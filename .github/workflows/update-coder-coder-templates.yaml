@@ -3,34 +3,24 @@ name: update-coder-coder-templates
 on:
   schedule:
     - cron: '0 0 * * *'  # Runs every day at midnight UTC
-  workflow_dispatch:
+  workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
   update_submodule:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the main repository
-        uses: actions/checkout@v4
+      - name: Checkout the repository including submodules
+        uses: actions/checkout@v2
         with:
-          submodules: recursive  # Initializes submodules recursively
-
-      - name: Pull latest changes in submodule
-        run: |
-          cd coder-submodule
-          git pull origin main
-          cd ..
-
-      - name: Copy updated contents to root directory
-        run: |
-          git rm -r --cached .  # Clear the existing files from the index
-          git checkout coder-submodule/examples/templates -- .  # Check out the updated files directly into the root directory
+          submodules: recursive  # Automatically initializes and updates submodules
+          fetch-depth: 0  # Fetch all history for all branches and tags
 
       - name: Check for changes and push if needed
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             git add .
-            git commit -m "Auto-update submodule examples/templates to the latest commit"
+            git commit -m "Auto-update submodule to the latest commit"
             git push origin main
           else
             echo "No changes to commit"
