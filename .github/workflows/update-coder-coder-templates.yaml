@@ -1,0 +1,28 @@
+name: update-coder-coder-templates
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight UTC
+  workflow_dispatch:  # Allows manual triggering of the workflow
+
+jobs:
+  update_submodule:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true  # Initializes submodules
+
+      - name: Update Submodule
+        run: |
+          cd coder-submodule
+          git pull origin main
+
+      - name: Commit and Push Changes
+        run: |
+          git add .
+          git commit -m "Auto-update coder/coder/examples/templates to the latest commit"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
