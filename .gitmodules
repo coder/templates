@@ -1,0 +1,4 @@
+[submodule "coder-submodule"]
+	path = coder-submodule
+	url = https://github.com/coder/coder.git
+	branch = main
