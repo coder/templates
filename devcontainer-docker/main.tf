@@ -13,8 +13,24 @@ terraform {
   }
 }
 
+
+variable "socket" {
+  type        = string
+  description = <<-EOF
+  The Unix socket that the Docker daemon listens on and how containers
+  communicate with the Docker daemon.
+
+  Either Unix or TCP
+  e.g., unix:///var/run/docker.sock
+
+  EOF
+  default = "unix:///var/run/docker.sock"
+}
+
 provider "coder" {}
-provider "docker" {}
+provider "docker" {
+  host = var.socket
+}
 provider "envbuilder" {}
 data "coder_provisioner" "me" {}
 data "coder_workspace" "me" {}
