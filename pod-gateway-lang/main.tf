@@ -18,10 +18,10 @@ locals {
   home-volume = "10Gi"
 
   repo = {
-    "Java"    = "sharkymark/java_helloworld" 
-    "Python"  = "sharkymark/python_commissions" 
+    "Java"    = "coder/java_helloworld" 
+    "Python"  = "coder/python_commissions" 
     "Golang"  = "coder/coder"
-    "Node"    = "sharkymark/coder-react"
+    "Node"    = "coder/coder-react"
   }  
   image = {
     "Java"    = "codercom/enterprise-java:ubuntu" 
