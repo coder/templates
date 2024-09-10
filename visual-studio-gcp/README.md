@@ -59,7 +59,7 @@ coder tunnel <workspace-name> --tcp 3301:3389
 
 [Google Cloud e2 Machine Types](https://cloud.google.com/compute/docs/general-purpose-machines#e2_machine_types)
 
-[sharkymark's v2 templates](https://github.com/sharkymark/v2-templates)
+[Coder Templates](https://github.com/coder/templates)
 
 [Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)
 
