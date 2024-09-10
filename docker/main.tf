@@ -13,10 +13,25 @@ locals {
   username = data.coder_workspace_owner.me.name
 }
 
+
+variable "socket" {
+  type        = string
+  description = <<-EOF
+  The Unix socket that the Docker daemon listens on and how containers
+  communicate with the Docker daemon.
+
+  Either Unix or TCP
+  e.g., unix:///var/run/docker.sock
+
+  EOF
+  default = "unix:///var/run/docker.sock"
+}
+
 data "coder_provisioner" "me" {
 }
 
 provider "docker" {
+  host = var.socket
 }
 
 data "coder_workspace" "me" {

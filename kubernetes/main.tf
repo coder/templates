@@ -26,7 +26,7 @@ variable "use_kubeconfig" {
   default     = false
 }
 
-variable "namespace" {
+variable "workspace_namespace" {
   type        = string
   description = "The Kubernetes namespace to create workspaces in (must exist prior to creating workspaces). If the Coder host is itself running as a Pod on the same Kubernetes cluster as you are deploying workspaces to, set this to the same namespace."
 }
@@ -194,7 +194,7 @@ resource "coder_app" "code-server" {
 resource "kubernetes_persistent_volume_claim" "home" {
   metadata {
     name      = "coder-${data.coder_workspace.me.id}-home"
-    namespace = var.namespace
+    namespace = var.workspace_namespace
     labels = {
       "app.kubernetes.io/name"     = "coder-pvc"
       "app.kubernetes.io/instance" = "coder-pvc-${data.coder_workspace.me.id}"
@@ -229,7 +229,7 @@ resource "kubernetes_deployment" "main" {
   wait_for_rollout = false
   metadata {
     name      = "coder-${data.coder_workspace.me.id}"
-    namespace = var.namespace
+    namespace = var.workspace_namespace
     labels = {
       "app.kubernetes.io/name"     = "coder-workspace"
       "app.kubernetes.io/instance" = "coder-workspace-${data.coder_workspace.me.id}"
