@@ -12,10 +12,10 @@ terraform {
 locals {
 
   repo = {
-    "Java"    = "sharkymark/java_helloworld.git" 
-    "Python"  = "sharkymark/python_commissions.git" 
+    "Java"    = "coder/java_helloworld.git" 
+    "Python"  = "coder/python_commissions.git" 
     "Go"      = "coder/coder.git"
-    "Node"    = "sharkymark/coder-react.git"
+    "Node"    = "coder/coder-react.git"
   }  
   image = {
     "Java"    = "codercom/enterprise-java:ubuntu" 

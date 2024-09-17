@@ -103,7 +103,7 @@ data "coder_parameter" "disk_size" {
 
 data "coder_parameter" "dotfiles_url" {
   name        = "Dotfiles URL (optional)"
-  description = "Personalize your workspace e.g., https://github.com/sharkymark/dotfiles"
+  description = "Personalize your workspace e.g., https://github.com/coder/example-dotfiles.git"
   type        = "string"
   default     = ""
   mutable     = true 
