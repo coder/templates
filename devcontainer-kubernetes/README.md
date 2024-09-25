@@ -6,6 +6,10 @@ tags: [cloud, kubernetes]
 
 # `envbuilder` in a Kubernetes pod
 
+### Changes 2024-09-25
+
+1. Overwritten with the official `devcontainer-kubernetes` [template provided in the Coder OSS repo](https://github.com/coder/coder/tree/main/examples/templates/devcontainer-kubernetes).
+
 ### Changes 2024-08-05
 
 1. Notice use of `data.coder_workspace_owner.me`, a new 2024 Coder change in their Terraform provider that replaced `data.coder_workspace_owner.me.name`
