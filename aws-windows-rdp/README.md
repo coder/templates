@@ -1,7 +1,11 @@
 ---
-name: Develop in Windows and Visual Studio on AWS EC2
+display_name: Develop in Windows and Visual Studio on AWS EC2
 description: Get started with Windows and Visual Studio development on AWS EC2.
 tags: [cloud, aws, windows]
+icon: ../../../site/static/icon/aws.svg
+maintainer_github: coder
+verified: false
+tags: [vm, windows, aws, persistent-vm, cloud]
 ---
 
 # Visual Studio IDE on a Windows VM in AWS

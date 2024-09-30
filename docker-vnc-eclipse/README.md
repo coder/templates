@@ -1,6 +1,9 @@
 ---
-name: Run a virtual desktop and Eclipse on your Docker workspace
-description: The goal is to run a virtual desktop and Eclipse on your Docker workspace 
+display_name: Docker (Eclipse)
+description: Runs a virtual desktop and Eclipse on your Docker workspace
+icon: ../../../site/static/icon/docker.svg
+maintainer_github: coder
+verified: true
 tags: [local, docker]
 ---
 
@@ -17,11 +20,6 @@ tags: [local, docker]
 1. Download, install and start code-server (VS Code-in-a-browser)
 1. Clone a Java repo
 1. Start Eclipse and put in the VNC window
-
-### Known limitations
-
-
-### Authentication
 
 
 ### Resources
