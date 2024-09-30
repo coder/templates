@@ -17,7 +17,7 @@ locals {
 variable "use_kubeconfig" {
   type        = bool
   description = <<-EOF
-  Use host kubeconfig? (true/false)
+  Use host kubeconfig? (true/false):
 
   Set this to false if the Coder host is itself running as a Pod on the same
   Kubernetes cluster as you are deploying workspaces to.
@@ -341,7 +341,7 @@ resource "coder_metadata" "workspace_info" {
   resource_id = kubernetes_pod.main[0].id
   item {
     key   = "image"
-    value = "${data.coder_parameter.image.value}"
+    value = data.coder_parameter.image.value
   }
   item {
     key   = "repo cloned"

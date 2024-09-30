@@ -15,8 +15,7 @@ locals {
   cpu-request = "500m"
   memory-request = "500Mi" 
   home-volume = "10Gi"
-  image = "marktmilligan/jupyter:latest"
-  repo = "docker.io/sharkymark/pandas_automl.git"
+  image = "docker.io/marktmilligan/jupyter:latest"
 }
 
 variable "socket" {
@@ -246,7 +245,7 @@ resource "coder_app" "jupyter" {
 
 resource "docker_container" "workspace" {
   count = data.coder_workspace.me.start_count
-  image = "marktmilligan/jupyter:latest"
+  image = local.image
   # Uses lower() to avoid Docker restriction on container names.
   name     = "coder-${data.coder_workspace_owner.me.name}-${lower(data.coder_workspace.me.name)}"
   hostname = lower(data.coder_workspace.me.name)
@@ -284,7 +283,7 @@ resource "coder_metadata" "workspace_info" {
   resource_id = docker_container.workspace[0].id   
   item {
     key   = "image"
-    value = "codercom/enterprise-base:ubuntu"
+    value = local.image
   }
    
 }

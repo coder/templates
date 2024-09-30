@@ -35,7 +35,7 @@ variable "use_kubeconfig" {
   default     = false
 }
 
-variable "workspace_namespace" {
+variable "workspaces_namespace" {
   type        = string
   description = "The Kubernetes namespace to create workspaces in (must exist prior to creating workspaces)"
   default = ""  
@@ -257,7 +257,7 @@ resource "coder_app" "code-server" {
 resource "kubernetes_persistent_volume_claim" "workspaces" {
   metadata {
     name      = "coder-${data.coder_workspace.me.id}"
-    namespace = var.workspace_namespace
+    namespace = var.workspaces_namespace
     labels = {
       "coder.owner"                      = data.coder_workspace_owner.me.name
       "coder.owner_id"                   = data.coder_workspace_owner.me.id
@@ -283,7 +283,7 @@ resource "kubernetes_deployment" "workspace" {
   count = data.coder_workspace.me.start_count  
   metadata {
     name      = "coder-${data.coder_workspace_owner.me.name}-${lower(data.coder_workspace.me.name)}"
-    namespace = var.workspace_namespace
+    namespace = var.workspaces_namespace
     labels = {
       "coder.owner"          = data.coder_workspace_owner.me.name
       "coder.owner_id"       = data.coder_workspace_owner.me.id

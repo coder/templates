@@ -12,7 +12,7 @@ terraform {
 locals { 
   repo = "https://github.com/coder/java_helloworld"
   repo-name = "java_helloworld" 
-  image = "java:jdk-11"    
+  image = "docker.io/marktmilligan/java:jdk-11"    
 }
 
 
@@ -124,7 +124,7 @@ fi
 
 resource "docker_container" "workspace" {
   count = data.coder_workspace.me.start_count
-  image = "docker.io/marktmilligan/${local.image}"
+  image = local.image
   # Uses lower() to avoid Docker restriction on container names.
   name     = "coder-${data.coder_workspace_owner.me.name}-${lower(data.coder_workspace.me.name)}"
   hostname = lower(data.coder_workspace.me.name)
@@ -164,7 +164,7 @@ resource "coder_metadata" "workspace_info" {
   resource_id = docker_container.workspace[0].id   
   item {
     key   = "image"
-    value = "${local.image}"
+    value = local.image
   }
   item {
     key   = "repo cloned"
