@@ -1,6 +1,9 @@
 ---
-name: Develop in a container with VNC and IntelliJ
-description: The goal is to enable VNC and IntelliJ Community
+display_name: Docker (VNC & IntelliJ)
+description: Provisions a IntelliJ Community container with VNC
+icon: ../../../site/static/icon/docker.svg
+maintainer_github: coder
+verified: false
 tags: [jetbrains, docker]
 ---
 

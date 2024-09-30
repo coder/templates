@@ -1,7 +1,10 @@
 ---
-name: K8s template injecting host, ca cert and service account token
+display_name: Azure K8s Pod (Linux)
 description: Use a Kubernetes cluster outside of the Coder control plane to create a pod workspace
-tags: [cloud, kubernetes]
+icon: ../../../site/static/icon/azure.svg
+maintainer_github: coder
+verified: false
+tags: [vm, linux, azure, cloud, persistent-vm, kubernetes]
 ---
 
 # Kubernetes pod on a cluster outside of Coder

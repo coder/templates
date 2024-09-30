@@ -1,6 +1,9 @@
 ---
-name: Develop in a container with IntelliJ & Gateway
-description: The goal is to enable VNC and IntelliJ & Gateway
+display_name: Docker (IntelliJ)
+description: Provisions a IntelliJ IDEA Community container for Jetbrains Gateway
+icon: ../../../site/static/icon/docker.svg
+maintainer_github: coder
+verified: true
 tags: [jetbrains, docker]
 ---
 

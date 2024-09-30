@@ -1,7 +1,10 @@
 ---
-name: Develop in a container in a Docker host with JupyterLab
-description: The goal is to enable JupyterLab 
-tags: [local, docker]
+display_name: Docker (JupyterLab)
+description: Run a container with JupyterLab
+icon: ../../../site/static/icon/docker.svg
+maintainer_github: coder
+verified: true
+tags: [local, docker, jupyterlab]
 ---
 
 # JupyterLab template for a workspace in a container on a Docker host

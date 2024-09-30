@@ -1,7 +1,10 @@
 ---
-name: Run a KasmVNC virtual desktop on your Docker workspace
-description: The goal is to run a Kasm VNC virtual desktop with Insomnia on your Docker workspace 
-tags: [local, docker]
+display_name: Docker (KasmVNC)
+description: Runs KasmVNC virtual desktop on Docker
+icon: ../../../site/static/icon/docker.svg
+maintainer_github: coder
+verified: false
+tags: [local, docker, kasm]
 ---
 
 # Run a virtual desktop to container workspace on a Docker host

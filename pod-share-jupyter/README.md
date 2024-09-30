@@ -1,6 +1,9 @@
 ---
-name: Develop with shared Jupyter in a container in a Kubernetes pod
-description: The goal is to enable code-server (VS Code) and Jupyter Lab or Jupyter Notebook - with IDEs sharable
+display_name: Kubernetes (Shared Jupyter)
+description: Demonstrates code-server (VS Code) and Jupyter Lab or Jupyter Notebook - with IDEs sharable.
+icon: ../../../site/static/icon/jupyter.svg
+maintainer_github: coder
+verified: false
 tags: [cloud, kubernetes]
 ---
 

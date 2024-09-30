@@ -1,6 +1,9 @@
 ---
-name: Develop with RStudio in a container in a Kubernetes pod
-description: The goal is to enable code-server (VS Code) and RStudio
+display_name: Kubernetes (RStudio)
+description: Demonstrates an RStudio-Server container
+icon: ../../../site/static/icon/rstudio.svg
+maintainer_github: coder
+verified: true
 tags: [cloud, kubernetes]
 ---
 

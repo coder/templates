@@ -1,7 +1,11 @@
 ---
-name: Develop in a container in a Kubernetes deployment
-description: The goal is to enable code-server and a Kubernetes deployment
-tags: [cloud, kubernetes]
+display_name: Kubernetes (Code-Server Deployment)
+description: Enables code-server and a Kubernetes deployment
+description: Provision AWS EC2 VMs as Coder workspaces
+icon: ../../../site/static/icon/coder.svg
+maintainer_github: coder
+verified: false
+tags: [vm, linux, persistent-vm, cloud, kubernetes]
 ---
 
 # code-server (VS Code) template for a workspace in a Kubernetes deployment
@@ -22,9 +26,7 @@ tags: [cloud, kubernetes]
 1. NodeJS
 1. Golang
 1. Java
-1. Base (for Rust and Python)
-
-> Note that Rust is installed during the startup script for `~/` configuration
+1. Base (for  Python)
 
 ### IDE use
 1. While the purpose of this template is to show `code-server` and VS Code in a browser, you can also use the `VS Code Desktop` to download Coder's VS Code extension and the Coder CLI to remotely connect to your Coder workspace from your local installation of VS Code.
@@ -102,11 +104,7 @@ coder-logstream-kube listens for pod creation events with containers that have t
 
 [Coder's code-server TypeScript repo](https://github.com/coder/code-server)
 
-[Golang command line repo](https://github.com/sharkymark/commissions)
-
 [Java Hello World repo](https://github.com/coder/java_helloworld)
-
-[Rust repo](https://github.com/coder/rust-hw)
 
 [Python repo](https://github.com/coder/python_commissions)
 

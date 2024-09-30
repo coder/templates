@@ -1,6 +1,9 @@
 ---
-name: Run a JetBrains IDE with JetBrains Gateway on your Docker workspace
-description: The goal is to run a JetBrains IDE with JetBrains Gateway on your Docker workspace 
+display_name: Docker (JetBrains)
+description: Deploys a JetBrains IDE in a container
+icon: ../../../site/static/icon/docker.svg
+maintainer_github: coder
+verified: true
 tags: [local, docker]
 ---
 

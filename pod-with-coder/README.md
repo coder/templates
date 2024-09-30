@@ -1,6 +1,9 @@
 ---
-name: Develop in a container in a Kubernetes pod
-description: The goal is to have a container workspace to work on Coder bits 
+display_name: Kubernetes (Various Coder Bits)
+description: Provisions a container workspace to work on different Coder bits.
+icon: ../../../site/static/icon/coder.svg
+maintainer_github: coder
+verified: true
 tags: [cloud, kubernetes]
 ---
 

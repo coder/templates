@@ -1,7 +1,7 @@
 ---
-display_name: Kubernetes (Deployment)
+display_name: Kubernetes (JetBrains)
 description: Provision Kubernetes Deployments as Coder workspaces
-icon: ../../../site/static/icon/k8s.png
+icon: ../../../site/static/icon/gateway.svg
 maintainer_github: coder
 verified: true
 tags: [kubernetes, container]

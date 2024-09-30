@@ -1,6 +1,9 @@
 ---
-name: Allow developers to modify their environment in a tight feedback loop.
-description: Build development environments from a Dockerfile on Kubernetes. Allow developers to modify their environment in a tight feedback loop.
+display_name: Devcontainer (Kubernetes)
+description: Build development environments from a Dockerfile on Kubernetes.
+icon: ../../../site/static/icon/k8s.png
+maintainer_github: coder
+verified: true
 tags: [cloud, kubernetes]
 ---
 
