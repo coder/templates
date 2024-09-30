@@ -9,8 +9,6 @@ terraform {
   }
 }
 
-# 2023-12-03 added amazon codewhisperer extension to go image and install to code-server in startup_script
-
 locals {
   folder_name = try(element(split("/", data.coder_parameter.repo.value), length(split("/", data.coder_parameter.repo.value)) - 1), "")  
   repo_owner_name = try(element(split("/", data.coder_parameter.repo.value), length(split("/", data.coder_parameter.repo.value)) - 2), "") 
@@ -101,26 +99,9 @@ data "coder_parameter" "image" {
   type        = "string"
   description = "The Go container image"
   mutable     = true
-  default     = "marktmilligan/go:1.21.4"
+  default     = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-golang:latest"
   icon        = "/icon/go.svg"
 
-  option {
-    name = "Latest 1.21.4"
-    value = "marktmilligan/go:1.21.4"
-    icon = "/icon/github.svg"
-  }
-  option {
-    name = "1.20.4"
-    value = "marktmilligan/go:1.20.4"
-  } 
-  option {
-    name = "1.20.1"
-    value = "marktmilligan/go:1.20.1"
-  } 
-  option {
-    name = "1.19.6"
-    value = "marktmilligan/go:1.19.6"
-  }  
   order       = 4      
 }
 
@@ -136,12 +117,7 @@ data "coder_parameter" "repo" {
     name = "Coder v2 OSS project"
     value = "https://github.com/coder/coder"
     icon = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
-  }  
-  option {
-    name = "Go command line app"
-    value = "https://github.com/sharkymark/commissions"
-    icon = "https://cdn.worldvectorlogo.com/logos/golang-gopher.svg"
-  }   
+  }     
   order       = 6     
 }
 
@@ -347,14 +323,16 @@ resource "kubernetes_deployment" "main" {
       }
    
       spec {
-
+        image_pull_secrets {
+          name = "jfrog-secret"
+        }
         security_context {
           run_as_user = "1000"
           fs_group    = "1000"
         }          
         container {
           name    = "coder-container"
-          image   = "docker.io/${data.coder_parameter.image.value}"
+          image   = data.coder_parameter.image.value
           image_pull_policy = "Always"
           command = ["sh", "-c", coder_agent.coder.init_script]
           security_context {
@@ -446,7 +424,7 @@ resource "coder_metadata" "workspace_info" {
   resource_id = kubernetes_deployment.main[0].id
   item {
     key   = "image"
-    value = "${data.coder_parameter.image.value}"
+    value = data.coder_parameter.image.value
   }
   item {
     key   = "repo cloned"

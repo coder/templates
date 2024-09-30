@@ -105,17 +105,17 @@ data "coder_parameter" "image" {
   type        = "string"
   description = "What container image and language do you want?"
   mutable     = true
-  default     = "codercom/enterprise-node:ubuntu"
+  default     = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-node:latest"
   icon        = "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
 
   option {
     name = "Node (needed for prettier)"
-    value = "codercom/enterprise-node:ubuntu"
+    value = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-node:latest"
     icon = "https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png"
   }
   option {
     name = "Golang"
-    value = "codercom/enterprise-golang:ubuntu"
+    value = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-golang:latest"
     icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1200px-Go_Logo_Blue.svg.png"
   } 
   option {
@@ -320,7 +320,7 @@ resource "kubernetes_pod" "main" {
     }    
     container {
       name    = "coder-container"
-      image   = "docker.io/${data.coder_parameter.image.value}"
+      image   = data.coder_parameter.image.value
       image_pull_policy = "Always"
       command = ["sh", "-c", coder_agent.coder.init_script]
       security_context {
@@ -375,7 +375,7 @@ resource "coder_metadata" "workspace_info" {
   resource_id = kubernetes_pod.main[0].id
   item {
     key   = "image"
-    value = "${data.coder_parameter.image.value}"
+    value = data.coder_parameter.image.value
   }
   item {
     key   = "repo cloned"

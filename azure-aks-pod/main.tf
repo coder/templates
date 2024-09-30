@@ -12,7 +12,7 @@ terraform {
 locals {
   cpu-request = "500m"
   memory-request = "2" 
-  image = "codercom/enterprise-node:ubuntu"
+  image = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-node:latest"
   repo = "https://github.com/coder/coder-react.git"
   repo-name = "coder-react"   
 }

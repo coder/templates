@@ -12,7 +12,7 @@ terraform {
 locals {
   cpu-request = "500m"
   memory-request = "2" 
-  image = "codercom/enterprise-node:ubuntu"
+  image = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-node:latest"
   repo = "https://github.com/coder/coder-react.git"
   repo-name = "coder-react"   
 }
@@ -102,7 +102,7 @@ variable "host" {
   default = ""
 }
 
-variable "workspace_namespace" {
+variable "workspaces_namespace" {
   sensitive   = true
   description = <<-EOF
   Kubernetes cluster namespace
@@ -256,7 +256,7 @@ resource "kubernetes_pod" "main" {
   ]  
   metadata {
     name = "coder-${data.coder_workspace_owner.me.name}-${data.coder_workspace.me.name}"
-    namespace = var.workspace_namespace
+    namespace = var.workspaces_namespace
   }
   spec {
     security_context {
@@ -302,7 +302,7 @@ resource "kubernetes_pod" "main" {
 resource "kubernetes_persistent_volume_claim" "home-directory" {
   metadata {
     name      = "home-coder-${data.coder_workspace_owner.me.name}-${data.coder_workspace.me.name}"
-    namespace = var.workspace_namespace
+    namespace = var.workspaces_namespace
   }
   wait_until_bound = false   
   spec {

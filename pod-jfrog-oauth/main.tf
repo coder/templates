@@ -137,17 +137,17 @@ data "coder_parameter" "image" {
   type        = "string"
   description = "What container image and language do you want?"
   mutable     = true
-  default     = "codercom/enterprise-node:ubuntu"
+  default     = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-node:latest"
   icon        = "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
 
   option {
     name = "Node React"
-    value = "codercom/enterprise-node:ubuntu"
+    value = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-node:latest"
     icon = "https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png"
   }
   option {
     name = "Golang"
-    value = "codercom/enterprise-golang:ubuntu"
+    value = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-golang:latest"
     icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1200px-Go_Logo_Blue.svg.png"
   } 
   option {
@@ -181,11 +181,6 @@ data "coder_parameter" "repo" {
     icon = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
   }
   option {
-    name = "Golang command line app"
-    value = "https://github.com/sharkymark/commissions"
-    icon = "https://cdn.worldvectorlogo.com/logos/golang-gopher.svg"
-  }
-  option {
     name = "Java Hello, World! command line app"
     value = "https://github.com/coder/java_helloworld"
     icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
@@ -195,11 +190,6 @@ data "coder_parameter" "repo" {
     value = "https://github.com/coder/python_commissions"
     icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
   }
-  option {
-    name = "Shark's rust sample apps"
-    value = "https://github.com/coder/rust-hw"
-    icon = "https://rustacean.net/assets/cuddlyferris.svg"
-  }     
 }
 
 resource "coder_agent" "coder" {
@@ -270,7 +260,7 @@ resource "kubernetes_pod" "main" {
     }    
     container {
       name    = "coder-container"
-      image   = "docker.io/${data.coder_parameter.image.value}"
+      image   = data.coder_parameter.image.value
       image_pull_policy = "Always"
       command = ["sh", "-c", coder_agent.coder.init_script]
       security_context {
@@ -325,7 +315,7 @@ resource "coder_metadata" "workspace_info" {
   resource_id = kubernetes_pod.main[0].id
   item {
     key   = "image"
-    value = "${data.coder_parameter.image.value}"
+    value = data.coder_parameter.image.value
   }
   item {
     key   = "repo cloned"

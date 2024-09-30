@@ -18,10 +18,10 @@ locals {
     "Node"    = "coder/coder-react.git"
   }  
   image = {
-    "Java"    = "codercom/enterprise-java:ubuntu" 
+    "Java"    = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-java:latest" 
     "Python"  = "codercom/enterprise-base:ubuntu" 
-    "Go"      = "codercom/enterprise-golang:ubuntu"
-    "Node"    = "codercom/enterprise-node:ubuntu"
+    "Go"      = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-golang:latest"
+    "Node"    = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-node:latest"
   }     
 
 }
@@ -190,7 +190,7 @@ resource "coder_app" "code-server" {
 
 resource "docker_container" "workspace" {
   count = data.coder_workspace.me.start_count
-  image = "docker.io/${lookup(local.image, data.coder_parameter.lang.value)}"
+  image = "${lookup(local.image, data.coder_parameter.lang.value)}"
   # Uses lower() to avoid Docker restriction on container names.
   name     = "coder-${data.coder_workspace_owner.me.name}-${lower(data.coder_workspace.me.name)}"
   hostname = lower(data.coder_workspace.me.name)
