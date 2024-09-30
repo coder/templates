@@ -23,7 +23,7 @@ data "coder_parameter" "home_disk" {
   description = "How large should the disk storing the home directory be?"
   icon        = "https://cdn-icons-png.flaticon.com/512/2344/2344147.png"
   type        = "number"
-  default     = 50
+  default     = 10
   mutable     = true
   validation {
     min = 10
@@ -38,7 +38,7 @@ data "coder_parameter" "repo" {
   description = "What source code repository do you want to clone?"
   mutable     = true
   icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-  default     = "https://github.com/coder/coder.git"
+  default     = "https://github.com/coder/coder"
   order = 2
 }
 
@@ -54,7 +54,7 @@ variable "use_kubeconfig" {
   EOF
 }
 
-variable "workspace_namespace" {
+variable "workspaces_namespace" {
   type        = string
   default     = ""
   description = "The namespace to create workspaces in (must exist prior to creating workspaces)"
@@ -68,7 +68,7 @@ variable "create_tun" {
 
 variable "create_fuse" {
   type        = bool
-  default     = false
+  default     = true
   description = "Add a FUSE device to the workspace."
 }
 
@@ -223,7 +223,7 @@ resource "coder_app" "code-server" {
 resource "kubernetes_persistent_volume_claim" "home" {
   metadata {
     name      = "coder-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}-home"
-    namespace = var.workspace_namespace
+    namespace = var.workspaces_namespace
   }
   wait_until_bound = false
   spec {
@@ -240,7 +240,7 @@ resource "kubernetes_pod" "main" {
   count = data.coder_workspace.me.start_count
   metadata {
     name      = "coder-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}"
-    namespace = var.workspace_namespace
+    namespace = var.workspaces_namespace
   }
   spec {
     container {
@@ -277,12 +277,17 @@ resource "kubernetes_pod" "main" {
 
       env {
         name  = "CODER_INNER_IMAGE"
-        value = "index.docker.io/codercom/enterprise-base@sha256:069e84783d134841cbb5007a16d9025b6aed67bc5b95eecc118eb96dccd6de68"
+        value = "index.docker.io/codercom/enterprise-base:ubuntu-20240812"
       }
 
       env {
         name  = "CODER_INNER_USERNAME"
         value = "coder"
+      }
+
+      env {
+        name = "CODER_INNER_HOSTNAME"
+        value = data.coder_workspace.me.name
       }
 
       env {

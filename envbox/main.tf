@@ -1,16 +1,12 @@
 terraform {
   required_providers {
     coder = {
-      source  = "coder/coder"
+      source = "coder/coder"
     }
     kubernetes = {
-      source  = "hashicorp/kubernetes"
+      source = "hashicorp/kubernetes"
     }
   }
-}
-
-provider "coder" {
-
 }
 
 data "coder_parameter" "home_disk" {
@@ -18,28 +14,17 @@ data "coder_parameter" "home_disk" {
   description = "How large should the disk storing the home directory be?"
   icon        = "https://cdn-icons-png.flaticon.com/512/2344/2344147.png"
   type        = "number"
-  default     = 50
+  default     = 10
   mutable     = true
   validation {
     min = 10
     max = 100
   }
-order       = 1  
-}
-
-data "coder_parameter" "dotfiles_url" {
-  name        = "Dotfiles URL (optional)"
-  description = "Personalize your workspace e.g., https://github.com/coder/example-dotfiles.git"
-  type        = "string"
-  default     = ""
-  mutable     = true 
-  icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-  order       = 2
 }
 
 variable "use_kubeconfig" {
   type        = bool
-  default     = false
+  default     = true
   description = <<-EOF
   Use host kubeconfig? (true/false)
   Set this to false if the Coder host is itself running as a Pod on the same
@@ -49,45 +34,43 @@ variable "use_kubeconfig" {
   EOF
 }
 
-variable "workspace_namespace" {
+provider "coder" {
+}
+
+variable "workspaces_namespace" {
   type        = string
-  default     = ""
   description = "The namespace to create workspaces in (must exist prior to creating workspaces)"
 }
 
 variable "create_tun" {
   type        = bool
-  default     = false
   description = "Add a TUN device to the workspace."
+  default     = false
 }
 
 variable "create_fuse" {
   type        = bool
-  default     = false
   description = "Add a FUSE device to the workspace."
+  default     = false
 }
 
 variable "max_cpus" {
   type        = string
-  default     = "4"
   description = "Max number of CPUs the workspace may use (e.g. 2)."
 }
 
 variable "min_cpus" {
   type        = string
-  default     = ".5"
   description = "Minimum number of CPUs the workspace may use (e.g. .1)."
 }
 
 variable "max_memory" {
   type        = string
-  default     = "8"
   description = "Maximum amount of memory to allocate the workspace (in GB)."
 }
 
 variable "min_memory" {
   type        = string
-  default     = "4"
   description = "Minimum amount of memory to allocate the workspace (in GB)."
 }
 
@@ -96,52 +79,14 @@ provider "kubernetes" {
   config_path = var.use_kubeconfig == true ? "~/.kube/config" : null
 }
 
-data "coder_workspace" "me" {
-}
-
-data "coder_workspace_owner" "me" {
-}
+data "coder_workspace" "me" {}
+data "coder_workspace_owner" "me" {}
 
 resource "coder_agent" "main" {
   os             = "linux"
   arch           = "amd64"
-
- # The following metadata blocks are optional. They are used to display
-  # information about your workspace in the dashboard. You can remove them
-  # if you don't want to display any information.
-  # For basic resources, you can use the `coder stat` command.
-  # If you need more control, you can write your own script.
-  metadata {
-    display_name = "CPU Usage"
-    key          = "0_cpu_usage"
-    script       = "coder stat cpu"
-    interval     = 10
-    timeout      = 1
-  }
-
-  metadata {
-    display_name = "RAM Usage"
-    key          = "1_ram_usage"
-    script       = "coder stat mem"
-    interval     = 10
-    timeout      = 1
-  }
-
-  metadata {
-    display_name = "Home Disk"
-    key          = "3_home_disk"
-    script       = "coder stat disk --path $${HOME}"
-    interval     = 60
-    timeout      = 1
-  }
-
-  dir = "/home/coder"
-  startup_script_behavior = "blocking"
-
-  
-  env                     = {  }      
   startup_script = <<EOT
-
+    #!/bin/bash
     # home folder can be empty, so copying default bash settings
     if [ ! -f ~/.profile ]; then
       cp /etc/skel/.profile $HOME
@@ -150,28 +95,12 @@ resource "coder_agent" "main" {
       cp /etc/skel/.bashrc $HOME
     fi
 
-    # install and start code-server
-    curl -fsSL https://code-server.dev/install.sh | sh -s
-    code-server --auth none --port 13337 > /dev/null 2>&1 &
+    # Install the latest code-server.
+    # Append "--version x.x.x" to install a specific version of code-server.
+    curl -fsSL https://code-server.dev/install.sh | sh -s -- --method=standalone --prefix=/tmp/code-server
 
-    # use coder CLI to clone and install dotfiles
-    if [[ ! -z "${data.coder_parameter.dotfiles_url.value}" ]]; then
-      coder dotfiles -y ${data.coder_parameter.dotfiles_url.value}
-    fi
-
-    # pull the nginx image and expose on port with hello world template
-    if [ "$(docker ps -a -q -f name='my-nginx-container')" ]; then
-      docker start my-nginx-container
-    else
-      docker run --name my-nginx-container -v ./templates:/etc/nginx/templates -d -p 8080:80 nginx
-    fi 
-
-    # start python web server
-    python3 -m http.server > /dev/null 2>&1 &
-
-    # resources
-    # https://hub.docker.com/_/nginx
-    # https://docs.docker.com/engine/reference/commandline/run/
+    # Start code-server in the background.
+    /tmp/code-server/bin/code-server --auth none --port 13337 >/tmp/code-server.log 2>&1 &
   EOT
 }
 
@@ -195,7 +124,7 @@ resource "coder_app" "code-server" {
 resource "kubernetes_persistent_volume_claim" "home" {
   metadata {
     name      = "coder-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}-home"
-    namespace = var.workspace_namespace
+    namespace = var.workspaces_namespace
   }
   wait_until_bound = false
   spec {
@@ -210,13 +139,18 @@ resource "kubernetes_persistent_volume_claim" "home" {
 
 resource "kubernetes_pod" "main" {
   count = data.coder_workspace.me.start_count
+
   metadata {
     name      = "coder-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}"
-    namespace = var.workspace_namespace
+    namespace = var.workspaces_namespace
   }
+
   spec {
+    restart_policy = "Never"
+
     container {
-      name              = "dev"
+      name = "dev"
+      # We highly recommend pinning this to a specific release of envbox, as the latest tag may change.
       image             = "ghcr.io/coder/envbox:latest"
       image_pull_policy = "Always"
       command           = ["/envbox", "docker"]
@@ -249,7 +183,7 @@ resource "kubernetes_pod" "main" {
 
       env {
         name  = "CODER_INNER_IMAGE"
-        value = "index.docker.io/codercom/enterprise-base@sha256:069e84783d134841cbb5007a16d9025b6aed67bc5b95eecc118eb96dccd6de68"
+        value = "index.docker.io/codercom/enterprise-base:ubuntu-20240812"
       }
 
       env {
@@ -276,7 +210,7 @@ resource "kubernetes_pod" "main" {
         name  = "CODER_INNER_HOSTNAME"
         value = data.coder_workspace.me.name
       }
-      
+
       env {
         name  = "CODER_ADD_TUN"
         value = var.create_tun
@@ -377,17 +311,3 @@ resource "kubernetes_pod" "main" {
     }
   }
 }
-
-resource "coder_metadata" "workspace_info" {
-  count       = data.coder_workspace.me.start_count
-  resource_id = kubernetes_pod.main[0].id  
-  item {
-    key   = "developer container"
-    value = "docker.io/codercom/enterprise-base"
-  }  
-  item {
-    key   = "envbox sysbox container runtime"
-    value = "${kubernetes_pod.main[0].spec[0].container[0].image}"
-  }       
-}
-

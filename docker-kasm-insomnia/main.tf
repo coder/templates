@@ -10,7 +10,7 @@ terraform {
 }
 
 locals {
-  image = "marktmilligan/kasm:latest"
+  image = "docker.io/marktmilligan/kasm:latest"
   user = "kasm-user"
 }
 

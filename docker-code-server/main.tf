@@ -47,22 +47,22 @@ data "coder_parameter" "image" {
   type        = "string"
   description = "What container image and language do you want?"
   mutable     = true
-  default     = "marktmilligan/node:20.10.0"
+  default     = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-node:latest"
   icon        = "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
 
   option {
     name = "Node React"
-    value = "marktmilligan/node:20.10.0"
+    value = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-node:latest"
     icon = "https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png"
   }
   option {
     name = "Golang"
-    value = "marktmilligan/go:1.22.1"
+    value = "docker.io/marktmilligan/go:1.22.1"
     icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1200px-Go_Logo_Blue.svg.png"
   } 
   option {
     name = "Java"
-    value = "codercom/enterprise-java:ubuntu"
+    value = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-java:latest"
     icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
   } 
   option {
@@ -97,11 +97,6 @@ data "coder_parameter" "repo" {
     icon = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
   }
   option {
-    name = "Golang command line app"
-    value = "https://github.com/sharkymark/commissions"
-    icon = "https://cdn.worldvectorlogo.com/logos/golang-gopher.svg"
-  }
-  option {
     name = "Java Hello, World! command line app"
     value = "https://github.com/coder/java_helloworld"
     icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
@@ -110,11 +105,6 @@ data "coder_parameter" "repo" {
     name = "Python command line app"
     value = "https://github.com/coder/python_commissions"
     icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
-  }
-  option {
-    name = "Shark's rust sample apps"
-    value = "https://github.com/coder/rust-hw"
-    icon = "https://rustacean.net/assets/cuddlyferris.svg"
   }
   order       = 2       
 }
@@ -137,16 +127,6 @@ data "coder_parameter" "extension" {
     value = "golang.go"
     icon = "https://cdn.worldvectorlogo.com/logos/golang-gopher.svg"
   } 
-  option {
-    name = "rust-lang"
-    value = "rust-lang.rust"
-    icon = "https://rustacean.net/assets/cuddlyferris.svg"
-  } 
-  option {
-    name = "rust analyzer"
-    value = "matklad.rust-analyzer"
-    icon = "https://rustacean.net/assets/cuddlyferris.svg"
-  }
   option {
     name = "Python"
     value = "ms-python.python"
@@ -274,7 +254,7 @@ resource "coder_app" "coder-code-server" {
 
 resource "docker_container" "workspace" {
   count = data.coder_workspace.me.start_count
-  image = "${data.coder_parameter.image.value}"
+  image = data.coder_parameter.image.value
   # Uses lower() to avoid Docker restriction on container names.
   name     = "coder-${data.coder_workspace_owner.me.name}-${lower(data.coder_workspace.me.name)}"
   hostname = lower(data.coder_workspace.me.name)
@@ -314,7 +294,7 @@ resource "coder_metadata" "workspace_info" {
   resource_id = docker_container.workspace[0].id   
   item {
     key   = "image"
-    value = "${data.coder_parameter.image.value}"
+    value = data.coder_parameter.image.value
   }
   item {
     key   = "repo cloned"
