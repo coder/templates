@@ -4,7 +4,7 @@ description: Alternative to unprotected dockerd side-cars or sysbox on the host 
 icon: ../../../site/static/icon/aws.svg
 maintainer_github: coder
 verified: true
-tags: [envbox, kubernetes]
+tags: [envbox, kubernetes, cloud, docker-in-docker]
 ---
 
 # Kubernetes pod with a privileged container running dockerd
