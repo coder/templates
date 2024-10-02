@@ -4,7 +4,7 @@ description: Use a Kubernetes cluster outside of the Coder control plane to crea
 icon: ../../../site/static/icon/azure.svg
 maintainer_github: coder
 verified: false
-tags: [vm, linux, azure, cloud, persistent-vm, kubernetes]
+tags: [linux, azure, cloud, kubernetes]
 ---
 
 # Kubernetes pod on a cluster outside of Coder
