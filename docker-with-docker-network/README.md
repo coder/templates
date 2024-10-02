@@ -4,7 +4,7 @@ description: Enable a Docker host within a Docker container
 icon: ../../../site/static/icon/docker.svg
 maintainer_github: coder
 verified: false
-tags: [local, docker]
+tags: [docker]
 ---
 
 # Docker host template for a workspace in a Docker container
