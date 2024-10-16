@@ -1,6 +1,6 @@
 ---
-display_name: Kubernetes (VNC & JetBrains IntelliJ IDEA Community)
-description: Provisions a VNC & IntelliJ IDEA Community container for a browser experience
+display_name: Kubernetes (JetBrains Gateway w/ Multi-Language)
+description: Provisions a pod with JetBrains Gateway
 icon: ../../../site/static/icon/intellij.svg
 maintainer_github: coder
 verified: true

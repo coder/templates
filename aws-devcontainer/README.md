@@ -4,7 +4,7 @@ description: Provision AWS EC2 VMs with a devcontainer as Coder workspaces
 icon: ../../../site/static/icon/aws.svg
 maintainer_github: coder
 verified: true
-tags: [vm, linux, aws, persistent, devcontainer]
+tags: [vm, linux, aws, devcontainer]
 ---
 
 # Remote Development on AWS EC2 VMs using a Devcontainer

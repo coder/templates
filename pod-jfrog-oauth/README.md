@@ -4,7 +4,7 @@ description: Demonstrates using the JFrog Terraform module.
 icon: ../../../site/static/icon/jfrog.svg
 maintainer_github: coder
 verified: true
-tags: [cloud, kubernetes]
+tags: [container, kubernetes]
 ---
 
 # Use Terraform modules to build a container workspace in a Kubernetes pod

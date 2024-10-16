@@ -4,7 +4,7 @@ description: Uses a K8s cluster outside of the Coder control plane to create a p
 icon: ../../../site/static/icon/k8s.png
 maintainer_github: coder
 verified: true
-tags: [cloud, kubernetes]
+tags: [container, kubernetes]
 ---
 
 # Kubernetes pod on a cluster outside of Coder

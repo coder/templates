@@ -3,8 +3,8 @@ display_name: Docker (Network Mode Host)
 description: Develop in a Docker container on a Docker host and be able to use `docker build` and `docker run` and `docker compose`
 icon: ../../../site/static/icon/docker.svg
 maintainer_github: coder
-verified: false
-tags: [local, docker, kasm]
+verified: true
+tags: [docker, container]
 ---
 
 # Docker host template for a workspace in a Docker container

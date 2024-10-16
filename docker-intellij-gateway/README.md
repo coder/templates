@@ -4,7 +4,7 @@ description: Provisions a IntelliJ IDEA Community container for Jetbrains Gatewa
 icon: ../../../site/static/icon/docker.svg
 maintainer_github: coder
 verified: true
-tags: [jetbrains, docker]
+tags: [docker, container]
 ---
 
 # IntelliJ  thru Gateway in a container

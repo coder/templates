@@ -3,8 +3,8 @@ display_name: Docker (VNC & IntelliJ)
 description: Provisions a IntelliJ Community container with VNC
 icon: ../../../site/static/icon/docker.svg
 maintainer_github: coder
-verified: false
-tags: [jetbrains, docker]
+verified: true
+tags: [docker, container]
 ---
 
 # IntelliJ Community thru VNC in a container

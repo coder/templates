@@ -4,7 +4,7 @@ description: Run a container with JupyterLab
 icon: ../../../site/static/icon/docker.svg
 maintainer_github: coder
 verified: true
-tags: [local, docker, jupyterlab]
+tags: [container, docker]
 ---
 
 # JupyterLab template for a workspace in a container on a Docker host

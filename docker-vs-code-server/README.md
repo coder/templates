@@ -3,8 +3,8 @@ display_name: Docker (Microsoft VS Code Server)
 description: Develop in a container in a Docker host with Coder and Microsoft's VS Code Server
 icon: ../../../site/static/icon/docker.svg
 maintainer_github: coder
-verified: false
-tags: [local, docker]
+verified: true
+tags: [container, docker]
 ---
 
 # VS Code Server template for a workspace in a container on a Docker host

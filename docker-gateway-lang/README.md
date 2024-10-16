@@ -4,7 +4,7 @@ description: Deploys a JetBrains IDE in a container
 icon: ../../../site/static/icon/docker.svg
 maintainer_github: coder
 verified: true
-tags: [local, docker]
+tags: [docker, container]
 ---
 
 # Run a JetBrains IDE with JetBrains Gateway with container workspace on a Docker host

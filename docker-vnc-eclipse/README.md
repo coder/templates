@@ -4,7 +4,7 @@ description: Runs a virtual desktop and Eclipse on your Docker workspace
 icon: ../../../site/static/icon/docker.svg
 maintainer_github: coder
 verified: true
-tags: [local, docker]
+tags: [container, docker]
 ---
 
 # Run a virtual desktop to container workspace on a Docker host

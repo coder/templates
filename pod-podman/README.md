@@ -3,8 +3,8 @@ display_name: Kubernetes (and Podman)
 description: Provision Kubernetes pods (with rootless Podman support) as Coder workspaces
 icon: ../.icons/k8s.svg
 maintainer_github: coder
-verified: false
-tags: [cloud, kubernetes]
+verified: true
+tags: [container, kubernetes]
 ---
 
 # Remote Development with Kubernetes+Podman

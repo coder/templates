@@ -4,7 +4,7 @@ description: Demonstrates an RStudio-Server container
 icon: ../../../site/static/icon/rstudio.svg
 maintainer_github: coder
 verified: true
-tags: [cloud, kubernetes]
+tags: [container, kubernetes]
 ---
 
 # RStudio IDE and code-server (VS Code) template for a workspace in a Kubernetes pod

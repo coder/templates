@@ -4,8 +4,8 @@ description: Enables code-server and a Kubernetes deployment with TabNine
 description: Provision AWS EC2 VMs as Coder workspaces
 icon: ../../../site/static/icon/coder.svg
 maintainer_github: coder
-verified: false
-tags: [cloud, kubernetes]
+verified: true
+tags: [linux, kubernetes]
 ---
 
 # TabNine & code-server (VS Code) template for a workspace in a Kubernetes deployment

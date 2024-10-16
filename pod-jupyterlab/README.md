@@ -4,7 +4,7 @@ description: Demonstrates using the JupyerLab Terraform module
 icon: ../../../site/static/icon/jupyter.svg
 maintainer_github: coder
 verified: true
-tags: [kubernetes]
+tags: [container, kubernetes]
 ---
 
 # JupyterLab template for a workspace in a container on Kubernetes

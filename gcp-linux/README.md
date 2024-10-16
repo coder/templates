@@ -4,7 +4,7 @@ description: Provision Google Compute Engine instances as Coder workspaces
 icon: ../../../site/static/icon/gcp.png
 maintainer_github: coder
 verified: true
-tags: [vm, linux, gcp, cloud]
+tags: [vm, linux, gcp]
 ---
 
 # Remote Development on Google Compute Engine (Linux)

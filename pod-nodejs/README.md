@@ -3,8 +3,8 @@ display_name: Kubernetes (Node.js with Button)
 description: Demonstrates an "Open in Coder" button to build a Kubernetes-managed container
 icon: ../../../site/static/icon/node.svg
 maintainer_github: coder
-verified: false
-tags: [cloud, kubernetes]
+verified: true
+tags: [container, kubernetes]
 ---
 
 # Build a Kubernetes-managed Node.js container with an Open in Coder button

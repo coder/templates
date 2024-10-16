@@ -3,8 +3,8 @@ display_name: Kubernetes (JetBrains PyCharm)
 description: Demonstrates a PyCharm Professional container for JetBrains Gateway
 icon: ../../../site/static/icon/pycharm.svg
 maintainer_github: coder
-verified: false
-tags: [cloud, kubernetes]
+verified: true
+tags: [container, kubernetes]
 ---
 
 # IntelliJ PyCharm Professional & JetBrains Gateway template for a workspace in a Kubernetes pod

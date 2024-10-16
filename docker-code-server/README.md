@@ -4,7 +4,7 @@ description: Deploys Coder and Microsoft's code-server (VS Code Web) in a contai
 icon: ../../../site/static/icon/docker.svg
 maintainer_github: coder
 verified: true
-tags: [local, docker]
+tags: [docker, container]
 ---
 
 # code-server (VS Code) template for a workspace in a container on a Docker host

@@ -4,7 +4,7 @@ description: Demonstrates using multiple and reusable Coder-supported Terraform 
 icon: ../../../site/static/icon/k8s.png
 maintainer_github: coder
 verified: true
-tags: [cloud, kubernetes]
+tags: [container, kubernetes]
 ---
 
 # Use Terraform modules to build a container workspace in a Kubernetes pod

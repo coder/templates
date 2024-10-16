@@ -3,8 +3,8 @@ display_name: Kubernetes (Shared Jupyter)
 description: Demonstrates code-server (VS Code) and Jupyter Lab or Jupyter Notebook - with IDEs sharable.
 icon: ../../../site/static/icon/jupyter.svg
 maintainer_github: coder
-verified: false
-tags: [cloud, kubernetes]
+verified: true
+tags: [container, kubernetes]
 ---
 
 # Jupyter Lab & Notebook and code-server (VS Code) template for a workspace in a Kubernetes pod where IDEs are sharable with team members

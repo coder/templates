@@ -3,8 +3,8 @@ display_name: Docker (Docker Bridge)
 description: Docker-on-Docker host and run `docker build` and `docker run` and `docker compose`
 icon: ../../../site/static/icon/docker.svg
 maintainer_github: coder
-verified: false
-tags: [local, docker]
+verified: true
+tags: [container, docker]
 ---
 
 # Docker host template for a workspace in a Docker container

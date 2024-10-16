@@ -3,8 +3,8 @@ display_name: Azure K8s Pod (Linux)
 description: Use a Kubernetes cluster outside of the Coder control plane to create a pod workspace
 icon: ../../../site/static/icon/azure.svg
 maintainer_github: coder
-verified: false
-tags: [linux, azure, cloud, kubernetes]
+verified: true
+tags: [linux, azure, kubernetes]
 ---
 
 # Kubernetes pod on a cluster outside of Coder
@@ -83,7 +83,7 @@ kubectl get secrets -n your_namespace -o jsonpath="{.items[?(@.metadata.annotati
 [Terraform Kubernetes provider](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs)---
 name: K8s template injecting host, ca cert and service account token
 description: Use a Kubernetes cluster outside of the Coder control plane to create a pod workspace
-tags: [cloud, kubernetes]
+tags: [container, kubernetes]
 ---
 
 # Kubernetes pod on a cluster outside of Coder

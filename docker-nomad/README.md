@@ -4,7 +4,7 @@ description: Provision Nomad Jobs as Coder workspaces
 icon: ../../../site/static/icon/nomad.svg
 maintainer_github: coder
 verified: true
-tags: [nomad, docker, nomad]
+tags: [container, docker]
 ---
 
 # Remote Development on Nomad

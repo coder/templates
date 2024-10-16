@@ -4,7 +4,7 @@ description: Build development environments from a Dockerfile on Kubernetes.
 icon: ../../../site/static/icon/k8s.png
 maintainer_github: coder
 verified: true
-tags: [cloud, kubernetes]
+tags: [devcontainer, kubernetes]
 ---
 
 # `envbuilder` in a Kubernetes pod

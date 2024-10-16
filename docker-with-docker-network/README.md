@@ -3,8 +3,8 @@ display_name: Docker (Docker Network)
 description: Enable a Docker host within a Docker container
 icon: ../../../site/static/icon/docker.svg
 maintainer_github: coder
-verified: false
-tags: [docker]
+verified: true
+tags: [container, docker]
 ---
 
 # Docker host template for a workspace in a Docker container

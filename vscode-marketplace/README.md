@@ -3,7 +3,7 @@ display_name: Coder-Server w/ VS-Code Extension
 description: The goal is to use code-server with a private VS Code extension marketplace 
 icon: ../../../site/static/icon/code.svg
 maintainer_github: coder
-verified: false
+verified: true
 tags: [vm, linux, persistent-vm, marketplace, kubernetes, cloud]
 ---
 

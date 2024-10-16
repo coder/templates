@@ -4,7 +4,7 @@ description: Provision AWS EC2 VMs as Coder workspaces
 icon: ../../../site/static/icon/aws.svg
 maintainer_github: coder
 verified: true
-tags: [vm, linux, aws, persistent-vm]
+tags: [vm, linux, aws]
 ---
 
 # Remote Development on AWS EC2 VMs (Linux)

@@ -4,8 +4,8 @@ description: Enables code-server and a Kubernetes deployment
 description: Provision AWS EC2 VMs as Coder workspaces
 icon: ../../../site/static/icon/coder.svg
 maintainer_github: coder
-verified: false
-tags: [vm, linux, persistent-vm, cloud, kubernetes]
+verified: true
+tags: [vm, linux, kubernetes]
 ---
 
 # code-server (VS Code) template for a workspace in a Kubernetes deployment

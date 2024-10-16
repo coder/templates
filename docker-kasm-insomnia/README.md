@@ -3,8 +3,8 @@ display_name: Docker (KasmVNC)
 description: Runs KasmVNC virtual desktop on Docker
 icon: ../../../site/static/icon/docker.svg
 maintainer_github: coder
-verified: false
-tags: [local, docker, kasm]
+verified: true
+tags: [docker, container]
 ---
 
 # Run a virtual desktop to container workspace on a Docker host

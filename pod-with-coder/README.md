@@ -4,7 +4,7 @@ description: Provisions a container workspace to work on different Coder bits.
 icon: ../../../site/static/icon/coder.svg
 maintainer_github: coder
 verified: true
-tags: [cloud, kubernetes]
+tags: [container, kubernetes]
 ---
 
 # code-server (VS Code) template for a workspace in a Kubernetes pod - for Coder bits

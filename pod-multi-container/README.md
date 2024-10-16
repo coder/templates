@@ -4,7 +4,7 @@ description: "Demonstrates using 4 containers: Postgres, Go, DBeaver amd pgAdmin
 icon: ../../../site/static/icon/k8s.svg
 maintainer_github: coder
 verified: true
-tags: [cloud, kubernetes]
+tags: [container, kubernetes]
 ---
 
 # 4 containers in a Kubernetes pod

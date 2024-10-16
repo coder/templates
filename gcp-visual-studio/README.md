@@ -4,7 +4,7 @@ description: Windows and Visual Studio development on GCP.
 icon: ../../../site/static/icon/gcp.svg
 maintainer_github: coder
 verified: true
-tags: [cloud, gcp, windows]
+tags: [gcp, windows, vm]
 ---
 
 # Visual Studio IDE on a Windows VM in Google Cloud
