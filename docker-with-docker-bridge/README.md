@@ -46,7 +46,7 @@ resource "docker_container" "dind" {
 
 resource "docker_container" "workspace" {
   count   = data.coder_workspace.me.start_count
-  image   = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-golang:latest"
+  image   = "codercom/enterprise-golang:ubuntu"
   name    = "dev-${data.coder_workspace.me.id}"
   command = ["sh", "-c", coder_agent.coder.init_script]
   env = [

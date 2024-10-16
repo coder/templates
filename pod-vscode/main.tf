@@ -110,22 +110,22 @@ data "coder_parameter" "image" {
   type        = "string"
   description = "What container image and language do you want?"
   mutable     = true
-  default     = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-golang:latest"
+  default     = "codercom/enterprise-golang:ubuntu"
   icon        = "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
 
   option {
     name = "Node React"
-    value = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-node:latest"
+    value = "codercom/enterprise-node:ubuntu"
     icon = "https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png"
   }
   option {
     name = "Golang"
-    value = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-golang:latest"
+    value = "codercom/enterprise-golang:ubuntu"
     icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1200px-Go_Logo_Blue.svg.png"
   } 
   option {
     name = "Java"
-    value = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-java:latest"
+    value = "codercom/enterprise-java:ubuntu"
     icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
   } 
   option {

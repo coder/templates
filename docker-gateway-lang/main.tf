@@ -18,10 +18,10 @@ locals {
     "Node"    = "coder/coder-react.git"
   }  
   image = {
-    "Java"    = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-java:latest" 
+    "Java"    = "codercom/enterprise-java:ubuntu" 
     "Python"  = "codercom/enterprise-base:ubuntu" 
-    "Go"      = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-golang:latest"
-    "Node"    = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-node:latest"
+    "Go"      = "codercom/enterprise-golang:ubuntu"
+    "Node"    = "codercom/enterprise-node:ubuntu"
   }     
 
 }

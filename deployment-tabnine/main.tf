@@ -99,7 +99,7 @@ data "coder_parameter" "image" {
   type        = "string"
   description = "The Go container image"
   mutable     = true
-  default     = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-golang:latest"
+  default     = "codercom/enterprise-golang:ubuntu"
   icon        = "/icon/go.svg"
 
   order       = 4      

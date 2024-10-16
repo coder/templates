@@ -12,7 +12,7 @@ terraform {
 locals {
   cpu-request = "500m"
   memory-request = "500m" 
-  image = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-node:latest"
+  image = "codercom/enterprise-node:ubuntu"
   folder_name = try(element(split("/", data.coder_parameter.git_repo_url.value), length(split("/", data.coder_parameter.git_repo_url.value)) - 1), "")  
 }
 

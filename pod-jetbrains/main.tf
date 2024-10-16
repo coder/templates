@@ -105,12 +105,12 @@ data "coder_parameter" "image" {
   type        = "string"
   description = "What container image and language do you want?"
   mutable     = true
-  default     = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-intellij:latest"
+  default     = "codercom/enterprise-java:ubuntu"
   icon        = "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
 
   option {
     name = "Java"
-    value = "coderintegration.jfrog.io/docker/coder/coder-demo/coder-demo-intellij:latest"
+    value = "codercom/enterprise-java:ubuntu"
     icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
   } 
   order       = 4      
