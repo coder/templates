@@ -9,19 +9,6 @@ terraform {
   }
 }
 
-locals {
-  cpu-limit = "2"
-  memory-limit = "4G"
-  cpu-request = "500m"
-  memory-request = "1G" 
-  home-volume = "10Gi"
-  image = "docker.io/jatcod3r/coder-rstudio:latest"
-}
-
-provider "coder" {
-
-}
-
 variable "use_kubeconfig" {
   type        = bool
   description = <<-EOF
@@ -43,6 +30,26 @@ variable "workspaces_namespace" {
   EOF
   default = ""
 }
+
+provider "coder" {}
+
+provider "kubernetes" {
+  # Authenticate via ~/.kube/config or a Coder-specific ServiceAccount, depending on admin preferences
+  config_path = var.use_kubeconfig == true ? "~/.kube/config" : null
+}
+
+locals {
+  cpu-limit = "2"
+  memory-limit = "4G"
+  cpu-request = "500m"
+  memory-request = "1G" 
+  home-volume = "10Gi"
+  image = "codercom/enterprise-base:ubuntu"
+}
+
+data "coder_workspace" "me" {}
+
+data "coder_workspace_owner" "me" {}
 
 data "coder_parameter" "dotfiles_url" {
   name        = "Dotfiles URL (optional)"
@@ -80,26 +87,11 @@ data "coder_parameter" "appshare" {
   order       = 2      
 }
 
-provider "kubernetes" {
-  # Authenticate via ~/.kube/config or a Coder-specific ServiceAccount, depending on admin preferences
-  config_path = var.use_kubeconfig == true ? "~/.kube/config" : null
-}
-
-data "coder_workspace" "me" {
-}
-
-data "coder_workspace_owner" "me" {
-}
-
 resource "coder_agent" "coder" {
   os   = "linux"
   arch = "amd64"
+  dir = "/home/coder"
 
-# The following metadata blocks are optional. They are used to display
-  # information about your workspace in the dashboard. You can remove them
-  # if you don't want to display any information.
-  # For basic resources, you can use the `coder stat` command.
-  # If you need more control, you can write your own script.
   metadata {
     display_name = "CPU Usage"
     key          = "0_cpu_usage"
@@ -131,106 +123,23 @@ resource "coder_agent" "coder" {
     port_forwarding_helper = false
     web_terminal = true
   }
-
-  dir = "/home/coder"
-  startup_script = <<EOT
-#!/bin/sh
-
-# install code-server
-curl -fsSL https://code-server.dev/install.sh | sh
-code-server --auth none --port 13337 >/dev/null 2>&1 &
-
-cat <<EOF > /home/coder/.nginx.conf
-  user www-data;
-  worker_processes auto;
-  pid /run/nginx.pid;
-
-  events {
-      worker_connections 768;
-  }
-
-  http {
-    map \$http_upgrade \$connection_upgrade {
-      default upgrade;
-      ''      close;
-    }
-
-    server {
-      listen 8788;
-
-      client_max_body_size 0; # Disables checking of client request body size
-
-      location /@${data.coder_workspace_owner.me.name}/${lower(data.coder_workspace.me.name)}.coder/apps/rstudio/ {
-          rewrite ^/@${data.coder_workspace_owner.me.name}/${lower(data.coder_workspace.me.name)}.coder/apps/rstudio/(.*)\$ /\$1 break;
-          proxy_set_header X-RSC-Request \$scheme://\$http_host\$request_uri;
-          proxy_pass http://localhost:8787;
-          proxy_redirect / /@${data.coder_workspace_owner.me.name}/${lower(data.coder_workspace.me.name)}.coder/apps/rstudio/;
-          proxy_set_header Upgrade \$http_upgrade;
-          proxy_set_header Connection \$connection_upgrade;
-          proxy_http_version 1.1;
-          proxy_set_header X-RStudio-Root-Path /@${data.coder_workspace_owner.me.name}/${lower(data.coder_workspace.me.name)}.coder/apps/rstudio;
-          proxy_set_header Host \$host;
-      }
-      location /healthz {
-          return 200;
-      }
-    }
-  }
-EOF
-
-echo "Starting RStudio Server..."
-rstudio-server start >/dev/null 2>&1 &
-
-echo "Starting NGINX..."
-sudo nginx -c /home/coder/.nginx.conf >/dev/null 2>&1 &
-
-# clone repo
-if [ ! -d "connect-examples" ]; then
-  git clone --progress https://github.com/rstudio/connect-examples.git &
-fi
-if [ ! -d "shiny-examples" ]; then
-  git clone --progress https://github.com/rstudio/shiny-examples.git &
-fi
-
-# use coder CLI to clone and install dotfiles
-if [ ! -z "${data.coder_parameter.dotfiles_url.value}" ]; then
-  coder dotfiles -y ${data.coder_parameter.dotfiles_url.value} &
-fi
-  EOT
 }
 
-# code-server
-resource "coder_app" "code-server" {
-  agent_id      = coder_agent.coder.id
-  slug          = "code-server"  
+module "code-server" {
+  source   = "registry.coder.com/modules/code-server/coder"
+  version  = "1.0.18"
+  agent_id = coder_agent.coder.id
+  slug = "code-server"
   display_name  = "code-server"
-  icon          = "/icon/code.svg"
-  url           = "http://localhost:13337?folder=/home/coder"
   subdomain = false
-  share     = "${data.coder_parameter.appshare.value}"
-
-  healthcheck {
-    url       = "http://localhost:13337/healthz"
-    interval  = 3
-    threshold = 10
-  } 
 }
 
-# rstudio
-resource "coder_app" "rstudio" {
-  agent_id      = coder_agent.coder.id
-  slug          = "rstudio"  
-  display_name  = "RStudio"
-  icon          = "/icon/rstudio.svg"
-  url           = "http://localhost:8788/@${data.coder_workspace_owner.me.name}/${lower(data.coder_workspace.me.name)}.coder/apps/rstudio/"
+module "rstudio-server" {
+  source = "./rstudio-server"
+  agent_id = coder_agent.coder.id
+  slug = "rstudio-server"
+  display_name  = "RStudio IDE"
   subdomain = false
-  share     = "${data.coder_parameter.appshare.value}"
-
-  healthcheck {
-    url       = "http://localhost:8788/healthz"
-    interval  = 3
-    threshold = 10
-  } 
 }
 
 resource "kubernetes_pod" "main" {
@@ -240,6 +149,7 @@ resource "kubernetes_pod" "main" {
     namespace = var.workspaces_namespace
   }
   spec {
+
     security_context {
       run_as_user = "1000"
       fs_group    = "1000"
