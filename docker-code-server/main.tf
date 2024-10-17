@@ -9,17 +9,22 @@ terraform {
   }
 }
 
-locals {
-  folder_name = try(element(split("/", data.coder_parameter.repo.value), length(split("/", data.coder_parameter.repo.value)) - 1), "")  
-  repo_owner_name = try(element(split("/", data.coder_parameter.repo.value), length(split("/", data.coder_parameter.repo.value)) - 2), "")    
+variable "default_registry" {
+    type = string
+    description = "The default docker image registry to use."
+    default = "index.docker.io"
 }
 
-
-
-data "coder_workspace" "me" {
-}
-
-data "coder_workspace_owner" "me" {
+variable registry_auth {
+  # Cannot be list, must be string: https://coder.com/docs/templates/variables
+  # Uses registry_auth nested schema: https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#nested-schema-for-registry_auth
+  type = string
+  description = <<-EOF
+  List of registry auths for your docker provider.
+  
+  e.g., "[{\"username\": \"User1\", \"password\": \"ABCD1234\"}]"
+  EOF
+  default = "[]"
 }
 
 variable "socket" {
@@ -35,13 +40,6 @@ variable "socket" {
   default = "unix:///var/run/docker.sock"
 }
 
-provider "docker" {
-  host = var.socket
-}
-
-provider "coder" {
-}
-
 data "coder_parameter" "image" {
   name        = "Container Image"
   type        = "string"
@@ -55,11 +53,6 @@ data "coder_parameter" "image" {
     value = "codercom/enterprise-node:ubuntu"
     icon = "https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png"
   }
-  option {
-    name = "Golang"
-    value = "docker.io/marktmilligan/go:1.22.1"
-    icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1200px-Go_Logo_Blue.svg.png"
-  } 
   option {
     name = "Java"
     value = "codercom/enterprise-java:ubuntu"
@@ -123,11 +116,6 @@ data "coder_parameter" "extension" {
     icon = "https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png"
   }
   option {
-    name = "Golang"
-    value = "golang.go"
-    icon = "https://cdn.worldvectorlogo.com/logos/golang-gopher.svg"
-  } 
-  option {
     name = "Python"
     value = "ms-python.python"
     icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
@@ -145,25 +133,66 @@ data "coder_parameter" "extension" {
   order       = 3             
 }
 
-data "coder_parameter" "dotfiles_url" {
-  name        = "Dotfiles URL (optional)"
-  description = "Personalize your workspace e.g., https://github.com/coder/example-dotfiles.git"
-  type        = "string"
-  default     = ""
-  mutable     = true 
-  icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-  order       = 4
+
+locals {
+    folder_name = try(element(split("/", data.coder_parameter.repo.value), length(split("/", data.coder_parameter.repo.value)) - 1), "")  
+    repo_owner_name = try(element(split("/", data.coder_parameter.repo.value), length(split("/", data.coder_parameter.repo.value)) - 2), "")
+    
+    registry_auth = toset([for auth in jsondecode(var.registry_auth): {
+        address = lookup(auth, "address", var.default_registry)
+        auth_disabled = lookup(auth, "auth_disabled", null)
+        config_file = lookup(auth, "config_file", null)
+        config_file_content = lookup(auth, "config_file_content", null)
+        password = lookup(auth, "password", null)
+        username = lookup(auth, "username", null)
+    }])
+}
+
+provider "coder" {}
+
+provider "docker" {
+  host = var.socket
+
+  dynamic "registry_auth" {
+    for_each = local.registry_auth
+
+    content {
+      address = registry_auth.value["address"]
+      auth_disabled = registry_auth.value["auth_disabled"]
+      config_file = registry_auth.value["config_file"]
+      config_file_content = registry_auth.value["config_file_content"]
+      password = registry_auth.value["password"]
+      username = registry_auth.value["username"]
+    }
+  }
+}
+
+module "code-server" {
+  count    = data.coder_workspace.me.start_count
+  source   = "registry.coder.com/modules/code-server/coder"
+  version  = "1.0.18"
+  agent_id = coder_agent.dev.id
+  extensions = [ data.coder_parameter.extension.value ]
+  auto_install_extensions = true
+}
+
+module "dotfiles" {
+  source               = "registry.coder.com/modules/dotfiles/coder"
+  version              = "1.0.18"
+  agent_id             = coder_agent.dev.id
+  default_dotfiles_uri = "https://github.com/coder/example-dotfiles.git"
+}
+
+module "git-clone" {
+  source   = "registry.coder.com/modules/git-clone/coder"
+  version  = "1.0.18"
+  agent_id = coder_agent.dev.id
+  url      = data.coder_parameter.repo.value
 }
 
 resource "coder_agent" "dev" {
   arch           = "amd64"
   os             = "linux"
-
-  # The following metadata blocks are optional. They are used to display
-  # information about your workspace in the dashboard. You can remove them
-  # if you don't want to display any information.
-  # For basic resources, you can use the `coder stat` command.
-  # If you need more control, you can write your own script.
 
   metadata {
     display_name = "CPU Usage"
@@ -199,71 +228,18 @@ resource "coder_agent" "dev" {
 
   startup_script_behavior = "blocking"
   connection_timeout = 300  
-  startup_script  = <<EOT
-#!/bin/bash
-
-# install and code-server, VS Code in a browser 
-curl -fsSL https://code-server.dev/install.sh | sh -s -- --method=standalone --prefix=/tmp/code-server
-/tmp/code-server/bin/code-server --auth none --port 13337 >/dev/null 2>&1 &
-
-# use coder CLI to clone and install dotfiles
-if [[ ! -z "${data.coder_parameter.dotfiles_url.value}" ]]; then
-  coder dotfiles -y ${data.coder_parameter.dotfiles_url.value}
-fi
-
-# install VS Code extension into coder technologies' code-server from openvsx's marketplace
-SERVICE_URL=https://open-vsx.org/vscode/gallery ITEM_URL=https://open-vsx.org/vscode/item /tmp/code-server/bin/code-server --install-extension ${data.coder_parameter.extension.value} >/dev/null 2>&1 &
-
-# clone repo
-
-echo "folder_name: ${local.folder_name}"
-echo "repo_name: ${local.repo_owner_name}"
-
-if test -z "${data.coder_parameter.repo.value}" 
-then
-  echo "No git repo specified, skipping"
-else
-  if [ ! -d "${local.folder_name}" ] 
-  then  
-    echo "Cloning git repo..."
-    git clone ${data.coder_parameter.repo.value}
-  else
-    echo "directory and repo ${local.folder_name} exists, so skipping clone"
-  fi
-fi
-
-  EOT  
 }
 
-# coder technologies' code-server
-resource "coder_app" "coder-code-server" {
-  agent_id = coder_agent.dev.id
-  slug          = "coder"  
-  display_name  = "code-server"
-  url      = "http://localhost:13337"
-  icon     = "/icon/code.svg"
-  subdomain = false
-  share     = "owner"
+data "coder_workspace" "me" {}
 
-  healthcheck {
-    url       = "http://localhost:13337/healthz"
-    interval  = 5
-    threshold = 15
-  }  
-}
+data "coder_workspace_owner" "me" {}
 
 resource "docker_container" "workspace" {
   count = data.coder_workspace.me.start_count
   image = data.coder_parameter.image.value
-  # Uses lower() to avoid Docker restriction on container names.
   name     = "coder-${data.coder_workspace_owner.me.name}-${lower(data.coder_workspace.me.name)}"
   hostname = lower(data.coder_workspace.me.name)
   dns      = ["1.1.1.1"] 
-
-  # Use the docker gateway if the access URL is 127.0.0.1
-  #entrypoint = ["sh", "-c", replace(coder_agent.dev.init_script, "127.0.0.1", "host.docker.internal")]
-
-  # Use the docker gateway if the access URL is 127.0.0.1
   command = [
     "sh", "-c",
     <<EOT
@@ -271,8 +247,6 @@ resource "docker_container" "workspace" {
     ${replace(coder_agent.dev.init_script, "/localhost|127\\.0\\.0\\.1/", "host.docker.internal")}
     EOT
   ]
-
-
   env        = ["CODER_AGENT_TOKEN=${coder_agent.dev.token}"]
   volumes {
     container_path = "/home/coder/"
