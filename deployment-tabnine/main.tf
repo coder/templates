@@ -323,9 +323,6 @@ resource "kubernetes_deployment" "main" {
       }
    
       spec {
-        image_pull_secrets {
-          name = "jfrog-secret"
-        }
         security_context {
           run_as_user = "1000"
           fs_group    = "1000"
