@@ -65,39 +65,34 @@ module "jetbrains_gateway" {
   version        = "1.0.13"
   agent_id       = coder_agent.coder.id
   agent_name     = "coder"
-  folder         = "/home/coder/example"
+  folder         = "/home/coder"
   jetbrains_ides = ["IU", "GO", "PY", "PS", "RM", "RD", "CL", "WS"]
   default        = "IU"
   latest         = true
   channel        = "eap"
 }
 
-data "coder_parameter" "cpu" {
-  name        = "CPU cores"
-  type        = "number"
-  description = "CPU cores for your individual workspace"
-  icon        = "https://png.pngtree.com/png-clipart/20191122/original/pngtree-processor-icon-png-image_5165793.jpg"
-  validation {
-    min       = 1
-    max       = 4
-  }
-  mutable     = true
-  default     = 2
-  order       = 1  
+module "code-server" {
+  source   = "registry.coder.com/modules/code-server/coder"
+  version  = "1.0.18"
+  agent_id = coder_agent.coder.id
+  slug = "code-server"
+  display_name  = "code-server"
+  subdomain = false
 }
 
-data "coder_parameter" "memory" {
-  name        = "Memory (__ GB)"
-  type        = "number"
-  description = "Memory (__ GB) for your individual workspace"
-  icon        = "https://www.vhv.rs/dpng/d/33-338595_random-access-memory-logo-hd-png-download.png"
-  validation {
-    min       = 8
-    max       = 16
-  }
-  mutable     = true
-  default     = 8
-  order       = 2  
+module "dotfiles" {
+  source               = "registry.coder.com/modules/dotfiles/coder"
+  version              = "1.0.18"
+  agent_id             = coder_agent.coder.id
+  default_dotfiles_uri = "https://github.com/coder/example-dotfiles.git"
+}
+
+module "git-clone" {
+  source   = "registry.coder.com/modules/git-clone/coder"
+  version  = "1.0.18"
+  agent_id = coder_agent.coder.id
+  url      = data.coder_parameter.repo.value
 }
 
 data "coder_parameter" "image" {
@@ -113,6 +108,21 @@ data "coder_parameter" "image" {
     value = "codercom/enterprise-java:ubuntu"
     icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
   } 
+  option {
+    name = "Node"
+    value = "codercom/enterprise-node:ubuntu"
+    icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
+  } 
+  option {
+    name = "GoLang"
+    value = "codercom/enterprise-golang:ubuntu"
+    icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
+  } 
+  option {
+    name = "Python"
+    value = "codercom/enterprise-base:ubuntu"
+    icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
+  } 
   order       = 4      
 }
 
@@ -122,36 +132,39 @@ data "coder_parameter" "repo" {
   description = "What source code repository do you want to clone?"
   mutable     = true
   icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-  default     = "https://github.com/coder/java_helloworld"
+  default     = "https://github.com/jatcod3r/java_helloworld"
 
   option {
+    name = "coder-react"
+    value = "https://github.com/coder/coder-react"
+    icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+  }
+  option {
+    name = "Coder v2 OSS project"
+    value = "https://github.com/coder/coder"
+    icon = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
+  }  
+  option {
+    name = "Coder code-server project"
+    value = "https://github.com/coder/code-server"
+    icon = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
+  }
+  option {
     name = "Java Hello, World! command line app"
-    value = "https://github.com/coder/java_helloworld"
+    value = "https://github.com/jatcod3r/java_helloworld"
     icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
   }  
+  option {
+    name = "Python command line app"
+    value = "https://github.com/coder/python_commissions"
+    icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
+  }
   order       = 5     
-}
-
-data "coder_parameter" "dotfiles_url" {
-  name        = "Dotfiles URL (optional)"
-  description = "Personalize your workspace e.g., https://github.com/coder/example-dotfiles.git"
-  type        = "string"
-  default     = ""
-  mutable     = true 
-  icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-  order       = 7
 }
 
 resource "coder_agent" "coder" {
   os             = "linux"
   arch           = "amd64"
- # startup_script = <<-EOT
- #    set -e
- #
-    # install and start code-server
- #   curl -fsSL https://code-server.dev/install.sh | sh -s -- --method=standalone --prefix=/tmp/code-server --version 4.11.0
- #   /tmp/code-server/bin/code-server --auth none --port 13337 >/tmp/code-server.log 2>&1 &
- # EOT
 
   # The following metadata blocks are optional. They are used to display
   # information about your workspace in the dashboard. You can remove them
@@ -219,53 +232,7 @@ resource "coder_agent" "coder" {
     
   dir = "/home/coder"
   startup_script_behavior = "blocking"
-  startup_script = <<EOT
-
-# clone repo selected by user
-if test -z "${data.coder_parameter.repo.value}" 
-then
-  echo "No git repo specified, skipping"
-else
-  if [ ! -d "${local.folder_name}" ] 
-  then
-    echo "Cloning git repo..."
-    git clone ${data.coder_parameter.repo.value}
-  else
-    echo "Repo ${data.coder_parameter.repo.value} already exists. Will not reclone"
-  fi
-  cd ${local.folder_name}
-fi
-
-# install and code-server, VS Code in a browser 
-#curl -fsSL https://code-server.dev/install.sh | sh
-#code-server --auth none --port 13337 >/dev/null 2>&1 &
-
-# use coder CLI to clone and install dotfiles
-if [[ ! -z "${data.coder_parameter.dotfiles_url.value}" ]]; then
-  coder dotfiles -y ${data.coder_parameter.dotfiles_url.value}
-fi
-
-coder login ${data.coder_workspace.me.access_url} --token ${data.coder_workspace_owner.me.session_token}
-
-  EOT  
 }
-
-# code-server
-#resource "coder_app" "code-server" {
-#  agent_id      = coder_agent.coder.id
-#  slug          = "code-server"  
-#  display_name  = "code-server"
-#  icon          = "/icon/code.svg"
-#  url           = "http://localhost:13337?folder=/home/coder"
-#  subdomain = false
-#  share     = "owner"
-#
-#  healthcheck {
-#    url       = "http://localhost:13337/healthz"
-#    interval  = 3
-#    threshold = 10
-#  }  
-#}
 
 resource "kubernetes_pod" "main" {
   count = data.coder_workspace.me.start_count
@@ -297,10 +264,10 @@ resource "kubernetes_pod" "main" {
         requests = {
           cpu    = "250m"
           memory = "500Mi"
-        }        
+        }
         limits = {
-          cpu    = "${data.coder_parameter.cpu.value}"
-          memory = "${data.coder_parameter.memory.value}G"
+          cpu    = "4"
+          memory = "8G"
         }
       }                       
       volume_mount {
