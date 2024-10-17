@@ -13,8 +13,6 @@ tags: [cloud, kubernetes]
 1. A web-based terminal
 1. JetBrains IDE (accessible with SSH and JetBrains Gateway)
 
-### JetBrains IDE images to choose from
-1. [PyCharm Professional](https://www.jetbrains.com/pycharm/download/) [Dockerfile](https://github.com/sharkymark/dockerfiles/blob/main/pycharm/pycharm-pro/Dockerfile)
 
 ### Additional bash scripting
 1. Prompt user and clone/install a dotfiles repository (for personalization settings)

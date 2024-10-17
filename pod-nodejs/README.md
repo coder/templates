@@ -27,10 +27,6 @@ Node.js `20.10.0`
 npm `10.2.3`
 yarn `1.22.19`
 
-[Dockerfile](https://github.com/sharkymark/dockerfiles/blob/main/node/nodesource-method/Dockerfile)
-[Container image](https://hub.docker.com/repository/docker/marktmilligan/node/tags)
-
-
 ### GitHub OAuth Admin Setup
 
 1. Create an OAuth app in GitHub with correct URL and Callback URLs to your Coder deployment
