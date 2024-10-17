@@ -42,8 +42,6 @@ module "vscode" {
   agent_id = coder_agent.coder.id
 }
 
-
-
 variable "workspaces_namespace" {
   description = <<-EOF
   Kubernetes namespace to deploy the workspace into
@@ -130,7 +128,7 @@ data "coder_parameter" "image" {
   } 
   option {
     name = "Base including Python"
-    value = "docker.io/codercom/enterprise-base:ubuntu"
+    value = "codercom/enterprise-base:ubuntu"
     icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
   }  
   order       = 4      
@@ -282,10 +280,6 @@ else
   cd ${local.folder_name}
 fi
 
-# install and code-server, VS Code in a browser 
-#curl -fsSL https://code-server.dev/install.sh | sh
-#code-server --auth none --port 13337 >/dev/null 2>&1 &
-
 # use coder CLI to clone and install dotfiles
 if [[ ! -z "${data.coder_parameter.dotfiles_url.value}" ]]; then
   coder dotfiles -y ${data.coder_parameter.dotfiles_url.value}
@@ -296,23 +290,6 @@ coder login ${data.coder_workspace.me.access_url} --token ${data.coder_workspace
 
   EOT  
 }
-
-# code-server
-#resource "coder_app" "code-server" {
-#  agent_id      = coder_agent.coder.id
-#  slug          = "code-server"  
-#  display_name  = "code-server"
-#  icon          = "/icon/code.svg"
-#  url           = "http://localhost:13337?folder=/home/coder"
-#  subdomain = false
-#  share     = "owner"
-#
-#  healthcheck {
-#    url       = "http://localhost:13337/healthz"
-#    interval  = 3
-#    threshold = 10
-#  }  
-#}
 
 resource "kubernetes_pod" "main" {
   count = data.coder_workspace.me.start_count
