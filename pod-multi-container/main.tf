@@ -17,7 +17,7 @@ locals {
   memory-request = "500m" 
   home-volume = "10Gi"
   repo = "https://github.com/gmhafiz/go8.git"
-  golang-image = "docker.io/codercom/enterprise-golang:ubuntu"
+  golang-image = "codercom/enterprise-golang:ubuntu"
   postgres-image = "docker.io/marktmilligan/postgres:13"  
   dbeaver-image = "docker.io/dbeaver/cloudbeaver:latest"    
   pgadmin-image = "docker.io/dpage/pgadmin4:latest"    

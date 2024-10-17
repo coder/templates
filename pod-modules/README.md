@@ -1,7 +1,10 @@
 ---
-name: Develop in a container in a Kubernetes pod and use Terraform modules
-description: The goal is to use Terraform modules so code is reusable across templates
-tags: [cloud, kubernetes]
+display_name: Kubernetes (Multi-Modules)
+description: Demonstrates using multiple and reusable Coder-supported Terraform modules.
+icon: ../../../site/static/icon/k8s.png
+maintainer_github: coder
+verified: true
+tags: [container, kubernetes]
 ---
 
 # Use Terraform modules to build a container workspace in a Kubernetes pod
@@ -23,9 +26,7 @@ tags: [cloud, kubernetes]
 1. NodeJS
 1. Golang
 1. Java
-1. Base (for Rust and Python)
-
-> Note that Rust is installed during the startup script for `~/` configuration
+1. Base (for Python)
 
 ### Terraform modules
 
@@ -64,11 +65,7 @@ Be sure to specify the workspaces_namespace variable during workspace creation t
 
 [Coder's code-server TypeScript repo](https://github.com/coder/code-server)
 
-[Golang command line repo](https://github.com/sharkymark/commissions)
-
 [Java Hello World repo](https://github.com/coder/java_helloworld)
-
-[Rust repo](https://github.com/coder/rust-hw)
 
 [Python repo](https://github.com/coder/python_commissions)
 

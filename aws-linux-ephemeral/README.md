@@ -1,8 +1,10 @@
 ---
-name: Develop in Linux on AWS EC2 (Ephemeral, Persistent Home)
+display_name: Develop in Linux on AWS EC2 (Ephemeral, Persistent Home)
 description: Get started with Linux development on AWS EC2 where only the home volume is persisted.
-tags: [cloud, aws]
-icon: /icon/aws.png
+icon: ../../../site/static/icon/aws.svg
+maintainer_github: coder
+verified: true
+tags: [vm, linux, aws]
 ---
 
 # aws-linux-ephemeral

@@ -1,7 +1,10 @@
 ---
-name: Develop in a container in a Docker host with Coder and Microsoft's code-server
-description: The goal is to enable Coder and Microsoft's code-server (VS Code Web) 
-tags: [local, docker]
+display_name: Docker (Code-Server)
+description: Deploys Coder and Microsoft's code-server (VS Code Web) in a container
+icon: ../../../site/static/icon/docker.svg
+maintainer_github: coder
+verified: true
+tags: [docker, container]
 ---
 
 # code-server (VS Code) template for a workspace in a container on a Docker host
@@ -36,11 +39,7 @@ tags: [local, docker]
 
 [Coder's code-server TypeScript repo](https://github.com/coder/code-server)
 
-[Golang command line repo](https://github.com/sharkymark/commissions)
-
 [Java Hello World repo](https://github.com/coder/java_helloworld)
-
-[Rust repo](https://github.com/coder/rust-hw)
 
 [Python repo](https://github.com/coder/python_commissions)
 

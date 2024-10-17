@@ -38,7 +38,7 @@ variable "use_kubeconfig" {
   default     = false
 }
 
-variable "namespace" {
+variable "workspaces_namespace" {
   type        = string
   default     = "default"
   description = "The Kubernetes namespace to create workspaces in (must exist prior to creating workspaces). If the Coder host is itself running as a Pod on the same Kubernetes cluster as you are deploying workspaces to, set this to the same namespace."
@@ -143,7 +143,7 @@ data "kubernetes_secret" "cache_repo_dockerconfig_secret" {
   count = var.cache_repo_secret_name == "" ? 0 : 1
   metadata {
     name      = var.cache_repo_secret_name
-    namespace = var.namespace
+    namespace = var.workspaces_namespace
   }
 }
 
@@ -189,7 +189,7 @@ resource "envbuilder_cached_image" "cached" {
 resource "kubernetes_persistent_volume_claim" "workspaces" {
   metadata {
     name      = "coder-${lower(data.coder_workspace.me.id)}-workspaces"
-    namespace = var.namespace
+    namespace = var.workspaces_namespace
     labels = {
       "app.kubernetes.io/name"     = "coder-${lower(data.coder_workspace.me.id)}-workspaces"
       "app.kubernetes.io/instance" = "coder-${lower(data.coder_workspace.me.id)}-workspaces"
@@ -225,7 +225,7 @@ resource "kubernetes_deployment" "main" {
   wait_for_rollout = false
   metadata {
     name      = local.deployment_name
-    namespace = var.namespace
+    namespace = var.workspaces_namespace
     labels = {
       "app.kubernetes.io/name"     = "coder-workspace"
       "app.kubernetes.io/instance" = local.deployment_name

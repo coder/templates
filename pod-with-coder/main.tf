@@ -320,7 +320,7 @@ resource "kubernetes_pod" "main" {
     }    
     container {
       name    = "coder-container"
-      image   = "docker.io/${data.coder_parameter.image.value}"
+      image   = data.coder_parameter.image.value
       image_pull_policy = "Always"
       command = ["sh", "-c", coder_agent.coder.init_script]
       security_context {
@@ -375,7 +375,7 @@ resource "coder_metadata" "workspace_info" {
   resource_id = kubernetes_pod.main[0].id
   item {
     key   = "image"
-    value = "${data.coder_parameter.image.value}"
+    value = data.coder_parameter.image.value
   }
   item {
     key   = "repo cloned"

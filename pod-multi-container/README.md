@@ -1,7 +1,10 @@
 ---
-name: Develop with 4 containers in a Kubernetes pod including PostgresSQL
-description: The goal is to enable 4 containers, Postgres, Go, DBeaver amd pgAdmin in a K8s pod 
-tags: [cloud, kubernetes]
+display_name: Kubernetes (Multi-Container)
+description: "Demonstrates using 4 containers: Postgres, Go, DBeaver amd pgAdmin in a K8s pod"
+icon: ../../../site/static/icon/k8s.svg
+maintainer_github: coder
+verified: true
+tags: [container, kubernetes]
 ---
 
 # 4 containers in a Kubernetes pod

@@ -1,7 +1,10 @@
 ---
-name: Run dockerd in a Kubernetes pod
+display_name: Envbox with dockerd
 description: Alternative to unprotected dockerd side-cars or sysbox on the host nodes
-tags: [cloud, kubernetes]
+icon: ../../../site/static/icon/aws.svg
+maintainer_github: coder
+verified: true
+tags: [kubernetes, container]
 ---
 
 # Kubernetes pod with a privileged container running dockerd

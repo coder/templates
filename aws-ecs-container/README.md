@@ -2,8 +2,8 @@
 display_name: ECS Containers
 description: Provision ECS containers as Coder workspaces
 icon: ../.icons/aws.svg
-maintainer_github: ericpaulsen
-verified: false
+maintainer_github: coder
+verified: true
 tags: [aws, container]
 ---
 

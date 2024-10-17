@@ -66,12 +66,12 @@ data "coder_parameter" "image" {
   type        = "string"
   description = "What container image and language do you want?"
   mutable     = true
-  default     = "marktmilligan/node:20.10.0"
+  default     = "codercom/enterprise-node:ubuntu"
   icon        = "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
 
   option {
     name = "Node.JS"
-    value = "marktmilligan/node:20.10.0"
+    value = "codercom/enterprise-node:ubuntu"
     icon = "https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png"
   }
   option {
@@ -215,7 +215,7 @@ fi
 
 resource "docker_container" "workspace" {
   count = data.coder_workspace.me.start_count
-  image = "${data.coder_parameter.image.value}"
+  image = data.coder_parameter.image.value
   # Uses lower() to avoid Docker restriction on container names.
   name     = "coder-${data.coder_workspace_owner.me.name}-${lower(data.coder_workspace.me.name)}"
   hostname = lower(data.coder_workspace.me.name)
@@ -255,7 +255,7 @@ resource "coder_metadata" "workspace_info" {
   resource_id = docker_container.workspace[0].id   
   item {
     key   = "image"
-    value = "${data.coder_parameter.image.value}"
+    value = data.coder_parameter.image.value
   }
   item {
     key   = "repo cloned"

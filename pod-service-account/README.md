@@ -1,7 +1,10 @@
 ---
-name: K8s template injecting host, ca cert and service account token
-description: Use a Kubernetes cluster outside of the Coder control plane to create a pod workspace
-tags: [cloud, kubernetes]
+display_name: Kubernetes (with Kubernetes)
+description: Uses a K8s cluster outside of the Coder control plane to create a pod workspace
+icon: ../../../site/static/icon/k8s.png
+maintainer_github: coder
+verified: true
+tags: [container, kubernetes]
 ---
 
 # Kubernetes pod on a cluster outside of Coder

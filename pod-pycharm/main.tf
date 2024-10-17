@@ -15,11 +15,9 @@ locals {
   cpu-request = "500m"
   memory-request = "1" 
   home-volume = "10Gi"
-  repo-owner = "docker.io/marktmilligan"
   repo = "https://github.com/sharkymark/" 
   repo-name = "python_commissions"  
-  #image = "pycharm-pro:2022.3.2"
-  image = "pycharm-pro:2023.1"  
+  image = "docker.io/marktmilligan/pycharm-pro:2023.1"  
 }
 
 provider "coder" {
@@ -168,7 +166,7 @@ resource "kubernetes_pod" "main" {
     }    
     container {
       name    = "coder-container"
-      image   = "${local.repo-owner}/${local.image}"
+      image   = local.image
       image_pull_policy = "Always"
       command = ["sh", "-c", coder_agent.coder.init_script]
       security_context {

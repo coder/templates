@@ -1,7 +1,10 @@
 ---
-name: Develop with JetBrains PyCharm Professional in a Kubernetes pod
-description: The goal is to enable a PyCharm Professional container that JetBrains Gateway can connect to 
-tags: [cloud, kubernetes]
+display_name: Kubernetes (JetBrains PyCharm)
+description: Demonstrates a PyCharm Professional container for JetBrains Gateway
+icon: ../../../site/static/icon/pycharm.svg
+maintainer_github: coder
+verified: true
+tags: [container, kubernetes]
 ---
 
 # IntelliJ PyCharm Professional & JetBrains Gateway template for a workspace in a Kubernetes pod

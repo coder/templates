@@ -16,7 +16,7 @@ locals {
   memory-request = "500Mi" 
   home-volume = "10Gi"
   image = "codercom/enterprise-jupyter:ubuntu"
-  repo = "docker.io/sharkymark/pandas_automl.git"
+  repo = "https://github.com/sharkymark/pandas_automl.git"
 }
 
 provider "coder" {
@@ -47,7 +47,7 @@ variable "workspaces_namespace" {
 
 data "coder_parameter" "dotfiles_url" {
   name        = "Dotfiles URL (optional)"
-  description = "Personalize your workspace e.g., git@github.com:coder/dotfiles.git"
+  description = "Personalize your workspace e.g., https://github.com/coder/dotfiles.git"
   type        = "string"
   default     = ""
   mutable     = true 
@@ -154,7 +154,7 @@ pip3 install --user pandas &
 if [ ! -d "pandas_automl" ]; then
   mkdir -p ~/.ssh
   ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-  git clone --progress https://github.com/coder/pandas_automl.git &
+  git clone --progress ${local.repo} &
 fi
 
 # install and code-server, VS Code in a browser 

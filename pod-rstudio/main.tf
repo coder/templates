@@ -15,7 +15,7 @@ locals {
   cpu-request = "500m"
   memory-request = "1G" 
   home-volume = "10Gi"
-  image = "docker.io/marktmilligan/rstudio:no-args"
+  image = "docker.io/jatcod3r/coder-rstudio:latest"
 }
 
 provider "coder" {
@@ -134,14 +134,55 @@ resource "coder_agent" "coder" {
 
   dir = "/home/coder"
   startup_script = <<EOT
-#!/bin/bash
+#!/bin/sh
 
 # install code-server
-curl -fsSL https://code-server.dev/install.sh | sh 
+curl -fsSL https://code-server.dev/install.sh | sh
 code-server --auth none --port 13337 >/dev/null 2>&1 &
 
-# start rstudio
-/usr/lib/rstudio-server/bin/rserver --server-daemonize=1 --auth-none=1 >/dev/null 2>&1 &
+cat <<EOF > /home/coder/.nginx.conf
+  user www-data;
+  worker_processes auto;
+  pid /run/nginx.pid;
+
+  events {
+      worker_connections 768;
+  }
+
+  http {
+    map \$http_upgrade \$connection_upgrade {
+      default upgrade;
+      ''      close;
+    }
+
+    server {
+      listen 8788;
+
+      client_max_body_size 0; # Disables checking of client request body size
+
+      location /@${data.coder_workspace_owner.me.name}/${lower(data.coder_workspace.me.name)}.coder/apps/rstudio/ {
+          rewrite ^/@${data.coder_workspace_owner.me.name}/${lower(data.coder_workspace.me.name)}.coder/apps/rstudio/(.*)\$ /\$1 break;
+          proxy_set_header X-RSC-Request \$scheme://\$http_host\$request_uri;
+          proxy_pass http://localhost:8787;
+          proxy_redirect / /@${data.coder_workspace_owner.me.name}/${lower(data.coder_workspace.me.name)}.coder/apps/rstudio/;
+          proxy_set_header Upgrade \$http_upgrade;
+          proxy_set_header Connection \$connection_upgrade;
+          proxy_http_version 1.1;
+          proxy_set_header X-RStudio-Root-Path /@${data.coder_workspace_owner.me.name}/${lower(data.coder_workspace.me.name)}.coder/apps/rstudio;
+          proxy_set_header Host \$host;
+      }
+      location /healthz {
+          return 200;
+      }
+    }
+  }
+EOF
+
+echo "Starting RStudio Server..."
+rstudio-server start >/dev/null 2>&1 &
+
+echo "Starting NGINX..."
+sudo nginx -c /home/coder/.nginx.conf >/dev/null 2>&1 &
 
 # clone repo
 if [ ! -d "connect-examples" ]; then
@@ -152,11 +193,10 @@ if [ ! -d "shiny-examples" ]; then
 fi
 
 # use coder CLI to clone and install dotfiles
-if [[ ! -z "${data.coder_parameter.dotfiles_url.value}" ]]; then
-  coder dotfiles -y ${data.coder_parameter.dotfiles_url.value}
+if [ ! -z "${data.coder_parameter.dotfiles_url.value}" ]; then
+  coder dotfiles -y ${data.coder_parameter.dotfiles_url.value} &
 fi
-
-EOT
+  EOT
 }
 
 # code-server
@@ -182,12 +222,12 @@ resource "coder_app" "rstudio" {
   slug          = "rstudio"  
   display_name  = "RStudio"
   icon          = "/icon/rstudio.svg"
-  url           = "http://localhost:8787"
-  subdomain = true
+  url           = "http://localhost:8788/@${data.coder_workspace_owner.me.name}/${lower(data.coder_workspace.me.name)}.coder/apps/rstudio/"
+  subdomain = false
   share     = "${data.coder_parameter.appshare.value}"
 
   healthcheck {
-    url       = "http://localhost:8787/healthz"
+    url       = "http://localhost:8788/healthz"
     interval  = 3
     threshold = 10
   } 

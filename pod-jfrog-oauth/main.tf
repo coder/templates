@@ -181,11 +181,6 @@ data "coder_parameter" "repo" {
     icon = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
   }
   option {
-    name = "Golang command line app"
-    value = "https://github.com/sharkymark/commissions"
-    icon = "https://cdn.worldvectorlogo.com/logos/golang-gopher.svg"
-  }
-  option {
     name = "Java Hello, World! command line app"
     value = "https://github.com/coder/java_helloworld"
     icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
@@ -195,11 +190,6 @@ data "coder_parameter" "repo" {
     value = "https://github.com/coder/python_commissions"
     icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
   }
-  option {
-    name = "Shark's rust sample apps"
-    value = "https://github.com/coder/rust-hw"
-    icon = "https://rustacean.net/assets/cuddlyferris.svg"
-  }     
 }
 
 resource "coder_agent" "coder" {
@@ -270,7 +260,7 @@ resource "kubernetes_pod" "main" {
     }    
     container {
       name    = "coder-container"
-      image   = "docker.io/${data.coder_parameter.image.value}"
+      image   = data.coder_parameter.image.value
       image_pull_policy = "Always"
       command = ["sh", "-c", coder_agent.coder.init_script]
       security_context {
@@ -325,7 +315,7 @@ resource "coder_metadata" "workspace_info" {
   resource_id = kubernetes_pod.main[0].id
   item {
     key   = "image"
-    value = "${data.coder_parameter.image.value}"
+    value = data.coder_parameter.image.value
   }
   item {
     key   = "repo cloned"

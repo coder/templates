@@ -99,21 +99,6 @@ resource "coder_agent" "dev" {
   connection_timeout = 300  
   startup_script  = <<EOT
 #!/bin/bash
-
-# start VNC
-# based on custom container images:
-# https://hub.docker.com/r/marktmilligan/intellij-idea-community-vnc
-#
-# Dockerfile:
-# https://github.com/sharkymark/dockerfiles/blob/main/intellij-idea/vnc/Dockerfile
-#
-# parent container image is noVNC and TurboVNC
-# https://hub.docker.com/r/marktmilligan/vnc
-# tags:
-# coder-v2
-#
-# Dockerfile:
-# https://github.com/sharkymark/dockerfiles/tree/main/vnc
 /coder/start_vnc >/dev/null 2>&1 
 
 # use coder CLI to clone and install dotfiles
@@ -193,7 +178,7 @@ resource "coder_metadata" "workspace_info" {
   resource_id = docker_container.workspace[0].id   
   item {
     key   = "image"
-    value = "${local.image}"
+    value = local.image
   }
   item {
     key   = "repo cloned"
