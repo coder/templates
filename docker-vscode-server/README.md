@@ -3,8 +3,8 @@ display_name: Docker (Microsoft VS Code Server)
 description: Develop in a container in a Docker host with Coder and Microsoft's VS Code Server
 icon: ../../../site/static/icon/docker.svg
 maintainer_github: coder
-verified: true
-tags: [container, docker]
+verified: false
+tags: [local, docker]
 ---
 
 # VS Code Server template for a workspace in a container on a Docker host
@@ -25,11 +25,9 @@ tags: [container, docker]
 1. Microsoft's code-server installs from [Microsoft](https://marketplace.visualstudio.com/)
 
 ### Resources
-[NodeJS coder-react repo](https://github.com/mark-theshark/coder-react)
+[NodeJS coder-react repo](https://github.com/coder/coder-react)
 
 [Microsoft VS Code Server home page](https://code.visualstudio.com/docs/remote/vscode-server)
-
-[Coder's GoLang v2 repo](https://github.com/coder/coder)
 
 [Coder's code-server TypeScript repo](https://github.com/coder/code-server)
 

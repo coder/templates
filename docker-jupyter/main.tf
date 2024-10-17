@@ -15,7 +15,25 @@ locals {
   cpu-request = "500m"
   memory-request = "500Mi" 
   home-volume = "10Gi"
-  image = "docker.io/marktmilligan/jupyter:latest"
+  image = "codercom/enterprise-base:ubuntu"
+}
+
+variable "default_registry" {
+    type = string
+    description = "The default docker image registry to use."
+    default = "index.docker.io"
+}
+
+variable registry_auth {
+  # Cannot be list, must be string: https://coder.com/docs/templates/variables
+  # Uses registry_auth nested schema: https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#nested-schema-for-registry_auth
+  type = string
+  description = <<-EOF
+  List of registry auths for your docker provider.
+  
+  e.g., "[{\"username\": \"User1\", \"password\": \"ABCD1234\"}]"
+  EOF
+  default = "[]"
 }
 
 variable "socket" {
@@ -45,7 +63,6 @@ provider "coder" {
 
 }
 
-
 data "coder_parameter" "jupyter" {
   name        = "Jupyter IDE type"
   type        = "string"
@@ -64,7 +81,7 @@ data "coder_parameter" "jupyter" {
     name = "Jupyter Notebook"
     value = "notebook"
     icon = "https://codingbootcamps.io/wp-content/uploads/jupyter_notebook.png"
-  }       
+  } 
 }
 
 data "coder_parameter" "appshare" {
@@ -93,16 +110,6 @@ data "coder_parameter" "appshare" {
   order       = 2      
 }
 
-data "coder_parameter" "dotfiles_url" {
-  name        = "Dotfiles URL (optional)"
-  description = "Personalize your workspace e.g., https://github.com/coder/example-dotfiles.git"
-  type        = "string"
-  default     = ""
-  mutable     = true 
-  icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-  order       = 3
-}
-
 data "coder_parameter" "marketplace" {
   name        = "VS Code Extension Marketplace"
   type        = "string"
@@ -124,8 +131,72 @@ data "coder_parameter" "marketplace" {
   order       = 4      
 }
 
-locals {
-  jupyter-type-arg = "${data.coder_parameter.jupyter.value == "notebook" ? "Notebook" : "Server"}"
+data "coder_parameter" "repo" {
+  name        = "Source Code Repository"
+  type        = "string"
+  description = "What source code repository do you want to clone?"
+  mutable     = true
+  icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+  default     = "https://github.com/jatcod3r/pandas_automl.git"
+  order       = 5     
+}
+
+data "coder_parameter" "extension" {
+  name        = "VS Code extension"
+  type        = "string"
+  description = "Which VS Code extension do you want?"
+  mutable     = true
+  default     = "ms-python.python"
+  icon        = "/icon/code.svg"
+
+  option {
+    name = "Python"
+    value = "ms-python.python"
+    icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
+  } 
+  option {
+    name = "Jupyter"
+    value = "ms-toolsai.jupyter"
+    icon = "/icon/jupyter.svg"
+  }
+  order       = 6        
+}
+
+module "code-server" {
+  count    = data.coder_workspace.me.start_count
+  source   = "registry.coder.com/modules/code-server/coder"
+  version  = "1.0.18"
+  agent_id = coder_agent.dev.id
+  extensions = [ data.coder_parameter.extension.value ]
+  auto_install_extensions = true
+}
+
+module "dotfiles" {
+  source               = "registry.coder.com/modules/dotfiles/coder"
+  version              = "1.0.18"
+  agent_id             = coder_agent.dev.id
+  default_dotfiles_uri = "https://github.com/coder/example-dotfiles.git"
+}
+
+module "git-clone" {
+  source   = "registry.coder.com/modules/git-clone/coder"
+  version  = "1.0.18"
+  agent_id = coder_agent.dev.id
+  url      = data.coder_parameter.repo.value
+}
+
+module "jupyterlab" {
+  source   = "registry.coder.com/modules/jupyterlab/coder"
+  version  = "1.0.19"
+  agent_id = coder_agent.dev.id
+  count = data.coder_parameter.jupyter.value == "lab" ? 1 : 0
+}
+
+module "jupyterlab-notebook" {
+  source   = "registry.coder.com/modules/jupyter-notebook/coder"
+  version  = "1.0.19"
+  agent_id = coder_agent.dev.id
+  count = data.coder_parameter.jupyter.value == "notebook" ? 1 : 0
 }
 
 resource "coder_agent" "dev" {
@@ -169,79 +240,9 @@ resource "coder_agent" "dev" {
     port_forwarding_helper = false
     web_terminal = true
   }
-
-  env = { 
-    }
   startup_script_behavior = "blocking"
-  startup_script  = <<EOT
-#!/bin/sh
-
-# install code-server
-curl -fsSL https://code-server.dev/install.sh | sh
-code-server --auth none --port 13337 >/dev/null 2>&1 &
-
-# start jupyter 
-jupyter ${data.coder_parameter.jupyter.value} --${local.jupyter-type-arg}App.token='' --ip='*' --${local.jupyter-type-arg}App.base_url=/@${data.coder_workspace_owner.me.name}/${lower(data.coder_workspace.me.name)}/apps/j >/dev/null 2>&1 &
-
-# clone repo
-if [ ! -d "pandas_automl" ]; then
-  git clone --progress https://github.com/coder/pandas_automl.git &
-fi
-
-# install and code-server, VS Code in a browser 
-curl -fsSL https://code-server.dev/install.sh | sh
-code-server --auth none --port 13337 >/dev/null 2>&1 
-
-# marketplace
-if [ "${data.coder_parameter.marketplace.value}" = "ms" ]; then
-  SERVICE_URL=https://marketplace.visualstudio.com/_apis/public/gallery ITEM_URL=https://marketplace.visualstudio.com/items code-server --install-extension ms-toolsai.jupyter 
-  SERVICE_URL=https://marketplace.visualstudio.com/_apis/public/gallery ITEM_URL=https://marketplace.visualstudio.com/items code-server --install-extension ms-python.python 
-else
-  SERVICE_URL=https://open-vsx.org/vscode/gallery ITEM_URL=https://open-vsx.org/vscode/item code-server --install-extension ms-toolsai.jupyter 
-  SERVICE_URL=https://open-vsx.org/vscode/gallery ITEM_URL=https://open-vsx.org/vscode/item code-server --install-extension ms-python.python 
-fi
-
-
-# use coder CLI to clone and install dotfiles
-if [ ! -z "${data.coder_parameter.dotfiles_url.value}" ]; then
-  coder dotfiles -y ${data.coder_parameter.dotfiles_url.value}
-fi
-
-EOT
 }
 
-# code-server
-resource "coder_app" "code-server" {
-  agent_id      = coder_agent.dev.id
-  slug          = "cc"  
-  display_name  = "code-server"
-  icon          = "/icon/code.svg"
-  url           = "http://localhost:13337?folder=/home/coder"
-  share         = "${data.coder_parameter.appshare.value}"
-  subdomain     = false  
-
-  healthcheck {
-    url       = "http://localhost:13337/healthz"
-    interval  = 3
-    threshold = 10
-  }   
-}
-
-resource "coder_app" "jupyter" {
-  agent_id      = coder_agent.dev.id
-  slug          = "j"  
-  display_name  = "jupyter ${data.coder_parameter.jupyter.value}"
-  icon          = "/icon/jupyter.svg"
-  url           = "http://localhost:8888/@${data.coder_workspace_owner.me.name}/${lower(data.coder_workspace.me.name)}/apps/j"
-  share         = "${data.coder_parameter.appshare.value}"
-  subdomain     = false  
-
-  healthcheck {
-    url       = "http://localhost:8888/healthz"
-    interval  = 10
-    threshold = 20
-  }  
-}
 
 resource "docker_container" "workspace" {
   count = data.coder_workspace.me.start_count
