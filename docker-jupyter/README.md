@@ -1,10 +1,10 @@
 ---
-display_name: Docker (JupyterLab)
+display_name: Docker (JupyterLab & Jupyter Notebook)
 description: Run a container with JupyterLab
 icon: ../../../site/static/icon/docker.svg
 maintainer_github: coder
 verified: true
-tags: [container, docker]
+tags: [local, docker, jupyter]
 ---
 
 # JupyterLab template for a workspace in a container on a Docker host
@@ -19,17 +19,10 @@ tags: [container, docker]
 This template uses modules from Coder's registry
 
 1. [Module](https://registry.coder.com/modules/jupyterlab) to install JupyterLab IDE
+1. [Module](https://registry.coder.com/modules/jupyter-notebook) to install Jupyter Notebook IDE
 1. [Module](https://registry.coder.com/modules/code-server) to install code-server IDE and Jupyter and Python extensions
 1. [Module](registry.coder.com/modules/dotfiles/coder) to clone a dotfiles repo for workspace 
 personalization
-
-### Additional scripting
-
-1. add the pandas Python package
-
-```sh
-pip3 install --user pandas &
-```
 
 ### Requirements
 1. A wildcard subdomain must be enabled (either with Coder's default tunnel or you manually configuring it)

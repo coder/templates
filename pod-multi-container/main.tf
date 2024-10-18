@@ -13,12 +13,12 @@ locals {
 
   cpu-limit = "1"
   memory-limit = "1G"
-  cpu-request = "250m"
+  cpu-request = "500m"
   memory-request = "500m" 
   home-volume = "10Gi"
   repo = "https://github.com/gmhafiz/go8.git"
   golang-image = "codercom/enterprise-golang:ubuntu"
-  postgres-image = "docker.io/marktmilligan/postgres:13"  
+  postgres-image = "docker.io/postgres:17.0-bookworm"
   dbeaver-image = "docker.io/dbeaver/cloudbeaver:latest"    
   pgadmin-image = "docker.io/dpage/pgadmin4:latest"    
   folder_name = try(element(split("/", local.repo), length(split("/", local.repo)) - 1), "")  
@@ -184,6 +184,8 @@ if [[ ! -z "${data.coder_parameter.dotfiles_url.value}" ]]; then
   coder dotfiles -y ${data.coder_parameter.dotfiles_url.value}
 fi
 
+
+
   EOT  
 }
 
@@ -259,7 +261,7 @@ resource "kubernetes_pod" "main" {
       command = ["sh", "-c", coder_agent.golang.init_script]
       security_context {
         run_as_user = "1000"
-      }     
+      }
       env {
         name  = "CODER_AGENT_TOKEN"
         value = coder_agent.golang.token
@@ -321,8 +323,12 @@ resource "kubernetes_pod" "main" {
         }
       }
       env {
-          name    = "PGDATA"
-          value   = "/var/lib/postgresql/data/k8s"        
+        name = "POSTGRES_PASSWORD"
+        value = "postgres"
+      }
+      env {
+        name    = "PGDATA"
+        value   = "/var/lib/postgresql/data/k8s"        
       }
       volume_mount {
         mount_path = "/var/lib/postgresql/data"

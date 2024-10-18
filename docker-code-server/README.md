@@ -27,7 +27,7 @@ tags: [docker, container]
 1. Microsoft's code-server installs from [Microsoft](https://marketplace.visualstudio.com/)
 
 ### Resources
-[NodeJS coder-react repo](https://github.com/mark-theshark/coder-react)
+[NodeJS coder-react repo](https://github.com/coder/coder-react)
 
 [Matifali template with Microsoft VS Code Server](https://github.com/matifali/coder-templates/tree/main/deeplearning)
 

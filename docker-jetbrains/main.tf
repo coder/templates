@@ -40,104 +40,65 @@ variable "socket" {
   default = "unix:///var/run/docker.sock"
 }
 
-data "coder_parameter" "image" {
-  name        = "Container Image"
+data "coder_workspace" "me" {}
+
+data "coder_workspace_owner" "me" {}
+
+data "coder_parameter" "lang" {
+  name        = "Programming Language"
   type        = "string"
   description = "What container image and language do you want?"
   mutable     = true
-  default     = "codercom/enterprise-node:ubuntu"
+  default     = "Java"
   icon        = "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
 
   option {
-    name = "Node React"
-    value = "codercom/enterprise-node:ubuntu"
+    name = "Node"
+    value = "Node"
     icon = "https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png"
   }
   option {
-    name = "Java"
-    value = "codercom/enterprise-java:ubuntu"
-    icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
+    name = "Go"
+    value = "Go"
+    icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1200px-Go_Logo_Blue.svg.png"
   } 
   option {
-    name = "Base including Python"
-    value = "codercom/enterprise-base:ubuntu"
-    icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
-  }
-  order       = 1        
-}
-
-data "coder_parameter" "repo" {
-  name        = "Source Code Repository"
-  type        = "string"
-  description = "What source code repository do you want to clone?"
-  mutable     = true
-  icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-  default     = "https://github.com/coder/coder-react"
-
-  option {
-    name = "coder-react"
-    value = "https://github.com/coder/coder-react"
-    icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
-  }
-  option {
-    name = "Coder v2 OSS project"
-    value = "https://github.com/coder/coder"
-    icon = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
-  }  
-  option {
-    name = "Coder code-server project"
-    value = "https://github.com/coder/code-server"
-    icon = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
-  }
-  option {
-    name = "Java Hello, World! command line app"
-    value = "https://github.com/coder/java_helloworld"
+    name = "Java"
+    value = "Java"
     icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
-  }  
-  option {
-    name = "Python command line app"
-    value = "https://github.com/coder/python_commissions"
-    icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
-  }
-  order       = 2       
-}
-
-data "coder_parameter" "extension" {
-  name        = "VS Code extension"
-  type        = "string"
-  description = "Which VS Code extension do you want?"
-  mutable     = true
-  default     = "eg2.vscode-npm-script"
-  icon        = "/icon/code.svg"
-
-  option {
-    name = "npm"
-    value = "eg2.vscode-npm-script"
-    icon = "https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png"
-  }
+  } 
   option {
     name = "Python"
-    value = "ms-python.python"
+    value = "Python"
     icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
   } 
-  option {
-    name = "Jupyter"
-    value = "ms-toolsai.jupyter"
-    icon = "/icon/jupyter.svg"
-  } 
-  option {
-    name = "Java"
-    value = "redhat.java"
-    icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
-  } 
-  order       = 3             
+  order       = 1       
 }
 
+data "coder_parameter" "dotfiles_url" {
+  name        = "Dotfiles URL (optional)"
+  description = "Personalize your workspace e.g., https://github.com/coder/example-dotfiles.git"
+  type        = "string"
+  default     = ""
+  mutable     = true 
+  icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+  order       = 2
+}
 
 locals {
-    folder_name = try(element(split("/", data.coder_parameter.repo.value), length(split("/", data.coder_parameter.repo.value)) - 1), "")  
-    repo_owner_name = try(element(split("/", data.coder_parameter.repo.value), length(split("/", data.coder_parameter.repo.value)) - 2), "")
-    
+    repo = {
+      "Node"    = "coder/coder-react.git"
+      "Java"    = "coder/java_helloworld.git" 
+      "Python"  = "coder/python_commissions.git" 
+      "Go"      = "coder/go_helloworld.git"
+    }  
+    image = {
+      "Node"    = "codercom/enterprise-node:latest"
+      "Java"    = "codercom/enterprise-java:latest" 
+      "Go"      = "codercom/enterprise-golang:latest"
+      "Python"  = "codercom/enterprise-base:ubuntu" 
+    }    
+
     registry_auth = toset([for auth in jsondecode(var.registry_auth): {
         address = lookup(auth, "address", var.default_registry)
         auth_disabled = lookup(auth, "auth_disabled", null)
@@ -147,8 +108,6 @@ locals {
         username = lookup(auth, "username", null)
     }])
 }
-
-provider "coder" {}
 
 provider "docker" {
   host = var.socket
@@ -167,13 +126,22 @@ provider "docker" {
   }
 }
 
+provider "coder" {}
+
+module "jetbrains_gateway" {
+  source         = "https://registry.coder.com/modules/jetbrains-gateway"
+  agent_id       = coder_agent.dev.id
+  agent_name     = "dev"
+  folder         = "/home/coder"
+  jetbrains_ides = ["GO", "WS", "IU", "PY"]
+  default        = "IU"
+}
+
 module "code-server" {
   count    = data.coder_workspace.me.start_count
   source   = "registry.coder.com/modules/code-server/coder"
   version  = "1.0.18"
   agent_id = coder_agent.dev.id
-  extensions = [ data.coder_parameter.extension.value ]
-  auto_install_extensions = true
 }
 
 module "dotfiles" {
@@ -187,12 +155,12 @@ module "git-clone" {
   source   = "registry.coder.com/modules/git-clone/coder"
   version  = "1.0.18"
   agent_id = coder_agent.dev.id
-  url      = data.coder_parameter.repo.value
+  url      = "https://github.com/${lookup(local.repo, data.coder_parameter.lang.value)}"
 }
 
 resource "coder_agent" "dev" {
-  arch           = "amd64"
-  os             = "linux"
+  os   = "linux"
+  arch = "amd64"
 
   metadata {
     display_name = "CPU Usage"
@@ -219,34 +187,26 @@ resource "coder_agent" "dev" {
   }
 
   display_apps {
-    vscode = true
+    vscode = false
     vscode_insiders = false
     ssh_helper = false
     port_forwarding_helper = true
     web_terminal = true
   }
 
+  dir = "/home/coder"
   startup_script_behavior = "blocking"
-  connection_timeout = 300  
 }
-
-data "coder_workspace" "me" {}
-
-data "coder_workspace_owner" "me" {}
 
 resource "docker_container" "workspace" {
   count = data.coder_workspace.me.start_count
-  image = data.coder_parameter.image.value
+  image = "${lookup(local.image, data.coder_parameter.lang.value)}"
   name     = "coder-${data.coder_workspace_owner.me.name}-${lower(data.coder_workspace.me.name)}"
   hostname = lower(data.coder_workspace.me.name)
-  dns      = ["1.1.1.1"] 
-  command = [
-    "sh", "-c",
-    <<EOT
-    trap '[ $? -ne 0 ] && echo === Agent script exited with non-zero code. Sleeping infinitely to preserve logs... && sleep infinity' EXIT
-    ${replace(coder_agent.dev.init_script, "/localhost|127\\.0\\.0\\.1/", "host.docker.internal")}
-    EOT
-  ]
+  dns      = ["1.1.1.1"]
+
+  entrypoint = ["sh", "-c", replace(coder_agent.dev.init_script, "/localhost|127\\.0\\.0\\.1/", "host.docker.internal")]
+
   env        = ["CODER_AGENT_TOKEN=${coder_agent.dev.token}"]
   volumes {
     container_path = "/home/coder/"
@@ -267,11 +227,11 @@ resource "coder_metadata" "workspace_info" {
   count       = data.coder_workspace.me.start_count
   resource_id = docker_container.workspace[0].id   
   item {
-    key   = "image"
-    value = data.coder_parameter.image.value
-  }
+    key   = "dockerhub-image"
+    value = "${lookup(local.image, data.coder_parameter.lang.value)}"
+  }     
   item {
-    key   = "repo cloned"
-    value = "${local.repo_owner_name}/${local.folder_name}"
-  }  
+    key   = "language"
+    value = data.coder_parameter.lang.value
+  }   
 }

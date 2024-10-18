@@ -50,6 +50,29 @@ variable "workspaces_namespace" {
   default = ""
 }
 
+module "jetbrains_gateway" {
+  source         = "https://registry.coder.com/modules/jetbrains-gateway"
+  agent_id       = coder_agent.coder.id
+  agent_name     = "coder"
+  folder         = "/home/coder"
+  jetbrains_ides = ["GO", "WS", "IU", "PY"]
+  default        = "IU"
+}
+
+module "jupyterlab" {
+  source   = "registry.coder.com/modules/jupyterlab/coder"
+  version  = "1.0.19"
+  agent_id = coder_agent.coder.id
+  count = data.coder_parameter.jupyter.value == "lab" ? 1 : 0
+}
+
+module "jupyterlab-notebook" {
+  source   = "registry.coder.com/modules/jupyter-notebook/coder"
+  version  = "1.0.19"
+  agent_id = coder_agent.coder.id
+  count = data.coder_parameter.jupyter.value == "notebook" ? 1 : 0
+}
+
 provider "kubernetes" {
   # Authenticate via ~/.kube/config or a Coder-specific ServiceAccount, depending on admin preferences
   config_path = var.use_kubeconfig == true ? "~/.kube/config" : null
@@ -57,6 +80,32 @@ provider "kubernetes" {
 
 data "coder_workspace" "me" {}
 data "coder_workspace_owner" "me" {}
+
+data "coder_parameter" "jupyter" {
+  name        = "Jupyter IDE type"
+  type        = "string"
+  description = "What type of Jupyter do you want?"
+  mutable     = true
+  default     = "lab"
+  icon        = "/icon/jupyter.svg"
+  order       = 1 
+
+  option {
+    name = "Jupyter Lab"
+    value = "lab"
+    icon = "https://raw.githubusercontent.com/gist/egormkn/672764e7ce3bdaf549b62a5e70eece79/raw/559e34c690ea4765001d4ba0e715106edea7439f/jupyter-lab.svg"
+  }
+  option {
+    name = "Jupyter Notebook"
+    value = "notebook"
+    icon = "https://codingbootcamps.io/wp-content/uploads/jupyter_notebook.png"
+  }    
+  option {
+    name = "None"
+    value = ""
+  }       
+}
+
 
 data "coder_parameter" "disk_size" {
   name        = "PVC storage size"
@@ -108,27 +157,27 @@ data "coder_parameter" "image" {
   type        = "string"
   description = "What container image and language do you want?"
   mutable     = true
-  default     = "codercom/enterprise-golang:ubuntu"
+  default     = "codercom/enterprise-golang:latest"
   icon        = "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
 
   option {
     name = "Node React"
-    value = "codercom/enterprise-node:ubuntu"
+    value = "codercom/enterprise-node:latest"
     icon = "https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png"
   }
   option {
     name = "Golang"
-    value = "codercom/enterprise-golang:ubuntu"
+    value = "codercom/enterprise-golang:latest"
     icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1200px-Go_Logo_Blue.svg.png"
   } 
   option {
     name = "Java"
-    value = "codercom/enterprise-java:ubuntu"
+    value = "codercom/enterprise-java:latest"
     icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
   } 
   option {
     name = "Base including Python"
-    value = "codercom/enterprise-base:ubuntu"
+    value = "docker.io/codercom/enterprise-base:ubuntu"
     icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
   }  
   order       = 4      
@@ -176,27 +225,22 @@ data "coder_parameter" "repo" {
   order       = 5     
 }
 
-data "coder_parameter" "dotfiles_url" {
-  name        = "Dotfiles URL (optional)"
-  description = "Personalize your workspace e.g., https://github.com/coder/example-dotfiles.git"
-  type        = "string"
-  default     = ""
-  mutable     = true 
-  icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-  order       = 7
+module "dotfiles" {
+  source   = "registry.coder.com/modules/dotfiles/coder"
+  version  = "1.0.18"
+  agent_id = coder_agent.coder.id
+}
+
+module "git-clone" {
+  source   = "registry.coder.com/modules/git-clone/coder"
+  version  = "1.0.18"
+  agent_id = coder_agent.coder.id
+  url      = data.coder_parameter.repo.value
 }
 
 resource "coder_agent" "coder" {
   os             = "linux"
   arch           = "amd64"
- # startup_script = <<-EOT
- #    set -e
- #
-    # install and start code-server
- #   curl -fsSL https://code-server.dev/install.sh | sh -s -- --method=standalone --prefix=/tmp/code-server --version 4.11.0
- #   /tmp/code-server/bin/code-server --auth none --port 13337 >/tmp/code-server.log 2>&1 &
- # EOT
-
   # The following metadata blocks are optional. They are used to display
   # information about your workspace in the dashboard. You can remove them
   # if you don't want to display any information.
@@ -264,31 +308,28 @@ resource "coder_agent" "coder" {
   dir = "/home/coder"
   startup_script_behavior = "blocking"
   startup_script = <<EOT
-
-# clone repo selected by user
-if test -z "${data.coder_parameter.repo.value}" 
-then
-  echo "No git repo specified, skipping"
-else
-  if [ ! -d "${local.folder_name}" ] 
-  then
-    echo "Cloning git repo..."
-    git clone ${data.coder_parameter.repo.value}
-  else
-    echo "Repo ${data.coder_parameter.repo.value} already exists. Will not reclone"
-  fi
-  cd ${local.folder_name}
-fi
-
-# use coder CLI to clone and install dotfiles
-if [[ ! -z "${data.coder_parameter.dotfiles_url.value}" ]]; then
-  coder dotfiles -y ${data.coder_parameter.dotfiles_url.value}
-fi
-
-
+# install and code-server, VS Code in a browser 
+curl -fsSL https://code-server.dev/install.sh | sh
+code-server --auth none --port 13337 >/dev/null 2>&1 &
 coder login ${data.coder_workspace.me.access_url} --token ${data.coder_workspace_owner.me.session_token}
-
   EOT  
+}
+
+# code-server
+resource "coder_app" "code-server" {
+  agent_id      = coder_agent.coder.id
+  slug          = "code-server"  
+  display_name  = "code-server"
+  icon          = "/icon/code.svg"
+  url           = "http://localhost:13337?folder=/home/coder"
+  subdomain = false
+  share     = "owner"
+
+  healthcheck {
+    url       = "http://localhost:13337/healthz"
+    interval  = 3
+    threshold = 10
+  }  
 }
 
 resource "kubernetes_pod" "main" {

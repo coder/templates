@@ -107,7 +107,7 @@ code-server --auth none --port 13337 >/dev/null 2>&1 &
 
 # clone repo
 if [ ! -d "flask-redis-docker-compose" ]; then
-  git clone --progress https://github.com/sharkymark/flask-redis-docker-compose.git 
+  git clone --progress https://github.com/coder/flask-redis-docker-compose.git 
 fi 
 
 # start python web server
@@ -180,6 +180,6 @@ resource "coder_metadata" "workspace_info" {
   }
   item {
     key   = "repo cloned"
-    value = "https://github.com/sharkymark/flask-redis-docker-compose.git"
+    value = "https://github.com/coder/flask-redis-docker-compose.git"
   }     
 }

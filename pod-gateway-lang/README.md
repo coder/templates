@@ -14,9 +14,6 @@ tags: [container, kubernetes]
 1. JetBrains IDE (accessible with VNC)
 1. noVNC `coder_app` to open a XFce Linux Desktop
 
-### JetBrains IDE images to choose from
-1. [IntelliJ IDEA Community](https://www.jetbrains.com/idea/download/) [Dockerfile](https://github.com/sharkymark/dockerfiles/blob/main/intellij-idea/vnc/Dockerfile)
-
 ### Additional bash scripting
 1. Prompt user and clone/install a dotfiles repository (for personalization settings)
 1. Clone [iluwatar/java-design-patterns](https://github.com/iluwatar/java-design-patterns) repo
