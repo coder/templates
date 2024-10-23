@@ -103,13 +103,8 @@ Be sure to specify the workspaces_namespace variable during workspace creation t
 
 [Coder's Terraform Provider - parameters](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/parameter)
 
-[NodeJS coder-react repo](https://github.com/coder/coder-react)
-
 [Coder's GoLang v2 repo](https://github.com/coder/coder)
 
 [Coder's code-server TypeScript repo](https://github.com/coder/code-server)
 
-[Java Hello World repo](https://github.com/coder/java_helloworld)
-
-[Python repo](https://github.com/coder/python_commissions)
 

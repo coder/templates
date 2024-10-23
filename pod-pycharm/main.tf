@@ -47,8 +47,8 @@ data "coder_parameter" "repo" {
   type        = "string"
   description = "What source code repository do you want to clone?"
   mutable     = true
-  icon        = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
-  default     = "https://github.com/jatcod3r/python_commissions"
+  icon        = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
+  default     = "https://github.com/coder/code-server"
   order       = 2       
 }
 

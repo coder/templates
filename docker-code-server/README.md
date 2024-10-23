@@ -27,8 +27,6 @@ tags: [docker, container]
 1. Microsoft's code-server installs from [Microsoft](https://marketplace.visualstudio.com/)
 
 ### Resources
-[NodeJS coder-react repo](https://github.com/coder/coder-react)
-
 [Matifali template with Microsoft VS Code Server](https://github.com/matifali/coder-templates/tree/main/deeplearning)
 
 [Matifali Dockerfile adding Microsoft VS Code Server](https://github.com/matifali/dockerdl/blob/main/base.Dockerfile)
@@ -38,9 +36,5 @@ tags: [docker, container]
 [Coder's GoLang v2 repo](https://github.com/coder/coder)
 
 [Coder's code-server TypeScript repo](https://github.com/coder/code-server)
-
-[Java Hello World repo](https://github.com/coder/java_helloworld)
-
-[Python repo](https://github.com/coder/python_commissions)
 
 [Docker Terraform provider](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs)

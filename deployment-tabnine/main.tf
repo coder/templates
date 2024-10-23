@@ -111,13 +111,7 @@ data "coder_parameter" "repo" {
   description = "What source code repository do you want to clone?"
   mutable     = true
   icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-  default     = "https://github.com/coder/coder"
-
-  option {
-    name = "Coder v2 OSS project"
-    value = "https://github.com/coder/coder"
-    icon = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
-  }     
+  default     = "https://github.com/coder/code-server"
   order       = 6     
 }
 

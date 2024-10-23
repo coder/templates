@@ -113,7 +113,7 @@ data "coder_parameter" "dotfiles_url" {
 
 data "coder_parameter" "git_repo_url" {
   name        = "Git Repo URL"
-  description = "The `https` URL to your git repo - using your GitHub OAuth token e.g., https://github.com/coder/coder-react"
+  description = "The `https` URL to your git repo."
   type        = "string"
   default     = ""
   mutable     = true 

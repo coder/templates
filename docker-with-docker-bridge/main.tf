@@ -32,6 +32,15 @@ data "coder_workspace" "me" {
 data "coder_workspace_owner" "me" {
 }
 
+data "coder_parameter" "repo" {
+  name        = "Source Code Repository"
+  type        = "string"
+  description = "What source code repository do you want to clone?"
+  mutable     = true
+  default     = "https://github.com/coder/coder"
+  icon        = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
+}
+
 data "coder_parameter" "dotfiles_url" {
   name        = "Dotfiles URL (optional)"
   description = "Personalize your workspace e.g., https://github.com/coder/example-dotfiles.git"
@@ -40,6 +49,10 @@ data "coder_parameter" "dotfiles_url" {
   mutable     = true 
   icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
   order       = 1
+}
+
+locals {
+  repo-name = element(split(".", element(split("/", data.coder_parameter.repo.value), length(split("/", data.coder_parameter.repo.value))-1)), 0)
 }
 
 resource "coder_agent" "coder" {
@@ -93,8 +106,8 @@ resource "coder_agent" "coder" {
 #!/bin/sh
 
 # clone repo
-if [ ! -d "flask-redis-docker-compose" ]; then
-  git clone --progress https://github.com/coder/flask-redis-docker-compose.git 
+if [ ! -d "${local.repo-name}" ]; then
+  git clone --progress ${data.coder_parameter.repo.value}
 fi
 
 # use coder CLI to clone and install dotfiles
@@ -174,6 +187,6 @@ resource "coder_metadata" "workspace_info" {
   }
   item {
     key   = "repo cloned"
-    value = "https://github.com/coder/flask-redis-docker-compose.git"
+    value = data.coder_parameter.repo.value
   }     
 }

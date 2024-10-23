@@ -134,37 +134,11 @@ data "coder_parameter" "image" {
 
 data "coder_parameter" "repo" {
   name        = "Source Code Repository (optional)"
-  type        = "string"
   description = "What source code repository do you want to clone?"
+  type        = "string"
   mutable     = true
-  icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-  default     = "https://github.com/coder/coder-react"
-
-  option {
-    name = "coder-react"
-    value = "https://github.com/coder/coder-react"
-    icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
-  }
-  option {
-    name = "Coder v2 OSS project"
-    value = "https://github.com/coder/coder"
-    icon = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
-  }  
-  option {
-    name = "Coder code-server project"
-    value = "https://github.com/coder/code-server"
-    icon = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
-  }
-  option {
-    name = "Java Hello, World! command line app"
-    value = "https://github.com/coder/java_helloworld"
-    icon = "https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png"
-  }  
-  option {
-    name = "Python command line app"
-    value = "https://github.com/coder/python_commissions"
-    icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
-  }
+  icon        = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
+  default     = "https://github.com/coder/code-server"
   order       = 5     
 }
 

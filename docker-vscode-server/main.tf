@@ -91,14 +91,9 @@ data "coder_parameter" "repo" {
   type        = "string"
   description = "What source code repository do you want to clone?"
   mutable     = true
-  icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-  default     = "https://github.com/coder/coder-react"
+  icon = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
+  default     = "https://github.com/coder/coder"
 
-  option {
-    name = "coder-react"
-    value = "https://github.com/coder/coder-react"
-    icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
-  }
   option {
     name = "Coder v2 OSS project"
     value = "https://github.com/coder/coder"
@@ -108,12 +103,7 @@ data "coder_parameter" "repo" {
     name = "Coder code-server project"
     value = "https://github.com/coder/code-server"
     icon = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
-  }  
-  option {
-    name = "Python command line app"
-    value = "https://github.com/coder/python_commissions"
-    icon = "/icon/python.svg"
-  }    
+  }
 }
 
 data "coder_parameter" "extension" {
