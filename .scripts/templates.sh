@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+TEMPLATES=(
+    aws-devcontainer
+    aws-ecs-container
+    aws-linux
+    aws-linux-ephemeral
+    aws-windows-rdp
+    azure-aks-pod
+    azure-linux
+    azure-windows
+    deployment-code-server
+    deployment-tabnine
+    devcontainer-docker
+    devcontainer-gcp
+    devcontainer-kubernetes
+    digitalocean-linux
+    docker
+    docker-code-server
+    docker-gateway-lang
+    docker-intellij-gateway
+    docker-intellij-jetbrains
+    docker-intellij-vnc
+    docker-jetbrains
+    docker-kasm-insomnia
+    docker-network-mode-host
+    docker-nomad
+    docker-vnc-eclipse
+    docker-vs-code-server
+    docker-with-docker-bridge
+    docker-with-docker-network
+    docker-with-jupyter
+    envbox
+    envbox-vscode-repo
+    gcp-linux
+    gcp-visual-studio
+    gcp-vm-container
+    gcp-windows
+    pod-gateway-lang
+    pod-intellij-idea-vnc
+    pod-jetbrains
+    pod-jfrog-oauth
+    pod-jupyterlab
+    pod-kitchen-sink
+    pod-modules
+    pod-multi-container
+    pod-nodejs
+    pod-podman
+    pod-pycharm
+    pod-rstudio
+    pod-service-account
+    pod-share-jupyter
+    pod-vscode
+    pod-vscode-custom-location
+    pod-with-coder
+    scratch
+    systemd
+    vscode-marketplace
+)
