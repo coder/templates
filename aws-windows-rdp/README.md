@@ -20,8 +20,7 @@ This template can be executed where the Coder control plane is Kubernetes - in a
 
 #### Dynamic AWS Credentials
 
-This template prompts the DevOps template administrator at template creation (not workspace creation) for valid AWS Access Key and Secret Access Key credentials. For other ways to authenticate [consult the
-Terraform docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#authentication-and-configuration).
+This template prompts the DevOps template administrator at template creation (not workspace creation) for valid AWS Access Key and Secret Access Key credentials. For other ways to authenticate [consult the Terraform docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#authentication-and-configuration).
 
 ```hcl
 provider "aws" {
@@ -31,14 +30,15 @@ provider "aws" {
 }
 ```
 
-For other ways to authenticate [consult the
-Terraform docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#authentication-and-configuration).
+For other ways to authenticate [consult the Terraform docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#authentication-and-configuration).
 
 ### Apps included
+
 1. A web-based terminal
 1. Microsoft Visual Studio 2019 Community Edition
 
 ### Additional bash scripting
+
 1. Prompt user for AWS region e.g., us-east-1
 1. Prompt user for AWS machine instance type e.g., t3.large
 1. Enable RDP
@@ -46,6 +46,7 @@ Terraform docs](https://registry.terraform.io/providers/hashicorp/aws/latest/doc
 1. Install Microsoft Visual Studio 2019 Community with Chocolatey
 
 ### Known limitations and required steps
+
 1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace
 
 ```sh
@@ -57,10 +58,12 @@ coder tunnel <workspace-name> --tcp 3301:3389
 1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.
 
 ## Future work
+
 1. Test additional RDP thick clients like CoRD
 1. Test browser-based RDP clients like [Apache Guacamole](https://guacamole.apache.org/)
 
 ## Additional Notes
+
 1. `coder_startup_script.log` is located in `C:\Windows\Temp`
 1. Installing Visual Studio will take several minutes, so hang tight.
 
@@ -87,6 +90,3 @@ coder tunnel <workspace-name> --tcp 3301:3389
 [Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)
 
 [RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)
-
-
-

@@ -12,11 +12,13 @@ tags: [gcp, windows, vm]
 > Updated 2023-04-21 using Coder parameters and only project_id as a Terraform variable
 
 ### Apps included
+
 1. A web-based terminal
 1. Microsoft Windows Server 2022 or 2019 (user-prompted)
 1. Microsoft Visual Studio 2022 or 2019 Community Edition (user-prompted)
 
 ### Additional bash scripting
+
 1. Prompt user for Google Cloud region e.g., us-central1-a
 1. Prompt user for Google Cloud machine type e.g., e2.medium
 1. Enable RDP
@@ -24,6 +26,7 @@ tags: [gcp, windows, vm]
 1. Install Microsoft Visual Studio with Chocolatey
 
 ### Known limitations and required steps
+
 1. The Coder agent sometimes does not start. Restarting the workspace may fix this.
 1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace
 
@@ -36,16 +39,18 @@ coder tunnel <workspace-name> --tcp 3301:3389
 1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.
 
 ## Additional Notes
+
 1. Run this Google Cloud CLI command to see the Windows images `gcloud compute images list --project=windows-cloud`
 1. `coder_startup_script.log` is located in `C:\Windows\Temp`
 1. Installing Visual Studio will take several minutes, so hang tight.
 
 ## Future work
+
 1. Test additional RDP thick clients like CoRD
 1. Test browser-based RDP clients like [Apache Guacamole](https://guacamole.apache.org/)
 
-
 ### Resources
+
 [Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)
 
 [Chocolatey package manager for Windows](https://chocolatey.org/)
@@ -67,5 +72,3 @@ coder tunnel <workspace-name> --tcp 3301:3389
 [Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)
 
 [RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)
-
-

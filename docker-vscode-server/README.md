@@ -10,10 +10,12 @@ tags: [local, docker]
 # VS Code Server template for a workspace in a container on a Docker host
 
 ### Apps included
+
 1. A web-based terminal
 1. Microsoft's VS Code Server
 
 ### Additional bash scripting
+
 1. Prompt user and clone/install a dotfiles repository (for personalization settings)
 2. Prompt user for container image to use
 3. Prompt user for repo to clone
@@ -22,9 +24,11 @@ tags: [local, docker]
 6. Download, install and start VS Code Server
 
 ### Extension Marketplaces
+
 1. Microsoft's code-server installs from [Microsoft](https://marketplace.visualstudio.com/)
 
 ### Resources
+
 [Microsoft VS Code Server home page](https://code.visualstudio.com/docs/remote/vscode-server)
 
 [Coder's code-server TypeScript repo](https://github.com/coder/code-server)

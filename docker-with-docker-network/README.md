@@ -10,10 +10,12 @@ tags: [container, docker]
 # Docker host template for a workspace in a Docker container
 
 ### Apps included
+
 1. A web-based terminal
 1. code-server IDE (VS Code-in-a-browser)
 
 ### Additional bash scripting
+
 1. Start Docker daemon using a privileged Docker container
 1. Prompt user and clone/install a dotfiles repository (for personalization settings)
 1. Clone coder/coder repo

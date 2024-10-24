@@ -10,10 +10,12 @@ tags: [docker, container]
 # Docker host template for a workspace in a Docker container
 
 ### Apps included
+
 1. A web-based terminal
 1. code-server IDE (VS Code-in-a-browser)
 
 ### Additional bash scripting
+
 1. Start Docker daemon using a privileged side-car Docker container
 1. Prompt user and clone/install a dotfiles repository (for personalization settings)
 1. Clone coder/coder repo
@@ -25,7 +27,7 @@ tags: [docker, container]
 > `DOCKER_HOST=localhost:2375`, running processes on any inner containers are
 > accessible from `localhost` which enables port forwarding. The trade-off is
 > network namespacing is disabled so a potential security risk.
-> 
+
 ```sh
 resource "docker_container" "dind" {
   image      = "docker:dind"

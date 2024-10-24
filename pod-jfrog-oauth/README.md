@@ -10,11 +10,13 @@ tags: [container, kubernetes]
 # Use Terraform modules to build a container workspace in a Kubernetes pod
 
 ### Apps included
+
 1. A web-based terminal
 1. Microsoft Visual Studio Code Server IDE
 1. Coder's code-server IDE
 
 ### Additional input variables and bash scripting
+
 1. Prompt user and clone/install a dotfiles repository (for personalization settings)
 1. Prompt user for compute options (CPU core, memory, and disk)
 1. Prompt user for container image to use
@@ -23,6 +25,7 @@ tags: [container, kubernetes]
 1. Download, install and start latest Microsoft Visual Studio Code Server
 
 ### Images/languages to choose from
+
 1. NodeJS
 1. Golang
 1. Java
@@ -31,6 +34,7 @@ tags: [container, kubernetes]
 ### Terraform modules
 
 This template demonstrates how to re-use and pull Terraform snippets from https://registry.coder.com for common components like:
+
 1. The `code-server` IDE (VS Code in a browser)
 1. Microsoft Visual Studio Code Server (VS Code in a browser)
 1. Automatically log into the Coder CLI in the workspace
@@ -38,7 +42,9 @@ This template demonstrates how to re-use and pull Terraform snippets from https:
 1. Clone a dotfiles repository for personalization
 
 ### Managed Terraform variables
+
 Managed Terraform variables can be freely managed by the template author to build templates. Workspace users are not able to modify template variables. This template has two managed Terraform variables:
+
 1. `use_kubeconfig` which tells Coder which cluster and where to get the Kubernetes service account
 2. `workspaces_namespace` which tells Coder which namespace to create the workspace pdo
 
@@ -57,10 +63,9 @@ This template will use ~/.kube/config or if the control plane's service account 
 Be sure to specify the workspaces_namespace variable during workspace creation to the Kubernetes namespace the workspace will be deployed to
 
 ### Resources
+
 [Coder's Terraform Provider - parameters](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/parameter)
 
 [Coder's GoLang v2 repo](https://github.com/coder/coder)
 
 [Coder's code-server TypeScript repo](https://github.com/coder/code-server)
-
-

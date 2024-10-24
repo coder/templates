@@ -11,10 +11,12 @@ tags: [linux, kubernetes]
 # TabNine & code-server (VS Code) template for a workspace in a Kubernetes deployment
 
 ### Apps included
+
 1. A web-based terminal
 2. `code-server` IDE
 
 ### Additional input variables and bash scripting
+
 1. Prompt user and clone/install a dotfiles repository (for personalization settings)
 1. Prompt user for compute options (CPU core, memory, and disk)
 1. Prompt user for container image to use
@@ -31,26 +33,30 @@ tags: [linux, kubernetes]
 
 [TabNine value proposition - your source code is not being sent somewhere](https://support.tabnine.com/hc/en-us/articles/4413853954321-Does-Tabnine-store-and-use-my-code-)
 
-
 This template lets the user choose a Copilot chat VS Code extension release
 
-
 ### Images/languages to choose from
+
 1. NodeJS
 1. Golang
 1. Java
 1. Base (for Python)
 
 ### IDE use
+
 1. While the purpose of this template is to show `code-server` and VS Code in a browser, you can also use the `VS Code Desktop` to download Coder's VS Code extension and the Coder CLI to remotely connect to your Coder workspace from your local installation of VS Code.
-   
+
 ### Parameters
+
 Parameters allow users who create workspaces to additional information required in the workspace build. This template will prompt the user for:
+
 1. A Dotfiles repository for workspace personalization `data "coder_parameter" "dotfiles_url"`
 2. The size of the persistent volume claim or `/home/coder` directory `data "coder_parameter" "pvc"`
 
 ### Managed Terraform variables
+
 Managed Terraform variables can be freely managed by the template author to build templates. Workspace users are not able to modify template variables. This template has two managed Terraform variables:
+
 1. `use_kubeconfig` which tells Coder which cluster and where to get the Kubernetes service account
 2. `workspaces_namespace` which tells Coder which namespace to create the workspace pdo
 
@@ -78,7 +84,7 @@ You will need a deployment resource and verbs to the apps api
 coder:
   serviceAccount:
     workspacePerms: true
-    enableDeployments: true 
+    enableDeployments: true
 ```
 
 ### OR add to the existing `coder-workspace-perms` role
@@ -105,6 +111,7 @@ Kubernetes provides an [informers Go API](https://pkg.go.dev/k8s.io/client-go/in
 coder-logstream-kube listens for pod creation events with containers that have the CODER_AGENT_TOKEN environment variable set. All pod events are streamed as logs to the Coder API using the agent token for authentication.
 
 ### Resources
+
 [Coder's Terraform Provider - parameters](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/parameter)
 
 [Kubernetes deployment docs](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
@@ -114,5 +121,3 @@ coder-logstream-kube listens for pod creation events with containers that have t
 [Coder's GoLang v2 repo](https://github.com/coder/coder)
 
 [Coder's code-server TypeScript repo](https://github.com/coder/code-server)
-
-

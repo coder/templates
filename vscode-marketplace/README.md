@@ -10,10 +10,12 @@ tags: [vm, linux, persistent-vm, marketplace, kubernetes, cloud]
 # code-server in a container pointing to a private VS Code extension marketplace
 
 ### Apps included
+
 1. A web-based terminal
 1. VS Code IDE in a browser (Coder's `code-server` project)
 
 ### Additional input variables and bash scripting
+
 1. Prompt user and clone/install a dotfiles repository (for personalization settings)
 1. Prompt user for compute options (CPU core, memory, and disk)
 1. Prompt user for container image to use
@@ -22,13 +24,15 @@ tags: [vm, linux, persistent-vm, marketplace, kubernetes, cloud]
 1. Download, install and start latest code-server (VS Code-in-a-browser) pointing to a private VS Code extension marketplace
 
 ### Images/languages to choose from
+
 1. NodeJS
 1. Golang
 1. Java
 1. Base (for Python)
 
 ### Air-gap and security features enabled
-1. Disable file downloads from `code-server` 
+
+1. Disable file downloads from `code-server`
 1. Point to an internal extensions marketplace
 
 #### Disable file downloads
@@ -40,7 +44,6 @@ In the `startup_script` start `code-server` with the flag `code-server --auth no
 Set an environment variable pointing to the new marketplace
 
 ```hcl
-
 variable "marketplace" {
   description = <<-EOF
   VS Code extensions marketplace to connect the code-server IDE into
@@ -61,14 +64,18 @@ resource "coder_agent" "coder" {
 
 ...
 ```
-   
+
 ### Parameters
+
 Parameters allow users who create workspaces to additional information required in the workspace build. This template will prompt the user for:
+
 1. A Dotfiles repository for workspace personalization `data "coder_parameter" "dotfiles_url"`
 2. The size of the persistent volume claim or `/home/coder` directory `data "coder_parameter" "pvc"`
 
 ### Terraform variables
+
 Terraform variables can be freely managed by the template author to build templates. Workspace users are not able to modify template variables. This template has two Terraform variables:
+
 1. `use_kubeconfig` which tells Coder which cluster and where to get the Kubernetes service account
 2. `workspaces_namespace` which tells Coder which namespace to create the workspace pdo
 
@@ -106,5 +113,3 @@ Be sure to specify the workspaces_namespace variable during workspace creation t
 [Coder's GoLang v2 repo](https://github.com/coder/coder)
 
 [Coder's code-server TypeScript repo](https://github.com/coder/code-server)
-
-

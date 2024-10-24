@@ -10,20 +10,24 @@ tags: [kubernetes, container]
 # Kubernetes pod with a privileged container running dockerd
 
 ### Apps included
+
 1. A web-based terminal
 1. VS Code Web (powered by code-server)
 
 ### Template Admin inputs
+
 1. namespace
 1. K8s permissions method (.kube/config or control plane service account)
 1. Envbox inputs (e.g., inner and outer container CPU, Memory, mounts)
 
 ### Developer inputs
+
 1. Dotfiles repo
 
 > Future inputs may include CPU, memory and $HOME volume storage size
 
 ### Additional bash scripting
+
 1. Start a python web server to show web-based port forwarding
 1. Pull an NGINX image from DockerHub and `docker run` on port `8080` to show in web-based port forwarding
 

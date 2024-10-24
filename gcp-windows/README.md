@@ -16,14 +16,12 @@ tags: [vm, windows, gcp]
 This template assumes that coderd is run in an environment that is authenticated
 with Google Cloud. For example, run `gcloud auth application-default login` to
 import credentials on the system and user running coderd. For other ways to
-authenticate [consult the Terraform
-docs](https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/getting_started#adding-credentials).
+authenticate [consult the Terraform docs](https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/getting_started#adding-credentials).
 
 Coder requires a Google Cloud Service Account to provision workspaces. To create
 a service account:
 
-1. Navigate to the [CGP
-   console](https://console.cloud.google.com/projectselector/iam-admin/serviceaccounts/create),
+1. Navigate to the [CGP console](https://console.cloud.google.com/projectselector/iam-admin/serviceaccounts/create),
    and select your Cloud project (if you have more than one project associated
    with your account)
 

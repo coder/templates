@@ -10,16 +10,19 @@ tags: [container, kubernetes]
 # Kubernetes pod on a cluster outside of Coder
 
 ### Apps included
+
 1. A web-based terminal
 1. Node.JS and React
 
 ### Template Admin inputs for remote K8s cluster
+
 1. namespace
 1. host
 1. CA certificate
 1. service account token
 
 ### Additional bash scripting
+
 1. Prompt user and clone/install a dotfiles repository (for personalization settings)
 1. Clone Node.jS React repo
 

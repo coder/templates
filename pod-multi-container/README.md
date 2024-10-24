@@ -10,31 +10,37 @@ tags: [container, kubernetes]
 # 4 containers in a Kubernetes pod
 
 ### Apps included
+
 1. A web-based terminal
 1. code-server (VS Code in a browser)
 1. DBeaver web UI
 1. pgAdmin web UI
 
 ### Images for the 4 containers
+
 1. [Go](https://hub.docker.com/r/codercom/enterprise-golang)
 1. [Postgres](https://hub.docker.com/_/postgres)
 1. [DBeaver](https://hub.docker.com/r/dbeaver/cloudbeaver)
 1. [pgAdmin](https://hub.docker.com/r/dpage/pgadmin4/)
 
 ### Additional bash scripting
+
 1. Prompt user and clone/install a dotfiles repository (for personalization settings)
 
 ### defaults
+
 1. (pgAdmin) Username: `pgadmin@pgadmin.org` Password: `pgadmin`
 1. (Postgres) Username: `postgres` Password: `postgres`
 1. (DBeaver) You create the username and password during the first use of DBeaver - I created: `cbadmin`, `cbadmin` for username and password
 
 ### psql
+
 The `startup_script` installs `psql` with `pip3` to connect to PostgreSQL from a terminal.
 
 `psql -U postgres -h localhost`
 
 ### go8 API steps
+
 1. `cd` into `go8` and `go run cmd/migrate/main.go` this will fail if `go8_db` database is not in PostgreSQL
 1. Start the API server `go run cmd/go8/main.go`
 1. See all routes `go run cmd/route/main.go`
@@ -54,7 +60,7 @@ curl -v --location --request POST 'http://localhost:3080/api/v1/book' \
     "a 1967 novel by Colombian author Gabriel García Márquez that tells the multi-generational story of the Buendía family, whose patriarch, José Arcadio Buendía, founded the fictitious town of Macondo."
   }' \
  | jq
- ```
+```
 
 #### Get all books
 
@@ -81,6 +87,7 @@ This template will use ~/.kube/config to authenticate to a Kubernetes cluster on
 Be sure to enter a valid workspaces_namespace at workspace creation to point to the Kubernetes namespace the workspace will be deployed to
 
 ### Resources
+
 [API example repo](https://github.com/gmhafiz/go8)
 
 [Postgres image](https://hub.docker.com/_/postgres)
