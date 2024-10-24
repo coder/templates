@@ -131,39 +131,8 @@ data "coder_parameter" "repo" {
   type        = "string"
   description = "What source code repository do you want to clone?"
   mutable     = true
-  icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-  default     = "https://github.com/coder/coder"
-
-  option {
-    name = "Coder v2 OSS project"
-    value = "https://github.com/coder/coder"
-    icon = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
-  }  
-  option {
-    name = "Coder vscode-coder VS Code extension project"
-    value = "https://github.com/coder/vscode-coder"
-    icon = "/icon/code.svg"
-  }   
-  option {
-    name = "Coder code-server project"
-    value = "https://github.com/coder/code-server"
-    icon = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
-  }
-  option {
-    name = "Coder envbuilder project (Kaniko devcontainer)"
-    value = "https://github.com/coder/envbuilder"
-    icon = "https://gitlab.com/uploads/-/system/project/avatar/19430116/kaniko_icon.png"
-  } 
-  option {
-    name = "Coder logstream-kube project"
-    value = "https://github.com/coder/coder-logstream-kube"
-    icon = "/icon/k8s.png"
-  }  
-  option {
-    name = "Coder envbox project (sysbox runc)"
-    value = "https://github.com/coder/envbox"
-    icon = "/icon/docker.png"
-  }  
+  icon        = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
+  default     = "https://github.com/coder/code-server"
   order       = 6    
 }
 

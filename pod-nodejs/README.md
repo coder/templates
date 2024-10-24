@@ -66,7 +66,7 @@ data "coder_parameter" "git_repo_url" {
   name        = "Git report URL"
   description = "The `https` URL to your git repo - using your GitHub OAuth token"
   type        = "string"
-  default     = "https://github.com/coder/coder-react"
+  default     = ""
   mutable     = true
   icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
 }
@@ -114,7 +114,7 @@ fi
 Create markdown with your Coder Access URL (your deployment) and any parameters you want pre-populated. e.g., repo URL
 
 ```sh
-[![Open in Coder](https://YOUR_ACCESS_URL/open-in-coder.svg)](https://YOUR_ACCESS_URL/templates/YOUR_TEMPLATE/workspace?param.Git%20Repo%20URL=https://github.com/coder/coder-react)
+[![Open in Coder](https://YOUR_ACCESS_URL/open-in-coder.svg)](https://YOUR_ACCESS_URL/templates/YOUR_TEMPLATE/workspace?param.Git%20Repo%20URL=https://github.com/coder/code-server)
 ```
 
 ### Resources

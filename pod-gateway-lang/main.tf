@@ -16,20 +16,12 @@ locals {
   cpu-request = "500m"
   memory-request = "2G" 
   home-volume = "10Gi"
-
-  repo = {
-    "Java"    = "coder/java_helloworld" 
-    "Python"  = "coder/python_commissions" 
-    "Golang"  = "coder/coder"
-    "Node"    = "coder/coder-react"
-  }  
   image = {
     "Java"    = "codercom/enterprise-java:ubuntu" 
     "Python"  = "codercom/enterprise-base:ubuntu" 
     "Golang"  = "codercom/enterprise-golang:ubuntu"
     "Node"    = "codercom/enterprise-node:ubuntu"
   }  
-
 }
 
 provider "coder" {
@@ -111,10 +103,20 @@ data "coder_parameter" "lang" {
   }      
 }
 
+data "coder_parameter" "repo" {
+  name        = "Source Code Repository (optional)"
+  description = "What source code repository do you want to clone?"
+  type        = "string"
+  mutable     = true
+  icon        = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
+  default     = "https://github.com/coder/code-server"
+  order       = 5     
+}
+
 module "git-clone" {
     source   = "registry.coder.com/modules/git-clone/coder"
     agent_id = coder_agent.dev.id
-    url      = "https://github.com/${lookup(local.repo, data.coder_parameter.lang.value)}"
+    url      = data.coder_parameter.repo.value
 }
 
 resource "coder_agent" "dev" {
@@ -270,6 +272,6 @@ resource "coder_metadata" "workspace_info" {
   }
   item {
     key   = "repo cloned"
-    value = "docker.io/${lookup(local.repo, data.coder_parameter.lang.value)}"
+    value = data.coder_parameter.repo.value
   }  
 }

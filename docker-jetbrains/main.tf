@@ -86,12 +86,6 @@ data "coder_parameter" "dotfiles_url" {
 }
 
 locals {
-    repo = {
-      "Node"    = "coder/coder-react.git"
-      "Java"    = "coder/java_helloworld.git" 
-      "Python"  = "coder/python_commissions.git" 
-      "Go"      = "coder/go_helloworld.git"
-    }  
     image = {
       "Node"    = "codercom/enterprise-node:latest"
       "Java"    = "codercom/enterprise-java:latest" 
@@ -151,11 +145,21 @@ module "dotfiles" {
   default_dotfiles_uri = "https://github.com/coder/example-dotfiles.git"
 }
 
+data "coder_parameter" "repo" {
+  name        = "Source Code Repository"
+  type        = "string"
+  description = "What source code repository do you want to clone?"
+  mutable     = true
+  icon        = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
+  default     = "https://github.com/coder/code-server"
+  order       = 5     
+}
+
 module "git-clone" {
   source   = "registry.coder.com/modules/git-clone/coder"
   version  = "1.0.18"
   agent_id = coder_agent.dev.id
-  url      = "https://github.com/${lookup(local.repo, data.coder_parameter.lang.value)}"
+  url      = data.coder_parameter.repo.value
 }
 
 resource "coder_agent" "dev" {

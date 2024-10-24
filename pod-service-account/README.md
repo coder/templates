@@ -78,6 +78,4 @@ kubectl get secrets -n your_namespace -o jsonpath="{.items[?(@.metadata.annotati
 
 ### Resources
 
-[Node React repo](https://github.com/coder/coder-react)
-
 [Terraform Kubernetes provider](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs)

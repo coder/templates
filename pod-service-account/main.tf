@@ -9,12 +9,20 @@ terraform {
   }
 }
 
+data "coder_parameter" "repo" {
+  name        = "Source Code Repository"
+  type        = "string"
+  description = "What source code repository do you want to clone?"
+  mutable     = true
+  default     = "https://github.com/coder/coder"
+  icon        = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
+}
+
 locals {
   cpu-request = "500m"
   memory-request = "2" 
   image = "codercom/enterprise-node:ubuntu"
-  repo = "https://github.com/coder/coder-react.git"
-  repo-name = "coder-react"   
+  repo-name = element(split(".", element(split("/", data.coder_parameter.repo.value), length(split("/", data.coder_parameter.repo.value))-1)), 0)
 }
 
 #
@@ -225,7 +233,7 @@ code-server --auth none --port 13337 >/dev/null 2>&1 &
 if [ ! -d "${local.repo-name}" ]; then
 mkdir -p ~/.ssh
 ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts
-git clone ${local.repo}
+git clone ${data.coder_parameter.repo.value}
 fi
 
   EOT  

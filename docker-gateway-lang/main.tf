@@ -10,20 +10,12 @@ terraform {
 }
 
 locals {
-
-  repo = {
-    "Java"    = "coder/java_helloworld.git" 
-    "Python"  = "coder/python_commissions.git" 
-    "Go"      = "coder/coder.git"
-    "Node"    = "coder/coder-react.git"
-  }  
   image = {
     "Java"    = "codercom/enterprise-java:ubuntu" 
     "Python"  = "codercom/enterprise-base:ubuntu" 
     "Go"      = "codercom/enterprise-golang:ubuntu"
     "Node"    = "codercom/enterprise-node:ubuntu"
   }     
-
 }
 
 variable "socket" {
@@ -103,6 +95,16 @@ data "coder_parameter" "dotfiles_url" {
   order       = 2
 }
 
+data "coder_parameter" "repo" {
+  name        = "Source Code Repository (optional)"
+  description = "What source code repository do you want to clone?"
+  type        = "string"
+  mutable     = true
+  icon        = "https://avatars.githubusercontent.com/u/95932066?s=200&v=4"
+  default     = "https://github.com/coder/code-server"
+  order       = 5     
+}
+
 resource "coder_agent" "dev" {
   os   = "linux"
   arch = "amd64"
@@ -156,7 +158,7 @@ resource "coder_agent" "dev" {
 # clone repo
 mkdir -p ~/.ssh
 ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts
-git clone --progress https://github.com/${lookup(local.repo, data.coder_parameter.lang.value)}
+git clone --progress ${data.coder_parameter.repo.value}
 
 # use coder CLI to clone and install dotfiles
 if [ -n "$DOTFILES_URI" ]; then
