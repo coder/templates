@@ -209,6 +209,38 @@ data "coder_parameter" "repo" {
   order       = 5     
 }
 
+data "coder_parameter" "location" {
+  name = "Workspace Location"
+  display_name = "Workspace Location"
+  description = "Location to deploy workspace into."
+  default = "central"
+  icon = "/icon/desktop.svg"
+  mutable = true
+  option {
+    icon  = "/icon/azure.png"
+    name  = "Azure West"
+    value = "west"
+  }
+  option {
+    icon  = "/icon/gcp.png"
+    name  = "GCP East"
+    value = "east"
+  }
+  option {
+    icon  = "/icon/aws.png"
+    name  = "AWS Central"
+    value = "central"
+  }
+  order = 6
+}
+
+# Provisionser Tags
+data "coder_workspace_tags" "custom_workspace_tags" {
+  tags = {
+    "location" = data.coder_parameter.location.value
+  }
+}
+
 module "dotfiles" {
   source   = "registry.coder.com/modules/dotfiles/coder"
   version  = "1.0.18"
