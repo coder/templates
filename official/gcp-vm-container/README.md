@@ -1,10 +1,10 @@
 ---
-display_name: GCP (VM Container)
-description:  Provision Google Compute Engine instances as Coder workspaces
-icon: ../../../site/static/icon/gcp.svg
+display_name: Google Compute Engine (VM Container)
+description: Provision Google Compute Engine instances as Coder workspaces
+icon: ../../../site/static/icon/gcp.png
 maintainer_github: coder
 verified: true
-tags: [vm, container, linux, gcp]
+tags: [vm-container, linux, gcp]
 ---
 
 # Remote Development on Google Compute Engine (VM Container)
@@ -49,7 +49,7 @@ a service account:
 
 This template provisions the following resources:
 
-- GCP (ephemeral, deleted on stop)
+- GCP VM (ephemeral, deleted on stop)
   - Container in VM
 - Managed disk (persistent, mounted to `/home/coder` in container)
 

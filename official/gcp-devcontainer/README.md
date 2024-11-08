@@ -1,5 +1,5 @@
 ---
-display_name: GCP (Devcontainer)
+display_name: Google Compute Engine (Devcontainer)
 description: Provision a Devcontainer on Google Compute Engine instances as Coder workspaces
 icon: ../../../site/static/icon/gcp.png
 maintainer_github: coder
@@ -52,12 +52,12 @@ a service account:
 This template provisions the following resources:
 
 - Envbuilder cached image (conditional, persistent) using [`terraform-provider-envbuilder`](https://github.com/coder/terraform-provider-envbuilder)
-- GCP (persistent) with a running Docker daemon
+- GCP VM (persistent) with a running Docker daemon
 - GCP Disk (persistent, mounted to root)
-- [Envbuilder container](https://github.com/coder/envbuilder) inside the GCP
+- [Envbuilder container](https://github.com/coder/envbuilder) inside the GCP VM
 
 Coder persists the root volume. The full filesystem is preserved when the workspace restarts.
-When the GCP starts, a startup script runs that ensures a running Docker daemon, and starts
+When the GCP VM starts, a startup script runs that ensures a running Docker daemon, and starts
 an Envbuilder container using this Docker daemon. The Docker socket is also mounted inside the container to allow running Docker containers inside the workspace.
 
 > **Note**

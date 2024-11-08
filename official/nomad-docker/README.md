@@ -1,10 +1,10 @@
 ---
-display_name: Docker (Nomad)
+display_name: Nomad
 description: Provision Nomad Jobs as Coder workspaces
 icon: ../../../site/static/icon/nomad.svg
 maintainer_github: coder
 verified: true
-tags: [container, docker]
+tags: [nomad, container]
 ---
 
 # Remote Development on Nomad
@@ -31,7 +31,7 @@ The CSI Host Volume plugin is used to mount host volumes into Nomad tasks. This 
 
 2. Append the following stanza to your Nomad server configuration file and restart the nomad service.
 
-   ```hcl
+   ```tf
    plugin "docker" {
      config {
        allow_privileged = true
@@ -45,7 +45,7 @@ The CSI Host Volume plugin is used to mount host volumes into Nomad tasks. This 
 
 3. Create a file `hostpath.nomad` with following content:
 
-   ```hcl
+   ```tf
    job "hostpath-csi-plugin" {
      datacenters = ["dc1"]
      type = "system"

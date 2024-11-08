@@ -37,7 +37,7 @@ variable "use_kubeconfig" {
 provider "coder" {
 }
 
-variable "workspaces_namespace" {
+variable "namespace" {
   type        = string
   description = "The namespace to create workspaces in (must exist prior to creating workspaces)"
 }
@@ -124,7 +124,7 @@ resource "coder_app" "code-server" {
 resource "kubernetes_persistent_volume_claim" "home" {
   metadata {
     name      = "coder-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}-home"
-    namespace = var.workspaces_namespace
+    namespace = var.namespace
   }
   wait_until_bound = false
   spec {
@@ -142,7 +142,7 @@ resource "kubernetes_pod" "main" {
 
   metadata {
     name      = "coder-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}"
-    namespace = var.workspaces_namespace
+    namespace = var.namespace
   }
 
   spec {
