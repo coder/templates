@@ -1,5 +1,5 @@
 ---
-display_name: GCP (Linux)
+display_name: Google Compute Engine (Linux)
 description: Provision Google Compute Engine instances as Coder workspaces
 icon: ../../../site/static/icon/gcp.png
 maintainer_github: coder
@@ -49,7 +49,7 @@ a service account:
 
 This template provisions the following resources:
 
-- GCP (ephemeral)
+- GCP VM (ephemeral)
 - GCP Disk (persistent, mounted to root)
 
 Coder persists the root volume. The full filesystem is preserved when the workspace restarts. See this [community example](https://github.com/bpmct/coder-templates/tree/main/aws-linux-ephemeral) of an ephemeral AWS instance.

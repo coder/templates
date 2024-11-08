@@ -13,25 +13,19 @@ terraform {
   }
 }
 
-
-variable "socket" {
+variable "docker_socket" {
+  default     = ""
+  description = "(Optional) Docker socket URI"
   type        = string
-  description = <<-EOF
-  The Unix socket that the Docker daemon listens on and how containers
-  communicate with the Docker daemon.
-
-  Either Unix or TCP
-  e.g., unix:///var/run/docker.sock
-
-  EOF
-  default = "unix:///var/run/docker.sock"
 }
 
 provider "coder" {}
 provider "docker" {
-  host = var.socket
+  # Defaulting to null if the variable is an empty string lets us have an optional variable without having to set our own default
+  host = var.docker_socket != "" ? var.docker_socket : null
 }
 provider "envbuilder" {}
+
 data "coder_provisioner" "me" {}
 data "coder_workspace" "me" {}
 data "coder_workspace_owner" "me" {}
