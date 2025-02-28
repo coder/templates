@@ -278,12 +278,15 @@ resource "coder_agent" "dev" {
   dir                = "/workspaces/${trimsuffix(basename(data.coder_parameter.repo_url.value), ".git")}"
   connection_timeout = 0
 
-  # Enable GIT integration upon workspace creation
+  # These environment variables allow you to make Git commits right away after creating a
+  # workspace. Note that they take precedence over configuration defined in ~/.gitconfig!
+  # You can remove this block if you'd prefer to configure Git manually or using
+  # dotfiles. (see docs/dotfiles.md)
   env = {
-    GIT_AUTHOR_NAME     = coalesce(data.coder_workspace_owner.me.full_name, data.coder_workspace_owner.me.name)
-    GIT_AUTHOR_EMAIL    = "${data.coder_workspace_owner.me.email}"
-    GIT_COMMITTER_NAME  = coalesce(data.coder_workspace_owner.me.full_name, data.coder_workspace_owner.me.name)
-    GIT_COMMITTER_EMAIL = "${data.coder_workspace_owner.me.email}"
+    GIT_AUTHOR_NAME     = local.git_author_name
+    GIT_AUTHOR_EMAIL    = local.git_author_email
+    GIT_COMMITTER_NAME  = local.git_author_name
+    GIT_COMMITTER_EMAIL = local.git_author_email
   }
 
   metadata {
