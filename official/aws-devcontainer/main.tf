@@ -171,6 +171,8 @@ locals {
     # ENVBUILDER_GIT_URL and ENVBUILDER_CACHE_REPO will be overridden by the provider
     # if the cache repo is enabled.
     "ENVBUILDER_GIT_URL" : data.coder_parameter.repo_url.value,
+    # Used for when SSH is an available authentication mechanism for git providers
+    "ENVBUILDER_GIT_SSH_PRIVATE_KEY_BASE64" : base64encode(try(data.coder_workspace_owner.me.ssh_private_key, "")),
     # The agent token is required for the agent to connect to the Coder platform.
     "CODER_AGENT_TOKEN" : try(coder_agent.dev.0.token, ""),
     # The agent URL is required for the agent to connect to the Coder platform.
@@ -275,6 +277,14 @@ resource "coder_agent" "dev" {
   os                 = "linux"
   dir                = "/workspaces/${trimsuffix(basename(data.coder_parameter.repo_url.value), ".git")}"
   connection_timeout = 0
+
+  # Enable GIT integration upon workspace creation
+  env = {
+    GIT_AUTHOR_NAME     = coalesce(data.coder_workspace_owner.me.full_name, data.coder_workspace_owner.me.name)
+    GIT_AUTHOR_EMAIL    = "${data.coder_workspace_owner.me.email}"
+    GIT_COMMITTER_NAME  = coalesce(data.coder_workspace_owner.me.full_name, data.coder_workspace_owner.me.name)
+    GIT_COMMITTER_EMAIL = "${data.coder_workspace_owner.me.email}"
+  }
 
   metadata {
     key          = "cpu"
