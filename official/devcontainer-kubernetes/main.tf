@@ -158,6 +158,8 @@ locals {
     # ENVBUILDER_GIT_URL and ENVBUILDER_CACHE_REPO will be overridden by the provider
     # if the cache repo is enabled.
     "ENVBUILDER_GIT_URL" : local.repo_url,
+    # Used for when SSH is an available authentication mechanism for git providers
+    "ENVBUILDER_GIT_SSH_PRIVATE_KEY_BASE64" : base64encode(try(data.coder_workspace_owner.me.ssh_private_key, "")),
     "ENVBUILDER_CACHE_REPO" : var.cache_repo,
     "CODER_AGENT_TOKEN" : coder_agent.main.token,
     # Use the docker gateway if the access URL is 127.0.0.1
