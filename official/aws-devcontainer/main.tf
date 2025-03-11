@@ -171,6 +171,8 @@ locals {
     # ENVBUILDER_GIT_URL and ENVBUILDER_CACHE_REPO will be overridden by the provider
     # if the cache repo is enabled.
     "ENVBUILDER_GIT_URL" : data.coder_parameter.repo_url.value,
+    # Used for when SSH is an available authentication mechanism for git providers
+    "ENVBUILDER_GIT_SSH_PRIVATE_KEY_BASE64" : base64encode(try(data.coder_workspace_owner.me.ssh_private_key, "")),
     # The agent token is required for the agent to connect to the Coder platform.
     "CODER_AGENT_TOKEN" : try(coder_agent.dev.0.token, ""),
     # The agent URL is required for the agent to connect to the Coder platform.
@@ -275,6 +277,17 @@ resource "coder_agent" "dev" {
   os                 = "linux"
   dir                = "/workspaces/${trimsuffix(basename(data.coder_parameter.repo_url.value), ".git")}"
   connection_timeout = 0
+
+  # These environment variables allow you to make Git commits right away after creating a
+  # workspace. Note that they take precedence over configuration defined in ~/.gitconfig!
+  # You can remove this block if you'd prefer to configure Git manually or using
+  # dotfiles. (see docs/dotfiles.md)
+  env = {
+    GIT_AUTHOR_NAME     = local.git_author_name
+    GIT_AUTHOR_EMAIL    = local.git_author_email
+    GIT_COMMITTER_NAME  = local.git_author_name
+    GIT_COMMITTER_EMAIL = local.git_author_email
+  }
 
   metadata {
     key          = "cpu"
