@@ -1,0 +1,62 @@
+{
+  "id": "757597c9-4c6d-4e99-8b19-67a196c11f9a",
+  "created_at": "2025-02-05T08:26:49.797079Z",
+  "updated_at": "2025-02-05T08:40:49.575036Z",
+  "organization_id": "c1064dd3-cd6c-4f6d-9754-f0dcab588b18",
+  "organization_name": "us-central",
+  "organization_display_name": "Coder",
+  "organization_icon": "/icon/coder.svg",
+  "name": "k8s-lightweight",
+  "display_name": "K8s Light",
+  "provisioner": "terraform",
+  "active_version_id": "340d8ab0-cdd1-4273-8f4b-daf04e825daa",
+  "active_user_count": 0,
+  "build_time_stats": {
+    "delete": {
+      "P50": null,
+      "P95": null
+    },
+    "start": {
+      "P50": null,
+      "P95": null
+    },
+    "stop": {
+      "P50": null,
+      "P95": null
+    }
+  },
+  "description": "A minimal starter template for Coder",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "/emojis/1f4e6.png",
+  "default_ttl_ms": 86400000,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [
+      "sunday"
+    ],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "db156574-ced8-464a-8bfc-95ebfce0b31c",
+  "created_by_name": "jullian",
+  "allow_user_autostart": false,
+  "allow_user_autostop": false,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 0,
+  "time_til_dormant_autodelete_ms": 0,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": true
+}

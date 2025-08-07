@@ -1,0 +1,60 @@
+{
+  "id": "1c390d2a-8925-4707-8df0-69c4f4b7dec2",
+  "created_at": "2024-10-16T02:26:30.854788Z",
+  "updated_at": "2025-06-18T13:48:41.491137Z",
+  "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+  "organization_name": "coder",
+  "organization_display_name": "Coder",
+  "organization_icon": "",
+  "name": "pod-kitchen-sink",
+  "display_name": "Universal Workspace Template",
+  "provisioner": "terraform",
+  "active_version_id": "3dfe26f2-5692-406b-95b5-92a004d2d1f0",
+  "active_user_count": 7,
+  "build_time_stats": {
+    "delete": {
+      "P50": null,
+      "P95": null
+    },
+    "start": {
+      "P50": 7750,
+      "P95": 7987
+    },
+    "stop": {
+      "P50": 7866,
+      "P95": 9179
+    }
+  },
+  "description": "",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "/emojis/1f37d.png",
+  "default_ttl_ms": 0,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "b4670a12-f79b-458a-8cf1-bc381846b368",
+  "created_by_name": "jullian",
+  "allow_user_autostart": true,
+  "allow_user_autostop": true,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 0,
+  "time_til_dormant_autodelete_ms": 0,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": false
+}

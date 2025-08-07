@@ -1,0 +1,62 @@
+{
+  "id": "be604066-469e-44f7-ad26-52ab1bfef9cf",
+  "created_at": "2025-06-18T13:33:54.469661Z",
+  "updated_at": "2025-06-18T14:17:36.881215Z",
+  "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+  "organization_name": "coder",
+  "organization_display_name": "Coder",
+  "organization_icon": "",
+  "name": "selenium-testing-demo",
+  "display_name": "Selenium Testing Demo",
+  "provisioner": "terraform",
+  "active_version_id": "21151a16-d0e8-45ea-a890-96095ff5f854",
+  "active_user_count": 0,
+  "build_time_stats": {
+    "delete": {
+      "P50": null,
+      "P95": null
+    },
+    "start": {
+      "P50": null,
+      "P95": null
+    },
+    "stop": {
+      "P50": null,
+      "P95": null
+    }
+  },
+  "description": "This template was create to demo an automated Selenium testing use-case for US Bank.",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png",
+  "default_ttl_ms": 86400000,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [
+      "sunday"
+    ],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "54c880b2-1fd6-4b84-884f-2948826ce682",
+  "created_by_name": "daveahr",
+  "allow_user_autostart": false,
+  "allow_user_autostop": false,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 0,
+  "time_til_dormant_autodelete_ms": 0,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": false
+}

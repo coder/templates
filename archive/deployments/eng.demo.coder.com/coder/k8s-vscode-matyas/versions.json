@@ -1,0 +1,1261 @@
+[
+  {
+    "TemplateVersion": {
+      "id": "3e357dac-e07b-4cb7-bf41-4e8c1fcdb8fb",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-05T20:43:53.503138Z",
+      "updated_at": "2024-12-05T20:44:02.101175Z",
+      "name": "laughing_gagarin7",
+      "message": "",
+      "job": {
+        "id": "3d4ccd81-e243-4d4c-aa01-a67d8d4f9637",
+        "created_at": "2024-12-05T20:43:53.501663Z",
+        "started_at": "2024-12-05T20:43:53.511622Z",
+        "completed_at": "2024-12-05T20:44:01.84136Z",
+        "status": "succeeded",
+        "worker_id": "f4c98c2b-b893-43da-9ebb-5725c3d46891",
+        "file_id": "620bcd64-80b0-4986-a466-3f1b83f62607",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "7bd2cf92-730f-4314-8986-0ed5677a7ea4",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-05T20:47:09.880644Z",
+      "updated_at": "2024-12-05T20:47:20.579075Z",
+      "name": "gracious_agnesi2",
+      "message": "",
+      "job": {
+        "id": "16a5a138-1ffb-4fd7-995b-010596202ca6",
+        "created_at": "2024-12-05T20:47:09.879373Z",
+        "started_at": "2024-12-05T20:47:09.890558Z",
+        "completed_at": "2024-12-05T20:47:20.585045Z",
+        "status": "succeeded",
+        "worker_id": "ccbba45a-ff9f-4870-bb2f-e2eb629242d1",
+        "file_id": "f47f737b-8b0c-47db-9063-a0764446f2ec",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "049e89db-626b-441b-b90e-a12400c0ec3b",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-05T21:00:35.899333Z",
+      "updated_at": "2024-12-05T21:00:47.478124Z",
+      "name": "interesting_knuth4",
+      "message": "",
+      "job": {
+        "id": "d06a2e98-91a9-4d1e-b39b-ab40512df817",
+        "created_at": "2024-12-05T21:00:35.896255Z",
+        "started_at": "2024-12-05T21:00:35.917893Z",
+        "completed_at": "2024-12-05T21:00:47.486979Z",
+        "status": "succeeded",
+        "worker_id": "c00eb3b0-e933-43f7-b6c1-55f3853db1a4",
+        "file_id": "eeffab44-029a-49b1-8e71-28a722e123c8",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "f8700daa-8738-474f-89d8-8eea80821d81",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-05T21:05:26.907671Z",
+      "updated_at": "2024-12-05T21:05:38.356338Z",
+      "name": "elastic_elion6",
+      "message": "",
+      "job": {
+        "id": "e8d68f26-fb7d-4023-b1d1-d393e879ddd9",
+        "created_at": "2024-12-05T21:05:26.906519Z",
+        "started_at": "2024-12-05T21:05:26.913982Z",
+        "completed_at": "2024-12-05T21:05:38.360459Z",
+        "status": "succeeded",
+        "worker_id": "ccbba45a-ff9f-4870-bb2f-e2eb629242d1",
+        "file_id": "c4119933-404a-4a04-95e0-10e9baf6e9ec",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "2ad6cb4a-6055-47d6-8e08-33dc4d0c1e72",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-09T18:19:46.581222Z",
+      "updated_at": "2024-12-09T18:19:46.581223Z",
+      "name": "cool_stonebraker4",
+      "message": "",
+      "job": {
+        "id": "b4d20c44-5793-49ac-a6a9-9d4601fe667d",
+        "created_at": "2024-12-09T18:19:46.577517Z",
+        "started_at": "2024-12-09T18:19:46.618938Z",
+        "completed_at": "2024-12-09T18:19:51.488984Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "c00eb3b0-e933-43f7-b6c1-55f3853db1a4",
+        "file_id": "3a8f4d0d-c8f2-4da4-b34b-c0e369ae4892",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "c90c821e-ba04-4dcf-905d-bf744346887c",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-09T18:20:09.293891Z",
+      "updated_at": "2024-12-09T18:20:09.293892Z",
+      "name": "trusting_wright5",
+      "message": "",
+      "job": {
+        "id": "2be7657f-52d3-4c4f-aa3e-d0b01f7f198f",
+        "created_at": "2024-12-09T18:20:09.291072Z",
+        "started_at": "2024-12-09T18:20:09.318133Z",
+        "completed_at": "2024-12-09T18:20:13.440775Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "87f3b473-2a53-4540-a3f5-c90c9cd3545e",
+        "file_id": "065b673a-028a-4930-8ef3-0de8b9a68646",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "52509b20-ebd8-4fc9-9cc7-058a17817ad7",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-09T18:20:33.056574Z",
+      "updated_at": "2024-12-09T18:20:33.056574Z",
+      "name": "intelligent_swartz3",
+      "message": "",
+      "job": {
+        "id": "1445a1b1-c4f3-4732-8119-889318a468c7",
+        "created_at": "2024-12-09T18:20:33.053543Z",
+        "started_at": "2024-12-09T18:20:33.077656Z",
+        "completed_at": "2024-12-09T18:20:37.533868Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "64f55c95-f901-4296-b423-29171206ef15",
+        "file_id": "7de327f4-339e-4166-a69d-2e48cf64ccb6",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "7cf31fdd-50eb-4b6c-970d-d8d69ef3d696",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-09T18:21:40.350989Z",
+      "updated_at": "2024-12-09T18:21:40.351064Z",
+      "name": "affectionate_archimedes8",
+      "message": "",
+      "job": {
+        "id": "8204ba08-6a91-4031-b7cf-e98c90fbe0c4",
+        "created_at": "2024-12-09T18:21:40.347117Z",
+        "started_at": "2024-12-09T18:21:40.379031Z",
+        "completed_at": "2024-12-09T18:21:41.183823Z",
+        "error": "template import provision for start: initialize terraform: exit status 1",
+        "status": "failed",
+        "worker_id": "a3d2ce5b-61fa-47b6-a9c0-d9bce3825451",
+        "file_id": "1223ca9a-59d8-4733-b648-dbb0252c377e",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "6183fbae-77e5-4414-8220-62ca2f8bdc2e",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-09T18:21:55.999064Z",
+      "updated_at": "2024-12-09T18:21:55.999065Z",
+      "name": "nifty_pascal8",
+      "message": "",
+      "job": {
+        "id": "05590095-76fd-4b78-b4b3-1e7c9ed18154",
+        "created_at": "2024-12-09T18:21:55.994314Z",
+        "started_at": "2024-12-09T18:21:56.030546Z",
+        "completed_at": "2024-12-09T18:22:00.278643Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "a3d2ce5b-61fa-47b6-a9c0-d9bce3825451",
+        "file_id": "98d46a71-34fa-4f97-931c-519dc3b7ea83",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "d92b4291-1c52-43e7-a9c9-99983b886bf0",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-09T18:22:27.986703Z",
+      "updated_at": "2024-12-09T18:22:27.986705Z",
+      "name": "charming_banach1",
+      "message": "",
+      "job": {
+        "id": "a4c529d4-2d56-46ab-aa6a-9bd405acbd47",
+        "created_at": "2024-12-09T18:22:27.981244Z",
+        "started_at": "2024-12-09T18:22:28.005993Z",
+        "completed_at": "2024-12-09T18:22:32.750561Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "0a7e0871-9724-4433-bb93-cf9a1a3140fd",
+        "file_id": "334c4ac2-771f-4186-9f6e-952d5409966c",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "7376226b-3bb0-4480-ae37-d98073625c69",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-09T18:23:01.584379Z",
+      "updated_at": "2024-12-09T18:23:12.187932Z",
+      "name": "wizardly_liskov8",
+      "message": "",
+      "job": {
+        "id": "c4585443-5b8f-4ec5-9c6c-1af9fad5600a",
+        "created_at": "2024-12-09T18:23:01.580049Z",
+        "started_at": "2024-12-09T18:23:01.617257Z",
+        "completed_at": "2024-12-09T18:23:12.192793Z",
+        "status": "succeeded",
+        "worker_id": "87f3b473-2a53-4540-a3f5-c90c9cd3545e",
+        "file_id": "6fc68bf3-be86-44c3-88b3-64373f0485eb",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "297229b8-b45d-482a-abbe-a49af174bd74",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-09T18:27:22.220711Z",
+      "updated_at": "2024-12-09T18:27:22.220712Z",
+      "name": "vigilant_bohr0",
+      "message": "",
+      "job": {
+        "id": "1be78211-a758-48d2-beb7-7737da7e44c5",
+        "created_at": "2024-12-09T18:27:22.212482Z",
+        "started_at": "2024-12-09T18:27:22.251321Z",
+        "completed_at": "2024-12-09T18:27:27.037775Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "052a7d9e-b3f3-45e7-8006-297a275d7ff1",
+        "file_id": "d41b1efc-98f8-4f97-b542-c7f9acdaf32a",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "71e66026-f24b-474d-a144-84e8a275eda3",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-09T18:28:41.318672Z",
+      "updated_at": "2024-12-09T18:28:53.006374Z",
+      "name": "gifted_franklin5",
+      "message": "",
+      "job": {
+        "id": "715fe00f-0eeb-4040-8d5f-46f71eaa6289",
+        "created_at": "2024-12-09T18:28:41.315149Z",
+        "started_at": "2024-12-09T18:28:41.346649Z",
+        "completed_at": "2024-12-09T18:28:53.010236Z",
+        "status": "succeeded",
+        "worker_id": "e9446546-e04c-4cfb-9a2d-88deafe13255",
+        "file_id": "a95f05f0-dc2c-43da-aebf-dfa0c2d66067",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "a3ea1a1d-493d-4bed-92c6-a06a9dbbf71b",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-09T18:30:26.119723Z",
+      "updated_at": "2024-12-09T18:30:37.123016Z",
+      "name": "competent_gauss7",
+      "message": "",
+      "job": {
+        "id": "207eee57-58e4-4fa1-83fe-e7d499a6e20e",
+        "created_at": "2024-12-09T18:30:26.115663Z",
+        "started_at": "2024-12-09T18:30:26.143443Z",
+        "completed_at": "2024-12-09T18:30:37.127641Z",
+        "status": "succeeded",
+        "worker_id": "0a7e0871-9724-4433-bb93-cf9a1a3140fd",
+        "file_id": "6c5b0f94-51c0-461d-a8a0-68060faa7b07",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "1ec95aa8-0680-49bb-8f66-f3e54185ad4d",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-09T18:34:53.002589Z",
+      "updated_at": "2024-12-09T18:35:04.053504Z",
+      "name": "practical_hamilton5",
+      "message": "",
+      "job": {
+        "id": "b1752654-22bf-4933-b6f2-b179d37427ca",
+        "created_at": "2024-12-09T18:34:52.998244Z",
+        "started_at": "2024-12-09T18:34:53.029483Z",
+        "completed_at": "2024-12-09T18:35:04.057888Z",
+        "status": "succeeded",
+        "worker_id": "87f3b473-2a53-4540-a3f5-c90c9cd3545e",
+        "file_id": "79f13433-7d8f-4118-88b0-8e097e2c8b48",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "48658231-361f-470d-ab5a-212c06f68df1",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-09T18:46:31.856242Z",
+      "updated_at": "2024-12-09T18:46:44.584374Z",
+      "name": "cranky_swanson1",
+      "message": "",
+      "job": {
+        "id": "b14df197-f0e2-455f-9ab9-40d40c054ed0",
+        "created_at": "2024-12-09T18:46:31.853057Z",
+        "started_at": "2024-12-09T18:46:31.888074Z",
+        "completed_at": "2024-12-09T18:46:44.59505Z",
+        "status": "succeeded",
+        "worker_id": "10589eff-a1c6-4f0a-9d96-bfb98f516865",
+        "file_id": "a355cf5d-16f6-4115-98c0-863ebcd8c759",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "7afef92d-0f70-4b0d-bfb9-9b5e6b258816",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-12T17:48:46.485838Z",
+      "updated_at": "2024-12-12T17:48:57.966078Z",
+      "name": "inspiring_galileo4",
+      "message": "",
+      "job": {
+        "id": "b8799321-dcc2-4007-a2b5-06bc9974beca",
+        "created_at": "2024-12-12T17:48:46.483586Z",
+        "started_at": "2024-12-12T17:48:46.49935Z",
+        "completed_at": "2024-12-12T17:48:57.975122Z",
+        "status": "succeeded",
+        "worker_id": "6762f31f-bcb6-4e50-bdc9-0ea17ecb0a93",
+        "file_id": "47a294c9-c3e4-4f9b-99c4-a9be4910b33c",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "c0314bc1-d8b0-4970-a3bc-9dca212085ec",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-12T17:53:25.389298Z",
+      "updated_at": "2024-12-12T17:53:34.979893Z",
+      "name": "cool_gould9",
+      "message": "",
+      "job": {
+        "id": "86cfcd99-92aa-4034-b626-8c4b9a6b426b",
+        "created_at": "2024-12-12T17:53:25.388288Z",
+        "started_at": "2024-12-12T17:53:25.402525Z",
+        "completed_at": "2024-12-12T17:53:34.984691Z",
+        "status": "succeeded",
+        "worker_id": "a3d2ce5b-61fa-47b6-a9c0-d9bce3825451",
+        "file_id": "6000ad92-78de-4285-9ca4-88e7c420469e",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "bdfa3c9e-bf14-4424-95be-35da3ec7fb3b",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-12T17:54:45.227714Z",
+      "updated_at": "2024-12-12T17:54:54.982595Z",
+      "name": "charming_colden5",
+      "message": "",
+      "job": {
+        "id": "ba91f666-0a1e-4d57-9cb0-e69ef420ba82",
+        "created_at": "2024-12-12T17:54:45.226691Z",
+        "started_at": "2024-12-12T17:54:45.234226Z",
+        "completed_at": "2024-12-12T17:54:54.986883Z",
+        "status": "succeeded",
+        "worker_id": "ccbba45a-ff9f-4870-bb2f-e2eb629242d1",
+        "file_id": "6000ad92-78de-4285-9ca4-88e7c420469e",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "7eac5455-d58c-4b29-bea3-e25c497b5cea",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-12T17:55:04.174722Z",
+      "updated_at": "2024-12-12T17:55:13.210047Z",
+      "name": "intelligent_brattain1",
+      "message": "",
+      "job": {
+        "id": "344dcf32-8a41-4822-9bf2-f5d7c10aeaf6",
+        "created_at": "2024-12-12T17:55:04.172881Z",
+        "started_at": "2024-12-12T17:55:04.183786Z",
+        "completed_at": "2024-12-12T17:55:13.214994Z",
+        "status": "succeeded",
+        "worker_id": "ccbba45a-ff9f-4870-bb2f-e2eb629242d1",
+        "file_id": "6000ad92-78de-4285-9ca4-88e7c420469e",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "73c9afbe-d97d-489c-852e-10ec513ed6cd",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-12T18:26:04.536148Z",
+      "updated_at": "2024-12-12T18:26:15.339442Z",
+      "name": "sad_boyd6",
+      "message": "",
+      "job": {
+        "id": "6893001f-4fab-4ef9-b98a-5d80efc7d250",
+        "created_at": "2024-12-12T18:26:04.529648Z",
+        "started_at": "2024-12-12T18:26:04.593665Z",
+        "completed_at": "2024-12-12T18:26:15.34364Z",
+        "status": "succeeded",
+        "worker_id": "87f3b473-2a53-4540-a3f5-c90c9cd3545e",
+        "file_id": "c49ab2af-9bcd-46ad-a3f2-a47451e08388",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "0ab20840-9ed0-40ba-9671-b78263e84e21",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-12T18:28:47.018092Z",
+      "updated_at": "2024-12-12T18:28:56.806678Z",
+      "name": "focused_snyder7",
+      "message": "",
+      "job": {
+        "id": "98cccd29-632c-4a79-820c-f9a0e0e05e50",
+        "created_at": "2024-12-12T18:28:47.015608Z",
+        "started_at": "2024-12-12T18:28:47.040477Z",
+        "completed_at": "2024-12-12T18:28:56.811568Z",
+        "status": "succeeded",
+        "worker_id": "c00eb3b0-e933-43f7-b6c1-55f3853db1a4",
+        "file_id": "37a9a37e-e06e-454e-961c-f12f37345bb0",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "22fce71f-9cda-4ab7-9015-3985733ff42b",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-20T20:58:13.089764Z",
+      "updated_at": "2024-12-20T20:58:22.980293Z",
+      "name": "jovial_nash8",
+      "message": "",
+      "job": {
+        "id": "2fddebb1-62bf-4e1b-88ec-6843556fb717",
+        "created_at": "2024-12-20T20:58:13.088444Z",
+        "started_at": "2024-12-20T20:58:13.099448Z",
+        "completed_at": "2024-12-20T20:58:22.986447Z",
+        "status": "succeeded",
+        "worker_id": "e36ad5e4-9ea1-4a3f-b2d9-35c7d1b8a4b5",
+        "file_id": "8a3c49b4-1aee-4082-a4a6-c6b1002308fc",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "9bf7713e-56ed-4db5-869a-07d518b87442",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-12-20T22:09:00.140914Z",
+      "updated_at": "2024-12-20T22:09:09.162422Z",
+      "name": "agitated_wilbur1",
+      "message": "",
+      "job": {
+        "id": "4d6ec98c-84b3-4624-9205-4af13d8612a6",
+        "created_at": "2024-12-20T22:09:00.139306Z",
+        "started_at": "2024-12-20T22:09:00.14941Z",
+        "completed_at": "2024-12-20T22:09:09.16665Z",
+        "status": "succeeded",
+        "worker_id": "53dcfa3e-f225-4797-828d-66a069a32837",
+        "file_id": "3b673b1f-813b-40fd-b0db-a9c792df6203",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "f3c4ece5-5e90-4f2e-af60-b5116b269191",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2025-01-31T17:32:35.585056Z",
+      "updated_at": "2025-01-31T17:32:46.22434Z",
+      "name": "gifted_gauss3",
+      "message": "",
+      "job": {
+        "id": "dc6f8dfc-7b77-41b8-a70e-c635729cd851",
+        "created_at": "2025-01-31T17:32:35.581822Z",
+        "started_at": "2025-01-31T17:32:35.60802Z",
+        "completed_at": "2025-01-31T17:32:46.229163Z",
+        "status": "succeeded",
+        "worker_id": "2764a978-6e62-4ead-a73f-07574e977c8a",
+        "file_id": "71392490-de05-4d80-94c5-ce19b5ec3b14",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "ceb976db-3a06-4073-9545-6859cf090865",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2025-02-26T01:06:01.751466Z",
+      "updated_at": "2025-02-26T01:06:01.751467Z",
+      "name": "inspiring_panini7",
+      "message": "",
+      "job": {
+        "id": "c3d95c41-f3cc-4a22-bb2c-1fdf1c652299",
+        "created_at": "2025-02-26T01:06:01.746273Z",
+        "started_at": "2025-02-26T01:06:01.765268Z",
+        "completed_at": "2025-02-26T01:06:04.741549Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "40050b25-d13e-4d58-8de7-6e8734251e8b",
+        "file_id": "522ceaf4-7c89-441d-9ca9-5af3720752c9",
+        "tags": {
+          "location": "central",
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "8b48c5f5-3998-40f4-b1d5-048f51314469",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2025-02-26T01:07:41.758338Z",
+      "updated_at": "2025-02-26T01:07:48.885023Z",
+      "name": "objective_engelbart8",
+      "message": "",
+      "job": {
+        "id": "1bc0046a-8f8f-471f-8fd1-b358cb569f8c",
+        "created_at": "2025-02-26T01:07:41.75322Z",
+        "started_at": "2025-02-26T01:07:41.772612Z",
+        "completed_at": "2025-02-26T01:07:48.89809Z",
+        "status": "succeeded",
+        "worker_id": "5ffe72c1-0234-4559-b55d-c92452852c09",
+        "file_id": "7eb67741-55e2-4a70-bed8-e2a2662e4865",
+        "tags": {
+          "location": "central",
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "7f4b7621-087c-4832-8862-8586079d12ea",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2025-02-26T01:21:12.939962Z",
+      "updated_at": "2025-02-26T01:21:19.69449Z",
+      "name": "bold_hellman3",
+      "message": "",
+      "job": {
+        "id": "6220c8d8-caf6-4de4-8501-8e3d999e36f7",
+        "created_at": "2025-02-26T01:21:12.934917Z",
+        "started_at": "2025-02-26T01:21:12.953478Z",
+        "completed_at": "2025-02-26T01:21:19.704597Z",
+        "status": "succeeded",
+        "worker_id": "40050b25-d13e-4d58-8de7-6e8734251e8b",
+        "file_id": "5f3da94a-8468-4614-90d9-da9bb733ad4d",
+        "tags": {
+          "location": "central",
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "f65111a7-b91e-4f66-9b47-09c18e4acc52",
+      "template_id": "4b197826-1485-4aac-ac32-0e9837f79e34",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2025-03-04T16:00:27.796192Z",
+      "updated_at": "2025-03-04T16:00:35.97125Z",
+      "name": "beautiful_newton6",
+      "message": "",
+      "job": {
+        "id": "61db596f-828b-47f9-8060-0fa8beb85041",
+        "created_at": "2025-03-04T16:00:27.789385Z",
+        "started_at": "2025-03-04T16:00:27.812139Z",
+        "completed_at": "2025-03-04T16:00:35.976393Z",
+        "status": "succeeded",
+        "worker_id": "40050b25-d13e-4d58-8de7-6e8734251e8b",
+        "file_id": "6a8ff145-de14-4af1-b926-4f9fb9f2f0ea",
+        "tags": {
+          "location": "central",
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  }
+]

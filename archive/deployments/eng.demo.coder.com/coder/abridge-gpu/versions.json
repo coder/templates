@@ -1,0 +1,43 @@
+{
+  "TemplateVersion": {
+    "id": "7f82acbf-1e65-4932-8202-635942e17ee1",
+    "template_id": "8fccf6d6-9ae0-4fe4-af48-dbf506b7c243",
+    "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+    "created_at": "2025-06-18T13:28:16.708449Z",
+    "updated_at": "2025-06-18T13:28:20.412575Z",
+    "name": "stupefied_hugle0",
+    "message": "",
+    "job": {
+      "id": "deeffb26-02a7-4a2d-8281-7aab70eac562",
+      "created_at": "2025-06-18T13:28:16.701628Z",
+      "started_at": "2025-06-18T13:28:16.713213Z",
+      "completed_at": "2025-06-18T13:28:19.765281Z",
+      "status": "succeeded",
+      "worker_id": "9c73e420-10a2-4540-bc7c-71ec4cec8ff4",
+      "file_id": "7a3b7fee-6515-4887-b05f-44719c78de05",
+      "tags": {
+        "owner": "",
+        "scope": "organization"
+      },
+      "queue_position": 0,
+      "queue_size": 3,
+      "organization_id": "00000000-0000-0000-0000-000000000000",
+      "input": {},
+      "type": "",
+      "metadata": {
+        "template_version_name": "",
+        "template_id": "00000000-0000-0000-0000-000000000000",
+        "template_name": "",
+        "template_display_name": "",
+        "template_icon": ""
+      }
+    },
+    "readme": "---\ndisplay_name: Scratch\ndescription: A minimal starter template for Coder\nicon: ../../../site/static/emojis/1f4e6.png\nmaintainer_github: coder\nverified: true\ntags: []\n---\n\n# A minimal Scaffolding for a Coder Template\n\nUse this starter template as a basis to create your own unique template from scratch.\n",
+    "created_by": {
+      "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+      "username": "matyas",
+      "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+    },
+    "archived": false
+  }
+}

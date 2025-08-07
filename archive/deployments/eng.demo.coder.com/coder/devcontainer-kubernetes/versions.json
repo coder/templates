@@ -1,0 +1,131 @@
+[
+  {
+    "TemplateVersion": {
+      "id": "d7054046-33d7-437b-904b-9e78f41212f6",
+      "template_id": "1b52594d-06a4-44ee-943a-43a467c24f22",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-10-29T20:55:55.4233Z",
+      "updated_at": "2024-10-29T20:56:03.392481Z",
+      "name": "wizardly_cartwright4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "e516b04a-e03f-4369-8f8b-30d77dc05177",
+        "created_at": "2024-10-29T20:55:55.420914Z",
+        "started_at": "2024-10-29T20:55:55.469804Z",
+        "completed_at": "2024-10-29T20:56:03.03132Z",
+        "status": "succeeded",
+        "worker_id": "5ab2f6a3-d2cb-400f-8273-e7d1f558feda",
+        "file_id": "e28eedd2-1460-401b-893d-d96606eebc14",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Devcontainers (Kubernetes)\ndescription: Provision envbuilder pods as Coder workspaces\nicon: ../../../site/static/icon/k8s.png\nmaintainer_github: coder\nverified: true\ntags: [container, kubernetes, devcontainer]\n---\n\n# Remote Development on Kubernetes Pods (with Devcontainers)\n\nProvision Devcontainers as [Coder workspaces](https://coder.com/docs/workspaces) on Kubernetes with this example template.\n\n## Prerequisites\n\n### Infrastructure\n\n**Cluster**: This template requires an existing Kubernetes cluster.\n\n**Container Image**: This template uses the [envbuilder image](https://github.com/coder/envbuilder) to build a Devcontainer from a `devcontainer.json`.\n\n### Authentication\n\nThis template authenticates using a `~/.kube/config`, if present on the server, or via built-in authentication if the Coder provisioner is running on Kubernetes with an authorized ServiceAccount. To use another [authentication method](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication), edit the template.\n\n## Architecture\n\nCoder supports devcontainers with [envbuilder](https://github.com/coder/envbuilder), an open source project. Read more about this in [Coder's documentation](https://coder.com/docs/templates/dev-containers).\n\nThis template provisions the following resources:\n\n- Kubernetes deployment (ephemeral)\n- Kubernetes persistent volume claim (persistent on `/workspaces`)\n\nThis template will fetch a Git repo containing a `devcontainer.json` specified by the `repo` parameter, and builds it\nwith [`envbuilder`](https://github.com/coder/envbuilder).\nThe Git repository is cloned inside the `/workspaces` volume if not present.\nAny local changes to the Devcontainer files inside the volume will be applied when you restart the workspace.\nAs you might suspect, any tools or files outside of `/workspaces` or not added as part of the Devcontainer specification are not persisted.\nEdit the `devcontainer.json` instead!\n\n> **Note**\n> This template is designed to be a starting point! Edit the Terraform to extend the template to support your use case.\n\n## Caching\n\nTo speed up your builds, you can use a container registry as a cache.\nWhen creating the template, set the parameter `cache_repo`.\n\n> [!NOTE] We recommend using a registry cache with authentication enabled.\n> To allow Envbuilder to authenticate with the registry cache, specify the variable `cache_repo_dockerconfig_secret`\n> with the name of a Kubernetes secret in the same namespace as Coder. The secret must contain the key `.dockerconfigjson`.\n",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "268f1ab7-0aa6-4eee-861a-12fbfe5fcf5e",
+      "template_id": "1b52594d-06a4-44ee-943a-43a467c24f22",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-10-29T20:56:44.097516Z",
+      "updated_at": "2024-10-29T20:56:53.566286Z",
+      "name": "modest_leavitt0",
+      "message": "",
+      "job": {
+        "id": "899c5086-6b11-4069-ae31-9694789846cb",
+        "created_at": "2024-10-29T20:56:44.093874Z",
+        "started_at": "2024-10-29T20:56:44.109206Z",
+        "completed_at": "2024-10-29T20:56:53.577704Z",
+        "status": "succeeded",
+        "worker_id": "5aa005a6-4d54-4b80-a991-fed80ed84711",
+        "file_id": "e28eedd2-1460-401b-893d-d96606eebc14",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Devcontainers (Kubernetes)\ndescription: Provision envbuilder pods as Coder workspaces\nicon: ../../../site/static/icon/k8s.png\nmaintainer_github: coder\nverified: true\ntags: [container, kubernetes, devcontainer]\n---\n\n# Remote Development on Kubernetes Pods (with Devcontainers)\n\nProvision Devcontainers as [Coder workspaces](https://coder.com/docs/workspaces) on Kubernetes with this example template.\n\n## Prerequisites\n\n### Infrastructure\n\n**Cluster**: This template requires an existing Kubernetes cluster.\n\n**Container Image**: This template uses the [envbuilder image](https://github.com/coder/envbuilder) to build a Devcontainer from a `devcontainer.json`.\n\n### Authentication\n\nThis template authenticates using a `~/.kube/config`, if present on the server, or via built-in authentication if the Coder provisioner is running on Kubernetes with an authorized ServiceAccount. To use another [authentication method](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication), edit the template.\n\n## Architecture\n\nCoder supports devcontainers with [envbuilder](https://github.com/coder/envbuilder), an open source project. Read more about this in [Coder's documentation](https://coder.com/docs/templates/dev-containers).\n\nThis template provisions the following resources:\n\n- Kubernetes deployment (ephemeral)\n- Kubernetes persistent volume claim (persistent on `/workspaces`)\n\nThis template will fetch a Git repo containing a `devcontainer.json` specified by the `repo` parameter, and builds it\nwith [`envbuilder`](https://github.com/coder/envbuilder).\nThe Git repository is cloned inside the `/workspaces` volume if not present.\nAny local changes to the Devcontainer files inside the volume will be applied when you restart the workspace.\nAs you might suspect, any tools or files outside of `/workspaces` or not added as part of the Devcontainer specification are not persisted.\nEdit the `devcontainer.json` instead!\n\n> **Note**\n> This template is designed to be a starting point! Edit the Terraform to extend the template to support your use case.\n\n## Caching\n\nTo speed up your builds, you can use a container registry as a cache.\nWhen creating the template, set the parameter `cache_repo`.\n\n> [!NOTE] We recommend using a registry cache with authentication enabled.\n> To allow Envbuilder to authenticate with the registry cache, specify the variable `cache_repo_dockerconfig_secret`\n> with the name of a Kubernetes secret in the same namespace as Coder. The secret must contain the key `.dockerconfigjson`.\n",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "243bc3ff-2bba-4a29-9c8f-45de991e79fa",
+      "template_id": "1b52594d-06a4-44ee-943a-43a467c24f22",
+      "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+      "created_at": "2024-10-29T20:57:31.176473Z",
+      "updated_at": "2024-10-29T20:57:40.858834Z",
+      "name": "flamboyant_borg5",
+      "message": "",
+      "job": {
+        "id": "b3739ac6-fde9-4e65-b47d-89c4f0cd0359",
+        "created_at": "2024-10-29T20:57:31.175389Z",
+        "started_at": "2024-10-29T20:57:31.186826Z",
+        "completed_at": "2024-10-29T20:57:40.867474Z",
+        "status": "succeeded",
+        "worker_id": "cd0d7eca-4744-4584-b427-d40201f0adbb",
+        "file_id": "e28eedd2-1460-401b-893d-d96606eebc14",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 3,
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "input": {},
+        "type": "",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Devcontainers (Kubernetes)\ndescription: Provision envbuilder pods as Coder workspaces\nicon: ../../../site/static/icon/k8s.png\nmaintainer_github: coder\nverified: true\ntags: [container, kubernetes, devcontainer]\n---\n\n# Remote Development on Kubernetes Pods (with Devcontainers)\n\nProvision Devcontainers as [Coder workspaces](https://coder.com/docs/workspaces) on Kubernetes with this example template.\n\n## Prerequisites\n\n### Infrastructure\n\n**Cluster**: This template requires an existing Kubernetes cluster.\n\n**Container Image**: This template uses the [envbuilder image](https://github.com/coder/envbuilder) to build a Devcontainer from a `devcontainer.json`.\n\n### Authentication\n\nThis template authenticates using a `~/.kube/config`, if present on the server, or via built-in authentication if the Coder provisioner is running on Kubernetes with an authorized ServiceAccount. To use another [authentication method](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication), edit the template.\n\n## Architecture\n\nCoder supports devcontainers with [envbuilder](https://github.com/coder/envbuilder), an open source project. Read more about this in [Coder's documentation](https://coder.com/docs/templates/dev-containers).\n\nThis template provisions the following resources:\n\n- Kubernetes deployment (ephemeral)\n- Kubernetes persistent volume claim (persistent on `/workspaces`)\n\nThis template will fetch a Git repo containing a `devcontainer.json` specified by the `repo` parameter, and builds it\nwith [`envbuilder`](https://github.com/coder/envbuilder).\nThe Git repository is cloned inside the `/workspaces` volume if not present.\nAny local changes to the Devcontainer files inside the volume will be applied when you restart the workspace.\nAs you might suspect, any tools or files outside of `/workspaces` or not added as part of the Devcontainer specification are not persisted.\nEdit the `devcontainer.json` instead!\n\n> **Note**\n> This template is designed to be a starting point! Edit the Terraform to extend the template to support your use case.\n\n## Caching\n\nTo speed up your builds, you can use a container registry as a cache.\nWhen creating the template, set the parameter `cache_repo`.\n\n> [!NOTE] We recommend using a registry cache with authentication enabled.\n> To allow Envbuilder to authenticate with the registry cache, specify the variable `cache_repo_dockerconfig_secret`\n> with the name of a Kubernetes secret in the same namespace as Coder. The secret must contain the key `.dockerconfigjson`.\n",
+      "created_by": {
+        "id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+        "username": "matyas",
+        "avatar_url": "https://graph.microsoft.com/v1.0/me/photo/$value"
+      },
+      "archived": false
+    }
+  }
+]

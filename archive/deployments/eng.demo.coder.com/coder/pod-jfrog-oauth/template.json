@@ -1,0 +1,60 @@
+{
+  "id": "c667df38-72a7-4cb6-b351-ee31e852f3ba",
+  "created_at": "2025-04-16T13:26:26.213797Z",
+  "updated_at": "2025-04-23T14:50:06.665649Z",
+  "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+  "organization_name": "coder",
+  "organization_display_name": "Coder",
+  "organization_icon": "",
+  "name": "pod-jfrog-oauth",
+  "display_name": "K8s Pod + JFrog Package Manager Integration",
+  "provisioner": "terraform",
+  "active_version_id": "3130bb33-f80a-45d4-9c6e-75d27581efdd",
+  "active_user_count": 0,
+  "build_time_stats": {
+    "delete": {
+      "P50": null,
+      "P95": null
+    },
+    "start": {
+      "P50": null,
+      "P95": null
+    },
+    "stop": {
+      "P50": null,
+      "P95": null
+    }
+  },
+  "description": "",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "https://images.credly.com/images/15d6738e-9827-44d3-aeb8-7486f2145ed5/blob.png",
+  "default_ttl_ms": 0,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "5c81422d-711c-425e-be39-4afd34d58444",
+  "created_by_name": "eric",
+  "allow_user_autostart": true,
+  "allow_user_autostop": true,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 0,
+  "time_til_dormant_autodelete_ms": 0,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": false
+}
