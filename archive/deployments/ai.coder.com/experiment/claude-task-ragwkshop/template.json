@@ -1,0 +1,62 @@
+{
+  "id": "2f2d1434-dd1f-4fae-be3b-1b16256f154e",
+  "created_at": "2025-07-15T21:08:38.218413Z",
+  "updated_at": "2025-07-15T21:08:38.224503Z",
+  "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+  "organization_name": "experiment",
+  "organization_display_name": "Coder Experiments",
+  "organization_icon": "https://vectorified.com/images/eye-of-sauron-icon-1.jpg",
+  "name": "claude-task-ragwkshop",
+  "display_name": "Experiment - Claude Task for RAG Workshop",
+  "provisioner": "terraform",
+  "active_version_id": "34a0b53f-e6bc-4440-9f01-5b170c3d67ec",
+  "active_user_count": 0,
+  "build_time_stats": {
+    "delete": {
+      "P50": 9277,
+      "P95": 14519
+    },
+    "start": {
+      "P50": 10535,
+      "P95": 16526
+    },
+    "stop": {
+      "P50": 14781,
+      "P95": 14781
+    }
+  },
+  "description": "Experimental version of \"Claude Task Runner\" used for AWS RAG Workshop and Prototyping",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "/emojis/1f97c.png",
+  "default_ttl_ms": 86400000,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [
+      "sunday"
+    ],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "b05779e0-bdd5-4907-a0e8-afc95a55fba3",
+  "created_by_name": "greg",
+  "allow_user_autostart": true,
+  "allow_user_autostop": true,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 0,
+  "time_til_dormant_autodelete_ms": 0,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": true
+}

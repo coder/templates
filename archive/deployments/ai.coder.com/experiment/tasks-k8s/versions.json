@@ -1,0 +1,722 @@
+[
+  {
+    "TemplateVersion": {
+      "id": "8badd923-15d6-44f2-ad32-de869a8561c6",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-07T23:25:07.489838Z",
+      "updated_at": "2025-07-07T23:25:20.970991Z",
+      "name": "gifted_bose5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "ea1fd305-c040-4842-a8a5-0af8ea6a4f8b",
+        "created_at": "2025-07-07T23:25:07.479375Z",
+        "started_at": "2025-07-07T23:25:07.498694Z",
+        "completed_at": "2025-07-07T23:25:20.420415Z",
+        "status": "succeeded",
+        "worker_id": "029d57af-e198-4751-95b9-983c0c11c44e",
+        "file_id": "26db7a9f-abd6-43b3-8a56-da569a9dc76d",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "8badd923-15d6-44f2-ad32-de869a8561c6"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Docker\ndescription: Run Coder Tasks on Docker with an example application\nicon: ./.images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [docker, container, ai, tasks]\n---\n\n# Run Coder Tasks on Docker\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./.images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "4f826242-3d35-47f0-8c90-805675e75a9f",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-07T23:27:06.080215Z",
+      "updated_at": "2025-07-07T23:27:18.933653Z",
+      "name": "sharp_hermann2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "d0163a1b-8664-4094-91cb-4675b0e8131f",
+        "created_at": "2025-07-07T23:27:06.070638Z",
+        "started_at": "2025-07-07T23:27:06.092237Z",
+        "completed_at": "2025-07-07T23:27:18.933653Z",
+        "status": "succeeded",
+        "worker_id": "4d7ba891-4490-4606-b5a0-61202e3e443e",
+        "file_id": "fa01c8e5-5ddf-4f5c-91ca-2b4e1c705e1e",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "4f826242-3d35-47f0-8c90-805675e75a9f"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Docker\ndescription: Run Coder Tasks on Docker with an example application\nicon: ./.images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [docker, container, ai, tasks]\n---\n\n# Run Coder Tasks on Docker\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./.images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "d29dc448-4c07-4887-8659-feeed3f7dcdc",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-07T23:27:23.899205Z",
+      "updated_at": "2025-07-07T23:27:36.818825Z",
+      "name": "ecstatic_payne9",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "fb5abcc4-1a73-4125-9d49-29c9170f5d70",
+        "created_at": "2025-07-07T23:27:23.889906Z",
+        "started_at": "2025-07-07T23:27:23.910485Z",
+        "completed_at": "2025-07-07T23:27:36.818825Z",
+        "status": "succeeded",
+        "worker_id": "029d57af-e198-4751-95b9-983c0c11c44e",
+        "file_id": "3a75e60b-0e37-47b7-ac6c-177021e2ba7e",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "d29dc448-4c07-4887-8659-feeed3f7dcdc"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Docker\ndescription: Run Coder Tasks on Docker with an example application\nicon: ./.images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [docker, container, ai, tasks]\n---\n\n# Run Coder Tasks on Docker\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./.images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "e8d6d820-5566-4c5c-a314-787550e58a4f",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T00:15:24.425868Z",
+      "updated_at": "2025-07-08T00:15:37.221457Z",
+      "name": "magical_bartik1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "bf9a37a0-6aa4-43f4-a2bc-2c319b07abe6",
+        "created_at": "2025-07-08T00:15:24.41576Z",
+        "started_at": "2025-07-08T00:15:24.438068Z",
+        "completed_at": "2025-07-08T00:15:37.221457Z",
+        "status": "succeeded",
+        "worker_id": "4d7ba891-4490-4606-b5a0-61202e3e443e",
+        "file_id": "4fe3a2ce-950a-4824-acbb-7b0603a37c27",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "e8d6d820-5566-4c5c-a314-787550e58a4f"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Docker\ndescription: Run Coder Tasks on Docker with an example application\nicon: ./.images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [docker, container, ai, tasks]\n---\n\n# Run Coder Tasks on Docker\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./.images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "d644d737-d98c-473f-9df6-b9e5a7c82542",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T00:15:39.834445Z",
+      "updated_at": "2025-07-08T00:15:52.724256Z",
+      "name": "nice_banach3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "f471d89d-1faf-4a35-84ff-a94acff76733",
+        "created_at": "2025-07-08T00:15:39.825182Z",
+        "started_at": "2025-07-08T00:15:39.845372Z",
+        "completed_at": "2025-07-08T00:15:52.724256Z",
+        "status": "succeeded",
+        "worker_id": "4d7ba891-4490-4606-b5a0-61202e3e443e",
+        "file_id": "82e93298-9a85-4d6b-92ed-4b6c11b24764",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "d644d737-d98c-473f-9df6-b9e5a7c82542"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Docker\ndescription: Run Coder Tasks on Docker with an example application\nicon: ./.images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [docker, container, ai, tasks]\n---\n\n# Run Coder Tasks on Docker\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./.images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "1a95b0f1-5520-451f-ac5c-8948ecfe5aee",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T00:16:34.739801Z",
+      "updated_at": "2025-07-08T00:16:47.939312Z",
+      "name": "adoring_gates7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "1829fb82-1051-43b2-b4cc-c176f446ac70",
+        "created_at": "2025-07-08T00:16:34.728534Z",
+        "started_at": "2025-07-08T00:16:34.752995Z",
+        "completed_at": "2025-07-08T00:16:47.939312Z",
+        "status": "succeeded",
+        "worker_id": "029d57af-e198-4751-95b9-983c0c11c44e",
+        "file_id": "b14a4c88-e3e6-4cd0-9865-602b9a2a8b58",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "1a95b0f1-5520-451f-ac5c-8948ecfe5aee"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Docker\ndescription: Run Coder Tasks on Docker with an example application\nicon: ./images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [docker, container, ai, tasks]\n---\n\n# Run Coder Tasks on Docker\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "d29e3dbc-f1fe-4690-b1b1-31c35f28e887",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T00:23:50.80535Z",
+      "updated_at": "2025-07-08T00:24:04.032112Z",
+      "name": "wizardly_meninsky8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "b385f69d-337d-468c-a4bb-899b17da797e",
+        "created_at": "2025-07-08T00:23:50.795386Z",
+        "started_at": "2025-07-08T00:23:50.817835Z",
+        "completed_at": "2025-07-08T00:24:04.032112Z",
+        "status": "succeeded",
+        "worker_id": "4d7ba891-4490-4606-b5a0-61202e3e443e",
+        "file_id": "7dcc1bee-0dc1-49f3-a049-53c6f0be993d",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "d29e3dbc-f1fe-4690-b1b1-31c35f28e887"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Docker\ndescription: Run Coder Tasks on Docker with an example application\nicon: ./images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [docker, container, ai, tasks]\n---\n\n# Run Coder Tasks on Docker\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "bd1efc08-c458-4f5b-967c-0289c57ae0dc",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T00:32:28.168763Z",
+      "updated_at": "2025-07-08T00:32:41.288007Z",
+      "name": "jovial_chatelet7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "b8b8a170-5815-48d5-bedf-9feac09faeda",
+        "created_at": "2025-07-08T00:32:28.158678Z",
+        "started_at": "2025-07-08T00:32:28.181333Z",
+        "completed_at": "2025-07-08T00:32:41.288007Z",
+        "status": "succeeded",
+        "worker_id": "81b289c7-84dc-4dfa-aa50-00b90c29d691",
+        "file_id": "006a6812-968e-41d2-bb5a-589afdbe89f7",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "bd1efc08-c458-4f5b-967c-0289c57ae0dc"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Docker\ndescription: Run Coder Tasks on Docker with an example application\nicon: ./images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [docker, container, ai, tasks]\n---\n\n# Run Coder Tasks on Docker\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "2d8ebf5a-c5b0-4345-83c9-c8e260b326c6",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T00:41:27.651908Z",
+      "updated_at": "2025-07-08T00:41:41.017811Z",
+      "name": "vigorous_burnell1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "2b227f59-eeb5-4637-9ca7-d7ee17d4a51f",
+        "created_at": "2025-07-08T00:41:27.64213Z",
+        "started_at": "2025-07-08T00:41:27.664717Z",
+        "completed_at": "2025-07-08T00:41:41.017811Z",
+        "status": "succeeded",
+        "worker_id": "029d57af-e198-4751-95b9-983c0c11c44e",
+        "file_id": "25502cad-9ce7-4420-945f-0c941c7f6888",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "2d8ebf5a-c5b0-4345-83c9-c8e260b326c6"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Docker\ndescription: Run Coder Tasks on Docker with an example application\nicon: ./images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [docker, container, ai, tasks]\n---\n\n# Run Coder Tasks on Docker\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "f74570f7-9fb1-424d-a653-e31b64140a5d",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T00:48:03.384311Z",
+      "updated_at": "2025-07-08T00:48:16.632008Z",
+      "name": "stoic_moser4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "49b543f3-2cbe-4b6f-b758-63225b2b0db8",
+        "created_at": "2025-07-08T00:48:03.374283Z",
+        "started_at": "2025-07-08T00:48:03.39642Z",
+        "completed_at": "2025-07-08T00:48:16.632008Z",
+        "status": "succeeded",
+        "worker_id": "029d57af-e198-4751-95b9-983c0c11c44e",
+        "file_id": "72cc015a-68de-43dd-9de5-4b69b588264f",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "f74570f7-9fb1-424d-a653-e31b64140a5d"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Docker\ndescription: Run Coder Tasks on Docker with an example application\nicon: ./images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [docker, container, ai, tasks]\n---\n\n# Run Coder Tasks on Docker\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "1fc59a18-4011-4159-8932-b34139137c7b",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T00:51:40.662985Z",
+      "updated_at": "2025-07-08T00:51:53.634861Z",
+      "name": "quizzical_kapitsa2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "e3dbf355-81b3-4c4a-93ac-6f3536a6232e",
+        "created_at": "2025-07-08T00:51:40.652922Z",
+        "started_at": "2025-07-08T00:51:40.675261Z",
+        "completed_at": "2025-07-08T00:51:53.634861Z",
+        "status": "succeeded",
+        "worker_id": "4d7ba891-4490-4606-b5a0-61202e3e443e",
+        "file_id": "2e7e68d0-cd23-4da6-9aa2-81c35535d630",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "1fc59a18-4011-4159-8932-b34139137c7b"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Docker\ndescription: Run Coder Tasks on Docker with an example application\nicon: ./images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [docker, container, ai, tasks]\n---\n\n# Run Coder Tasks on Docker\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "3825341f-12f5-4f8a-a438-a5f41329f63f",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T00:52:35.062741Z",
+      "updated_at": "2025-07-08T00:52:48.421445Z",
+      "name": "cool_keller7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "ef0c535b-b1ac-49ec-9b24-7118919fd4e8",
+        "created_at": "2025-07-08T00:52:35.052729Z",
+        "started_at": "2025-07-08T00:52:35.074928Z",
+        "completed_at": "2025-07-08T00:52:48.421445Z",
+        "status": "succeeded",
+        "worker_id": "81b289c7-84dc-4dfa-aa50-00b90c29d691",
+        "file_id": "c8fba663-abfa-4ad2-9a5f-ec3e58c4c49c",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "3825341f-12f5-4f8a-a438-a5f41329f63f"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Docker\ndescription: Run Coder Tasks on Docker with an example application\nicon: ./images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [docker, container, ai, tasks]\n---\n\n# Run Coder Tasks on Docker\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "1867cefe-705a-471e-9fcf-8ad091d19e4f",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T01:11:05.666827Z",
+      "updated_at": "2025-07-08T01:11:19.117131Z",
+      "name": "nice_ptolemy5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "4d91ae38-01be-401e-aa38-ea971095c904",
+        "created_at": "2025-07-08T01:11:05.657087Z",
+        "started_at": "2025-07-08T01:11:05.679114Z",
+        "completed_at": "2025-07-08T01:11:19.117131Z",
+        "status": "succeeded",
+        "worker_id": "4d7ba891-4490-4606-b5a0-61202e3e443e",
+        "file_id": "3860315f-335f-46b6-b7ba-50a654202553",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "1867cefe-705a-471e-9fcf-8ad091d19e4f"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Docker\ndescription: Run Coder Tasks on Docker with an example application\nicon: ./images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [docker, container, ai, tasks]\n---\n\n# Run Coder Tasks on Docker\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "caa2562b-150b-4517-92fe-8ab0f15eaf96",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T01:13:04.561062Z",
+      "updated_at": "2025-07-08T01:13:17.786167Z",
+      "name": "determined_kare3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "3d71abe5-db35-4355-ac16-c8b81ec8cbe7",
+        "created_at": "2025-07-08T01:13:04.550566Z",
+        "started_at": "2025-07-08T01:13:04.573083Z",
+        "completed_at": "2025-07-08T01:13:17.786167Z",
+        "status": "succeeded",
+        "worker_id": "81b289c7-84dc-4dfa-aa50-00b90c29d691",
+        "file_id": "25021cd7-8a9e-4593-90ec-1c17dcb8cabd",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "caa2562b-150b-4517-92fe-8ab0f15eaf96"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Docker\ndescription: Run Coder Tasks on Docker with an example application\nicon: ./images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [docker, container, ai, tasks]\n---\n\n# Run Coder Tasks on Docker\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "15f26431-7426-483a-a6ef-0928623f4486",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T01:17:16.057688Z",
+      "updated_at": "2025-07-08T01:17:29.132582Z",
+      "name": "sad_fermi4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "266aca7a-4cca-4253-9543-21e202351dec",
+        "created_at": "2025-07-08T01:17:16.047925Z",
+        "started_at": "2025-07-08T01:17:16.069919Z",
+        "completed_at": "2025-07-08T01:17:29.132582Z",
+        "status": "succeeded",
+        "worker_id": "4d7ba891-4490-4606-b5a0-61202e3e443e",
+        "file_id": "e9774567-d153-4964-8001-801c73249079",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "15f26431-7426-483a-a6ef-0928623f4486"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Docker\ndescription: Run Coder Tasks on Docker with an example application\nicon: ./images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [docker, container, ai, tasks]\n---\n\n# Run Coder Tasks on Docker\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "0ab4fd71-4733-4620-b59f-02216e60d162",
+      "template_id": "e7351a11-35b0-488b-9854-764ea21e9d93",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T01:25:38.71961Z",
+      "updated_at": "2025-07-08T01:25:52.418701Z",
+      "name": "interesting_benz5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "53d9a7bf-cbda-4da9-ae0e-887d6ff2d9bc",
+        "created_at": "2025-07-08T01:25:38.710086Z",
+        "started_at": "2025-07-08T01:25:38.73165Z",
+        "completed_at": "2025-07-08T01:25:52.418701Z",
+        "status": "succeeded",
+        "worker_id": "81b289c7-84dc-4dfa-aa50-00b90c29d691",
+        "file_id": "d95cb925-9861-4f69-9f17-ac8b11ad3982",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "0ab4fd71-4733-4620-b59f-02216e60d162"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Tasks on Kubernetes\ndescription: Run Coder Tasks on Kubernetes with an example application\nicon: ./images/tasks.svg\nmaintainer_github: coder-labs\nverified: false\ntags: [kubernetes, container, ai, tasks]\n---\n\n# Run Coder Tasks on Kubernetes\n\nThis is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).\n\n![Tasks](./images/tasks-screenshot.png)\n\nThis is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:\n\n- \"Make the background color blue\"\n- \"Add a dark mode\"\n- \"Rewrite the entire backend in Go\"\n\n## Included in this template\n\nThis template is designed to be an example and a reference for building other templates with Coder Tasks. You can always run Coder Tasks on different infrastructure (e.g. as on Kubernetes, VMs) and with your own GitHub repositories, MCP servers, images, etc.\n\nAdditionally, this template uses our [Claude Code](https://registry.coder.com/modules/coder/claude-code) module, but [other agents](https://registry.coder.com/modules?search=tag%3Aagent) or even [custom agents](https://coder.com/docs/ai-coder/custom-agents) can be used in its place.\n\nThis template uses a [Workspace Preset](https://coder.com/docs/admin/templates/extending-templates/parameters#workspace-presets) that pre-defines:\n\n- Universal Container Image (e.g. contains Node.js, Java, Python, Ruby, etc)\n- MCP servers (desktop-commander for long-running logs, playwright for previewing changes)\n- System prompt and [repository](https://github.com/coder-contrib/realworld-django-rest-framework-angular) for the AI agent\n- Startup script to initialize the repository and start the development server\n\n## Add this template to your Coder deployment\n\nYou can also add this template to your Coder deployment and begin tinkering right away!\n\n### Prerequisites\n\nAlthough this template runs on Kubernetes, alternatively, it can be installed onto a VM or Docker Container using our [tasks-docker](https://github.com/coder/registry/tree/main/registry/coder-labs/templates/tasks-docker) template. This is what it will require:\n\n- Coder installed (see [our docs](https://coder.com/docs/install)), ideally a Linux VM with Docker\n- Anthropic API Key (or access to Anthropic models via Bedrock or Vertex, see [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/third-party-integrations))\n- Access to a Docker socket\n  - If on the local VM, ensure the `coder` user is added to the Docker group (docs)\n\n    ```sh\n    # Add coder user to Docker group\n    sudo adduser coder docker\n    \n    # Restart Coder server\n    sudo systemctl restart coder\n    \n    # Test Docker\n    sudo -u coder docker ps\n    ```\n\n  - If on a remote VM, see the [Docker Terraform provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts) to configure a remote host\n\nTo import this template into Coder, first create a template from \"Scratch\" in the template editor.\n\nVisit this URL for your Coder deployment:\n\n```sh\nhttps://coder.example.com/templates/new?exampleId=scratch\n```\n\nAfter creating the template, paste the contents from [main.tf](./main.tf) into the template editor and save.\n\nAlternatively, you can use the Coder CLI to [push the template](https://coder.com/docs/reference/cli/templates_push)\n\n```sh\n# Download the CLI\ncurl -L https://coder.com/install.sh | sh\n\n# Log in to your deployment\ncoder login https://coder.example.com\n\n# Clone the registry\ngit clone https://github.com/coder/registry\ncd registry\n\n# Navigate to this template\ncd registry/coder-labs/templates/tasks-docker\n# OR\ncd registry/coder-labs/templates/tasks-k8s\n\n# Push the template\ncoder templates push\n```\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  }
+]

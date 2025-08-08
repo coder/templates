@@ -1,0 +1,1951 @@
+[
+  {
+    "TemplateVersion": {
+      "id": "b28420a8-b80d-448d-813a-8e0d5966cf7a",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-16T07:59:25.25548Z",
+      "updated_at": "2025-06-16T08:00:20.891332Z",
+      "name": "zealous_thompson1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "639d658c-6781-43ef-b557-5367543854ea",
+        "created_at": "2025-06-16T07:59:25.250215Z",
+        "started_at": "2025-06-16T07:59:25.262871Z",
+        "completed_at": "2025-06-16T08:00:20.235594Z",
+        "status": "succeeded",
+        "worker_id": "f14cc6fb-7530-42bb-b2d0-225ff0b9337a",
+        "file_id": "d0d5c617-14e3-4704-93a0-245f81127b4b",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "b28420a8-b80d-448d-813a-8e0d5966cf7a"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\ntags: [container, aws, windows]\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "d72374de-e629-42bd-9302-5f5df6509529",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-16T08:08:12.427338Z",
+      "updated_at": "2025-06-16T08:09:08.03636Z",
+      "name": "zen_shirley5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "ca10497e-83cf-4008-a5b0-4ba698cb74ee",
+        "created_at": "2025-06-16T08:08:12.422346Z",
+        "started_at": "2025-06-16T08:08:12.439531Z",
+        "completed_at": "2025-06-16T08:09:08.03636Z",
+        "status": "succeeded",
+        "worker_id": "5ae02b6f-c06b-4aaa-8064-20e308da0170",
+        "file_id": "624c00a0-e724-488d-bf12-2bcb22af04ee",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "d72374de-e629-42bd-9302-5f5df6509529"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "e3826159-a1c0-4aed-aeed-8a93b81affa6",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-16T08:20:47.572311Z",
+      "updated_at": "2025-06-16T08:21:33.256698Z",
+      "name": "laughing_nash9",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "50b3b002-767b-41c1-97e2-70b6434a7880",
+        "created_at": "2025-06-16T08:20:47.567329Z",
+        "started_at": "2025-06-16T08:20:47.583584Z",
+        "completed_at": "2025-06-16T08:21:33.256698Z",
+        "status": "succeeded",
+        "worker_id": "f14cc6fb-7530-42bb-b2d0-225ff0b9337a",
+        "file_id": "cfbd2e1e-c30c-448d-9194-4a64b78797e8",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "e3826159-a1c0-4aed-aeed-8a93b81affa6"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "56e1791a-1c75-4f5b-945b-18c0d005fc36",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-16T21:07:01.659134Z",
+      "updated_at": "2025-06-16T21:07:45.054635Z",
+      "name": "peaceful_black8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "36db9567-5b32-409f-a602-5af44a79ea38",
+        "created_at": "2025-06-16T21:07:01.647501Z",
+        "started_at": "2025-06-16T21:07:01.67353Z",
+        "completed_at": "2025-06-16T21:07:45.054635Z",
+        "status": "succeeded",
+        "worker_id": "bdb69614-4ab2-4cde-8a52-42d9e4944c94",
+        "file_id": "d56e8d64-f252-48f5-8efc-820b72d983f1",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "56e1791a-1c75-4f5b-945b-18c0d005fc36"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "d18e0b88-8f4e-47b4-b93d-49a65c98d626",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-16T21:32:44.700673Z",
+      "updated_at": "2025-06-16T21:33:38.428981Z",
+      "name": "stupefied_leakey2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "9c3b5456-32bf-4727-866f-2eafdd8170f6",
+        "created_at": "2025-06-16T21:32:44.69057Z",
+        "started_at": "2025-06-16T21:32:44.714382Z",
+        "completed_at": "2025-06-16T21:33:38.428981Z",
+        "status": "succeeded",
+        "worker_id": "58310c63-a97f-409f-9f44-bc2269a1518f",
+        "file_id": "85f8bab1-1a7f-4999-b3d3-6ab7762759f8",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "d18e0b88-8f4e-47b4-b93d-49a65c98d626"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "8889ffc0-9f43-4562-9718-aad13b98c1a4",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-16T21:37:52.606895Z",
+      "updated_at": "2025-06-16T21:38:36.711251Z",
+      "name": "sweet_keldysh1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "3f2de424-222a-4a47-8b57-5daa07ec631d",
+        "created_at": "2025-06-16T21:37:52.596626Z",
+        "started_at": "2025-06-16T21:37:52.620273Z",
+        "completed_at": "2025-06-16T21:38:36.711251Z",
+        "status": "succeeded",
+        "worker_id": "1cf61a11-1604-4a7c-bf21-3091e8a6d3a0",
+        "file_id": "1330ff21-7b73-4c79-a576-dfb52502e1a8",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "8889ffc0-9f43-4562-9718-aad13b98c1a4"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "cc1f9e2b-fa21-4c45-8e26-faa6547a8e53",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T03:23:37.518865Z",
+      "updated_at": "2025-06-17T03:24:20.932189Z",
+      "name": "happy_galois3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "3cd6becc-1961-42fe-9020-2f79086b993c",
+        "created_at": "2025-06-17T03:23:37.508416Z",
+        "started_at": "2025-06-17T03:23:37.531079Z",
+        "completed_at": "2025-06-17T03:24:20.932189Z",
+        "status": "succeeded",
+        "worker_id": "bdb69614-4ab2-4cde-8a52-42d9e4944c94",
+        "file_id": "a519ba73-d0e4-42c4-b9f8-1f38497d7ccb",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "cc1f9e2b-fa21-4c45-8e26-faa6547a8e53"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "185d81dc-51a5-41af-8a55-709af4b1931f",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T03:26:37.799702Z",
+      "updated_at": "2025-06-17T03:26:37.862999Z",
+      "name": "interesting_ellis6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "da912a35-fed3-49d2-bfce-01cf6d197498",
+        "created_at": "2025-06-17T03:26:37.789292Z",
+        "started_at": "2025-06-17T03:26:37.813761Z",
+        "completed_at": "2025-06-17T03:26:57.642585Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "d71243c1-1dbc-4809-9b17-67879f9612a1",
+        "file_id": "d939f77f-433b-4898-8817-b71e2f2f6a61",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "185d81dc-51a5-41af-8a55-709af4b1931f"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "a1536619-b442-4dd4-b64e-020eda6dd378",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T03:27:47.984819Z",
+      "updated_at": "2025-06-17T03:27:48.039957Z",
+      "name": "peaceful_hermann0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "bbb745b1-9ba5-4c94-8f1d-9b14967f3662",
+        "created_at": "2025-06-17T03:27:47.975246Z",
+        "started_at": "2025-06-17T03:27:47.997186Z",
+        "completed_at": "2025-06-17T03:27:57.847031Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "bdb69614-4ab2-4cde-8a52-42d9e4944c94",
+        "file_id": "8dd8bf53-48ec-4b96-8ea7-39c829da8d90",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "a1536619-b442-4dd4-b64e-020eda6dd378"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "84042747-08e4-4824-9ed9-ff3f4ed5d4ba",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T03:28:01.750812Z",
+      "updated_at": "2025-06-17T03:28:45.060953Z",
+      "name": "charming_liskov5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "987945cb-31f2-4bb8-86cf-60b811ff177d",
+        "created_at": "2025-06-17T03:28:01.740421Z",
+        "started_at": "2025-06-17T03:28:01.76349Z",
+        "completed_at": "2025-06-17T03:28:45.060953Z",
+        "status": "succeeded",
+        "worker_id": "1cf61a11-1604-4a7c-bf21-3091e8a6d3a0",
+        "file_id": "c85c5a7c-8331-49ca-8764-a4cc2f32be4c",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "84042747-08e4-4824-9ed9-ff3f4ed5d4ba"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "fbfa9ab6-adf9-41c6-a404-1837d4bce387",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T03:28:49.256967Z",
+      "updated_at": "2025-06-17T03:29:32.956991Z",
+      "name": "cool_edison8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "1ec2b315-7b64-4f92-aa10-ee59a2b6b76c",
+        "created_at": "2025-06-17T03:28:49.247705Z",
+        "started_at": "2025-06-17T03:28:49.268496Z",
+        "completed_at": "2025-06-17T03:29:32.956991Z",
+        "status": "succeeded",
+        "worker_id": "bdb69614-4ab2-4cde-8a52-42d9e4944c94",
+        "file_id": "da666f3d-898b-4458-8bd8-cf9e0c4554fe",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "fbfa9ab6-adf9-41c6-a404-1837d4bce387"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "ee3ba11b-c42c-424b-af57-f588bc36f88a",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T03:34:45.925461Z",
+      "updated_at": "2025-06-17T03:35:32.614917Z",
+      "name": "focused_tesla1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "7ad4f694-8b85-4586-92e6-0018e5b322d4",
+        "created_at": "2025-06-17T03:34:45.91613Z",
+        "started_at": "2025-06-17T03:34:45.938314Z",
+        "completed_at": "2025-06-17T03:35:32.614917Z",
+        "status": "succeeded",
+        "worker_id": "1cf61a11-1604-4a7c-bf21-3091e8a6d3a0",
+        "file_id": "ab37edd7-fc29-4d1d-9296-56de17c42863",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "ee3ba11b-c42c-424b-af57-f588bc36f88a"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "259f3c4c-cdfb-4a70-ae51-1f9b7f8f8892",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T03:42:11.657358Z",
+      "updated_at": "2025-06-17T03:42:57.442454Z",
+      "name": "lucid_dijkstra4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "28e388e8-55e1-48dc-9557-1da5af9695b1",
+        "created_at": "2025-06-17T03:42:11.647392Z",
+        "started_at": "2025-06-17T03:42:11.670173Z",
+        "completed_at": "2025-06-17T03:42:57.442454Z",
+        "status": "succeeded",
+        "worker_id": "bdb69614-4ab2-4cde-8a52-42d9e4944c94",
+        "file_id": "a3032eca-6ac5-4bc5-8f90-ab10028c046d",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "259f3c4c-cdfb-4a70-ae51-1f9b7f8f8892"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "7554239a-d62a-41ae-a63b-c03a494326ac",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T03:43:01.294944Z",
+      "updated_at": "2025-06-17T03:43:44.438392Z",
+      "name": "elegant_bouman1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "9b1c12a2-4491-4871-9bff-3b535e03fd78",
+        "created_at": "2025-06-17T03:43:01.284705Z",
+        "started_at": "2025-06-17T03:43:01.307587Z",
+        "completed_at": "2025-06-17T03:43:44.438392Z",
+        "status": "succeeded",
+        "worker_id": "58310c63-a97f-409f-9f44-bc2269a1518f",
+        "file_id": "f4821ede-92c4-4af5-a689-83a2d6c707a3",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "7554239a-d62a-41ae-a63b-c03a494326ac"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "223ad845-acff-4d80-914e-8e55faf029c9",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T03:57:28.780252Z",
+      "updated_at": "2025-06-17T03:58:15.133925Z",
+      "name": "tender_liskov0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "b8ccf382-e79f-46fa-a601-807efb8cbdb8",
+        "created_at": "2025-06-17T03:57:28.769394Z",
+        "started_at": "2025-06-17T03:57:28.793588Z",
+        "completed_at": "2025-06-17T03:58:15.133925Z",
+        "status": "succeeded",
+        "worker_id": "58310c63-a97f-409f-9f44-bc2269a1518f",
+        "file_id": "b084a2fb-1778-474d-9b88-4d3ac25520b9",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "223ad845-acff-4d80-914e-8e55faf029c9"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "d6e0f6e4-8f6e-4052-bc37-57a2dea15987",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T05:09:33.176932Z",
+      "updated_at": "2025-06-17T05:10:18.041045Z",
+      "name": "elastic_perlman4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "009a799b-cb4f-40bc-99e6-ed0f42df1e25",
+        "created_at": "2025-06-17T05:09:33.167155Z",
+        "started_at": "2025-06-17T05:09:33.18959Z",
+        "completed_at": "2025-06-17T05:10:18.041045Z",
+        "status": "succeeded",
+        "worker_id": "bdb69614-4ab2-4cde-8a52-42d9e4944c94",
+        "file_id": "fcf442d1-cfd7-4905-9a07-65122be76667",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "d6e0f6e4-8f6e-4052-bc37-57a2dea15987"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "4e08db17-6112-4a6b-af9a-17c9fcb371da",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T05:59:45.337722Z",
+      "updated_at": "2025-06-17T05:59:45.385882Z",
+      "name": "vibrant_heisenberg5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "85bb230e-1696-4dc5-aeee-3710b06f8d2e",
+        "created_at": "2025-06-17T05:59:45.330686Z",
+        "started_at": "2025-06-17T05:59:45.349506Z",
+        "completed_at": "2025-06-17T05:59:56.273823Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "d71243c1-1dbc-4809-9b17-67879f9612a1",
+        "file_id": "5f8c6cfb-0e88-4898-b854-a8d4e2bd53ce",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "4e08db17-6112-4a6b-af9a-17c9fcb371da"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "8ab24c39-1559-41f2-8136-d062a2e3258e",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T06:01:34.973237Z",
+      "updated_at": "2025-06-17T06:02:18.622901Z",
+      "name": "stoic_cerf1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "047e6cde-c60c-4686-ab14-04fd611de428",
+        "created_at": "2025-06-17T06:01:34.961621Z",
+        "started_at": "2025-06-17T06:01:34.985887Z",
+        "completed_at": "2025-06-17T06:02:18.622901Z",
+        "status": "succeeded",
+        "worker_id": "115a50b5-7169-46b2-8841-2bc5edb8227f",
+        "file_id": "5f8c6cfb-0e88-4898-b854-a8d4e2bd53ce",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "8ab24c39-1559-41f2-8136-d062a2e3258e"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "9dabb295-4125-420c-8cae-16a5a2a9a568",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T06:10:52.497442Z",
+      "updated_at": "2025-06-17T06:11:35.933583Z",
+      "name": "magical_kowalevski5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "8614eeae-b5b7-4832-95ef-9efa7aa4fac8",
+        "created_at": "2025-06-17T06:10:52.490618Z",
+        "started_at": "2025-06-17T06:10:52.509172Z",
+        "completed_at": "2025-06-17T06:11:35.933583Z",
+        "status": "succeeded",
+        "worker_id": "115a50b5-7169-46b2-8841-2bc5edb8227f",
+        "file_id": "c389476c-7958-4c2d-993f-63bb5af9d01c",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "9dabb295-4125-420c-8cae-16a5a2a9a568"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "2a431460-b4ed-470b-9e86-02e6b163bdd7",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T06:43:52.444855Z",
+      "updated_at": "2025-06-17T06:44:35.83362Z",
+      "name": "charming_mirzakhani4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "aea390ef-e908-4561-8311-9eafe5da6515",
+        "created_at": "2025-06-17T06:43:52.434527Z",
+        "started_at": "2025-06-17T06:43:52.457751Z",
+        "completed_at": "2025-06-17T06:44:35.83362Z",
+        "status": "succeeded",
+        "worker_id": "1cf61a11-1604-4a7c-bf21-3091e8a6d3a0",
+        "file_id": "eac65e01-3dd6-424f-afce-0c04c400f742",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "2a431460-b4ed-470b-9e86-02e6b163bdd7"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "e123f0d4-5c4e-4877-a2ad-2838f96fd22d",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T08:16:08.599978Z",
+      "updated_at": "2025-06-17T08:17:06.207576Z",
+      "name": "stupefied_herschel7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "69035761-8aca-41b7-bcbc-0a44e9b6c3a4",
+        "created_at": "2025-06-17T08:16:08.589985Z",
+        "started_at": "2025-06-17T08:16:08.612368Z",
+        "completed_at": "2025-06-17T08:17:06.207576Z",
+        "status": "succeeded",
+        "worker_id": "a631c727-0424-4e4c-9850-a2c893f730b3",
+        "file_id": "386a7de2-b113-4f88-9d73-fb2b7ccca46f",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "e123f0d4-5c4e-4877-a2ad-2838f96fd22d"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "93abf7d4-e1ee-4859-ba25-3085bf4a48c6",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T08:31:28.674216Z",
+      "updated_at": "2025-06-17T08:32:24.645827Z",
+      "name": "interesting_meitner1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "7f960ae1-dbc6-42ea-aff0-da8bdb5470cf",
+        "created_at": "2025-06-17T08:31:28.66369Z",
+        "started_at": "2025-06-17T08:31:28.687099Z",
+        "completed_at": "2025-06-17T08:32:24.645827Z",
+        "status": "succeeded",
+        "worker_id": "bb56b323-92f3-4e23-9c7b-12febcac6693",
+        "file_id": "cf014f39-041f-44ad-82a6-e54332df0acd",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "93abf7d4-e1ee-4859-ba25-3085bf4a48c6"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "5a61d494-cbd7-41d6-8afe-49286a703779",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T08:37:59.597214Z",
+      "updated_at": "2025-06-17T08:38:42.437998Z",
+      "name": "flamboyant_mirzakhani8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "0251f168-6fff-4f13-98f3-13ba200e4010",
+        "created_at": "2025-06-17T08:37:59.590697Z",
+        "started_at": "2025-06-17T08:37:59.608706Z",
+        "completed_at": "2025-06-17T08:38:42.437998Z",
+        "status": "succeeded",
+        "worker_id": "bb56b323-92f3-4e23-9c7b-12febcac6693",
+        "file_id": "8fd775d4-63e5-4e61-8f58-5d52c7857b34",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "5a61d494-cbd7-41d6-8afe-49286a703779"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "1025c286-d1b0-40f2-b67a-266032e5fc91",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T08:42:31.283746Z",
+      "updated_at": "2025-06-17T08:43:14.164093Z",
+      "name": "modest_gates6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "c3261c1d-6a10-4418-a919-684b3e10edb8",
+        "created_at": "2025-06-17T08:42:31.272259Z",
+        "started_at": "2025-06-17T08:42:31.297323Z",
+        "completed_at": "2025-06-17T08:43:14.164093Z",
+        "status": "succeeded",
+        "worker_id": "28ae582c-5db7-458e-b017-ac1dc8c9f02d",
+        "file_id": "60ac1203-35ce-4dbf-90fe-f0dc32575dd8",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "1025c286-d1b0-40f2-b67a-266032e5fc91"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "225f182a-970b-42a2-acd6-028fb848ca78",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-17T14:59:30.634195Z",
+      "updated_at": "2025-06-17T15:01:03.097743Z",
+      "name": "goofy_ishizaka4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "fb9a918c-a562-4ac7-a453-a3c163a62b32",
+        "created_at": "2025-06-17T14:59:30.627465Z",
+        "started_at": "2025-06-17T14:59:30.645688Z",
+        "completed_at": "2025-06-17T15:01:03.097743Z",
+        "status": "succeeded",
+        "worker_id": "d6f43afc-adcf-4123-b5e3-44fcc1e01052",
+        "file_id": "28b94c43-cd95-4c37-b0e7-036271572cdf",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "225f182a-970b-42a2-acd6-028fb848ca78"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "36804eb1-db3c-42b2-a794-1a199b220ae3",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-07-28T16:41:53.687116Z",
+      "updated_at": "2025-07-28T16:43:05.905958Z",
+      "name": "exciting_tu2",
+      "message": "",
+      "job": {
+        "id": "0e22d987-f47d-422e-811e-7f6ff6669582",
+        "created_at": "2025-07-28T16:41:53.678725Z",
+        "started_at": "2025-07-28T16:41:53.698548Z",
+        "completed_at": "2025-07-28T16:43:05.905958Z",
+        "status": "succeeded",
+        "worker_id": "a7d8954f-c516-4784-a147-42cc18566e6d",
+        "file_id": "352acebc-ff98-4708-9e28-634fc5d2b585",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "36804eb1-db3c-42b2-a794-1a199b220ae3"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "5e93cbac-b551-4ebe-971f-74e8687ceb57",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-07-28T16:50:56.845011Z",
+      "updated_at": "2025-07-28T16:52:08.245816Z",
+      "name": "gracious_shannon6",
+      "message": "",
+      "job": {
+        "id": "753ceca6-2fb0-4d8a-91ea-27f6a0a39ee1",
+        "created_at": "2025-07-28T16:50:56.838695Z",
+        "started_at": "2025-07-28T16:50:56.856401Z",
+        "completed_at": "2025-07-28T16:52:08.245816Z",
+        "status": "succeeded",
+        "worker_id": "a7d8954f-c516-4784-a147-42cc18566e6d",
+        "file_id": "500b9068-0329-4d22-a4ac-4cdee0634af4",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "5e93cbac-b551-4ebe-971f-74e8687ceb57"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "074d481a-8cc1-4dd9-aacb-2967274ac0b9",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-07-28T19:51:08.789019Z",
+      "updated_at": "2025-07-28T19:52:20.427737Z",
+      "name": "loving_wu9",
+      "message": "",
+      "job": {
+        "id": "9ba98a9e-b3cf-496b-a407-17405b44d8bd",
+        "created_at": "2025-07-28T19:51:08.781934Z",
+        "started_at": "2025-07-28T19:51:08.800978Z",
+        "completed_at": "2025-07-28T19:52:20.427737Z",
+        "status": "succeeded",
+        "worker_id": "a7d8954f-c516-4784-a147-42cc18566e6d",
+        "file_id": "9e14a74d-a9fc-4241-a142-9cd56adaf582",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "074d481a-8cc1-4dd9-aacb-2967274ac0b9"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "482e333c-2db7-4042-9954-3d41baa3add5",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-07-28T19:59:09.07403Z",
+      "updated_at": "2025-07-28T20:00:19.937854Z",
+      "name": "pensive_burnell0",
+      "message": "",
+      "job": {
+        "id": "29b4ff03-2b53-4222-b00c-6228d80f9ee6",
+        "created_at": "2025-07-28T19:59:09.067572Z",
+        "started_at": "2025-07-28T19:59:09.085254Z",
+        "completed_at": "2025-07-28T20:00:19.937854Z",
+        "status": "succeeded",
+        "worker_id": "a7d8954f-c516-4784-a147-42cc18566e6d",
+        "file_id": "9e14a74d-a9fc-4241-a142-9cd56adaf582",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "482e333c-2db7-4042-9954-3d41baa3add5"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "82b90d89-85f0-4f54-9bc7-c41a9b418fa2",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-06T17:38:14.663Z",
+      "updated_at": "2025-08-06T17:38:14.702542Z",
+      "name": "angry_panini7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "64c57937-3ca3-4272-b81e-6abcedea25d5",
+        "created_at": "2025-08-06T17:38:14.659705Z",
+        "started_at": "2025-08-06T17:38:14.669831Z",
+        "completed_at": "2025-08-06T17:38:32.322274Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "c8980a20-5e6b-446d-ac38-d7cbb36d9108",
+        "file_id": "91010ef3-cae6-4e6e-b815-119468517f3f",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "82b90d89-85f0-4f54-9bc7-c41a9b418fa2"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "9a88dcb1-309c-45b3-bbef-8e9ce576f9d0",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-06T17:49:39.735731Z",
+      "updated_at": "2025-08-06T17:49:39.774662Z",
+      "name": "friendly_blackwell6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "91c59793-17a8-4c46-9b98-1937c8ecebe7",
+        "created_at": "2025-08-06T17:49:39.732811Z",
+        "started_at": "2025-08-06T17:49:39.742518Z",
+        "completed_at": "2025-08-06T17:49:57.139649Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "c8980a20-5e6b-446d-ac38-d7cbb36d9108",
+        "file_id": "91010ef3-cae6-4e6e-b815-119468517f3f",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "9a88dcb1-309c-45b3-bbef-8e9ce576f9d0"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "f347d30b-f2a3-4265-9d21-cfd05ab33779",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-06T17:56:52.665979Z",
+      "updated_at": "2025-08-06T17:56:52.709184Z",
+      "name": "youthful_pasteur0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "155c3815-05f3-416b-aa01-50ff2f5886b3",
+        "created_at": "2025-08-06T17:56:52.662857Z",
+        "started_at": "2025-08-06T17:56:52.673396Z",
+        "completed_at": "2025-08-06T17:57:10.142363Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "c676e796-5466-41f7-baad-7890c437424d",
+        "file_id": "91010ef3-cae6-4e6e-b815-119468517f3f",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "f347d30b-f2a3-4265-9d21-cfd05ab33779"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "457d3646-4891-411c-a0f6-cef88f7ccc10",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-06T18:36:49.155122Z",
+      "updated_at": "2025-08-06T18:36:49.196416Z",
+      "name": "jolly_darwin5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "516daa3c-922d-44ec-8913-8d55d6ad81a2",
+        "created_at": "2025-08-06T18:36:49.152199Z",
+        "started_at": "2025-08-06T18:36:49.16205Z",
+        "completed_at": "2025-08-06T18:37:07.151911Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "c676e796-5466-41f7-baad-7890c437424d",
+        "file_id": "58a9ac3e-7cd0-4ba3-8bda-9b3b3aa70afa",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "457d3646-4891-411c-a0f6-cef88f7ccc10"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "bd477e71-975c-4549-87be-358c3a053fbc",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-06T18:39:59.949915Z",
+      "updated_at": "2025-08-06T18:39:59.989184Z",
+      "name": "inspiring_ellis6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "80f4401d-03dc-4db3-8a3f-9f3563791400",
+        "created_at": "2025-08-06T18:39:59.947161Z",
+        "started_at": "2025-08-06T18:39:59.956639Z",
+        "completed_at": "2025-08-06T18:40:17.521212Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "c676e796-5466-41f7-baad-7890c437424d",
+        "file_id": "58a9ac3e-7cd0-4ba3-8bda-9b3b3aa70afa",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "bd477e71-975c-4549-87be-358c3a053fbc"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "10f03500-9a14-4648-997b-1e54a0ccd875",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-06T18:42:43.952382Z",
+      "updated_at": "2025-08-06T18:42:43.995374Z",
+      "name": "bold_kepler0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "6905b2e6-265f-4448-822a-0bf25c4c603b",
+        "created_at": "2025-08-06T18:42:43.949191Z",
+        "started_at": "2025-08-06T18:42:43.960692Z",
+        "completed_at": "2025-08-06T18:43:01.436039Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "c676e796-5466-41f7-baad-7890c437424d",
+        "file_id": "58a9ac3e-7cd0-4ba3-8bda-9b3b3aa70afa",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "10f03500-9a14-4648-997b-1e54a0ccd875"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "34de5098-3be6-4adb-9924-990bdda31829",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-06T18:55:11.567516Z",
+      "updated_at": "2025-08-06T18:56:42.139596Z",
+      "name": "peaceful_khayyam5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "d100d567-ac51-4ecb-84f3-563b9f4ea2ef",
+        "created_at": "2025-08-06T18:55:11.561179Z",
+        "started_at": "2025-08-06T18:55:11.576111Z",
+        "completed_at": "2025-08-06T18:56:42.139596Z",
+        "status": "succeeded",
+        "worker_id": "2b7c6adb-d45c-41cf-9ded-46437eea1b75",
+        "file_id": "58a9ac3e-7cd0-4ba3-8bda-9b3b3aa70afa",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "34de5098-3be6-4adb-9924-990bdda31829"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "cd5f0f05-22e2-457a-8d10-2905f5ace906",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-07T03:29:29.694888Z",
+      "updated_at": "2025-08-07T03:29:29.73556Z",
+      "name": "keen_hermann4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "219c1af1-a6d4-4b33-b8c2-0537381458fd",
+        "created_at": "2025-08-07T03:29:29.690148Z",
+        "started_at": "2025-08-07T03:29:29.702632Z",
+        "completed_at": "2025-08-07T03:30:08.24047Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "b5727fec-32b6-48d4-a04f-6f836d23dcfb",
+        "file_id": "a3706abb-0fb9-43c7-b9eb-bb89cb30fae6",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "cd5f0f05-22e2-457a-8d10-2905f5ace906"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "cbc84ace-536a-41e2-9064-007d3c16771f",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-07T03:30:41.9306Z",
+      "updated_at": "2025-08-07T03:30:41.973376Z",
+      "name": "blissful_payne2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "e11d0ac8-c30f-4af5-b85b-3e752c80ef8c",
+        "created_at": "2025-08-07T03:30:41.926213Z",
+        "started_at": "2025-08-07T03:30:41.938388Z",
+        "completed_at": "2025-08-07T03:31:17.340077Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "16c86539-ca8c-4b4a-bfeb-0d8cc5bf41cd",
+        "file_id": "48316d33-e70c-4b90-8c59-7c95cff76a00",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "cbc84ace-536a-41e2-9064-007d3c16771f"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "0ff2aba3-dcac-46db-b947-e2c9701a4230",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-07T03:32:51.977484Z",
+      "updated_at": "2025-08-07T03:32:52.016004Z",
+      "name": "confident_lederberg4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "36ddb26d-83ec-47dd-bbd1-ab930c69439f",
+        "created_at": "2025-08-07T03:32:51.973327Z",
+        "started_at": "2025-08-07T03:32:51.984069Z",
+        "completed_at": "2025-08-07T03:33:08.141524Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "b5727fec-32b6-48d4-a04f-6f836d23dcfb",
+        "file_id": "dd06aecf-b11b-44b2-b260-2c6223aa253e",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "0ff2aba3-dcac-46db-b947-e2c9701a4230"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "87e272f9-b2eb-4ceb-aac9-899b0be98f9e",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-07T03:34:03.260875Z",
+      "updated_at": "2025-08-07T03:34:03.299806Z",
+      "name": "dazzling_perlman1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "db6acf9e-aa27-4cec-908c-6d226b645595",
+        "created_at": "2025-08-07T03:34:03.256945Z",
+        "started_at": "2025-08-07T03:34:03.267153Z",
+        "completed_at": "2025-08-07T03:34:42.621263Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "88a0fee8-a244-4256-ba01-436550fef1f2",
+        "file_id": "9303d8f8-a58c-4d4d-a2df-cbb4b84aa932",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "87e272f9-b2eb-4ceb-aac9-899b0be98f9e"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "e37aa6ca-5a07-4ac5-a886-aa5a535033f5",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-07T03:36:18.353595Z",
+      "updated_at": "2025-08-07T03:36:18.353596Z",
+      "name": "crazy_jackson0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "76617234-a04e-4fcf-9e47-7addae617cfb",
+        "created_at": "2025-08-07T03:36:18.349689Z",
+        "started_at": "2025-08-07T03:36:18.360123Z",
+        "completed_at": "2025-08-07T03:36:18.399256Z",
+        "error": "run parse: parse error: load module:  ERROR: Unclosed configuration block (main.tf:133)\n> There is no closing brace for this block before the end of the file. This may\n> be caused by incorrect brace nesting elsewhere in this file.",
+        "status": "failed",
+        "worker_id": "c988f47d-4dc9-4b7d-9b8b-fa7e7d1a994e",
+        "file_id": "c3740af5-c008-4c0e-b597-6d3d5e25a18d",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "e37aa6ca-5a07-4ac5-a886-aa5a535033f5"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "409cf478-d8a8-4915-83df-0c95b00f41c3",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-07T03:37:23.520557Z",
+      "updated_at": "2025-08-07T03:39:04.037621Z",
+      "name": "determined_kare3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "7c9503b7-e8b7-4704-a13b-309ceab12847",
+        "created_at": "2025-08-07T03:37:23.515904Z",
+        "started_at": "2025-08-07T03:37:23.529216Z",
+        "completed_at": "2025-08-07T03:39:04.037621Z",
+        "status": "succeeded",
+        "worker_id": "c988f47d-4dc9-4b7d-9b8b-fa7e7d1a994e",
+        "file_id": "3e33bc03-7571-4c23-8ad4-e8ebbddc9c3f",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "409cf478-d8a8-4915-83df-0c95b00f41c3"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "75e12fc5-d8b4-4cee-9af9-0f7eb4181395",
+      "template_id": "8ebb0486-c56a-4543-8748-24d33b6087b2",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-07T05:14:38.022435Z",
+      "updated_at": "2025-08-07T05:16:20.411179Z",
+      "name": "youthful_varahamihira8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "809c43a1-a000-4402-8c3d-e9c317d2c291",
+        "created_at": "2025-08-07T05:14:38.018485Z",
+        "started_at": "2025-08-07T05:14:38.028816Z",
+        "completed_at": "2025-08-07T05:16:20.411179Z",
+        "status": "succeeded",
+        "worker_id": "c988f47d-4dc9-4b7d-9b8b-fa7e7d1a994e",
+        "file_id": "bd4cc830-322e-432b-95da-1c0d54fc8cfd",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "75e12fc5-d8b4-4cee-9af9-0f7eb4181395"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Develop in Windows and VS Code on AWS EC2\ndescription: Get started with Windows and VS Code development on AWS EC2.\nicon: ../../../site/static/icon/aws.svg\nmaintainer_github: coder\nverified: true\ntags: [vm, windows, aws]\n---\n\n# Visual Studio Code IDE on a Windows VM in AWS\n\n### Apps included\n\n1. A web-based terminal\n1. Visual Studio Code over SSH\n1. Remote Desktop (RDP) w/ Visual Studio Code App\n\n### Additional bash scripting\n\n1. Asks for deployment region (default us-east-1)\n1. Asks for instance type (default t3.micro)\n1. Asks for disk size (default 30 GB)\n1. Creates disk partition\n1. Attaches Z-Drive\n1. Installs Microsoft's VS Code for the remote desktop client only.\n\n### Known limitations and required steps\n\n1. `Local RDP` icon does not open your local RDP, redirects to tunneling documentation for RDP.\n1. Add the Coder CLI to your local machine, login and start a tunnel for the RDP port in the workspace\n\n```sh\ncoder login <your Coder deployment access URL>\ncoder tunnel <workspace-name> --tcp 3399:3389\n```\n\n1. [Microsoft's RDP client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) must be installed on the local machine to access the workspace. CoRD RDP client did not connect.\n1. Create a new configuration in Microsoft's RDP client, adding 127.0.0.1:3301 as the host, `Administrator` as the username and the password `coderRDP!` and connect.\n\n## Additional Notes\n\n1. AWS Windows AMI's take a few minutes to startup, so hang tight.\n1. Installation of VS Code and creating the partition will also add some extra time.\n\n### Resources\n\n[AWS Terraform provider - instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)\n\n[Microsoft Remote Desktop (macOS)](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)\n\n[AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\n\n[AWS Instance Types](https://aws.amazon.com/ec2/instance-types/)\n\n[Coder Templates](https://github.com/coder/templates)\n\n[Microsoft technical overview of the RDP protocol](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol)\n\n[RDP on Wikipedia](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)\n",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  }
+]

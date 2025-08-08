@@ -1,0 +1,456 @@
+[
+  {
+    "TemplateVersion": {
+      "id": "9ea33dfc-85d0-4e5a-864c-63bfc3d6b41b",
+      "template_id": "e605d989-b71f-47fe-b581-2eb9d8579a89",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-05T13:43:04.318564Z",
+      "updated_at": "2025-08-05T13:43:29.221268Z",
+      "name": "ecstatic_mirzakhani5",
+      "message": "",
+      "job": {
+        "id": "713008b8-6cd9-44c0-9512-1799ca0a4a57",
+        "created_at": "2025-08-05T13:43:04.315639Z",
+        "started_at": "2025-08-05T13:43:04.323232Z",
+        "completed_at": "2025-08-05T13:43:27.941078Z",
+        "status": "succeeded",
+        "worker_id": "c676e796-5466-41f7-baad-7890c437424d",
+        "file_id": "f84edd12-3149-48ab-abe5-604732dd8e79",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "9ea33dfc-85d0-4e5a-864c-63bfc3d6b41b"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Universal Workspace Template\ndescription: Demonstrates \"all things possible\" in Coder Workspaces\nicon: ../../../site/static/icon/code.png\nmaintainer_github: coder\nverified: true\ntags: [kubernetes, container]\n---\n\n# Remote Development on Kubernetes Pods\n\nProvision Kubernetes Pods as [Coder workspaces](https://coder.com/docs/v2/latest/workspaces) with this example template.\n\n<!-- TODO: Add screenshot -->\n\n## Prerequisites\n\n### Infrastructure\n\n**Cluster**: This template requires an existing Kubernetes cluster\n\n**Container Image**: This template uses the [codercom/enterprise-base:ubuntu image](https://github.com/coder/enterprise-images/tree/main/images/base) with some dev tools preinstalled. To add additional tools, extend this image or build it yourself.\n\n### Authentication\n\nThis template authenticates using a `~/.kube/config`, if present on the server, or via built-in authentication if the Coder provisioner is running on Kubernetes with an authorized ServiceAccount. To use another [authentication method](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication), edit the template.\n\n## Architecture\n\nThis template provisions the following resources:\n\n- Kubernetes pod (ephemeral)\n- Kubernetes persistent volume claim (persistent on `/home/coder`)\n\nThis means, when the workspace restarts, any tools or files outside of the home directory are not persisted. To pre-bake tools into the workspace (e.g. `python3`), modify the container image. Alternatively, individual developers can [personalize](https://coder.com/docs/v2/latest/dotfiles) their workspaces with dotfiles.\n\n> **Note**\n> This template is designed to be a starting point! Edit the Terraform to extend the template to support your use case.",
+      "created_by": {
+        "id": "ce8f693d-0e9b-4374-b5ac-26bae950d8be",
+        "username": "theo"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "5b797798-8c24-4dfe-a2e8-e5b6da92d226",
+      "template_id": "e605d989-b71f-47fe-b581-2eb9d8579a89",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-05T13:44:40.430519Z",
+      "updated_at": "2025-08-05T13:44:40.470176Z",
+      "name": "interesting_varahamihira7",
+      "message": "",
+      "job": {
+        "id": "7bdd4b6a-f6ec-43b9-a647-aa14424f85eb",
+        "created_at": "2025-08-05T13:44:40.42697Z",
+        "started_at": "2025-08-05T13:44:40.437967Z",
+        "completed_at": "2025-08-05T13:44:43.529921Z",
+        "error": "template import provision for start: initialize terraform: exit status 1",
+        "status": "failed",
+        "worker_id": "c676e796-5466-41f7-baad-7890c437424d",
+        "file_id": "6118fbce-230f-4540-8311-ef987638d91d",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "5b797798-8c24-4dfe-a2e8-e5b6da92d226"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Universal Workspace Template\ndescription: Demonstrates \"all things possible\" in Coder Workspaces\nicon: ../../../site/static/icon/code.png\nmaintainer_github: coder\nverified: true\ntags: [kubernetes, container]\n---\n\n# Remote Development on Kubernetes Pods\n\nProvision Kubernetes Pods as [Coder workspaces](https://coder.com/docs/v2/latest/workspaces) with this example template.\n\n<!-- TODO: Add screenshot -->\n\n## Prerequisites\n\n### Infrastructure\n\n**Cluster**: This template requires an existing Kubernetes cluster\n\n**Container Image**: This template uses the [codercom/enterprise-base:ubuntu image](https://github.com/coder/enterprise-images/tree/main/images/base) with some dev tools preinstalled. To add additional tools, extend this image or build it yourself.\n\n### Authentication\n\nThis template authenticates using a `~/.kube/config`, if present on the server, or via built-in authentication if the Coder provisioner is running on Kubernetes with an authorized ServiceAccount. To use another [authentication method](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication), edit the template.\n\n## Architecture\n\nThis template provisions the following resources:\n\n- Kubernetes pod (ephemeral)\n- Kubernetes persistent volume claim (persistent on `/home/coder`)\n\nThis means, when the workspace restarts, any tools or files outside of the home directory are not persisted. To pre-bake tools into the workspace (e.g. `python3`), modify the container image. Alternatively, individual developers can [personalize](https://coder.com/docs/v2/latest/dotfiles) their workspaces with dotfiles.\n\n> **Note**\n> This template is designed to be a starting point! Edit the Terraform to extend the template to support your use case.",
+      "created_by": {
+        "id": "ce8f693d-0e9b-4374-b5ac-26bae950d8be",
+        "username": "theo"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "85e0e041-7c75-4a3d-ad09-9020086253a6",
+      "template_id": "e605d989-b71f-47fe-b581-2eb9d8579a89",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-05T13:45:00.718263Z",
+      "updated_at": "2025-08-05T13:45:00.753953Z",
+      "name": "awesome_kirch3",
+      "message": "",
+      "job": {
+        "id": "7bba01f4-55b1-4cd5-9849-71f5f133056e",
+        "created_at": "2025-08-05T13:45:00.715662Z",
+        "started_at": "2025-08-05T13:45:00.723643Z",
+        "completed_at": "2025-08-05T13:45:08.128969Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "c676e796-5466-41f7-baad-7890c437424d",
+        "file_id": "bb47fe20-6b1d-4c17-b9b4-487af93fc360",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "85e0e041-7c75-4a3d-ad09-9020086253a6"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Universal Workspace Template\ndescription: Demonstrates \"all things possible\" in Coder Workspaces\nicon: ../../../site/static/icon/code.png\nmaintainer_github: coder\nverified: true\ntags: [kubernetes, container]\n---\n\n# Remote Development on Kubernetes Pods\n\nProvision Kubernetes Pods as [Coder workspaces](https://coder.com/docs/v2/latest/workspaces) with this example template.\n\n<!-- TODO: Add screenshot -->\n\n## Prerequisites\n\n### Infrastructure\n\n**Cluster**: This template requires an existing Kubernetes cluster\n\n**Container Image**: This template uses the [codercom/enterprise-base:ubuntu image](https://github.com/coder/enterprise-images/tree/main/images/base) with some dev tools preinstalled. To add additional tools, extend this image or build it yourself.\n\n### Authentication\n\nThis template authenticates using a `~/.kube/config`, if present on the server, or via built-in authentication if the Coder provisioner is running on Kubernetes with an authorized ServiceAccount. To use another [authentication method](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication), edit the template.\n\n## Architecture\n\nThis template provisions the following resources:\n\n- Kubernetes pod (ephemeral)\n- Kubernetes persistent volume claim (persistent on `/home/coder`)\n\nThis means, when the workspace restarts, any tools or files outside of the home directory are not persisted. To pre-bake tools into the workspace (e.g. `python3`), modify the container image. Alternatively, individual developers can [personalize](https://coder.com/docs/v2/latest/dotfiles) their workspaces with dotfiles.\n\n> **Note**\n> This template is designed to be a starting point! Edit the Terraform to extend the template to support your use case.",
+      "created_by": {
+        "id": "ce8f693d-0e9b-4374-b5ac-26bae950d8be",
+        "username": "theo"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "7571f3df-385f-4532-b22d-c3163407fb96",
+      "template_id": "e605d989-b71f-47fe-b581-2eb9d8579a89",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-05T13:48:19.665946Z",
+      "updated_at": "2025-08-05T13:48:42.34579Z",
+      "name": "objective_brahmagupta8",
+      "message": "",
+      "job": {
+        "id": "f75c9418-323d-4f5e-9e19-caacf4c8adcd",
+        "created_at": "2025-08-05T13:48:19.662371Z",
+        "started_at": "2025-08-05T13:48:19.672307Z",
+        "completed_at": "2025-08-05T13:48:42.34579Z",
+        "status": "succeeded",
+        "worker_id": "c676e796-5466-41f7-baad-7890c437424d",
+        "file_id": "25ffbcb7-6c45-4c38-8f47-7af25ba3b27b",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "7571f3df-385f-4532-b22d-c3163407fb96"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Universal Workspace Template\ndescription: Demonstrates \"all things possible\" in Coder Workspaces\nicon: ../../../site/static/icon/code.png\nmaintainer_github: coder\nverified: true\ntags: [kubernetes, container]\n---\n\n# Remote Development on Kubernetes Pods\n\nProvision Kubernetes Pods as [Coder workspaces](https://coder.com/docs/v2/latest/workspaces) with this example template.\n\n<!-- TODO: Add screenshot -->\n\n## Prerequisites\n\n### Infrastructure\n\n**Cluster**: This template requires an existing Kubernetes cluster\n\n**Container Image**: This template uses the [codercom/enterprise-base:ubuntu image](https://github.com/coder/enterprise-images/tree/main/images/base) with some dev tools preinstalled. To add additional tools, extend this image or build it yourself.\n\n### Authentication\n\nThis template authenticates using a `~/.kube/config`, if present on the server, or via built-in authentication if the Coder provisioner is running on Kubernetes with an authorized ServiceAccount. To use another [authentication method](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication), edit the template.\n\n## Architecture\n\nThis template provisions the following resources:\n\n- Kubernetes pod (ephemeral)\n- Kubernetes persistent volume claim (persistent on `/home/coder`)\n\nThis means, when the workspace restarts, any tools or files outside of the home directory are not persisted. To pre-bake tools into the workspace (e.g. `python3`), modify the container image. Alternatively, individual developers can [personalize](https://coder.com/docs/v2/latest/dotfiles) their workspaces with dotfiles.\n\n> **Note**\n> This template is designed to be a starting point! Edit the Terraform to extend the template to support your use case.",
+      "created_by": {
+        "id": "ce8f693d-0e9b-4374-b5ac-26bae950d8be",
+        "username": "theo"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "b0ef6c84-32ba-496b-91e7-1ae29a70fcae",
+      "template_id": "e605d989-b71f-47fe-b581-2eb9d8579a89",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-05T13:48:47.266339Z",
+      "updated_at": "2025-08-05T13:49:10.013366Z",
+      "name": "magical_chatelet7",
+      "message": "",
+      "job": {
+        "id": "c7025b06-ccff-4425-963d-4e084a466c86",
+        "created_at": "2025-08-05T13:48:47.263115Z",
+        "started_at": "2025-08-05T13:48:47.273389Z",
+        "completed_at": "2025-08-05T13:49:10.013366Z",
+        "status": "succeeded",
+        "worker_id": "c676e796-5466-41f7-baad-7890c437424d",
+        "file_id": "25ffbcb7-6c45-4c38-8f47-7af25ba3b27b",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "b0ef6c84-32ba-496b-91e7-1ae29a70fcae"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Universal Workspace Template\ndescription: Demonstrates \"all things possible\" in Coder Workspaces\nicon: ../../../site/static/icon/code.png\nmaintainer_github: coder\nverified: true\ntags: [kubernetes, container]\n---\n\n# Remote Development on Kubernetes Pods\n\nProvision Kubernetes Pods as [Coder workspaces](https://coder.com/docs/v2/latest/workspaces) with this example template.\n\n<!-- TODO: Add screenshot -->\n\n## Prerequisites\n\n### Infrastructure\n\n**Cluster**: This template requires an existing Kubernetes cluster\n\n**Container Image**: This template uses the [codercom/enterprise-base:ubuntu image](https://github.com/coder/enterprise-images/tree/main/images/base) with some dev tools preinstalled. To add additional tools, extend this image or build it yourself.\n\n### Authentication\n\nThis template authenticates using a `~/.kube/config`, if present on the server, or via built-in authentication if the Coder provisioner is running on Kubernetes with an authorized ServiceAccount. To use another [authentication method](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication), edit the template.\n\n## Architecture\n\nThis template provisions the following resources:\n\n- Kubernetes pod (ephemeral)\n- Kubernetes persistent volume claim (persistent on `/home/coder`)\n\nThis means, when the workspace restarts, any tools or files outside of the home directory are not persisted. To pre-bake tools into the workspace (e.g. `python3`), modify the container image. Alternatively, individual developers can [personalize](https://coder.com/docs/v2/latest/dotfiles) their workspaces with dotfiles.\n\n> **Note**\n> This template is designed to be a starting point! Edit the Terraform to extend the template to support your use case.",
+      "created_by": {
+        "id": "ce8f693d-0e9b-4374-b5ac-26bae950d8be",
+        "username": "theo"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "25738717-a7d4-476d-b4c1-7c4d82db8f5a",
+      "template_id": "e605d989-b71f-47fe-b581-2eb9d8579a89",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-05T13:50:30.011295Z",
+      "updated_at": "2025-08-05T13:50:52.931868Z",
+      "name": "dazzling_fermat4",
+      "message": "",
+      "job": {
+        "id": "b8b2897d-44cb-4f9f-b67d-41211521e2fc",
+        "created_at": "2025-08-05T13:50:30.004288Z",
+        "started_at": "2025-08-05T13:50:30.020782Z",
+        "completed_at": "2025-08-05T13:50:52.931868Z",
+        "status": "succeeded",
+        "worker_id": "c676e796-5466-41f7-baad-7890c437424d",
+        "file_id": "73ac55f5-add7-48a6-a0d8-64e705143f07",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "25738717-a7d4-476d-b4c1-7c4d82db8f5a"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Universal Workspace Template\ndescription: Demonstrates \"all things possible\" in Coder Workspaces\nicon: ../../../site/static/icon/code.png\nmaintainer_github: coder\nverified: true\ntags: [kubernetes, container]\n---\n\n# Remote Development on Kubernetes Pods\n\nProvision Kubernetes Pods as [Coder workspaces](https://coder.com/docs/v2/latest/workspaces) with this example template.\n\n<!-- TODO: Add screenshot -->\n\n## Prerequisites\n\n### Infrastructure\n\n**Cluster**: This template requires an existing Kubernetes cluster\n\n**Container Image**: This template uses the [codercom/enterprise-base:ubuntu image](https://github.com/coder/enterprise-images/tree/main/images/base) with some dev tools preinstalled. To add additional tools, extend this image or build it yourself.\n\n### Authentication\n\nThis template authenticates using a `~/.kube/config`, if present on the server, or via built-in authentication if the Coder provisioner is running on Kubernetes with an authorized ServiceAccount. To use another [authentication method](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication), edit the template.\n\n## Architecture\n\nThis template provisions the following resources:\n\n- Kubernetes pod (ephemeral)\n- Kubernetes persistent volume claim (persistent on `/home/coder`)\n\nThis means, when the workspace restarts, any tools or files outside of the home directory are not persisted. To pre-bake tools into the workspace (e.g. `python3`), modify the container image. Alternatively, individual developers can [personalize](https://coder.com/docs/v2/latest/dotfiles) their workspaces with dotfiles.\n\n> **Note**\n> This template is designed to be a starting point! Edit the Terraform to extend the template to support your use case.",
+      "created_by": {
+        "id": "ce8f693d-0e9b-4374-b5ac-26bae950d8be",
+        "username": "theo"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "3618cddb-a658-49f6-8cf3-fda710137d2c",
+      "template_id": "e605d989-b71f-47fe-b581-2eb9d8579a89",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-05T14:07:57.660716Z",
+      "updated_at": "2025-08-05T14:08:25.007493Z",
+      "name": "gifted_aryabhata4",
+      "message": "",
+      "job": {
+        "id": "e535b4fe-e861-4aee-ad4d-8fafa9fc0228",
+        "created_at": "2025-08-05T14:07:57.656372Z",
+        "started_at": "2025-08-05T14:07:57.668573Z",
+        "completed_at": "2025-08-05T14:08:25.007493Z",
+        "status": "succeeded",
+        "worker_id": "c676e796-5466-41f7-baad-7890c437424d",
+        "file_id": "ef96d588-9c47-4ac5-8add-64754b105a42",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "3618cddb-a658-49f6-8cf3-fda710137d2c"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Universal Workspace Template\ndescription: Demonstrates \"all things possible\" in Coder Workspaces\nicon: ../../../site/static/icon/code.png\nmaintainer_github: coder\nverified: true\ntags: [kubernetes, container]\n---\n\n# Remote Development on Kubernetes Pods\n\nProvision Kubernetes Pods as [Coder workspaces](https://coder.com/docs/v2/latest/workspaces) with this example template.\n\n<!-- TODO: Add screenshot -->\n\n## Prerequisites\n\n### Infrastructure\n\n**Cluster**: This template requires an existing Kubernetes cluster\n\n**Container Image**: This template uses the [codercom/enterprise-base:ubuntu image](https://github.com/coder/enterprise-images/tree/main/images/base) with some dev tools preinstalled. To add additional tools, extend this image or build it yourself.\n\n### Authentication\n\nThis template authenticates using a `~/.kube/config`, if present on the server, or via built-in authentication if the Coder provisioner is running on Kubernetes with an authorized ServiceAccount. To use another [authentication method](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication), edit the template.\n\n## Architecture\n\nThis template provisions the following resources:\n\n- Kubernetes pod (ephemeral)\n- Kubernetes persistent volume claim (persistent on `/home/coder`)\n\nThis means, when the workspace restarts, any tools or files outside of the home directory are not persisted. To pre-bake tools into the workspace (e.g. `python3`), modify the container image. Alternatively, individual developers can [personalize](https://coder.com/docs/v2/latest/dotfiles) their workspaces with dotfiles.\n\n> **Note**\n> This template is designed to be a starting point! Edit the Terraform to extend the template to support your use case.",
+      "created_by": {
+        "id": "ce8f693d-0e9b-4374-b5ac-26bae950d8be",
+        "username": "theo"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "2ce6af44-c35e-45fd-a860-6c237ad2a465",
+      "template_id": "e605d989-b71f-47fe-b581-2eb9d8579a89",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-05T14:11:05.487457Z",
+      "updated_at": "2025-08-05T14:11:05.528509Z",
+      "name": "bold_shamir7",
+      "message": "",
+      "job": {
+        "id": "842ea130-d58c-4375-9980-b4ace58085c6",
+        "created_at": "2025-08-05T14:11:05.483611Z",
+        "started_at": "2025-08-05T14:11:05.495042Z",
+        "completed_at": "2025-08-05T14:11:12.830173Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "c676e796-5466-41f7-baad-7890c437424d",
+        "file_id": "38d0b4be-05ac-4b12-aee6-d1a8fabc5eed",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "2ce6af44-c35e-45fd-a860-6c237ad2a465"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Universal Workspace Template\ndescription: Demonstrates \"all things possible\" in Coder Workspaces\nicon: ../../../site/static/icon/code.png\nmaintainer_github: coder\nverified: true\ntags: [kubernetes, container]\n---\n\n# Remote Development on Kubernetes Pods\n\nProvision Kubernetes Pods as [Coder workspaces](https://coder.com/docs/v2/latest/workspaces) with this example template.\n\n<!-- TODO: Add screenshot -->\n\n## Prerequisites\n\n### Infrastructure\n\n**Cluster**: This template requires an existing Kubernetes cluster\n\n**Container Image**: This template uses the [codercom/enterprise-base:ubuntu image](https://github.com/coder/enterprise-images/tree/main/images/base) with some dev tools preinstalled. To add additional tools, extend this image or build it yourself.\n\n### Authentication\n\nThis template authenticates using a `~/.kube/config`, if present on the server, or via built-in authentication if the Coder provisioner is running on Kubernetes with an authorized ServiceAccount. To use another [authentication method](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication), edit the template.\n\n## Architecture\n\nThis template provisions the following resources:\n\n- Kubernetes pod (ephemeral)\n- Kubernetes persistent volume claim (persistent on `/home/coder`)\n\nThis means, when the workspace restarts, any tools or files outside of the home directory are not persisted. To pre-bake tools into the workspace (e.g. `python3`), modify the container image. Alternatively, individual developers can [personalize](https://coder.com/docs/v2/latest/dotfiles) their workspaces with dotfiles.\n\n> **Note**\n> This template is designed to be a starting point! Edit the Terraform to extend the template to support your use case.",
+      "created_by": {
+        "id": "ce8f693d-0e9b-4374-b5ac-26bae950d8be",
+        "username": "theo"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "9fe0e705-dbf5-44e3-b49f-67b72a6a309c",
+      "template_id": "e605d989-b71f-47fe-b581-2eb9d8579a89",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-05T14:12:12.050757Z",
+      "updated_at": "2025-08-05T14:12:12.093312Z",
+      "name": "focused_blackwell1",
+      "message": "",
+      "job": {
+        "id": "cea3cc5f-48a4-4d25-ab05-5b4dfdbb37db",
+        "created_at": "2025-08-05T14:12:12.04688Z",
+        "started_at": "2025-08-05T14:12:12.058296Z",
+        "completed_at": "2025-08-05T14:12:25.821713Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "c676e796-5466-41f7-baad-7890c437424d",
+        "file_id": "9c264202-b425-4c3e-91e8-1bb6ac31383e",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "9fe0e705-dbf5-44e3-b49f-67b72a6a309c"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Universal Workspace Template\ndescription: Demonstrates \"all things possible\" in Coder Workspaces\nicon: ../../../site/static/icon/code.png\nmaintainer_github: coder\nverified: true\ntags: [kubernetes, container]\n---\n\n# Remote Development on Kubernetes Pods\n\nProvision Kubernetes Pods as [Coder workspaces](https://coder.com/docs/v2/latest/workspaces) with this example template.\n\n<!-- TODO: Add screenshot -->\n\n## Prerequisites\n\n### Infrastructure\n\n**Cluster**: This template requires an existing Kubernetes cluster\n\n**Container Image**: This template uses the [codercom/enterprise-base:ubuntu image](https://github.com/coder/enterprise-images/tree/main/images/base) with some dev tools preinstalled. To add additional tools, extend this image or build it yourself.\n\n### Authentication\n\nThis template authenticates using a `~/.kube/config`, if present on the server, or via built-in authentication if the Coder provisioner is running on Kubernetes with an authorized ServiceAccount. To use another [authentication method](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication), edit the template.\n\n## Architecture\n\nThis template provisions the following resources:\n\n- Kubernetes pod (ephemeral)\n- Kubernetes persistent volume claim (persistent on `/home/coder`)\n\nThis means, when the workspace restarts, any tools or files outside of the home directory are not persisted. To pre-bake tools into the workspace (e.g. `python3`), modify the container image. Alternatively, individual developers can [personalize](https://coder.com/docs/v2/latest/dotfiles) their workspaces with dotfiles.\n\n> **Note**\n> This template is designed to be a starting point! Edit the Terraform to extend the template to support your use case.",
+      "created_by": {
+        "id": "ce8f693d-0e9b-4374-b5ac-26bae950d8be",
+        "username": "theo"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "6c46fbcc-7b88-46e2-96ad-3c402e6c351a",
+      "template_id": "e605d989-b71f-47fe-b581-2eb9d8579a89",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-08-05T14:12:44.961793Z",
+      "updated_at": "2025-08-05T14:13:17.260424Z",
+      "name": "intelligent_tesla7",
+      "message": "",
+      "job": {
+        "id": "c2d78a52-d091-4b7d-bac5-e2f544301789",
+        "created_at": "2025-08-05T14:12:44.9583Z",
+        "started_at": "2025-08-05T14:12:44.969124Z",
+        "completed_at": "2025-08-05T14:13:17.260424Z",
+        "status": "succeeded",
+        "worker_id": "c676e796-5466-41f7-baad-7890c437424d",
+        "file_id": "f81e5d26-70b4-4f6e-b2a0-b4415f241ad0",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "6c46fbcc-7b88-46e2-96ad-3c402e6c351a"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Universal Workspace Template\ndescription: Demonstrates \"all things possible\" in Coder Workspaces\nicon: ../../../site/static/icon/code.png\nmaintainer_github: coder\nverified: true\ntags: [kubernetes, container]\n---\n\n# Remote Development on Kubernetes Pods\n\nProvision Kubernetes Pods as [Coder workspaces](https://coder.com/docs/v2/latest/workspaces) with this example template.\n\n<!-- TODO: Add screenshot -->\n\n## Prerequisites\n\n### Infrastructure\n\n**Cluster**: This template requires an existing Kubernetes cluster\n\n**Container Image**: This template uses the [codercom/enterprise-base:ubuntu image](https://github.com/coder/enterprise-images/tree/main/images/base) with some dev tools preinstalled. To add additional tools, extend this image or build it yourself.\n\n### Authentication\n\nThis template authenticates using a `~/.kube/config`, if present on the server, or via built-in authentication if the Coder provisioner is running on Kubernetes with an authorized ServiceAccount. To use another [authentication method](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication), edit the template.\n\n## Architecture\n\nThis template provisions the following resources:\n\n- Kubernetes pod (ephemeral)\n- Kubernetes persistent volume claim (persistent on `/home/coder`)\n\nThis means, when the workspace restarts, any tools or files outside of the home directory are not persisted. To pre-bake tools into the workspace (e.g. `python3`), modify the container image. Alternatively, individual developers can [personalize](https://coder.com/docs/v2/latest/dotfiles) their workspaces with dotfiles.\n\n> **Note**\n> This template is designed to be a starting point! Edit the Terraform to extend the template to support your use case.",
+      "created_by": {
+        "id": "ce8f693d-0e9b-4374-b5ac-26bae950d8be",
+        "username": "theo"
+      },
+      "archived": false
+    }
+  }
+]

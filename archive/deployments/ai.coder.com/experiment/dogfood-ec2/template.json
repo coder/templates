@@ -1,0 +1,60 @@
+{
+  "id": "6593e651-1a5d-4fbc-ae4e-4c37c4ef1fb4",
+  "created_at": "2025-06-06T20:34:01.879505Z",
+  "updated_at": "2025-06-12T23:37:52.047407Z",
+  "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+  "organization_name": "experiment",
+  "organization_display_name": "Coder Experiments",
+  "organization_icon": "https://vectorified.com/images/eye-of-sauron-icon-1.jpg",
+  "name": "dogfood-ec2",
+  "display_name": "Dogfood on EC2",
+  "provisioner": "terraform",
+  "active_version_id": "043f7e9e-4ef5-4e70-8e68-40d653c873d8",
+  "active_user_count": 0,
+  "build_time_stats": {
+    "delete": {
+      "P50": null,
+      "P95": null
+    },
+    "start": {
+      "P50": null,
+      "P95": null
+    },
+    "stop": {
+      "P50": null,
+      "P95": null
+    }
+  },
+  "description": "Dogfooding on AWS EC2. Comes with Docker, Terraform, Kubectl, Helm, the AWS CLI, and more! ",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "/emojis/1f436.png",
+  "default_ttl_ms": 0,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "f973b3c7-4619-41a4-8a64-e5fa8fd80006",
+  "created_by_name": "jullian",
+  "allow_user_autostart": true,
+  "allow_user_autostop": true,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 0,
+  "time_til_dormant_autodelete_ms": 0,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": true
+}

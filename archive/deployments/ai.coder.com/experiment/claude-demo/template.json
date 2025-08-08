@@ -1,0 +1,60 @@
+{
+  "id": "dc04c53e-944f-4928-a857-2f0838213e83",
+  "created_at": "2025-06-12T06:07:29.215733Z",
+  "updated_at": "2025-07-01T19:59:20.358442Z",
+  "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+  "organization_name": "experiment",
+  "organization_display_name": "Coder Experiments",
+  "organization_icon": "https://vectorified.com/images/eye-of-sauron-icon-1.jpg",
+  "name": "claude-demo",
+  "display_name": "Experiment - Demo 'Claude Web'",
+  "provisioner": "terraform",
+  "active_version_id": "d934c7ed-947d-4046-b4b5-b84c0b67b871",
+  "active_user_count": 0,
+  "build_time_stats": {
+    "delete": {
+      "P50": null,
+      "P95": null
+    },
+    "start": {
+      "P50": null,
+      "P95": null
+    },
+    "stop": {
+      "P50": null,
+      "P95": null
+    }
+  },
+  "description": "Testing the \"Claude Web\" UI: https://github.com/coder/registry/tree/claude-code-web/registry/coder/modules/claude-code",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "/emojis/1f9d1-200d-1f52c.png",
+  "default_ttl_ms": 0,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+  "created_by_name": "ju-pe",
+  "allow_user_autostart": true,
+  "allow_user_autostop": true,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 0,
+  "time_til_dormant_autodelete_ms": 0,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": true
+}
