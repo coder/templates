@@ -1,7 +1,6 @@
 ---
 display_name: Tasks on Kubernetes
 description: Run Coder Tasks on Kubernetes with an example application
-icon: ./images/tasks.svg
 maintainer_github: coder-labs
 verified: false
 tags: [kubernetes, container, ai, tasks]
@@ -10,8 +9,6 @@ tags: [kubernetes, container, ai, tasks]
 # Run Coder Tasks on Kubernetes
 
 This is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).
-
-![Tasks](./images/tasks-screenshot.png)
 
 This is a fantastic starting point for working with AI agents with Coder Tasks. Try prompts such as:
 
