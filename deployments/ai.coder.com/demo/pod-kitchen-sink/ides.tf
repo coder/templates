@@ -1,3 +1,4 @@
+# Managed in https://github.com/coder/templates
 # Web
 module "code-server" {
   source   = "registry.coder.com/coder/code-server/coder"

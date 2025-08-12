@@ -1,3 +1,4 @@
+# Managed in https://github.com/coder/templates
 # code-server
 resource "coder_app" "code-server" {
   agent_id      = coder_agent.coder.id

@@ -1,3 +1,4 @@
+# Managed in https://github.com/coder/templates
 module "dotfiles" {
   source   = "registry.coder.com/coder/dotfiles/coder"
   version  = "1.2.1"
