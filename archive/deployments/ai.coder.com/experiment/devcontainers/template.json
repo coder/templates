@@ -1,0 +1,60 @@
+{
+  "id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+  "created_at": "2025-07-17T08:20:41.273077Z",
+  "updated_at": "2025-07-21T18:04:15.532079Z",
+  "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+  "organization_name": "experiment",
+  "organization_display_name": "Coder Experiments",
+  "organization_icon": "https://vectorified.com/images/eye-of-sauron-icon-1.jpg",
+  "name": "devcontainers",
+  "display_name": "Experiment - DevContainers w/ EC2",
+  "provisioner": "terraform",
+  "active_version_id": "71fc7e78-eadf-48d0-836a-613de7354f32",
+  "active_user_count": 0,
+  "build_time_stats": {
+    "delete": {
+      "P50": 119693,
+      "P95": 175826
+    },
+    "start": {
+      "P50": 75722,
+      "P95": 112614
+    },
+    "stop": {
+      "P50": 125244,
+      "P95": 137931
+    }
+  },
+  "description": "Deploy's an EC2 instance that auto-installs Docker, NPM, and @devcontainers/cli. You can also use this w/ VSCode's devcontainer",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "https://www.svgrepo.com/show/373550/devcontainer.svg",
+  "default_ttl_ms": 0,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+  "created_by_name": "ju-pe",
+  "allow_user_autostart": true,
+  "allow_user_autostop": true,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 0,
+  "time_til_dormant_autodelete_ms": 0,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": true
+}

@@ -1,0 +1,62 @@
+{
+  "id": "07dfdbf8-ccb6-420f-9c6f-e530699b47d5",
+  "created_at": "2024-10-24T23:23:08.276972Z",
+  "updated_at": "2025-03-27T11:15:01.050713Z",
+  "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+  "organization_name": "coder",
+  "organization_display_name": "Coder",
+  "organization_icon": "",
+  "name": "aws-linux",
+  "display_name": "AWS EC2 (Linux)",
+  "provisioner": "terraform",
+  "active_version_id": "918d8b42-e8c9-4477-9a4d-4d3922ed5a65",
+  "active_user_count": 0,
+  "build_time_stats": {
+    "delete": {
+      "P50": null,
+      "P95": null
+    },
+    "start": {
+      "P50": null,
+      "P95": null
+    },
+    "stop": {
+      "P50": null,
+      "P95": null
+    }
+  },
+  "description": "Provision AWS EC2 VMs as Coder workspaces",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "/icon/aws.svg",
+  "default_ttl_ms": 86400000,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [
+      "sunday"
+    ],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "c6d330c5-e4df-4a03-a08e-d37ef63c70b1",
+  "created_by_name": "roger",
+  "allow_user_autostart": false,
+  "allow_user_autostop": true,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 604800000,
+  "time_til_dormant_ms": 1814400000,
+  "time_til_dormant_autodelete_ms": 604800000,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": false
+}

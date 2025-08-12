@@ -1,0 +1,1027 @@
+[
+  {
+    "TemplateVersion": {
+      "id": "bead004f-f1f6-453d-abd0-2ca367193e32",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-06-11T05:50:51.232997Z",
+      "updated_at": "2025-06-11T05:50:59.511046Z",
+      "name": "nervous_roentgen9",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "902699cb-64c7-4cfb-8c5c-b8d34a36eff5",
+        "created_at": "2025-06-11T05:50:51.222078Z",
+        "started_at": "2025-06-11T05:50:51.240336Z",
+        "completed_at": "2025-06-11T05:50:59.373529Z",
+        "status": "succeeded",
+        "worker_id": "ec4c3614-8edc-4bb4-a377-732228bf5b74",
+        "file_id": "30268815-a93e-4b20-8d15-d4d4a7533742",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "bead004f-f1f6-453d-abd0-2ca367193e32"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "f973b3c7-4619-41a4-8a64-e5fa8fd80006",
+        "username": "jullian"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "1ba88b44-e7f9-4dce-82a0-04238742cabe",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-06-11T05:53:44.33155Z",
+      "updated_at": "2025-06-11T05:53:52.414144Z",
+      "name": "strange_easley3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "ab49382d-839a-456f-828e-85f097362700",
+        "created_at": "2025-06-11T05:53:44.321257Z",
+        "started_at": "2025-06-11T05:53:44.343343Z",
+        "completed_at": "2025-06-11T05:53:52.414144Z",
+        "status": "succeeded",
+        "worker_id": "ec4c3614-8edc-4bb4-a377-732228bf5b74",
+        "file_id": "a77fc01e-4f91-49e6-8336-865ee8afcf0b",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "1ba88b44-e7f9-4dce-82a0-04238742cabe"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "f973b3c7-4619-41a4-8a64-e5fa8fd80006",
+        "username": "jullian"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "26e729ca-ca31-4ec7-96e9-b4878a6b4051",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-06-11T05:58:27.316583Z",
+      "updated_at": "2025-06-11T05:58:35.401106Z",
+      "name": "flamboyant_bouman2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "e17618fb-1f8e-4714-9b2d-047075928825",
+        "created_at": "2025-06-11T05:58:27.30593Z",
+        "started_at": "2025-06-11T05:58:27.328494Z",
+        "completed_at": "2025-06-11T05:58:35.401106Z",
+        "status": "succeeded",
+        "worker_id": "ec4c3614-8edc-4bb4-a377-732228bf5b74",
+        "file_id": "b900a239-a7fa-4b8d-878c-bfb51ab6395d",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "26e729ca-ca31-4ec7-96e9-b4878a6b4051"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "f973b3c7-4619-41a4-8a64-e5fa8fd80006",
+        "username": "jullian"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "c507148f-0710-41d6-b7f8-399e923ab184",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-06-12T06:09:09.167064Z",
+      "updated_at": "2025-06-12T06:09:16.881912Z",
+      "name": "epic_chaplygin0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "015c3258-2a17-4ee9-89ce-c4cbbd30046f",
+        "created_at": "2025-06-12T06:09:09.158817Z",
+        "started_at": "2025-06-12T06:09:09.173234Z",
+        "completed_at": "2025-06-12T06:09:16.881912Z",
+        "status": "succeeded",
+        "worker_id": "0e5098bc-7b90-4c85-aefb-a0ea07ec61d9",
+        "file_id": "22a2a8e4-c418-4174-9284-4e2788311fbe",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "c507148f-0710-41d6-b7f8-399e923ab184"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "6947fbf2-bb76-45c4-838d-dc4185157508",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-06-12T06:10:56.198317Z",
+      "updated_at": "2025-06-12T06:11:05.251534Z",
+      "name": "confident_banach6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "eb576d51-3e81-4594-95c5-e33347ae4fea",
+        "created_at": "2025-06-12T06:10:56.187995Z",
+        "started_at": "2025-06-12T06:10:56.21034Z",
+        "completed_at": "2025-06-12T06:11:05.251534Z",
+        "status": "succeeded",
+        "worker_id": "0e5098bc-7b90-4c85-aefb-a0ea07ec61d9",
+        "file_id": "fa99acef-7aff-4429-8759-926b1c428734",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "6947fbf2-bb76-45c4-838d-dc4185157508"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "35ce77a7-5def-4fc5-8b00-cc41d703c439",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-06-12T06:47:17.854174Z",
+      "updated_at": "2025-06-12T06:47:26.863553Z",
+      "name": "zen_goldwasser7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "7c6dbd85-46ed-474d-afc4-590ce1ade31b",
+        "created_at": "2025-06-12T06:47:17.845801Z",
+        "started_at": "2025-06-12T06:47:17.860157Z",
+        "completed_at": "2025-06-12T06:47:26.863553Z",
+        "status": "succeeded",
+        "worker_id": "0e5098bc-7b90-4c85-aefb-a0ea07ec61d9",
+        "file_id": "f020f59c-e03c-4518-88e3-2ae78b3b1252",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "35ce77a7-5def-4fc5-8b00-cc41d703c439"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "fbab4d84-1709-4b5a-b263-b9c34712739c",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-06-12T17:37:03.782199Z",
+      "updated_at": "2025-06-12T17:37:13.152828Z",
+      "name": "charming_blackwell6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "0bb8db44-6f1b-4327-9bb0-114616776e5a",
+        "created_at": "2025-06-12T17:37:03.771677Z",
+        "started_at": "2025-06-12T17:37:03.794192Z",
+        "completed_at": "2025-06-12T17:37:13.152828Z",
+        "status": "succeeded",
+        "worker_id": "8c4ff96d-35cf-47e3-9f67-5e9a1edce5a2",
+        "file_id": "61039e10-49fa-445b-ba83-614629741ff5",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "fbab4d84-1709-4b5a-b263-b9c34712739c"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "160a8c64-fbdc-47ff-906f-c3e49d999a6f",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-06-13T06:38:12.020925Z",
+      "updated_at": "2025-06-13T06:38:12.053755Z",
+      "name": "quirky_ardinghelli9",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "ffcf93d9-a364-4fcf-abd2-0852b41af186",
+        "created_at": "2025-06-13T06:38:12.01114Z",
+        "started_at": "2025-06-13T06:38:12.028677Z",
+        "completed_at": "2025-06-13T06:38:23.300212Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "6669dac3-bbad-4ed8-a79f-e8e62021d4bc",
+        "file_id": "81cd481a-b2e7-4e62-9111-cca0b30073a5",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "160a8c64-fbdc-47ff-906f-c3e49d999a6f"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "496f3b05-15a1-4f39-997f-c1f72bd2abf2",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-06-13T06:38:55.048296Z",
+      "updated_at": "2025-06-13T06:39:12.816Z",
+      "name": "flamboyant_hellman9",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "e93148d5-9eea-4204-b6fb-dc4e9db46576",
+        "created_at": "2025-06-13T06:38:55.038963Z",
+        "started_at": "2025-06-13T06:38:55.056112Z",
+        "completed_at": "2025-06-13T06:39:12.816Z",
+        "status": "succeeded",
+        "worker_id": "6669dac3-bbad-4ed8-a79f-e8e62021d4bc",
+        "file_id": "8607d14c-06a4-4866-94b8-aea3b6e72bd1",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "496f3b05-15a1-4f39-997f-c1f72bd2abf2"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "43313190-f3c8-412e-a648-3adce45a7bbf",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-06-19T06:41:50.494211Z",
+      "updated_at": "2025-06-19T06:41:50.54514Z",
+      "name": "gallant_dewdney7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "43d48714-572d-4994-846b-6d440a927eb1",
+        "created_at": "2025-06-19T06:41:50.484014Z",
+        "started_at": "2025-06-19T06:41:50.506848Z",
+        "completed_at": "2025-06-19T06:41:54.788846Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "c2c3dd2c-3d8e-45cf-8914-ff4545026990",
+        "file_id": "1b476f3d-d81a-401d-99df-799a4bc75587",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "43313190-f3c8-412e-a648-3adce45a7bbf"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "36fefb8b-9187-4936-bec9-60766d8a909f",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-06-19T06:42:11.308157Z",
+      "updated_at": "2025-06-19T06:42:22.281957Z",
+      "name": "thirsty_bartik1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "4a6b9589-6dbf-42f7-96c1-5fe1e118a597",
+        "created_at": "2025-06-19T06:42:11.297927Z",
+        "started_at": "2025-06-19T06:42:11.320386Z",
+        "completed_at": "2025-06-19T06:42:22.281957Z",
+        "status": "succeeded",
+        "worker_id": "1575a263-2d9e-40f7-92fa-7a9da911b20d",
+        "file_id": "1db4bda9-3cfa-476e-be23-1957d9bc8ffb",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "36fefb8b-9187-4936-bec9-60766d8a909f"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "05be39e7-7c3d-45a5-bf33-378b3cacd132",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-06-19T06:43:18.27325Z",
+      "updated_at": "2025-06-19T06:43:29.389312Z",
+      "name": "great_jones3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "7205bb00-13ad-4e52-b1df-7723b36f3bf3",
+        "created_at": "2025-06-19T06:43:18.263447Z",
+        "started_at": "2025-06-19T06:43:18.285381Z",
+        "completed_at": "2025-06-19T06:43:29.389312Z",
+        "status": "succeeded",
+        "worker_id": "1575a263-2d9e-40f7-92fa-7a9da911b20d",
+        "file_id": "b05ee7ab-4b70-4bdc-995f-7e7a12a0de63",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "05be39e7-7c3d-45a5-bf33-378b3cacd132"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "2533d27c-b2f4-42c0-82e4-3a6fa75e2b10",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-06-19T06:47:58.81069Z",
+      "updated_at": "2025-06-19T06:48:09.791588Z",
+      "name": "nice_volhard1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "c4ed2906-f227-46ec-8c67-07e649b52025",
+        "created_at": "2025-06-19T06:47:58.79942Z",
+        "started_at": "2025-06-19T06:47:58.823777Z",
+        "completed_at": "2025-06-19T06:48:09.791588Z",
+        "status": "succeeded",
+        "worker_id": "1575a263-2d9e-40f7-92fa-7a9da911b20d",
+        "file_id": "35bf6d1e-7de0-4eed-ae52-d9034b3aa1db",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "2533d27c-b2f4-42c0-82e4-3a6fa75e2b10"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "1d7550db-d785-4fc5-a350-180224054f79",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-02T01:35:05.625013Z",
+      "updated_at": "2025-07-02T01:35:16.580799Z",
+      "name": "stupefied_jemison2",
+      "message": "",
+      "job": {
+        "id": "798843c7-b454-41cb-8fbb-cdb2d5bca8c5",
+        "created_at": "2025-07-02T01:35:05.618095Z",
+        "started_at": "2025-07-02T01:35:05.636948Z",
+        "completed_at": "2025-07-02T01:35:16.580799Z",
+        "status": "succeeded",
+        "worker_id": "a6cd6ea3-deee-4746-8585-823c38ff5110",
+        "file_id": "5b1ecd28-d4e5-4faf-a3c2-542b6b2484c2",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "1d7550db-d785-4fc5-a350-180224054f79"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "ba5bc0ea-25ef-42b4-8b92-84043303dde5",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-02T17:35:43.32466Z",
+      "updated_at": "2025-07-02T17:35:52.987276Z",
+      "name": "funny_morse2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "1b171d1e-32db-4e30-947b-541abce28c8c",
+        "created_at": "2025-07-02T17:35:43.317528Z",
+        "started_at": "2025-07-02T17:35:43.337052Z",
+        "completed_at": "2025-07-02T17:35:52.987276Z",
+        "status": "succeeded",
+        "worker_id": "01048183-9654-4b64-9232-cc704e95eb4d",
+        "file_id": "e30b46ee-f268-46ae-a32d-16ad12a06309",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "ba5bc0ea-25ef-42b4-8b92-84043303dde5"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "b406b8bf-e1ef-4648-9cf4-f220056f06ad",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-02T17:41:28.690026Z",
+      "updated_at": "2025-07-02T17:41:37.244051Z",
+      "name": "hungry_tu3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "301b1038-24ed-4652-8d8b-ac94b07bf15d",
+        "created_at": "2025-07-02T17:41:28.683394Z",
+        "started_at": "2025-07-02T17:41:28.702098Z",
+        "completed_at": "2025-07-02T17:41:37.244051Z",
+        "status": "succeeded",
+        "worker_id": "01048183-9654-4b64-9232-cc704e95eb4d",
+        "file_id": "b9b203d0-7010-41ee-bd62-d8ca72a2690e",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "b406b8bf-e1ef-4648-9cf4-f220056f06ad"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "cf3735b4-3d59-464a-b2dd-1b0100ddf587",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-07T09:54:57.747908Z",
+      "updated_at": "2025-07-07T09:55:06.341228Z",
+      "name": "thirsty_engelbart0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "ebc3fdfe-70f0-4907-87a8-ad62593fa309",
+        "created_at": "2025-07-07T09:54:57.742453Z",
+        "started_at": "2025-07-07T09:54:57.759406Z",
+        "completed_at": "2025-07-07T09:55:06.341228Z",
+        "status": "succeeded",
+        "worker_id": "100538f3-48fe-48ec-b075-7a00cca6dc0c",
+        "file_id": "0abd9edd-b054-48f4-91c4-0775856dfa15",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "cf3735b4-3d59-464a-b2dd-1b0100ddf587"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "166a61d1-4d15-4970-8f6b-73af25335b79",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T01:42:25.156456Z",
+      "updated_at": "2025-07-08T01:42:25.214361Z",
+      "name": "sharp_goldstine5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "5403884b-c371-445e-87c8-99acaf9a4a1a",
+        "created_at": "2025-07-08T01:42:25.146825Z",
+        "started_at": "2025-07-08T01:42:25.168891Z",
+        "completed_at": "2025-07-08T01:42:27.413043Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "4d7ba891-4490-4606-b5a0-61202e3e443e",
+        "file_id": "ead0bfe6-f013-4457-9534-d86956f04c04",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "166a61d1-4d15-4970-8f6b-73af25335b79"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "c8b1b0aa-71d6-45db-a998-a09cc9d06be8",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T01:42:35.361415Z",
+      "updated_at": "2025-07-08T01:42:44.726543Z",
+      "name": "condescending_gould1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "a5fe26de-f192-4b15-acdb-49ddd28bada4",
+        "created_at": "2025-07-08T01:42:35.351597Z",
+        "started_at": "2025-07-08T01:42:35.374036Z",
+        "completed_at": "2025-07-08T01:42:44.726543Z",
+        "status": "succeeded",
+        "worker_id": "4d7ba891-4490-4606-b5a0-61202e3e443e",
+        "file_id": "4510dffc-babc-4d40-b11f-dab740486dcf",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "c8b1b0aa-71d6-45db-a998-a09cc9d06be8"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "fc2115f4-9b90-4c5c-ab3b-11ab2a6029db",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T01:43:50.021666Z",
+      "updated_at": "2025-07-08T01:43:59.81678Z",
+      "name": "vibrant_engelbart8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "cf72ac6a-77bb-4e5c-91fe-8886a434e377",
+        "created_at": "2025-07-08T01:43:50.011442Z",
+        "started_at": "2025-07-08T01:43:50.033945Z",
+        "completed_at": "2025-07-08T01:43:59.81678Z",
+        "status": "succeeded",
+        "worker_id": "029d57af-e198-4751-95b9-983c0c11c44e",
+        "file_id": "685a4397-e8b3-4b5f-bcde-23b9af1e8578",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "fc2115f4-9b90-4c5c-ab3b-11ab2a6029db"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "322ed623-0e2e-4507-a3fc-6734a369a33c",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T01:45:14.372289Z",
+      "updated_at": "2025-07-08T01:45:23.815275Z",
+      "name": "sad_shockley0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "6f479cf4-76ce-4664-8dbf-85c9aef109e9",
+        "created_at": "2025-07-08T01:45:14.362488Z",
+        "started_at": "2025-07-08T01:45:14.384359Z",
+        "completed_at": "2025-07-08T01:45:23.815275Z",
+        "status": "succeeded",
+        "worker_id": "029d57af-e198-4751-95b9-983c0c11c44e",
+        "file_id": "a9491187-74b8-4ce9-a183-93006a9fcad9",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "322ed623-0e2e-4507-a3fc-6734a369a33c"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "23bb401b-8ede-433a-9fc3-a8955ad67fb2",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T01:45:29.623274Z",
+      "updated_at": "2025-07-08T01:45:38.912103Z",
+      "name": "adoring_dhawan7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "dd20e954-faf8-4e7a-a9bc-1ecfdfd60410",
+        "created_at": "2025-07-08T01:45:29.614174Z",
+        "started_at": "2025-07-08T01:45:29.633965Z",
+        "completed_at": "2025-07-08T01:45:38.912103Z",
+        "status": "succeeded",
+        "worker_id": "029d57af-e198-4751-95b9-983c0c11c44e",
+        "file_id": "b61f90da-d1e7-4ec0-b63a-6f59874a525d",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "23bb401b-8ede-433a-9fc3-a8955ad67fb2"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "fd58b43e-2e32-4552-af31-b2a22ad8c289",
+      "template_id": "d734f091-576f-41af-8655-52b879874997",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-08T01:45:44.946554Z",
+      "updated_at": "2025-07-08T01:45:54.211795Z",
+      "name": "dazzling_franklin1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "3ece8ebc-24ff-42b1-87a6-3e74ff44e576",
+        "created_at": "2025-07-08T01:45:44.936898Z",
+        "started_at": "2025-07-08T01:45:44.958191Z",
+        "completed_at": "2025-07-08T01:45:54.211795Z",
+        "status": "succeeded",
+        "worker_id": "4d7ba891-4490-4606-b5a0-61202e3e443e",
+        "file_id": "f09b6f34-d4f2-418a-a3c1-ba8d401f1f27",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "fd58b43e-2e32-4552-af31-b2a22ad8c289"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🚀 Run a Task with Claude Code 💥💥\n\nThis template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n## ✍️ How to use\n\n### To run a task.\n\n1. Navigate to the **[Tasks](https://ai.coder.com/tasks)** tab.\n2. Type in your prompt that you'd like Claude Code to run.\n3. Click the bottom-left dropdown and select **\"Run a Task with Claude Code\"**\n\n### To build on\n\n1. Create a **new workspace** using the **“Run a Task with Claude Code”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Claude Code to follow.\n   - **AI Task Prompt** → describe what you want Claude Code to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Claude Code will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Claude Code will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  }
+]

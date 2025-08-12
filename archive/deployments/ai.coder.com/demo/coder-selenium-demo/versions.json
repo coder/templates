@@ -1,0 +1,182 @@
+[
+  {
+    "TemplateVersion": {
+      "id": "012ac3e4-f788-48e8-80a8-65558d92eb2f",
+      "template_id": "c5a4110b-41c9-4c72-87f1-c16e9698955a",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-23T19:34:55.091532Z",
+      "updated_at": "2025-06-23T19:35:06.157376Z",
+      "name": "angry_borg9",
+      "message": "",
+      "job": {
+        "id": "682b438e-b1af-4690-bb90-0d618cccdc18",
+        "created_at": "2025-06-23T19:34:55.081062Z",
+        "started_at": "2025-06-23T19:34:55.100541Z",
+        "completed_at": "2025-06-23T19:35:04.882933Z",
+        "status": "succeeded",
+        "worker_id": "6552fdec-135f-4453-b26e-8568d95ba797",
+        "file_id": "032b756d-1ad8-42c4-976c-711939f3f363",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "012ac3e4-f788-48e8-80a8-65558d92eb2f"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Universal Workspace Template\ndescription: Demonstrates \"all things possible\" in Coder Workspaces\nicon: ../../../site/static/icon/code.png\nmaintainer_github: coder\nverified: true\ntags: [kubernetes, container]\n---\n\n# Remote Development on Kubernetes Pods\n\nProvision Kubernetes Pods as [Coder workspaces](https://coder.com/docs/v2/latest/workspaces) with this example template.\n\n<!-- TODO: Add screenshot -->\n\n## Prerequisites\n\n### Infrastructure\n\n**Cluster**: This template requires an existing Kubernetes cluster\n\n**Container Image**: This template uses the [codercom/enterprise-base:ubuntu image](https://github.com/coder/enterprise-images/tree/main/images/base) with some dev tools preinstalled. To add additional tools, extend this image or build it yourself.\n\n### Authentication\n\nThis template authenticates using a `~/.kube/config`, if present on the server, or via built-in authentication if the Coder provisioner is running on Kubernetes with an authorized ServiceAccount. To use another [authentication method](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication), edit the template.\n\n## Architecture\n\nThis template provisions the following resources:\n\n- Kubernetes pod (ephemeral)\n- Kubernetes persistent volume claim (persistent on `/home/coder`)\n\nThis means, when the workspace restarts, any tools or files outside of the home directory are not persisted. To pre-bake tools into the workspace (e.g. `python3`), modify the container image. Alternatively, individual developers can [personalize](https://coder.com/docs/v2/latest/dotfiles) their workspaces with dotfiles.\n\n> **Note**\n> This template is designed to be a starting point! Edit the Terraform to extend the template to support your use case.",
+      "created_by": {
+        "id": "b40293ad-dbe2-4d1c-87c4-2f50fa48c39f",
+        "username": "daveahr"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "465ff755-c24e-4451-a812-7779b781b17e",
+      "template_id": "c5a4110b-41c9-4c72-87f1-c16e9698955a",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-23T19:36:07.904167Z",
+      "updated_at": "2025-06-23T19:36:18.196332Z",
+      "name": "angry_kilby7",
+      "message": "",
+      "job": {
+        "id": "f0b741a8-aea8-49d7-90e5-867d81b3f83b",
+        "created_at": "2025-06-23T19:36:07.894288Z",
+        "started_at": "2025-06-23T19:36:07.917159Z",
+        "completed_at": "2025-06-23T19:36:18.196332Z",
+        "status": "succeeded",
+        "worker_id": "6552fdec-135f-4453-b26e-8568d95ba797",
+        "file_id": "167f01dd-ad01-4e97-bad4-a1d3ad73351a",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "465ff755-c24e-4451-a812-7779b781b17e"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "---\ndisplay_name: Universal Workspace Template\ndescription: Demonstrates \"all things possible\" in Coder Workspaces\nicon: ../../../site/static/icon/code.png\nmaintainer_github: coder\nverified: true\ntags: [kubernetes, container]\n---\n\n# Remote Development on Kubernetes Pods\n\nProvision Kubernetes Pods as [Coder workspaces](https://coder.com/docs/v2/latest/workspaces) with this example template.\n\n<!-- TODO: Add screenshot -->\n\n## Prerequisites\n\n### Infrastructure\n\n**Cluster**: This template requires an existing Kubernetes cluster\n\n**Container Image**: This template uses the [codercom/enterprise-base:ubuntu image](https://github.com/coder/enterprise-images/tree/main/images/base) with some dev tools preinstalled. To add additional tools, extend this image or build it yourself.\n\n### Authentication\n\nThis template authenticates using a `~/.kube/config`, if present on the server, or via built-in authentication if the Coder provisioner is running on Kubernetes with an authorized ServiceAccount. To use another [authentication method](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication), edit the template.\n\n## Architecture\n\nThis template provisions the following resources:\n\n- Kubernetes pod (ephemeral)\n- Kubernetes persistent volume claim (persistent on `/home/coder`)\n\nThis means, when the workspace restarts, any tools or files outside of the home directory are not persisted. To pre-bake tools into the workspace (e.g. `python3`), modify the container image. Alternatively, individual developers can [personalize](https://coder.com/docs/v2/latest/dotfiles) their workspaces with dotfiles.\n\n> **Note**\n> This template is designed to be a starting point! Edit the Terraform to extend the template to support your use case.",
+      "created_by": {
+        "id": "b40293ad-dbe2-4d1c-87c4-2f50fa48c39f",
+        "username": "daveahr"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "f433270d-835a-4b35-9cea-b32a7be53938",
+      "template_id": "c5a4110b-41c9-4c72-87f1-c16e9698955a",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-23T19:37:14.369206Z",
+      "updated_at": "2025-06-23T19:37:24.365169Z",
+      "name": "nifty_khayyam7",
+      "message": "",
+      "job": {
+        "id": "e7551310-64c4-48ad-85b7-92f657d2aa90",
+        "created_at": "2025-06-23T19:37:14.358919Z",
+        "started_at": "2025-06-23T19:37:14.383043Z",
+        "completed_at": "2025-06-23T19:37:24.365169Z",
+        "status": "succeeded",
+        "worker_id": "75c037e2-b4bf-439b-9203-f2a88b895f05",
+        "file_id": "56d1f9af-8bc9-4583-bcbe-a5af013b5530",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "f433270d-835a-4b35-9cea-b32a7be53938"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# Selenium Testing in Coder Workspaces\n\nThis repository demonstrates how to run automated browser testing using Selenium within Coder Workspaces. The workspace comes pre-configured with Selenium Grid, Chrome browser, and all necessary drivers for immediate testing.\n\n## 🚀 Quick Start\n\nOnce your Coder Workspace is running, Selenium is automatically available. No additional setup required!\n\n### Test the Setup\n```bash\n# Quick verification that Selenium is working\n./quick-selenium-demo.py\n\n# Check Selenium Grid status\n./check-selenium.sh\n```\n\n## 📁 Included Test Scripts\n\n### 1. Quick Demo (`quick-selenium-demo.py`)\nA fast-running demo that verifies Selenium is working correctly.\n\n```bash\n./quick-selenium-demo.py\n```\n\n**Features demonstrated:**\n- Google search automation\n- Multi-site navigation\n- JavaScript execution\n- Performance metrics capture\n- Screenshot generation\n\n### 2. E-commerce Test Suite (`ecommerce-selenium-test.py`)\nReal-world testing scenario using a demo e-commerce site.\n\n```bash\n./ecommerce-selenium-test.py\n```\n\n**Tests included:**\n- Homepage loading\n- User authentication\n- Product search and filtering\n- Shopping cart functionality\n- Checkout process\n- Responsive design testing\n- HTML report generation\n\n### 3. Comprehensive Test Suite (`selenium-test-suite.py`)\nEight different test scenarios covering various Selenium capabilities.\n\n```bash\n# Run all tests\n./selenium-test-suite.py\n\n# Run specific test\n./selenium-test-suite.py test_01_google_search\n```\n\n**Test cases:**\n1. Google search functionality\n2. GitHub navigation\n3. Form interactions\n4. JavaScript execution\n5. Screenshot capture\n6. Wait conditions\n7. Multi-window handling\n8. Element attribute inspection\n\n## 🛠️ Technical Details\n\n### Pre-installed Components\n- **Selenium Grid**: Running on `http://localhost:4444`\n- **Chrome Browser**: Latest stable version (headless-capable)\n- **ChromeDriver**: Automatically matched to Chrome version\n- **GeckoDriver**: For Firefox support (if needed)\n- **Python Selenium**: Pre-configured virtual environment at `/home/coder/selenium-env`\n\n### Architecture\n```\n┌─────────────────────┐\n│   Your Test Code    │\n├─────────────────────┤\n│  Selenium WebDriver │\n├─────────────────────┤\n│   Selenium Grid     │\n│  (localhost:4444)   │\n├─────────────────────┤\n│   Chrome Browser    │\n│    (Headless)       │\n└─────────────────────┘\n```\n\n### Available Paths\n- **Selenium drivers**: `/home/coder/selenium-drivers/`\n- **Python environment**: `/home/coder/selenium-env/`\n- **Test screenshots**: `/home/coder/` (persistent storage)\n- **Selenium logs**: `/home/coder/selenium.log`\n\n## 💻 Writing Your Own Tests\n\n### Basic Test Template\n```python\n#!/home/coder/selenium-env/bin/python3\nfrom selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.chrome.options import Options\n\n# Configure Chrome options\nchrome_options = Options()\nchrome_options.add_argument('--headless=new')\nchrome_options.add_argument('--no-sandbox')\nchrome_options.add_argument('--disable-dev-shm-usage')\n\n# Connect to Selenium Grid\ndriver = webdriver.Remote(\n    command_executor='http://localhost:4444',\n    options=chrome_options\n)\n\n# Your test code here\ndriver.get(\"https://example.com\")\nprint(f\"Page title: {driver.title}\")\n\n# Cleanup\ndriver.quit()\n```\n\n### Using Different Languages\n\nWhile the examples are in Python, Selenium Grid supports all major languages:\n\n**Java**\n```java\nRemoteWebDriver driver = new RemoteWebDriver(\n    new URL(\"http://localhost:4444\"), \n    new ChromeOptions()\n);\n```\n\n**JavaScript**\n```javascript\nconst driver = await new Builder()\n    .forBrowser('chrome')\n    .usingServer('http://localhost:4444')\n    .build();\n```\n\n**C#**\n```csharp\nIWebDriver driver = new RemoteWebDriver(\n    new Uri(\"http://localhost:4444\"), \n    new ChromeOptions()\n);\n```\n\n## 📊 Generated Artifacts\n\nThe test scripts generate various artifacts in `/home/coder/`:\n\n- **Screenshots**: `test_*.png`, `demo_*.png`, `selenium-screenshot.png`\n- **HTML Reports**: `test_report.html` (from e-commerce tests)\n- **Logs**: `selenium.log` (Selenium Grid logs)\n\n## 🔧 Troubleshooting\n\n### Check Selenium Status\n```bash\n./check-selenium.sh\n```\n\nThis script shows:\n- Chrome version\n- ChromeDriver version\n- Selenium process status\n- Grid connectivity\n- Recent log entries\n\n### Common Issues\n\n**Issue**: Tests fail to connect to Selenium Grid\n```bash\n# Check if Selenium is running\nps aux | grep selenium\n\n# Restart Selenium manually if needed\ncd /home/coder/selenium-drivers\njava -jar selenium-server.jar standalone &\n```\n\n**Issue**: Chrome not found\n```bash\n# Verify Chrome installation\ngoogle-chrome --version\n\n# Check Chrome binary location\nwhich google-chrome\n```\n\n**Issue**: Screenshots not saving\n```bash\n# Ensure write permissions\nls -la /home/coder/\n\n# Check available disk space\ndf -h /home/coder\n```\n\n## 🚀 CI/CD Integration\n\nThe headless Chrome setup makes this ideal for CI/CD pipelines:\n\n```yaml\n# Example GitHub Actions\n- name: Run Selenium Tests\n  run: |\n    ./selenium-test-suite.py\n    ./ecommerce-selenium-test.py\n```\n\n```groovy\n// Example Jenkins Pipeline\nstage('Selenium Tests') {\n    steps {\n        sh './selenium-test-suite.py'\n        sh './ecommerce-selenium-test.py'\n    }\n}\n```\n\n## 📈 Performance Considerations\n\n- **Headless Mode**: All tests run in headless mode for better performance\n- **Parallel Testing**: Selenium Grid supports parallel test execution\n- **Resource Usage**: Workspace configured with appropriate CPU/memory limits\n- **Persistent Storage**: Test artifacts stored in persistent `/home/coder` volume\n\n## 🎯 Use Cases\n\nThis Selenium setup in Coder Workspaces is perfect for:\n\n- **QA Teams**: Consistent testing environments for all team members\n- **Developers**: Test web applications during development\n- **CI/CD**: Automated testing in pipelines\n- **Training**: Teaching test automation with pre-configured environments\n- **Demos**: Showing testing capabilities to stakeholders\n\n## 📚 Additional Resources\n\n- [Selenium Documentation](https://www.selenium.dev/documentation/)\n- [Chrome DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/)\n- [Selenium Grid Guide](https://www.selenium.dev/documentation/grid/)\n- [Coder Documentation](https://coder.com/docs)\n\n## 🤝 Support\n\nFor issues specific to:\n- **Selenium**: Check the [Selenium GitHub](https://github.com/SeleniumHQ/selenium)\n- **Coder Workspaces**: Visit [Coder Support](https://coder.com/support)\n- **Test Scripts**: Modify as needed for your use cases\n\n---\n\n**Happy Testing! 🧪**\n",
+      "created_by": {
+        "id": "b40293ad-dbe2-4d1c-87c4-2f50fa48c39f",
+        "username": "daveahr"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "8cc3f12b-649a-47b8-81d4-63e7a519fd9e",
+      "template_id": "c5a4110b-41c9-4c72-87f1-c16e9698955a",
+      "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+      "created_at": "2025-06-23T19:44:32.397201Z",
+      "updated_at": "2025-06-23T19:44:42.388304Z",
+      "name": "festive_curran9",
+      "message": "",
+      "job": {
+        "id": "a8acd15b-0dbc-45d0-a94c-a58d97c1b75a",
+        "created_at": "2025-06-23T19:44:32.387265Z",
+        "started_at": "2025-06-23T19:44:32.409994Z",
+        "completed_at": "2025-06-23T19:44:42.388304Z",
+        "status": "succeeded",
+        "worker_id": "6552fdec-135f-4453-b26e-8568d95ba797",
+        "file_id": "56d1f9af-8bc9-4583-bcbe-a5af013b5530",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "4dfef39a-0598-4fe5-9bf2-a732c6776240",
+        "input": {
+          "template_version_id": "8cc3f12b-649a-47b8-81d4-63e7a519fd9e"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# Selenium Testing in Coder Workspaces\n\nThis repository demonstrates how to run automated browser testing using Selenium within Coder Workspaces. The workspace comes pre-configured with Selenium Grid, Chrome browser, and all necessary drivers for immediate testing.\n\n## 🚀 Quick Start\n\nOnce your Coder Workspace is running, Selenium is automatically available. No additional setup required!\n\n### Test the Setup\n```bash\n# Quick verification that Selenium is working\n./quick-selenium-demo.py\n\n# Check Selenium Grid status\n./check-selenium.sh\n```\n\n## 📁 Included Test Scripts\n\n### 1. Quick Demo (`quick-selenium-demo.py`)\nA fast-running demo that verifies Selenium is working correctly.\n\n```bash\n./quick-selenium-demo.py\n```\n\n**Features demonstrated:**\n- Google search automation\n- Multi-site navigation\n- JavaScript execution\n- Performance metrics capture\n- Screenshot generation\n\n### 2. E-commerce Test Suite (`ecommerce-selenium-test.py`)\nReal-world testing scenario using a demo e-commerce site.\n\n```bash\n./ecommerce-selenium-test.py\n```\n\n**Tests included:**\n- Homepage loading\n- User authentication\n- Product search and filtering\n- Shopping cart functionality\n- Checkout process\n- Responsive design testing\n- HTML report generation\n\n### 3. Comprehensive Test Suite (`selenium-test-suite.py`)\nEight different test scenarios covering various Selenium capabilities.\n\n```bash\n# Run all tests\n./selenium-test-suite.py\n\n# Run specific test\n./selenium-test-suite.py test_01_google_search\n```\n\n**Test cases:**\n1. Google search functionality\n2. GitHub navigation\n3. Form interactions\n4. JavaScript execution\n5. Screenshot capture\n6. Wait conditions\n7. Multi-window handling\n8. Element attribute inspection\n\n## 🛠️ Technical Details\n\n### Pre-installed Components\n- **Selenium Grid**: Running on `http://localhost:4444`\n- **Chrome Browser**: Latest stable version (headless-capable)\n- **ChromeDriver**: Automatically matched to Chrome version\n- **GeckoDriver**: For Firefox support (if needed)\n- **Python Selenium**: Pre-configured virtual environment at `/home/coder/selenium-env`\n\n### Architecture\n```\n┌─────────────────────┐\n│   Your Test Code    │\n├─────────────────────┤\n│  Selenium WebDriver │\n├─────────────────────┤\n│   Selenium Grid     │\n│  (localhost:4444)   │\n├─────────────────────┤\n│   Chrome Browser    │\n│    (Headless)       │\n└─────────────────────┘\n```\n\n### Available Paths\n- **Selenium drivers**: `/home/coder/selenium-drivers/`\n- **Python environment**: `/home/coder/selenium-env/`\n- **Test screenshots**: `/home/coder/` (persistent storage)\n- **Selenium logs**: `/home/coder/selenium.log`\n\n## 💻 Writing Your Own Tests\n\n### Basic Test Template\n```python\n#!/home/coder/selenium-env/bin/python3\nfrom selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.chrome.options import Options\n\n# Configure Chrome options\nchrome_options = Options()\nchrome_options.add_argument('--headless=new')\nchrome_options.add_argument('--no-sandbox')\nchrome_options.add_argument('--disable-dev-shm-usage')\n\n# Connect to Selenium Grid\ndriver = webdriver.Remote(\n    command_executor='http://localhost:4444',\n    options=chrome_options\n)\n\n# Your test code here\ndriver.get(\"https://example.com\")\nprint(f\"Page title: {driver.title}\")\n\n# Cleanup\ndriver.quit()\n```\n\n### Using Different Languages\n\nWhile the examples are in Python, Selenium Grid supports all major languages:\n\n**Java**\n```java\nRemoteWebDriver driver = new RemoteWebDriver(\n    new URL(\"http://localhost:4444\"), \n    new ChromeOptions()\n);\n```\n\n**JavaScript**\n```javascript\nconst driver = await new Builder()\n    .forBrowser('chrome')\n    .usingServer('http://localhost:4444')\n    .build();\n```\n\n**C#**\n```csharp\nIWebDriver driver = new RemoteWebDriver(\n    new Uri(\"http://localhost:4444\"), \n    new ChromeOptions()\n);\n```\n\n## 📊 Generated Artifacts\n\nThe test scripts generate various artifacts in `/home/coder/`:\n\n- **Screenshots**: `test_*.png`, `demo_*.png`, `selenium-screenshot.png`\n- **HTML Reports**: `test_report.html` (from e-commerce tests)\n- **Logs**: `selenium.log` (Selenium Grid logs)\n\n## 🔧 Troubleshooting\n\n### Check Selenium Status\n```bash\n./check-selenium.sh\n```\n\nThis script shows:\n- Chrome version\n- ChromeDriver version\n- Selenium process status\n- Grid connectivity\n- Recent log entries\n\n### Common Issues\n\n**Issue**: Tests fail to connect to Selenium Grid\n```bash\n# Check if Selenium is running\nps aux | grep selenium\n\n# Restart Selenium manually if needed\ncd /home/coder/selenium-drivers\njava -jar selenium-server.jar standalone &\n```\n\n**Issue**: Chrome not found\n```bash\n# Verify Chrome installation\ngoogle-chrome --version\n\n# Check Chrome binary location\nwhich google-chrome\n```\n\n**Issue**: Screenshots not saving\n```bash\n# Ensure write permissions\nls -la /home/coder/\n\n# Check available disk space\ndf -h /home/coder\n```\n\n## 🚀 CI/CD Integration\n\nThe headless Chrome setup makes this ideal for CI/CD pipelines:\n\n```yaml\n# Example GitHub Actions\n- name: Run Selenium Tests\n  run: |\n    ./selenium-test-suite.py\n    ./ecommerce-selenium-test.py\n```\n\n```groovy\n// Example Jenkins Pipeline\nstage('Selenium Tests') {\n    steps {\n        sh './selenium-test-suite.py'\n        sh './ecommerce-selenium-test.py'\n    }\n}\n```\n\n## 📈 Performance Considerations\n\n- **Headless Mode**: All tests run in headless mode for better performance\n- **Parallel Testing**: Selenium Grid supports parallel test execution\n- **Resource Usage**: Workspace configured with appropriate CPU/memory limits\n- **Persistent Storage**: Test artifacts stored in persistent `/home/coder` volume\n\n## 🎯 Use Cases\n\nThis Selenium setup in Coder Workspaces is perfect for:\n\n- **QA Teams**: Consistent testing environments for all team members\n- **Developers**: Test web applications during development\n- **CI/CD**: Automated testing in pipelines\n- **Training**: Teaching test automation with pre-configured environments\n- **Demos**: Showing testing capabilities to stakeholders\n\n## 📚 Additional Resources\n\n- [Selenium Documentation](https://www.selenium.dev/documentation/)\n- [Chrome DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/)\n- [Selenium Grid Guide](https://www.selenium.dev/documentation/grid/)\n- [Coder Documentation](https://coder.com/docs)\n\n## 🤝 Support\n\nFor issues specific to:\n- **Selenium**: Check the [Selenium GitHub](https://github.com/SeleniumHQ/selenium)\n- **Coder Workspaces**: Visit [Coder Support](https://coder.com/support)\n- **Test Scripts**: Modify as needed for your use cases\n\n---\n\n**Happy Testing! 🧪**\n",
+      "created_by": {
+        "id": "b40293ad-dbe2-4d1c-87c4-2f50fa48c39f",
+        "username": "daveahr"
+      },
+      "archived": false
+    }
+  }
+]

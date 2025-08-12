@@ -1,0 +1,62 @@
+{
+  "id": "847abbf0-43bd-492c-95fa-949fbb829445",
+  "created_at": "2024-11-14T17:20:12.985638Z",
+  "updated_at": "2025-05-30T09:44:18.933626Z",
+  "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+  "organization_name": "coder",
+  "organization_display_name": "Coder",
+  "organization_icon": "",
+  "name": "anvbox-jupyter",
+  "display_name": "envbox-jupyter",
+  "provisioner": "terraform",
+  "active_version_id": "c8d7f2fe-f232-4a0d-8e3a-b9b71cddc217",
+  "active_user_count": 2,
+  "build_time_stats": {
+    "delete": {
+      "P50": null,
+      "P95": null
+    },
+    "start": {
+      "P50": null,
+      "P95": null
+    },
+    "stop": {
+      "P50": null,
+      "P95": null
+    }
+  },
+  "description": "A minimal starter template for Coder",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png",
+  "default_ttl_ms": 86400000,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [
+      "sunday"
+    ],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "f4cdd50a-be11-42df-8f77-7dd90bd9c1fa",
+  "created_by_name": "matyas",
+  "allow_user_autostart": false,
+  "allow_user_autostop": false,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 0,
+  "time_til_dormant_autodelete_ms": 0,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": false
+}

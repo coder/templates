@@ -1,0 +1,62 @@
+{
+  "id": "593c3231-cfb8-4e2e-9956-0289c0c6b8ca",
+  "created_at": "2025-03-03T01:51:42.244077Z",
+  "updated_at": "2025-03-10T21:25:15.738732Z",
+  "organization_id": "c1064dd3-cd6c-4f6d-9754-f0dcab588b18",
+  "organization_name": "us-central",
+  "organization_display_name": "Coder",
+  "organization_icon": "/icon/coder.svg",
+  "name": "Coder-on-K8s",
+  "display_name": "Provision Me",
+  "provisioner": "terraform",
+  "active_version_id": "40049107-3d95-4f05-ad38-5d7412673f40",
+  "active_user_count": 0,
+  "build_time_stats": {
+    "delete": {
+      "P50": null,
+      "P95": null
+    },
+    "start": {
+      "P50": null,
+      "P95": null
+    },
+    "stop": {
+      "P50": null,
+      "P95": null
+    }
+  },
+  "description": "Provision Kubernetes Deployments as Coder workspaces",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "/icon/coder.svg",
+  "default_ttl_ms": 86400000,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [
+      "sunday"
+    ],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "e6cb6f3c-bbe6-4a48-b3f4-83e3c9a5adc1",
+  "created_by_name": "roger",
+  "allow_user_autostart": false,
+  "allow_user_autostop": false,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 0,
+  "time_til_dormant_autodelete_ms": 0,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": true
+}

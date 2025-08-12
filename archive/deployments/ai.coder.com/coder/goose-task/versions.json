@@ -1,0 +1,2254 @@
+[
+  {
+    "TemplateVersion": {
+      "id": "fe5b3e09-3d91-40aa-b7a1-45ba56b6d0aa",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-06-12T23:29:58.524689Z",
+      "updated_at": "2025-06-12T23:30:06.263828Z",
+      "name": "dazzling_galois3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "16070709-6b7a-4bcc-a633-1fc2c0502311",
+        "created_at": "2025-06-12T23:29:58.514983Z",
+        "started_at": "2025-06-12T23:29:58.529869Z",
+        "completed_at": "2025-06-12T23:30:05.836635Z",
+        "status": "succeeded",
+        "worker_id": "13a159e3-f931-4cde-bb5f-6324d83ae985",
+        "file_id": "45b2df94-b9f5-4572-8670-dba2f73cc5cb",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "fe5b3e09-3d91-40aa-b7a1-45ba56b6d0aa"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "b009a2ef-39f2-4243-a7c6-2a960ff8b27b",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-06-13T06:38:21.985586Z",
+      "updated_at": "2025-06-13T06:38:40.678189Z",
+      "name": "busy_leavitt3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "0b4d5a8f-2c28-47b2-aace-ef19f9ef2526",
+        "created_at": "2025-06-13T06:38:21.975224Z",
+        "started_at": "2025-06-13T06:38:21.993289Z",
+        "completed_at": "2025-06-13T06:38:40.678189Z",
+        "status": "succeeded",
+        "worker_id": "d63d054f-ca31-4ad2-8a8c-d16a182469b6",
+        "file_id": "d112f48f-1c33-4807-a123-cb720903dadc",
+        "tags": {
+          "owner": "",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "b009a2ef-39f2-4243-a7c6-2a960ff8b27b"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "644dfd1a-310f-4a1e-b034-f995bb8a82ee",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-06-16T06:52:30.275621Z",
+      "updated_at": "2025-06-16T06:52:39.132484Z",
+      "name": "relaxed_thompson4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "63810e80-a995-491b-9643-0fceaa24c173",
+        "created_at": "2025-06-16T06:52:30.268668Z",
+        "started_at": "2025-06-16T06:52:30.287813Z",
+        "completed_at": "2025-06-16T06:52:39.132484Z",
+        "status": "succeeded",
+        "worker_id": "6913a0f8-4f86-4336-a410-56a449f66b29",
+        "file_id": "ef5b0cc6-f429-4242-a19b-4f4cc1d86cdf",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "644dfd1a-310f-4a1e-b034-f995bb8a82ee"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "31246ddc-babd-4288-90e0-d0ea77b48fa3",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-06-19T07:08:47.647332Z",
+      "updated_at": "2025-06-19T07:08:56.621212Z",
+      "name": "charming_dhawan2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "a332aaa1-493e-405b-bebb-79821a29ceb8",
+        "created_at": "2025-06-19T07:08:47.639803Z",
+        "started_at": "2025-06-19T07:08:47.660034Z",
+        "completed_at": "2025-06-19T07:08:56.621212Z",
+        "status": "succeeded",
+        "worker_id": "339ca197-2074-4f56-8800-ab410240d32e",
+        "file_id": "ce059c74-1c05-4496-926c-f2fabd6ea75f",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "31246ddc-babd-4288-90e0-d0ea77b48fa3"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "5b8b242c-fec0-402f-a69c-2ca5b5380f54",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-06-19T07:19:35.683775Z",
+      "updated_at": "2025-06-19T07:19:44.42024Z",
+      "name": "serene_chandrasekhar8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "28b03378-3ac9-466b-ae0d-7c0836eea1bd",
+        "created_at": "2025-06-19T07:19:35.672294Z",
+        "started_at": "2025-06-19T07:19:35.697821Z",
+        "completed_at": "2025-06-19T07:19:44.42024Z",
+        "status": "succeeded",
+        "worker_id": "c161b99c-0ad4-4933-aa13-d44f0d934924",
+        "file_id": "c981e9e0-3386-4a61-bc53-b6d5b035cb81",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "5b8b242c-fec0-402f-a69c-2ca5b5380f54"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "d65f6d54-ca38-4de3-9205-24293e7f0552",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-06-22T09:01:35.583758Z",
+      "updated_at": "2025-06-22T09:01:47.389032Z",
+      "name": "condescending_shirley8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "097845ad-0720-40c2-8291-ddfd64ce4617",
+        "created_at": "2025-06-22T09:01:35.576249Z",
+        "started_at": "2025-06-22T09:01:35.595588Z",
+        "completed_at": "2025-06-22T09:01:47.389032Z",
+        "status": "succeeded",
+        "worker_id": "896cba55-8fc2-4a5d-be84-3211d951c323",
+        "file_id": "2c3993d1-e493-4204-b6bc-460adf689a5d",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "d65f6d54-ca38-4de3-9205-24293e7f0552"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "1afc0f5b-a0a3-4737-ac1f-fccf8b101430",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-06-22T20:03:52.569037Z",
+      "updated_at": "2025-06-22T20:04:01.682352Z",
+      "name": "lucid_curran3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "2df5f9d3-089b-478d-9222-db404f3c3640",
+        "created_at": "2025-06-22T20:03:52.562229Z",
+        "started_at": "2025-06-22T20:03:52.579943Z",
+        "completed_at": "2025-06-22T20:04:01.682352Z",
+        "status": "succeeded",
+        "worker_id": "896cba55-8fc2-4a5d-be84-3211d951c323",
+        "file_id": "2c3993d1-e493-4204-b6bc-460adf689a5d",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "1afc0f5b-a0a3-4737-ac1f-fccf8b101430"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "84b8359f-f63e-4e31-9144-7cf7b32f2d82",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-06-22T20:25:31.883496Z",
+      "updated_at": "2025-06-22T20:25:40.999244Z",
+      "name": "magical_liskov2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "1b5e0548-ba12-4c8c-8f2e-80069cc9a021",
+        "created_at": "2025-06-22T20:25:31.876228Z",
+        "started_at": "2025-06-22T20:25:31.895269Z",
+        "completed_at": "2025-06-22T20:25:40.999244Z",
+        "status": "succeeded",
+        "worker_id": "9430afb6-68da-444f-82db-88eb1be16892",
+        "file_id": "1be8451e-88ce-4b3f-85af-4895373a4a78",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "84b8359f-f63e-4e31-9144-7cf7b32f2d82"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "1035ea4f-522e-4664-8cc3-2642a6f05984",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-06-23T16:27:29.208864Z",
+      "updated_at": "2025-06-23T16:27:38.30074Z",
+      "name": "recursing_noyce6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "6f9e6819-b246-4434-b2d0-d2a07f8a836a",
+        "created_at": "2025-06-23T16:27:29.201746Z",
+        "started_at": "2025-06-23T16:27:29.221077Z",
+        "completed_at": "2025-06-23T16:27:38.30074Z",
+        "status": "succeeded",
+        "worker_id": "19145ed1-fd58-406c-873c-5d7f5d6da316",
+        "file_id": "9510680d-cc4d-40f5-bad8-00eb8c94a20f",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "1035ea4f-522e-4664-8cc3-2642a6f05984"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "bc45a6b0-177a-4273-a89e-13cccf12f7d8",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-06-23T16:32:02.203885Z",
+      "updated_at": "2025-06-23T16:32:11.283392Z",
+      "name": "elastic_jennings4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "dc80a913-4578-46df-99fc-fa1da09bd684",
+        "created_at": "2025-06-23T16:32:02.196712Z",
+        "started_at": "2025-06-23T16:32:02.215593Z",
+        "completed_at": "2025-06-23T16:32:11.283392Z",
+        "status": "succeeded",
+        "worker_id": "896cba55-8fc2-4a5d-be84-3211d951c323",
+        "file_id": "df9e09c3-745d-4a8c-96bd-372e45389a55",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "bc45a6b0-177a-4273-a89e-13cccf12f7d8"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "94464ead-39e8-4d36-8e27-9606d2cb9d57",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-06-23T16:36:05.217316Z",
+      "updated_at": "2025-06-23T16:36:15.188585Z",
+      "name": "nifty_galois4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "bffc90e0-0d61-4a8e-b793-484ce9446af3",
+        "created_at": "2025-06-23T16:36:05.210344Z",
+        "started_at": "2025-06-23T16:36:05.229236Z",
+        "completed_at": "2025-06-23T16:36:15.188585Z",
+        "status": "succeeded",
+        "worker_id": "19145ed1-fd58-406c-873c-5d7f5d6da316",
+        "file_id": "e5a85b88-c029-48b1-8821-53ab47ad0d8a",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "94464ead-39e8-4d36-8e27-9606d2cb9d57"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "060c3a31-1702-417a-9280-2e5cf8ef9983",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-06-27T07:56:03.76073Z",
+      "updated_at": "2025-06-27T07:56:15.349847Z",
+      "name": "pedantic_agnesi4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "90c2950a-2c23-4879-b2cf-2c41336e1566",
+        "created_at": "2025-06-27T07:56:03.749994Z",
+        "started_at": "2025-06-27T07:56:03.773076Z",
+        "completed_at": "2025-06-27T07:56:15.349847Z",
+        "status": "succeeded",
+        "worker_id": "ed8a72bb-2c3f-433d-b6ee-31af51ead990",
+        "file_id": "98c4e35f-3009-4f6f-8c6d-889810a12e96",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "060c3a31-1702-417a-9280-2e5cf8ef9983"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "facefa80-a651-4619-8812-5de525fbaec9",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-06-30T23:03:28.045482Z",
+      "updated_at": "2025-06-30T23:03:37.033943Z",
+      "name": "lucid_babbage4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "17e8b6c8-49c2-4cdc-ab88-eef7e643339f",
+        "created_at": "2025-06-30T23:03:28.035656Z",
+        "started_at": "2025-06-30T23:03:28.059965Z",
+        "completed_at": "2025-06-30T23:03:37.033943Z",
+        "status": "succeeded",
+        "worker_id": "3fb2b50d-844a-41a9-bdc0-bea85dc8a6e5",
+        "file_id": "badc395f-279b-4dc5-80b6-59f5834dd36e",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "facefa80-a651-4619-8812-5de525fbaec9"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "b94ef938-762b-4125-bc71-a9e10b669706",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T01:41:28.085983Z",
+      "updated_at": "2025-07-01T01:41:36.872779Z",
+      "name": "zen_sammet6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "1e5d644a-6096-4a31-a8ba-207c123449af",
+        "created_at": "2025-07-01T01:41:28.072696Z",
+        "started_at": "2025-07-01T01:41:28.101454Z",
+        "completed_at": "2025-07-01T01:41:36.872779Z",
+        "status": "succeeded",
+        "worker_id": "4cb09f1c-7178-4281-972a-31f66ace8817",
+        "file_id": "f007e400-801c-474f-b0a4-9e432b321f12",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "b94ef938-762b-4125-bc71-a9e10b669706"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "d92342b9-8fa1-4ebe-a2f6-d89ddb19d918",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T01:51:21.072658Z",
+      "updated_at": "2025-07-01T01:51:29.817516Z",
+      "name": "condescending_liskov7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "c6c8aa55-4493-48fb-ac1a-deb3c93386d0",
+        "created_at": "2025-07-01T01:51:21.065032Z",
+        "started_at": "2025-07-01T01:51:21.084659Z",
+        "completed_at": "2025-07-01T01:51:29.817516Z",
+        "status": "succeeded",
+        "worker_id": "3fb2b50d-844a-41a9-bdc0-bea85dc8a6e5",
+        "file_id": "93af37dd-28d2-41f7-9f11-3cbcb4d2f4e8",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "d92342b9-8fa1-4ebe-a2f6-d89ddb19d918"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "7500260c-c16f-495d-b5d9-4f46b4a8dbfd",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T01:59:35.122198Z",
+      "updated_at": "2025-07-01T01:59:44.067679Z",
+      "name": "peaceful_chatelet5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "42e91cea-fce6-4421-9c49-91c4225c3508",
+        "created_at": "2025-07-01T01:59:35.114956Z",
+        "started_at": "2025-07-01T01:59:35.134436Z",
+        "completed_at": "2025-07-01T01:59:44.067679Z",
+        "status": "succeeded",
+        "worker_id": "3fb2b50d-844a-41a9-bdc0-bea85dc8a6e5",
+        "file_id": "8f591274-a9c5-4899-8c55-664b14d750b2",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "7500260c-c16f-495d-b5d9-4f46b4a8dbfd"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "81feb501-1658-4fb0-8ba0-baafffbbd2b1",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T02:11:20.062114Z",
+      "updated_at": "2025-07-01T02:11:28.867824Z",
+      "name": "exciting_shaw3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "e57b6cbd-a6eb-41a8-98c3-3d59fff776ba",
+        "created_at": "2025-07-01T02:11:20.052023Z",
+        "started_at": "2025-07-01T02:11:20.074781Z",
+        "completed_at": "2025-07-01T02:11:28.867824Z",
+        "status": "succeeded",
+        "worker_id": "33ad2b87-ee7b-4050-9564-aaeb53eaf802",
+        "file_id": "5384b7ac-6a8e-45c2-912d-b9a2ba8a6c35",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "81feb501-1658-4fb0-8ba0-baafffbbd2b1"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "26beb472-db58-40c4-8f9e-565d4d5159b3",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T05:39:15.803802Z",
+      "updated_at": "2025-07-01T05:39:24.572385Z",
+      "name": "romantic_ishizaka3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "473d3de1-a106-4bd5-a0fa-7eadac4c0a2e",
+        "created_at": "2025-07-01T05:39:15.795883Z",
+        "started_at": "2025-07-01T05:39:15.816484Z",
+        "completed_at": "2025-07-01T05:39:24.572385Z",
+        "status": "succeeded",
+        "worker_id": "4cb09f1c-7178-4281-972a-31f66ace8817",
+        "file_id": "478ac56c-ca08-4299-ba40-9b470c47611f",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "26beb472-db58-40c4-8f9e-565d4d5159b3"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "cea1efab-e361-47f2-a4f3-c3bd75536cec",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T05:47:54.002085Z",
+      "updated_at": "2025-07-01T05:48:02.863328Z",
+      "name": "vigilant_margulis8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "52553136-aa9a-47f8-abff-d74397984138",
+        "created_at": "2025-07-01T05:47:53.994567Z",
+        "started_at": "2025-07-01T05:47:54.017238Z",
+        "completed_at": "2025-07-01T05:48:02.863328Z",
+        "status": "succeeded",
+        "worker_id": "4cb09f1c-7178-4281-972a-31f66ace8817",
+        "file_id": "225da0e3-ce75-4c0c-949c-1bbdf1b78be2",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "cea1efab-e361-47f2-a4f3-c3bd75536cec"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "888ff999-a86d-4a12-b123-dc92427308ff",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T06:11:07.941069Z",
+      "updated_at": "2025-07-01T06:11:16.977778Z",
+      "name": "nice_meninsky7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "ae663517-3e34-4200-8646-94981c1b3212",
+        "created_at": "2025-07-01T06:11:07.930464Z",
+        "started_at": "2025-07-01T06:11:07.954055Z",
+        "completed_at": "2025-07-01T06:11:16.977778Z",
+        "status": "succeeded",
+        "worker_id": "4cb09f1c-7178-4281-972a-31f66ace8817",
+        "file_id": "729271f4-395d-4bef-955c-eb4fdbb01c20",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "888ff999-a86d-4a12-b123-dc92427308ff"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "6498e10e-95bb-4124-8847-91d4d6e20204",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T06:12:30.753122Z",
+      "updated_at": "2025-07-01T06:12:39.645379Z",
+      "name": "compassionate_driscoll9",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "9405617d-4bb6-48f3-b072-9ba5df167b7f",
+        "created_at": "2025-07-01T06:12:30.743111Z",
+        "started_at": "2025-07-01T06:12:30.765445Z",
+        "completed_at": "2025-07-01T06:12:39.645379Z",
+        "status": "succeeded",
+        "worker_id": "0c218cc7-9812-4728-8ed4-3a306e4d740a",
+        "file_id": "1f8f3ad1-b415-418b-919e-2609c52a7799",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "6498e10e-95bb-4124-8847-91d4d6e20204"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "61d70f3b-798a-4544-98dd-660d9632954a",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T06:21:48.395985Z",
+      "updated_at": "2025-07-01T06:21:58.154298Z",
+      "name": "quirky_lamport8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "4247e9d9-c374-4c76-a0bf-f72926d6732e",
+        "created_at": "2025-07-01T06:21:48.388305Z",
+        "started_at": "2025-07-01T06:21:48.407597Z",
+        "completed_at": "2025-07-01T06:21:58.154298Z",
+        "status": "succeeded",
+        "worker_id": "3fb2b50d-844a-41a9-bdc0-bea85dc8a6e5",
+        "file_id": "653050b8-82e4-467b-a39d-54bb65cfe7fd",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "61d70f3b-798a-4544-98dd-660d9632954a"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "b6bbcacd-2a99-4ce6-b71e-d9c7b19c7b10",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T06:25:37.713318Z",
+      "updated_at": "2025-07-01T06:25:46.639608Z",
+      "name": "adoring_banzai6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "d7ab464b-c614-498d-a97e-fc67c63af25d",
+        "created_at": "2025-07-01T06:25:37.70241Z",
+        "started_at": "2025-07-01T06:25:37.726405Z",
+        "completed_at": "2025-07-01T06:25:46.639608Z",
+        "status": "succeeded",
+        "worker_id": "3fb2b50d-844a-41a9-bdc0-bea85dc8a6e5",
+        "file_id": "16c323c0-b9ba-4401-820c-da98e1249309",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "b6bbcacd-2a99-4ce6-b71e-d9c7b19c7b10"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "adc1484f-8fd5-4db2-84c6-5d25aaa8b8a6",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T07:10:09.843692Z",
+      "updated_at": "2025-07-01T07:10:18.749709Z",
+      "name": "naughty_kilby3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "9500ab43-d040-4fe5-83a3-224e95fa6624",
+        "created_at": "2025-07-01T07:10:09.832777Z",
+        "started_at": "2025-07-01T07:10:09.856694Z",
+        "completed_at": "2025-07-01T07:10:18.749709Z",
+        "status": "succeeded",
+        "worker_id": "4cb09f1c-7178-4281-972a-31f66ace8817",
+        "file_id": "e336c628-7617-4b0d-89e0-825e790a6052",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "adc1484f-8fd5-4db2-84c6-5d25aaa8b8a6"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "9eeee0c8-6ca3-478f-8d8b-bc306cec6003",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T07:11:41.984398Z",
+      "updated_at": "2025-07-01T07:11:51.856927Z",
+      "name": "keen_black8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "a0658b43-2b07-485a-bf09-3c46e2c09686",
+        "created_at": "2025-07-01T07:11:41.972574Z",
+        "started_at": "2025-07-01T07:11:41.996846Z",
+        "completed_at": "2025-07-01T07:11:51.856927Z",
+        "status": "succeeded",
+        "worker_id": "3fb2b50d-844a-41a9-bdc0-bea85dc8a6e5",
+        "file_id": "2991d580-8419-4ea1-9ba8-05c936274c53",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "9eeee0c8-6ca3-478f-8d8b-bc306cec6003"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "f8dde042-7e91-4fa6-a9b6-0ed2d3d070be",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T07:13:46.334839Z",
+      "updated_at": "2025-07-01T07:13:55.241215Z",
+      "name": "jolly_ardinghelli4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "e746c507-7e04-43c2-ad74-d02853bfff82",
+        "created_at": "2025-07-01T07:13:46.32779Z",
+        "started_at": "2025-07-01T07:13:46.346665Z",
+        "completed_at": "2025-07-01T07:13:55.241215Z",
+        "status": "succeeded",
+        "worker_id": "3fb2b50d-844a-41a9-bdc0-bea85dc8a6e5",
+        "file_id": "6d3550eb-8742-47f4-b2b1-2b314cdd8c3b",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "f8dde042-7e91-4fa6-a9b6-0ed2d3d070be"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "0004702c-eb99-4b95-a183-de4db95767ad",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T07:17:47.616536Z",
+      "updated_at": "2025-07-01T07:17:56.337605Z",
+      "name": "interesting_lumiere1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "21772814-54d1-40a0-8e06-de4d689b44e1",
+        "created_at": "2025-07-01T07:17:47.609039Z",
+        "started_at": "2025-07-01T07:17:47.628683Z",
+        "completed_at": "2025-07-01T07:17:56.337605Z",
+        "status": "succeeded",
+        "worker_id": "3fb2b50d-844a-41a9-bdc0-bea85dc8a6e5",
+        "file_id": "967c3fb9-6f69-4b4e-a50c-8ae418d5de36",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "0004702c-eb99-4b95-a183-de4db95767ad"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "7649dc70-cefc-4e34-bc01-e979aa816c85",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T07:44:44.51508Z",
+      "updated_at": "2025-07-01T07:44:53.363525Z",
+      "name": "dazzling_germain6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "6a620500-e6c6-432d-a8f3-a24d3c68955f",
+        "created_at": "2025-07-01T07:44:44.501958Z",
+        "started_at": "2025-07-01T07:44:44.528145Z",
+        "completed_at": "2025-07-01T07:44:53.363525Z",
+        "status": "succeeded",
+        "worker_id": "3fb2b50d-844a-41a9-bdc0-bea85dc8a6e5",
+        "file_id": "1713d06e-32b5-437c-bf17-a9f1c9f06475",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "7649dc70-cefc-4e34-bc01-e979aa816c85"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "ac1bfd2b-3baa-4d04-a9f6-469419808bae",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T07:51:01.824886Z",
+      "updated_at": "2025-07-01T07:51:10.659501Z",
+      "name": "adoring_driscoll2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "b3fdc100-9468-4849-9af0-40c24be9ce70",
+        "created_at": "2025-07-01T07:51:01.814691Z",
+        "started_at": "2025-07-01T07:51:01.838377Z",
+        "completed_at": "2025-07-01T07:51:10.659501Z",
+        "status": "succeeded",
+        "worker_id": "3fb2b50d-844a-41a9-bdc0-bea85dc8a6e5",
+        "file_id": "7a1041c2-10c2-4594-9030-04a26bffb84d",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "ac1bfd2b-3baa-4d04-a9f6-469419808bae"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "14ddab41-f571-4541-b748-d435e841e1d2",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-01T07:51:48.190516Z",
+      "updated_at": "2025-07-01T07:51:57.261083Z",
+      "name": "nifty_chaum1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "9caf1a19-35bd-4633-9344-3a851f6e0970",
+        "created_at": "2025-07-01T07:51:48.179232Z",
+        "started_at": "2025-07-01T07:51:48.202026Z",
+        "completed_at": "2025-07-01T07:51:57.261083Z",
+        "status": "succeeded",
+        "worker_id": "3fa28642-9aa7-4c61-8657-3705c4f54838",
+        "file_id": "b09e4bba-29b8-4d4a-af00-64e96cbb841f",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "14ddab41-f571-4541-b748-d435e841e1d2"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "8dce15a4-d644-40d5-8f5d-73db2b4a08c0",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-02T06:06:34.380463Z",
+      "updated_at": "2025-07-02T06:06:43.488066Z",
+      "name": "elastic_shtern9",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "b94059ac-1953-40fd-aa3d-343a00b9cc7c",
+        "created_at": "2025-07-02T06:06:34.374013Z",
+        "started_at": "2025-07-02T06:06:34.39176Z",
+        "completed_at": "2025-07-02T06:06:43.488066Z",
+        "status": "succeeded",
+        "worker_id": "a7b05b9d-ea26-404a-ad71-dee171209186",
+        "file_id": "ae0d7f3c-ce41-423e-b3a1-9caff6b8e2ed",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "8dce15a4-d644-40d5-8f5d-73db2b4a08c0"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "55b8e473-71d3-4252-ba51-158280009628",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-02T06:22:01.088709Z",
+      "updated_at": "2025-07-02T06:22:01.147631Z",
+      "name": "unruffled_spence2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "74847646-4723-4b63-922a-dbde8572e658",
+        "created_at": "2025-07-02T06:22:01.080292Z",
+        "started_at": "2025-07-02T06:22:01.100055Z",
+        "completed_at": "2025-07-02T06:22:02.562882Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "33ad2b87-ee7b-4050-9564-aaeb53eaf802",
+        "file_id": "70f9a951-e16b-4326-8624-75df8cd4cd2b",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "55b8e473-71d3-4252-ba51-158280009628"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "b5550324-219e-438a-858b-f307d9ce9d9f",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-02T06:22:23.219287Z",
+      "updated_at": "2025-07-02T06:22:23.321085Z",
+      "name": "gifted_jepsen8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "721dd747-528d-4f38-9375-fb430fae8072",
+        "created_at": "2025-07-02T06:22:23.210011Z",
+        "started_at": "2025-07-02T06:22:23.235269Z",
+        "completed_at": "2025-07-02T06:22:25.357206Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "4cb09f1c-7178-4281-972a-31f66ace8817",
+        "file_id": "798ba902-d901-463e-b7c6-c3a9dcdbf39c",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "b5550324-219e-438a-858b-f307d9ce9d9f"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "14638eb7-b430-48e0-a3de-e9d2fdfa6e10",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-02T06:23:02.10736Z",
+      "updated_at": "2025-07-02T06:23:11.56072Z",
+      "name": "boring_carson8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "03c52261-39c1-44b2-998a-9ebd3724469e",
+        "created_at": "2025-07-02T06:23:02.10013Z",
+        "started_at": "2025-07-02T06:23:02.118481Z",
+        "completed_at": "2025-07-02T06:23:11.56072Z",
+        "status": "succeeded",
+        "worker_id": "3fa28642-9aa7-4c61-8657-3705c4f54838",
+        "file_id": "573aaca3-5b35-43cb-b049-d0c6929de6c9",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "14638eb7-b430-48e0-a3de-e9d2fdfa6e10"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "328ddfcc-bef2-4731-b0bf-867cb2e7e3ad",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-02T06:24:21.819861Z",
+      "updated_at": "2025-07-02T06:24:30.954579Z",
+      "name": "unruffled_swirles2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "90fd11b6-1054-49da-9492-e9a8aeba3179",
+        "created_at": "2025-07-02T06:24:21.808792Z",
+        "started_at": "2025-07-02T06:24:21.83252Z",
+        "completed_at": "2025-07-02T06:24:30.954579Z",
+        "status": "succeeded",
+        "worker_id": "33ad2b87-ee7b-4050-9564-aaeb53eaf802",
+        "file_id": "40939977-d8f7-4d47-9245-65195b003902",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "328ddfcc-bef2-4731-b0bf-867cb2e7e3ad"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "b9cbdfee-d0ee-4dae-baef-5f5a1ac6bc82",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-02T06:29:19.870885Z",
+      "updated_at": "2025-07-02T06:29:29.070512Z",
+      "name": "nice_galileo8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "5e212d0a-3fd1-4b39-b2dd-452be189bfb1",
+        "created_at": "2025-07-02T06:29:19.859447Z",
+        "started_at": "2025-07-02T06:29:19.885334Z",
+        "completed_at": "2025-07-02T06:29:29.070512Z",
+        "status": "succeeded",
+        "worker_id": "0c218cc7-9812-4728-8ed4-3a306e4d740a",
+        "file_id": "c67f14c6-5612-459d-87dd-6a6981bfff68",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "b9cbdfee-d0ee-4dae-baef-5f5a1ac6bc82"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "62d329f4-8fbb-45cf-b8d3-41a65068caf2",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-02T06:31:53.096386Z",
+      "updated_at": "2025-07-02T06:32:02.368174Z",
+      "name": "interesting_shannon7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "398ddf6e-b5b9-4d3a-956d-1331e1353c68",
+        "created_at": "2025-07-02T06:31:53.088211Z",
+        "started_at": "2025-07-02T06:31:53.108002Z",
+        "completed_at": "2025-07-02T06:32:02.368174Z",
+        "status": "succeeded",
+        "worker_id": "0c218cc7-9812-4728-8ed4-3a306e4d740a",
+        "file_id": "df402e5b-98e1-4154-ae60-c0f54d586200",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "62d329f4-8fbb-45cf-b8d3-41a65068caf2"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "380e1a3c-fa1b-4ca5-a39c-1afe93426d2a",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-02T06:34:28.611367Z",
+      "updated_at": "2025-07-02T06:34:38.151383Z",
+      "name": "wonderful_poincare0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "c8a16ace-a29c-4a7d-952f-8036b4d47401",
+        "created_at": "2025-07-02T06:34:28.603731Z",
+        "started_at": "2025-07-02T06:34:28.623325Z",
+        "completed_at": "2025-07-02T06:34:38.151383Z",
+        "status": "succeeded",
+        "worker_id": "3fa28642-9aa7-4c61-8657-3705c4f54838",
+        "file_id": "a51128e5-1f7b-45dd-8087-a79d66a45db5",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "380e1a3c-fa1b-4ca5-a39c-1afe93426d2a"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "afeb4aee-58f5-4da5-8f84-0025862a260b",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-02T06:39:35.372167Z",
+      "updated_at": "2025-07-02T06:39:44.571426Z",
+      "name": "laughing_northcutt2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "28851832-fca8-4e33-88c5-b111825b7554",
+        "created_at": "2025-07-02T06:39:35.364708Z",
+        "started_at": "2025-07-02T06:39:35.384684Z",
+        "completed_at": "2025-07-02T06:39:44.571426Z",
+        "status": "succeeded",
+        "worker_id": "4cb09f1c-7178-4281-972a-31f66ace8817",
+        "file_id": "fc993b1d-56fc-44ed-a997-c8568c81660d",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "afeb4aee-58f5-4da5-8f84-0025862a260b"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "af90f574-baac-473d-a16a-ff5768a900dc",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-02T06:49:48.090257Z",
+      "updated_at": "2025-07-02T06:49:57.090015Z",
+      "name": "xenodochial_moser0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "810a870f-3438-4f8f-914c-594207d0df46",
+        "created_at": "2025-07-02T06:49:48.083081Z",
+        "started_at": "2025-07-02T06:49:48.102297Z",
+        "completed_at": "2025-07-02T06:49:57.090015Z",
+        "status": "succeeded",
+        "worker_id": "33ad2b87-ee7b-4050-9564-aaeb53eaf802",
+        "file_id": "c091763f-4dd6-4315-afac-45b5a46e521d",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "af90f574-baac-473d-a16a-ff5768a900dc"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "92e94605-0f74-40c0-8239-6701317b607a",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-06T06:37:44.364616Z",
+      "updated_at": "2025-07-06T06:37:53.635287Z",
+      "name": "charming_bartik0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "69bfa5fe-fdd3-49a3-ace8-672af118132d",
+        "created_at": "2025-07-06T06:37:44.354024Z",
+        "started_at": "2025-07-06T06:37:44.376981Z",
+        "completed_at": "2025-07-06T06:37:53.635287Z",
+        "status": "succeeded",
+        "worker_id": "0260e4fd-9dac-4093-97fa-a8230d24f245",
+        "file_id": "4d820471-1ca8-4d54-b66f-da357f341983",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "92e94605-0f74-40c0-8239-6701317b607a"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "b48f844e-0b46-4764-bc4b-1ac2a5e084da",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-06T06:39:07.26161Z",
+      "updated_at": "2025-07-06T06:39:07.321862Z",
+      "name": "gracious_jang3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "1e7230a8-609f-4a5e-ba81-9f0839025170",
+        "created_at": "2025-07-06T06:39:07.250802Z",
+        "started_at": "2025-07-06T06:39:07.273727Z",
+        "completed_at": "2025-07-06T06:39:07.446963Z",
+        "error": "template import provision for start: initialize terraform: exit status 1",
+        "status": "failed",
+        "worker_id": "e884974b-dab9-4c6e-a700-07fd93385f66",
+        "file_id": "dc80dc47-1020-46ae-b7dd-0a792e97e89c",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "b48f844e-0b46-4764-bc4b-1ac2a5e084da"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "502c3c28-5fd6-415c-8b91-6c413f9d226b",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-06T06:39:23.111752Z",
+      "updated_at": "2025-07-06T06:39:32.532369Z",
+      "name": "compassionate_ptolemy8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "5837fe59-f904-4ae1-8e1a-d948958d6ec1",
+        "created_at": "2025-07-06T06:39:23.101693Z",
+        "started_at": "2025-07-06T06:39:23.123958Z",
+        "completed_at": "2025-07-06T06:39:32.532369Z",
+        "status": "succeeded",
+        "worker_id": "e884974b-dab9-4c6e-a700-07fd93385f66",
+        "file_id": "84f13816-ce87-402a-be43-fc6c25a45cb7",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "502c3c28-5fd6-415c-8b91-6c413f9d226b"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "930297a8-347a-4b0d-a692-1ac383999060",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-06T06:43:59.047261Z",
+      "updated_at": "2025-07-06T06:44:08.339961Z",
+      "name": "stoic_saha9",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "876c0c23-1c5e-415a-8968-d339d4a6e06d",
+        "created_at": "2025-07-06T06:43:59.036712Z",
+        "started_at": "2025-07-06T06:43:59.059616Z",
+        "completed_at": "2025-07-06T06:44:08.339961Z",
+        "status": "succeeded",
+        "worker_id": "e884974b-dab9-4c6e-a700-07fd93385f66",
+        "file_id": "09e9908a-4b1c-4c48-ab70-e5deccfa7468",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "930297a8-347a-4b0d-a692-1ac383999060"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "e83314cf-147a-4057-b100-6cf75013705b",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-06T06:47:53.782719Z",
+      "updated_at": "2025-07-06T06:48:03.041066Z",
+      "name": "focused_feistel7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "6edcd9bc-9545-4105-b92d-bb93c2b9f4fb",
+        "created_at": "2025-07-06T06:47:53.772444Z",
+        "started_at": "2025-07-06T06:47:53.794985Z",
+        "completed_at": "2025-07-06T06:48:03.041066Z",
+        "status": "succeeded",
+        "worker_id": "1f91472a-a5d5-49c6-979f-fb2aaa0da91d",
+        "file_id": "d6ee61cc-c3b7-4c56-a66a-45cc3a9ef184",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "e83314cf-147a-4057-b100-6cf75013705b"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "289710d0-a2fb-49e5-81ba-a42575ecaebc",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-07T09:54:31.681786Z",
+      "updated_at": "2025-07-07T09:54:43.735919Z",
+      "name": "charming_kalam7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "26ee7f5c-e21d-45a4-9d40-ce7bd71e6d43",
+        "created_at": "2025-07-07T09:54:31.671092Z",
+        "started_at": "2025-07-07T09:54:31.694107Z",
+        "completed_at": "2025-07-07T09:54:43.735919Z",
+        "status": "succeeded",
+        "worker_id": "669ca269-6ef5-42c5-a386-e8b41e237a7b",
+        "file_id": "a29ee9d7-4792-4df2-a3f2-63f6a3028f3b",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "289710d0-a2fb-49e5-81ba-a42575ecaebc"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "347cd12c-fe60-46e0-9ac1-17dccd320e57",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-09T14:38:30.072493Z",
+      "updated_at": "2025-07-09T14:38:42.735505Z",
+      "name": "friendly_kirch3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "73d497e7-ade9-4286-8cf9-79f4e07ed0b8",
+        "created_at": "2025-07-09T14:38:30.064607Z",
+        "started_at": "2025-07-09T14:38:30.084635Z",
+        "completed_at": "2025-07-09T14:38:42.735505Z",
+        "status": "succeeded",
+        "worker_id": "a3f0f192-9885-41cb-a3ce-06873a85dc0d",
+        "file_id": "9f032858-99a1-410b-a28c-68049954831c",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "347cd12c-fe60-46e0-9ac1-17dccd320e57"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "33426f68-3c07-4ed2-b52f-15c8e4ca3f0e",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-09T14:40:37.338428Z",
+      "updated_at": "2025-07-09T14:40:37.400973Z",
+      "name": "trusting_proskuriakova9",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "a92be78a-6251-4995-b13b-9e6fb6e00b3f",
+        "created_at": "2025-07-09T14:40:37.327201Z",
+        "started_at": "2025-07-09T14:40:37.351849Z",
+        "completed_at": "2025-07-09T14:40:39.53277Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "27c99ca9-b43d-4519-8aa5-7a34a9d22731",
+        "file_id": "14b5244d-5e4b-4ce8-9756-d4b743f30493",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "33426f68-3c07-4ed2-b52f-15c8e4ca3f0e"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "6cfdf377-3f31-44c7-bb91-58a5b0d342db",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-09T14:40:50.95132Z",
+      "updated_at": "2025-07-09T14:41:00.711111Z",
+      "name": "modest_sanderson6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "cf20c6a2-0abe-46c2-b7e3-705683563345",
+        "created_at": "2025-07-09T14:40:50.939727Z",
+        "started_at": "2025-07-09T14:40:50.962454Z",
+        "completed_at": "2025-07-09T14:41:00.711111Z",
+        "status": "succeeded",
+        "worker_id": "27c99ca9-b43d-4519-8aa5-7a34a9d22731",
+        "file_id": "538c065a-9257-4cfd-9ba4-8aee09e61b97",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "6cfdf377-3f31-44c7-bb91-58a5b0d342db"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "b5a964fe-ae7a-4ea7-88f9-6c42b70b5641",
+      "template_id": "f5f56758-5828-4eb3-8048-b1ee18f5ace0",
+      "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+      "created_at": "2025-07-09T14:43:26.063081Z",
+      "updated_at": "2025-07-09T14:43:35.836188Z",
+      "name": "sleepy_napier4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "ae48ceba-632a-4add-ab1e-f2bf9f1712a3",
+        "created_at": "2025-07-09T14:43:26.051919Z",
+        "started_at": "2025-07-09T14:43:26.074514Z",
+        "completed_at": "2025-07-09T14:43:35.836188Z",
+        "status": "succeeded",
+        "worker_id": "27c99ca9-b43d-4519-8aa5-7a34a9d22731",
+        "file_id": "6d620fa5-5609-4a83-9820-7e5238bdc07b",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+        "input": {
+          "template_version_id": "b5a964fe-ae7a-4ea7-88f9-6c42b70b5641"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# 🪽 Prototype Anything with Goose AI 🪿💨\n\nThis template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live \"preview—all\" automatically.\n\n**NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.\n\n## ✍️ How to use\n\n1. Create a **new workspace** using the **“Building with Goose AI”** template.\n2. Fill out:\n   - **Workspace Name** → (use a name or accept the suggestion)\n   - **AI System Prompt** → describe global settings and parameters you want Goose AI to follow.\n   - **AI Task Prompt** → describe what you want Goose AI to build.\n3. Click **Create Workspace**.\n\n🎉 That’s it! Your workspace will launch, and Goose AI will start building.\n\n---\n\n## 💡 Prompt examples\n\n✅ “Build a simple hello world website.”  \n✅ “Create an online sock store app with a product page”  \n✅ “Make a website celebrating upcoming holidays with a festive design.”\n\nYou can also leave the prompt blank—Goose AI will ask you what to build after the workspace launches.\n\n---\n\nYour app will run on **port 3000** (accessible via Coder’s preview link). You can send additional instructions inside the workspace terminal to keep improving your project.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  }
+]

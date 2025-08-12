@@ -1,0 +1,60 @@
+{
+  "id": "bf1f9598-fc83-4b1f-bb7e-9920ee8ce06d",
+  "created_at": "2025-07-08T01:30:58.795602Z",
+  "updated_at": "2025-07-21T16:32:19.768919Z",
+  "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+  "organization_name": "coder",
+  "organization_display_name": "Coder",
+  "organization_icon": "/icon/coder.svg",
+  "name": "tasks-k8s",
+  "display_name": "Real World App w/ Claude",
+  "provisioner": "terraform",
+  "active_version_id": "05c27928-bb89-4af2-b306-96a82032f146",
+  "active_user_count": 1,
+  "build_time_stats": {
+    "delete": {
+      "P50": 11721,
+      "P95": 18955
+    },
+    "start": {
+      "P50": 14945,
+      "P95": 105519
+    },
+    "stop": {
+      "P50": 12381,
+      "P95": 20138
+    }
+  },
+  "description": "Create a workspace that creates a real world example ran by Coder Tasks using Claude Code!",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "/icon/coder.svg",
+  "default_ttl_ms": 3600000,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+  "created_by_name": "ju-pe",
+  "allow_user_autostart": true,
+  "allow_user_autostop": true,
+  "allow_user_cancel_workspace_jobs": true,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 28800000,
+  "time_til_dormant_autodelete_ms": 28800000,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": true
+}

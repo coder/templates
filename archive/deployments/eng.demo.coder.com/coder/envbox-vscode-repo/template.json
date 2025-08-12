@@ -1,0 +1,60 @@
+{
+  "id": "6d1c8531-b6a4-46c6-8514-0416c8a18939",
+  "created_at": "2024-10-02T03:10:28.077915Z",
+  "updated_at": "2024-11-14T23:09:14.426321Z",
+  "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+  "organization_name": "coder",
+  "organization_display_name": "Coder",
+  "organization_icon": "",
+  "name": "envbox-vscode-repo",
+  "display_name": "envbox-vscode-repo",
+  "provisioner": "terraform",
+  "active_version_id": "6987ec5c-acfa-42ec-a078-2daedaa59dad",
+  "active_user_count": 0,
+  "build_time_stats": {
+    "delete": {
+      "P50": 5847,
+      "P95": 5847
+    },
+    "start": {
+      "P50": null,
+      "P95": null
+    },
+    "stop": {
+      "P50": null,
+      "P95": null
+    }
+  },
+  "description": "",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "/icon/docker.png",
+  "default_ttl_ms": 10800000,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "fee1e1ee-c1a4-4aff-bda0-75b09c969e7f",
+  "created_by_name": "coder",
+  "allow_user_autostart": true,
+  "allow_user_autostop": true,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 604800000,
+  "time_til_dormant_ms": 1814400000,
+  "time_til_dormant_autodelete_ms": 604800000,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": false
+}

@@ -1,0 +1,60 @@
+{
+  "id": "d14bcc23-50f6-4219-a907-ad9d27dae28a",
+  "created_at": "2024-10-02T02:29:49.243908Z",
+  "updated_at": "2024-11-27T23:05:22.609549Z",
+  "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+  "organization_name": "coder",
+  "organization_display_name": "Coder",
+  "organization_icon": "",
+  "name": "k8s-vscode",
+  "display_name": "K8s Pod (w/ VS Code + Custom Provisioner Location)",
+  "provisioner": "terraform",
+  "active_version_id": "2fd9892a-af61-4914-a7df-35676ad76d92",
+  "active_user_count": 0,
+  "build_time_stats": {
+    "delete": {
+      "P50": null,
+      "P95": null
+    },
+    "start": {
+      "P50": null,
+      "P95": null
+    },
+    "stop": {
+      "P50": null,
+      "P95": null
+    }
+  },
+  "description": "",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "/icon/code.svg",
+  "default_ttl_ms": 14400000,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "fee1e1ee-c1a4-4aff-bda0-75b09c969e7f",
+  "created_by_name": "coder",
+  "allow_user_autostart": true,
+  "allow_user_autostop": true,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 172800000,
+  "time_til_dormant_ms": 2592000000,
+  "time_til_dormant_autodelete_ms": 1814400000,
+  "require_active_version": true,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": false
+}

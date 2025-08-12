@@ -1,0 +1,62 @@
+{
+  "id": "d2954bc5-2057-4409-b7bc-acc23b19d553",
+  "created_at": "2025-08-06T11:07:19.849541Z",
+  "updated_at": "2025-08-06T12:07:32.350486Z",
+  "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+  "organization_name": "coder",
+  "organization_display_name": "Coder",
+  "organization_icon": "/icon/coder.svg",
+  "name": "claude-task-eric-copy",
+  "display_name": "Eric Claude Test",
+  "provisioner": "terraform",
+  "active_version_id": "9d5b4398-e118-4a71-8333-a74a0f1aa99f",
+  "active_user_count": 1,
+  "build_time_stats": {
+    "delete": {
+      "P50": 12439,
+      "P95": 13477
+    },
+    "start": {
+      "P50": 12965,
+      "P95": 93889
+    },
+    "stop": {
+      "P50": 10004,
+      "P95": 10240
+    }
+  },
+  "description": "Launch a Claude workspace to run a task!",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "/icon/claude.svg",
+  "default_ttl_ms": 86400000,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [
+      "sunday"
+    ],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "1755a50f-0317-43bf-8dab-247eee667a2a",
+  "created_by_name": "ericpaulsen",
+  "allow_user_autostart": false,
+  "allow_user_autostop": false,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 0,
+  "time_til_dormant_autodelete_ms": 0,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": false
+}

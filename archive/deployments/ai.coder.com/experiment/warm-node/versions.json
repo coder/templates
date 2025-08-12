@@ -1,0 +1,1780 @@
+[
+  {
+    "TemplateVersion": {
+      "id": "e1811b9f-82e3-4945-b2f0-8d5b864fe9a5",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T06:06:19.285962Z",
+      "updated_at": "2025-07-15T06:06:29.468858Z",
+      "name": "beautiful_tu7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "98dca400-08bd-4478-99bf-aea2b5f505f8",
+        "created_at": "2025-07-15T06:06:19.279279Z",
+        "started_at": "2025-07-15T06:06:19.293954Z",
+        "completed_at": "2025-07-15T06:06:29.084793Z",
+        "status": "succeeded",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "7aec3e89-3946-4d05-8727-f9752055df01",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "e1811b9f-82e3-4945-b2f0-8d5b864fe9a5"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "efad622f-5248-4e3f-8b5b-e06e31d2d075",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T06:11:13.420346Z",
+      "updated_at": "2025-07-15T06:11:23.292493Z",
+      "name": "wonderful_brahmagupta6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "3b5452ea-75a8-4e26-b5d9-a22eee169fb9",
+        "created_at": "2025-07-15T06:11:13.413723Z",
+        "started_at": "2025-07-15T06:11:13.43318Z",
+        "completed_at": "2025-07-15T06:11:23.292493Z",
+        "status": "succeeded",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "06668eb8-2ac7-4ec2-bd68-4242b3cac2e0",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "efad622f-5248-4e3f-8b5b-e06e31d2d075"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "75a19d96-7e3f-4c59-bfbd-221a25ef082b",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T06:12:18.800679Z",
+      "updated_at": "2025-07-15T06:12:28.666285Z",
+      "name": "zealous_ellis4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "ff95faf3-7a13-4141-bcd0-6ec356c46b2f",
+        "created_at": "2025-07-15T06:12:18.794093Z",
+        "started_at": "2025-07-15T06:12:18.812692Z",
+        "completed_at": "2025-07-15T06:12:28.666285Z",
+        "status": "succeeded",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "75622dfd-2804-4c17-8605-2a529ab541af",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "75a19d96-7e3f-4c59-bfbd-221a25ef082b"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "3223f306-4363-4f9c-ae99-7e92f070761c",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T06:17:51.00008Z",
+      "updated_at": "2025-07-15T06:18:00.785119Z",
+      "name": "elastic_saha8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "51484d46-8e64-4f6d-a475-d804cf4623ac",
+        "created_at": "2025-07-15T06:17:50.992993Z",
+        "started_at": "2025-07-15T06:17:51.012897Z",
+        "completed_at": "2025-07-15T06:18:00.785119Z",
+        "status": "succeeded",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "98a1fcf7-a162-437f-a354-0882b9623737",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "3223f306-4363-4f9c-ae99-7e92f070761c"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "7b8b3f89-070c-4fc2-b8e6-ab7bc79ba4ec",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T07:10:57.190159Z",
+      "updated_at": "2025-07-15T07:10:57.190159Z",
+      "name": "wizardly_roentgen6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "f4377222-bd5c-486a-819b-e07b1658ab92",
+        "created_at": "2025-07-15T07:10:57.183027Z",
+        "started_at": "2025-07-15T07:10:57.202251Z",
+        "completed_at": "2025-07-15T07:11:01.597171Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "6c221618-9ad3-4b60-aa7e-012c1ee37dfe",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "7b8b3f89-070c-4fc2-b8e6-ab7bc79ba4ec"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "896d92b5-d5b3-4fab-ac2f-847ee61b21e3",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T07:11:36.894812Z",
+      "updated_at": "2025-07-15T07:11:36.894813Z",
+      "name": "quizzical_dijkstra0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "60430be3-2fb8-4058-9cb0-8773a95d2de5",
+        "created_at": "2025-07-15T07:11:36.888162Z",
+        "started_at": "2025-07-15T07:11:36.906076Z",
+        "completed_at": "2025-07-15T07:11:41.097637Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "4ceb4702-7623-4128-a562-07f0d13aa185",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "896d92b5-d5b3-4fab-ac2f-847ee61b21e3"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "c4241220-5429-47a5-a280-65e993a475b5",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T07:13:23.798951Z",
+      "updated_at": "2025-07-15T07:13:33.517295Z",
+      "name": "awesome_pare1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "84dd9bd3-467a-48d5-a418-814ee1f45298",
+        "created_at": "2025-07-15T07:13:23.79166Z",
+        "started_at": "2025-07-15T07:13:23.81053Z",
+        "completed_at": "2025-07-15T07:13:33.517295Z",
+        "status": "succeeded",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "fda5b763-c637-4f85-bef6-64f5d80369cf",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "c4241220-5429-47a5-a280-65e993a475b5"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "a25e18b7-f512-419f-a101-8ce3e6005286",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T07:15:27.498226Z",
+      "updated_at": "2025-07-15T07:15:37.903757Z",
+      "name": "eloquent_einstein1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "d16293ff-de8e-4a23-b54f-4a3173fd0c2b",
+        "created_at": "2025-07-15T07:15:27.491618Z",
+        "started_at": "2025-07-15T07:15:27.510351Z",
+        "completed_at": "2025-07-15T07:15:37.903757Z",
+        "status": "succeeded",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "6875939c-b909-4b38-8b32-cb09ad75c170",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "a25e18b7-f512-419f-a101-8ce3e6005286"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "3294b5bc-75c6-4ec5-8681-d9dcc9c087d3",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T07:18:00.953012Z",
+      "updated_at": "2025-07-15T07:18:00.953012Z",
+      "name": "epic_hellman2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "d1322beb-b09b-40af-a9cd-42a8699297c2",
+        "created_at": "2025-07-15T07:18:00.945869Z",
+        "started_at": "2025-07-15T07:18:00.965195Z",
+        "completed_at": "2025-07-15T07:18:05.411037Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "cb205429-9ac4-47e4-b061-3341a1a1cec6",
+        "file_id": "dca98ace-725e-4a1c-a028-ad29cb6fda47",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "3294b5bc-75c6-4ec5-8681-d9dcc9c087d3"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "d10d0bab-d161-4799-929a-c0b52044b65d",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T07:18:53.768787Z",
+      "updated_at": "2025-07-15T07:18:53.768787Z",
+      "name": "infallible_chandrasekhar7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "fb76f151-338f-4648-80fb-4aaa7bcdba00",
+        "created_at": "2025-07-15T07:18:53.76221Z",
+        "started_at": "2025-07-15T07:18:53.780252Z",
+        "completed_at": "2025-07-15T07:18:57.98865Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "0c786f5d-ecae-41eb-9784-9493fd456173",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "d10d0bab-d161-4799-929a-c0b52044b65d"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "286d15a5-5d04-43de-9121-8f48e2638e87",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T07:19:59.0423Z",
+      "updated_at": "2025-07-15T07:19:59.042301Z",
+      "name": "peaceful_lamarr5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "7eff1410-0c60-4eac-8c85-89b61fbe5ded",
+        "created_at": "2025-07-15T07:19:59.03516Z",
+        "started_at": "2025-07-15T07:19:59.054443Z",
+        "completed_at": "2025-07-15T07:20:03.487775Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "c33c207b-4321-43cc-860a-94d6f45fd3c6",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "286d15a5-5d04-43de-9121-8f48e2638e87"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "0708af1c-cb39-4c4b-a8f0-2a9df95fb637",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T07:21:48.763001Z",
+      "updated_at": "2025-07-15T07:21:48.763002Z",
+      "name": "priceless_hugle8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "097afc90-b78c-4266-ad9a-0e9d5d0d185b",
+        "created_at": "2025-07-15T07:21:48.756031Z",
+        "started_at": "2025-07-15T07:21:48.775058Z",
+        "completed_at": "2025-07-15T07:21:52.988813Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "6a1bac99-7af4-4624-b4d0-762976e2f3d8",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "0708af1c-cb39-4c4b-a8f0-2a9df95fb637"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "9e66a832-dc11-441e-a663-4cad7910616c",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T07:22:16.143445Z",
+      "updated_at": "2025-07-15T07:22:16.143445Z",
+      "name": "thirsty_spence6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "839f7de0-2142-4371-bb25-249a63b09327",
+        "created_at": "2025-07-15T07:22:16.136963Z",
+        "started_at": "2025-07-15T07:22:16.157994Z",
+        "completed_at": "2025-07-15T07:22:20.390584Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "7e1d33d6-2b3d-4534-a73a-627c4c859702",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "9e66a832-dc11-441e-a663-4cad7910616c"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "c8ba378e-a974-4128-8534-c2299940c76d",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T07:23:11.910021Z",
+      "updated_at": "2025-07-15T07:23:21.795375Z",
+      "name": "gallant_ramanujan7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "1cea3af9-c211-4307-b38c-94845cde9fbf",
+        "created_at": "2025-07-15T07:23:11.903265Z",
+        "started_at": "2025-07-15T07:23:11.921574Z",
+        "completed_at": "2025-07-15T07:23:21.795375Z",
+        "status": "succeeded",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "020daa7c-9d99-4c33-b2c9-81f5f4ff061c",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "c8ba378e-a974-4128-8534-c2299940c76d"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "15b7a0b0-7da5-4057-8021-d33cf3eafba1",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T07:43:02.67737Z",
+      "updated_at": "2025-07-15T07:43:12.396248Z",
+      "name": "dazzling_murdock3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "703009a1-5dda-424d-acce-e69cdf1cef15",
+        "created_at": "2025-07-15T07:43:02.669401Z",
+        "started_at": "2025-07-15T07:43:02.689799Z",
+        "completed_at": "2025-07-15T07:43:12.396248Z",
+        "status": "succeeded",
+        "worker_id": "cb205429-9ac4-47e4-b061-3341a1a1cec6",
+        "file_id": "6317a634-4dc4-480e-8a36-0666e636fdbe",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "15b7a0b0-7da5-4057-8021-d33cf3eafba1"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "44f738ee-826c-4405-90ef-4c8a37e1df9d",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:01:21.195913Z",
+      "updated_at": "2025-07-15T08:01:31.119775Z",
+      "name": "sweet_chatterjee9",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "32fb5107-4601-4fbd-8145-d751b6e92403",
+        "created_at": "2025-07-15T08:01:21.188961Z",
+        "started_at": "2025-07-15T08:01:21.207987Z",
+        "completed_at": "2025-07-15T08:01:31.119775Z",
+        "status": "succeeded",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "9213f5f7-358f-4814-b469-4267c47b76fd",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "44f738ee-826c-4405-90ef-4c8a37e1df9d"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "52c31d93-6c03-4735-ab8f-8ba61c024395",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:13:38.780417Z",
+      "updated_at": "2025-07-15T08:13:38.780417Z",
+      "name": "wizardly_snyder2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "cf7a32da-9ec0-4964-a5c2-9c80aec4aaba",
+        "created_at": "2025-07-15T08:13:38.773652Z",
+        "started_at": "2025-07-15T08:13:38.795251Z",
+        "completed_at": "2025-07-15T08:13:44.891225Z",
+        "error": "template import provision for start: plan resources: duplicate agent name: dev",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "ed68d0d9-13bd-406b-9d3b-463406fea911",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "52c31d93-6c03-4735-ab8f-8ba61c024395"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "1f8e63b2-a7c5-4dd4-b0ab-cc9835b74200",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:31:38.266932Z",
+      "updated_at": "2025-07-15T08:31:38.266932Z",
+      "name": "gallant_merkle5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "290ec2d4-3c2e-4a5e-8732-c42957fbcc8b",
+        "created_at": "2025-07-15T08:31:38.246711Z",
+        "started_at": "2025-07-15T08:31:38.280122Z",
+        "completed_at": "2025-07-15T08:31:40.824623Z",
+        "error": "template import provision for start: initialize terraform: exit status 1",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "572e9237-acad-4904-98a6-bd6ee3cf076f",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "1f8e63b2-a7c5-4dd4-b0ab-cc9835b74200"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "3556c744-7eda-4b12-a043-07f72ad97b1b",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:31:58.237145Z",
+      "updated_at": "2025-07-15T08:31:58.237145Z",
+      "name": "mystifying_montalcini8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "edbea333-1d62-4d9a-a93a-6bc57e0582bd",
+        "created_at": "2025-07-15T08:31:58.230782Z",
+        "started_at": "2025-07-15T08:31:58.248557Z",
+        "completed_at": "2025-07-15T08:32:01.692795Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "3d964d60-e90f-4b16-b11d-8089b6605d91",
+        "file_id": "a81d5a8a-bbed-4e33-80bc-2ff05572a371",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "3556c744-7eda-4b12-a043-07f72ad97b1b"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "3c2eb6ee-9b83-401d-94c2-22b0e6aa6f92",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:32:20.577144Z",
+      "updated_at": "2025-07-15T08:32:20.577145Z",
+      "name": "elastic_kare6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "2e4d3a05-5133-4f9f-bfc1-0e54f1a4dd37",
+        "created_at": "2025-07-15T08:32:20.57041Z",
+        "started_at": "2025-07-15T08:32:20.588627Z",
+        "completed_at": "2025-07-15T08:32:26.990779Z",
+        "error": "template import provision for start: plan resources: couldn't find node on graph: \"module.coder_agent\"",
+        "status": "failed",
+        "worker_id": "3d964d60-e90f-4b16-b11d-8089b6605d91",
+        "file_id": "4d138666-3a06-43c6-a69a-c3ca1f4309a4",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "3c2eb6ee-9b83-401d-94c2-22b0e6aa6f92"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "990c05cf-d0d8-44ff-a6fc-82408fd27278",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:32:50.099556Z",
+      "updated_at": "2025-07-15T08:32:50.099556Z",
+      "name": "sad_shaw1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "697634ee-e062-4301-a47d-d05f99990223",
+        "created_at": "2025-07-15T08:32:50.093284Z",
+        "started_at": "2025-07-15T08:32:50.110497Z",
+        "completed_at": "2025-07-15T08:32:57.325279Z",
+        "error": "template import provision for start: plan resources: couldn't find node on graph: \"module.coder_agent\"",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "279f63e0-d7f0-4981-8bd1-a71a4adc34ee",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "990c05cf-d0d8-44ff-a6fc-82408fd27278"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "48a370be-cea1-43d4-bc1d-459162f4bccd",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:34:58.190957Z",
+      "updated_at": "2025-07-15T08:34:58.190957Z",
+      "name": "amazing_ardinghelli6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "b0647ac4-096e-4ba7-8cb6-2adc48a25ec8",
+        "created_at": "2025-07-15T08:34:58.184219Z",
+        "started_at": "2025-07-15T08:34:58.202899Z",
+        "completed_at": "2025-07-15T08:35:05.482139Z",
+        "error": "template import provision for start: plan resources: couldn't find node on graph: \"module.coder_agent\"",
+        "status": "failed",
+        "worker_id": "cb205429-9ac4-47e4-b061-3341a1a1cec6",
+        "file_id": "63e7dc3d-202b-4575-ae03-01ce5819c51b",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "48a370be-cea1-43d4-bc1d-459162f4bccd"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "e40fee90-f76a-4245-a878-386e0e2584ec",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:35:27.591662Z",
+      "updated_at": "2025-07-15T08:35:27.591662Z",
+      "name": "zealous_elbakyan1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "3662aa80-e24f-4308-b71f-9d32e58aade2",
+        "created_at": "2025-07-15T08:35:27.585378Z",
+        "started_at": "2025-07-15T08:35:27.602615Z",
+        "completed_at": "2025-07-15T08:35:34.668035Z",
+        "error": "template import provision for start: plan resources: couldn't find node on graph: \"module.coder_agent\"",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "63e7dc3d-202b-4575-ae03-01ce5819c51b",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "e40fee90-f76a-4245-a878-386e0e2584ec"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "e4b090bb-5e3c-4ba2-a3f4-32d609d52c2e",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:37:16.558267Z",
+      "updated_at": "2025-07-15T08:37:16.558268Z",
+      "name": "mystifying_driscoll4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "14feedad-3b03-4b82-bd99-fa6b92fb6e18",
+        "created_at": "2025-07-15T08:37:16.55188Z",
+        "started_at": "2025-07-15T08:37:16.568786Z",
+        "completed_at": "2025-07-15T08:37:24.111423Z",
+        "error": "template import provision for start: plan resources: couldn't find node on graph: \"module.coder_agent\"",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "53754566-3a06-44cc-902e-f0e670339717",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "e4b090bb-5e3c-4ba2-a3f4-32d609d52c2e"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "69c95f8d-6819-481a-a944-038b79e5aaa7",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:37:46.885602Z",
+      "updated_at": "2025-07-15T08:37:46.885602Z",
+      "name": "clever_buck7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "fbd7ae2d-06c2-418d-b7c2-babf45244024",
+        "created_at": "2025-07-15T08:37:46.879162Z",
+        "started_at": "2025-07-15T08:37:46.896911Z",
+        "completed_at": "2025-07-15T08:37:54.38694Z",
+        "error": "template import provision for start: plan resources: couldn't find node on graph: \"module.agent\"",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "205ad43f-76fb-4a15-b5d6-1cf3fefc8ee8",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "69c95f8d-6819-481a-a944-038b79e5aaa7"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "eb12eb55-3447-4263-b64f-7e9a57b84d3b",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:45:47.415689Z",
+      "updated_at": "2025-07-15T08:45:47.41569Z",
+      "name": "charming_dubinsky1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "c8900b1f-da0b-4db5-ac6e-63d740984f2d",
+        "created_at": "2025-07-15T08:45:47.408553Z",
+        "started_at": "2025-07-15T08:45:47.427335Z",
+        "completed_at": "2025-07-15T08:45:54.792771Z",
+        "error": "template import provision for start: plan resources: couldn't find node on graph: \"module.agent\"",
+        "status": "failed",
+        "worker_id": "3d964d60-e90f-4b16-b11d-8089b6605d91",
+        "file_id": "6c6b163b-a372-4327-b9cc-383ade2cecbe",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "eb12eb55-3447-4263-b64f-7e9a57b84d3b"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "f06abb77-f3e7-40a5-b0be-07abcecbb64f",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:46:06.518991Z",
+      "updated_at": "2025-07-15T08:46:06.518991Z",
+      "name": "adoring_galois0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "49d0d05a-20b1-4a5c-9a17-45bacee870b7",
+        "created_at": "2025-07-15T08:46:06.512368Z",
+        "started_at": "2025-07-15T08:46:06.529924Z",
+        "completed_at": "2025-07-15T08:46:06.692448Z",
+        "error": "template import provision for start: initialize terraform: exit status 1",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "c5a4c7e3-0cc2-4179-aedb-2a66c7f2df0f",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "f06abb77-f3e7-40a5-b0be-07abcecbb64f"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "bcd7d5c6-dc80-477d-8baa-a801850c2a7e",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:47:05.648097Z",
+      "updated_at": "2025-07-15T08:47:05.648097Z",
+      "name": "vibrant_wing5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "e16d3107-b799-4073-880e-4320a6a018d1",
+        "created_at": "2025-07-15T08:47:05.641428Z",
+        "started_at": "2025-07-15T08:47:05.65876Z",
+        "completed_at": "2025-07-15T08:47:10.507352Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "9e60befc-e741-4565-8a95-045ee1ed156b",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "bcd7d5c6-dc80-477d-8baa-a801850c2a7e"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "1183d3ba-9081-4ec3-a26d-01f5c2c5cdd6",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:47:22.558562Z",
+      "updated_at": "2025-07-15T08:47:22.558562Z",
+      "name": "inspiring_williams6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "c233d796-19a1-435a-a3ef-8392d0aed396",
+        "created_at": "2025-07-15T08:47:22.551448Z",
+        "started_at": "2025-07-15T08:47:22.570136Z",
+        "completed_at": "2025-07-15T08:47:29.786622Z",
+        "error": "template import provision for start: plan resources: duplicate agent name: dev",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "7275af36-1e16-499c-8607-570d5f1feecf",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "1183d3ba-9081-4ec3-a26d-01f5c2c5cdd6"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "610edfce-599c-4b83-9b23-46e77c13c812",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:47:53.988841Z",
+      "updated_at": "2025-07-15T08:47:53.988841Z",
+      "name": "strange_chaplygin8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "985d162a-fc68-4781-acc4-501b4b1b4ff6",
+        "created_at": "2025-07-15T08:47:53.981768Z",
+        "started_at": "2025-07-15T08:47:53.999605Z",
+        "completed_at": "2025-07-15T08:48:01.38852Z",
+        "error": "template import provision for start: plan resources: couldn't find node on graph: \"module.agent\"",
+        "status": "failed",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "5cfe863f-2841-4591-967c-f0139bb82084",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "610edfce-599c-4b83-9b23-46e77c13c812"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "b9bd6d6c-e110-4e75-bd15-c58cadac5753",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:48:08.933179Z",
+      "updated_at": "2025-07-15T08:48:20.293521Z",
+      "name": "peaceful_khayyam5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "f48b1e0b-8247-4ac2-9d69-0e2ab634e6a2",
+        "created_at": "2025-07-15T08:48:08.9268Z",
+        "started_at": "2025-07-15T08:48:08.943878Z",
+        "completed_at": "2025-07-15T08:48:20.293521Z",
+        "status": "succeeded",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "16ce367f-5589-4378-9965-3b71f9b45eb2",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "b9bd6d6c-e110-4e75-bd15-c58cadac5753"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "6a808373-5dbe-4060-8156-6330c6c6a6e0",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:48:40.123673Z",
+      "updated_at": "2025-07-15T08:48:51.486391Z",
+      "name": "sleepy_carver2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "cf06d311-0f6f-4bb3-bd10-0f4b6b2de126",
+        "created_at": "2025-07-15T08:48:40.117741Z",
+        "started_at": "2025-07-15T08:48:40.133726Z",
+        "completed_at": "2025-07-15T08:48:51.486391Z",
+        "status": "succeeded",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "c9486d60-23ce-4fb5-aef4-825c599e6f3d",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "6a808373-5dbe-4060-8156-6330c6c6a6e0"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "7bb1ed6c-2090-4274-a6f3-7299ced451b1",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:55:51.769291Z",
+      "updated_at": "2025-07-15T08:55:51.769291Z",
+      "name": "heuristic_jepsen9",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "9385b85c-0a32-4700-a229-df2f787b9bcb",
+        "created_at": "2025-07-15T08:55:51.763069Z",
+        "started_at": "2025-07-15T08:55:51.78073Z",
+        "completed_at": "2025-07-15T08:55:56.498272Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "cb205429-9ac4-47e4-b061-3341a1a1cec6",
+        "file_id": "4a40cf3d-fa24-49ce-915e-6819f00d5afa",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "7bb1ed6c-2090-4274-a6f3-7299ced451b1"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "281e790b-8880-4c1e-be72-9a602dba3d2e",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T08:56:43.472636Z",
+      "updated_at": "2025-07-15T08:56:54.191732Z",
+      "name": "gallant_heyrovsky3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "62d8bc90-448d-4342-b8d8-b4f0f4c7fdc5",
+        "created_at": "2025-07-15T08:56:43.46609Z",
+        "started_at": "2025-07-15T08:56:43.483241Z",
+        "completed_at": "2025-07-15T08:56:54.191732Z",
+        "status": "succeeded",
+        "worker_id": "cb205429-9ac4-47e4-b061-3341a1a1cec6",
+        "file_id": "f88e9c93-1db4-4365-b76a-71180b46adaa",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "281e790b-8880-4c1e-be72-9a602dba3d2e"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "53392967-6373-4e0f-a283-f2b00fcaf27d",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T09:01:15.686094Z",
+      "updated_at": "2025-07-15T09:01:15.686094Z",
+      "name": "kind_nobel0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "531d394e-d0a8-47ed-b4e6-41275b093101",
+        "created_at": "2025-07-15T09:01:15.679658Z",
+        "started_at": "2025-07-15T09:01:15.697939Z",
+        "completed_at": "2025-07-15T09:01:20.710145Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "cb205429-9ac4-47e4-b061-3341a1a1cec6",
+        "file_id": "0584e7e9-c4a2-41f1-953d-acdd6cb5c396",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "53392967-6373-4e0f-a283-f2b00fcaf27d"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "22f5cc28-59fb-4114-8365-31394945b4d6",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T09:01:29.08655Z",
+      "updated_at": "2025-07-15T09:01:39.822458Z",
+      "name": "fervent_rosalind2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "b23a26b7-a29f-42d7-a013-94c53f8ed225",
+        "created_at": "2025-07-15T09:01:29.076864Z",
+        "started_at": "2025-07-15T09:01:29.099467Z",
+        "completed_at": "2025-07-15T09:01:39.822458Z",
+        "status": "succeeded",
+        "worker_id": "cb205429-9ac4-47e4-b061-3341a1a1cec6",
+        "file_id": "f1fc52da-7c2d-448b-a59d-53c8c15977b9",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "22f5cc28-59fb-4114-8365-31394945b4d6"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "6147cd8e-cebf-426d-a1f0-515d9009e3c4",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T09:42:50.491266Z",
+      "updated_at": "2025-07-15T09:43:01.831459Z",
+      "name": "zen_torvalds9",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "04bb8365-4191-405d-98a3-6896053b89cc",
+        "created_at": "2025-07-15T09:42:50.484777Z",
+        "started_at": "2025-07-15T09:42:50.502733Z",
+        "completed_at": "2025-07-15T09:43:01.831459Z",
+        "status": "succeeded",
+        "worker_id": "236829b4-815d-4869-a2c5-994d3ebd543c",
+        "file_id": "ae11cbe9-d527-4686-9de0-917ab4c3cb6e",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "6147cd8e-cebf-426d-a1f0-515d9009e3c4"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# Node Warmer\n\n### NOTE: This process takes a bit of time (>=5 minutes), depending on the images being pre-cached.\n\nTo warm up your nodes, simply launch this workspace in your desired region, or allow the template to automatically warm up nodes on some schedule (using prebuilds!)\n\nTF Variables are used in this template to apply changes globally (i.e. to modify prebuild instances and coder parameters), so modify with caution!\n\nIf you need a certain region warmed up, then the easiest thing to do is to launch the workspace in the target region. \n\nThe number of workspaces you configure creates the same number of K8s nodes in the background, warming up instances as needed.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "a7c5a20c-6816-47c0-ab8c-0f13d1d4a647",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T19:55:28.127946Z",
+      "updated_at": "2025-07-15T19:55:39.372582Z",
+      "name": "cranky_bhaskara1",
+      "message": "",
+      "job": {
+        "id": "3dec11ec-e750-4b66-a033-6683e101a5e8",
+        "created_at": "2025-07-15T19:55:28.117664Z",
+        "started_at": "2025-07-15T19:55:28.14092Z",
+        "completed_at": "2025-07-15T19:55:39.372582Z",
+        "status": "succeeded",
+        "worker_id": "17448bcd-b34a-49ea-8371-3dc1bae464bd",
+        "file_id": "ae11cbe9-d527-4686-9de0-917ab4c3cb6e",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "a7c5a20c-6816-47c0-ab8c-0f13d1d4a647"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# Node Warmer\n\n### NOTE: This process takes a bit of time (>=5 minutes), depending on the images being pre-cached.\n\nTo warm up your nodes, simply launch this workspace in your desired region, or allow the template to automatically warm up nodes on some schedule (using prebuilds!)\n\nTF Variables are used in this template to apply changes globally (i.e. to modify prebuild instances and coder parameters), so modify with caution!\n\nIf you need a certain region warmed up, then the easiest thing to do is to launch the workspace in the target region. \n\nThe number of workspaces you configure creates the same number of K8s nodes in the background, warming up instances as needed.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "0c374aae-dcf6-4dd0-858e-caeb43e6a936",
+      "template_id": "3ccd905a-e386-4af9-bfae-ce59c24db707",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-15T20:29:10.591995Z",
+      "updated_at": "2025-07-15T20:29:22.179697Z",
+      "name": "vigorous_galois8",
+      "message": "",
+      "job": {
+        "id": "e0e6fea6-fcd9-4ac6-9173-390f8c196f6a",
+        "created_at": "2025-07-15T20:29:10.581631Z",
+        "started_at": "2025-07-15T20:29:10.604647Z",
+        "completed_at": "2025-07-15T20:29:22.179697Z",
+        "status": "succeeded",
+        "worker_id": "b39cc175-6610-4e27-82d4-248842cb02f6",
+        "file_id": "ae11cbe9-d527-4686-9de0-917ab4c3cb6e",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "0c374aae-dcf6-4dd0-858e-caeb43e6a936"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# Node Warmer\n\n### NOTE: This process takes a bit of time (>=5 minutes), depending on the images being pre-cached.\n\nTo warm up your nodes, simply launch this workspace in your desired region, or allow the template to automatically warm up nodes on some schedule (using prebuilds!)\n\nTF Variables are used in this template to apply changes globally (i.e. to modify prebuild instances and coder parameters), so modify with caution!\n\nIf you need a certain region warmed up, then the easiest thing to do is to launch the workspace in the target region. \n\nThe number of workspaces you configure creates the same number of K8s nodes in the background, warming up instances as needed.",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  }
+]

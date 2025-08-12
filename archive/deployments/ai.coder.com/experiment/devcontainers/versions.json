@@ -1,0 +1,1946 @@
+[
+  {
+    "TemplateVersion": {
+      "id": "c668e236-de21-45bf-9366-cf4473df6654",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-17T08:19:52.030112Z",
+      "updated_at": "2025-07-17T08:20:41.291792Z",
+      "name": "infallible_mirzakhani8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "a3ddef47-c501-4acc-bca1-9e11cf60eee3",
+        "created_at": "2025-07-17T08:19:52.020637Z",
+        "started_at": "2025-07-17T08:19:52.037775Z",
+        "completed_at": "2025-07-17T08:20:40.876736Z",
+        "status": "succeeded",
+        "worker_id": "b39cc175-6610-4e27-82d4-248842cb02f6",
+        "file_id": "abcd52a8-49c2-4067-af08-140a2cca2a62",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "c668e236-de21-45bf-9366-cf4473df6654"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "4226a0c7-72c2-40f4-8e7e-bfc3f87a67d1",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-17T08:20:44.987393Z",
+      "updated_at": "2025-07-17T08:21:33.206927Z",
+      "name": "trusting_borg3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "32c34aff-e65c-4f45-8571-c9ed0f9a6b3e",
+        "created_at": "2025-07-17T08:20:44.977658Z",
+        "started_at": "2025-07-17T08:20:44.999357Z",
+        "completed_at": "2025-07-17T08:21:33.206927Z",
+        "status": "succeeded",
+        "worker_id": "97f29c7b-5605-4d2a-89d1-840525bb016b",
+        "file_id": "5240e7db-cf67-425a-b456-5ec1529cc295",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "4226a0c7-72c2-40f4-8e7e-bfc3f87a67d1"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "f09e9e5d-cafd-4640-9b4f-cf23bf046609",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-17T08:23:17.170082Z",
+      "updated_at": "2025-07-17T08:24:05.607002Z",
+      "name": "frosty_snyder8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "98ba78da-38c2-442c-a560-625cbd8df590",
+        "created_at": "2025-07-17T08:23:17.160947Z",
+        "started_at": "2025-07-17T08:23:17.182652Z",
+        "completed_at": "2025-07-17T08:24:05.607002Z",
+        "status": "succeeded",
+        "worker_id": "97f29c7b-5605-4d2a-89d1-840525bb016b",
+        "file_id": "6e8cbfcf-6c6b-4e6b-96a0-8b74009ba298",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "f09e9e5d-cafd-4640-9b4f-cf23bf046609"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "f1715a78-f789-459d-a104-bb79406b80ae",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-17T08:30:04.154351Z",
+      "updated_at": "2025-07-17T08:30:52.093743Z",
+      "name": "youthful_ride3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "ae81f696-87de-4f05-a265-11eccaf66ca5",
+        "created_at": "2025-07-17T08:30:04.144493Z",
+        "started_at": "2025-07-17T08:30:04.167046Z",
+        "completed_at": "2025-07-17T08:30:52.093743Z",
+        "status": "succeeded",
+        "worker_id": "b39cc175-6610-4e27-82d4-248842cb02f6",
+        "file_id": "4975b496-9a61-4289-ad8c-9fb216f3f588",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "f1715a78-f789-459d-a104-bb79406b80ae"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "4922f8bf-f32b-4a9d-a3b7-3755ccf48699",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-17T08:34:17.694264Z",
+      "updated_at": "2025-07-17T08:34:17.694264Z",
+      "name": "naughty_napier2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "b35e58c3-8737-4c63-a6c2-5952b1ac67f0",
+        "created_at": "2025-07-17T08:34:17.684009Z",
+        "started_at": "2025-07-17T08:34:17.70712Z",
+        "completed_at": "2025-07-17T08:34:54.951137Z",
+        "error": "template import provision for stop: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "17448bcd-b34a-49ea-8371-3dc1bae464bd",
+        "file_id": "6772e5c2-9c3a-456a-921d-069f1910c563",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "4922f8bf-f32b-4a9d-a3b7-3755ccf48699"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "dc519b6e-bfa4-4f46-be14-a7f9cab14ac5",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-17T08:35:41.302668Z",
+      "updated_at": "2025-07-17T08:35:41.302669Z",
+      "name": "gallant_kepler7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "43feb158-4adf-455f-8396-cb659c9f7c05",
+        "created_at": "2025-07-17T08:35:41.292884Z",
+        "started_at": "2025-07-17T08:35:41.315532Z",
+        "completed_at": "2025-07-17T08:36:19.042346Z",
+        "error": "template import provision for stop: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "17448bcd-b34a-49ea-8371-3dc1bae464bd",
+        "file_id": "6ca6ef08-1f26-4600-8905-e75f07e7da8a",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "dc519b6e-bfa4-4f46-be14-a7f9cab14ac5"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "55b45fc3-96e9-43fb-b6dd-b6c0640d8c95",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-17T08:36:51.642666Z",
+      "updated_at": "2025-07-17T08:37:39.594125Z",
+      "name": "gracious_kowalevski1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "a66ed7e8-ed12-40f0-a815-14f307f9b6fe",
+        "created_at": "2025-07-17T08:36:51.633345Z",
+        "started_at": "2025-07-17T08:36:51.655714Z",
+        "completed_at": "2025-07-17T08:37:39.594125Z",
+        "status": "succeeded",
+        "worker_id": "b39cc175-6610-4e27-82d4-248842cb02f6",
+        "file_id": "535b7871-66df-464b-965c-aaceec5fdd6b",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "55b45fc3-96e9-43fb-b6dd-b6c0640d8c95"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "61a153b8-2014-435d-a9f7-2b8c7e921956",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-17T08:50:07.424239Z",
+      "updated_at": "2025-07-17T08:50:56.377462Z",
+      "name": "sharp_lehmann7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "dfd5cf5f-5c30-4c27-91d6-9405c469a610",
+        "created_at": "2025-07-17T08:50:07.41504Z",
+        "started_at": "2025-07-17T08:50:07.436521Z",
+        "completed_at": "2025-07-17T08:50:56.377462Z",
+        "status": "succeeded",
+        "worker_id": "17448bcd-b34a-49ea-8371-3dc1bae464bd",
+        "file_id": "70df1f59-935d-46dc-9daf-e833cf955562",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "61a153b8-2014-435d-a9f7-2b8c7e921956"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "f51ad4d1-cdbe-46ac-b8f7-ed9cfb0965a0",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-17T08:58:27.301956Z",
+      "updated_at": "2025-07-17T08:59:16.28054Z",
+      "name": "vigilant_bhabha2",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "4fc5d559-a41f-4744-b95a-07632d6c0cee",
+        "created_at": "2025-07-17T08:58:27.295187Z",
+        "started_at": "2025-07-17T08:58:27.315111Z",
+        "completed_at": "2025-07-17T08:59:16.28054Z",
+        "status": "succeeded",
+        "worker_id": "b39cc175-6610-4e27-82d4-248842cb02f6",
+        "file_id": "04c5aebc-5ee9-4d1f-9e93-d077448813b2",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "f51ad4d1-cdbe-46ac-b8f7-ed9cfb0965a0"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "38694c71-141a-45f5-9d76-fccdf8b9a14a",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-17T09:04:16.94722Z",
+      "updated_at": "2025-07-17T09:05:05.175314Z",
+      "name": "suspicious_wu6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "7d934c8f-8842-466d-ac11-16e319ba2fd3",
+        "created_at": "2025-07-17T09:04:16.940683Z",
+        "started_at": "2025-07-17T09:04:16.960192Z",
+        "completed_at": "2025-07-17T09:05:05.175314Z",
+        "status": "succeeded",
+        "worker_id": "17448bcd-b34a-49ea-8371-3dc1bae464bd",
+        "file_id": "0727e985-0df4-46ce-bcdb-aa7c8473eb81",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "38694c71-141a-45f5-9d76-fccdf8b9a14a"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "f47cc10a-a21f-4a99-b1bd-5f4578097d5a",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-17T17:00:25.656848Z",
+      "updated_at": "2025-07-17T17:01:14.304775Z",
+      "name": "zealous_burnell1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "1184ab9b-cdd1-42d3-bfcf-4fc4592fa9e3",
+        "created_at": "2025-07-17T17:00:25.650121Z",
+        "started_at": "2025-07-17T17:00:25.669376Z",
+        "completed_at": "2025-07-17T17:01:14.304775Z",
+        "status": "succeeded",
+        "worker_id": "b39cc175-6610-4e27-82d4-248842cb02f6",
+        "file_id": "5e3b2dd0-fa76-40b8-9a82-ea48b6e9212a",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "f47cc10a-a21f-4a99-b1bd-5f4578097d5a"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "61aafa67-47cc-4f01-aeb5-afde010a68b1",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-17T18:10:19.77998Z",
+      "updated_at": "2025-07-17T18:11:07.808391Z",
+      "name": "magical_euclid0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "511f8db2-5027-4721-8795-bdbab4491b8f",
+        "created_at": "2025-07-17T18:10:19.773266Z",
+        "started_at": "2025-07-17T18:10:19.794898Z",
+        "completed_at": "2025-07-17T18:11:07.808391Z",
+        "status": "succeeded",
+        "worker_id": "97f29c7b-5605-4d2a-89d1-840525bb016b",
+        "file_id": "f64a746a-4bb5-4ba8-bc83-fde35534b67c",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "61aafa67-47cc-4f01-aeb5-afde010a68b1"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "628a853b-b4b5-4854-9003-b2b7574aa4b4",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-17T18:37:35.419959Z",
+      "updated_at": "2025-07-17T18:38:23.710016Z",
+      "name": "adoring_wilbur3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "9b1cc4bf-64e1-4be1-9790-ceb980b2a1f1",
+        "created_at": "2025-07-17T18:37:35.413867Z",
+        "started_at": "2025-07-17T18:37:35.432289Z",
+        "completed_at": "2025-07-17T18:38:23.710016Z",
+        "status": "succeeded",
+        "worker_id": "17448bcd-b34a-49ea-8371-3dc1bae464bd",
+        "file_id": "1b9692d4-868a-49a7-b738-64c832574f69",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "628a853b-b4b5-4854-9003-b2b7574aa4b4"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "9e97e5d9-accb-4f12-bf22-5825a52699de",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-20T00:53:38.9233Z",
+      "updated_at": "2025-07-20T00:53:38.9233Z",
+      "name": "friendly_wozniak3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "53326cb4-a118-4a31-ac78-fa3380979303",
+        "created_at": "2025-07-20T00:53:38.91845Z",
+        "started_at": "2025-07-20T00:53:38.935058Z",
+        "completed_at": "2025-07-20T00:53:41.367606Z",
+        "canceled_at": "2025-07-20T00:53:40.050566Z",
+        "error": "template import provision for start: initialize terraform: exit status 1",
+        "status": "failed",
+        "worker_id": "e06251af-d410-4b8c-a91b-9100bcc51c6c",
+        "file_id": "1f22f1fa-3ed5-4360-a7c0-267c2205c32a",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "9e97e5d9-accb-4f12-bf22-5825a52699de"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "9ce7cb5e-0680-4bf5-a724-434224a2f92b",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-20T00:54:15.895444Z",
+      "updated_at": "2025-07-20T00:55:11.296408Z",
+      "name": "boring_herschel5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "b59f7dad-f996-4058-8b2d-2b83e219cf1e",
+        "created_at": "2025-07-20T00:54:15.889323Z",
+        "started_at": "2025-07-20T00:54:15.908025Z",
+        "completed_at": "2025-07-20T00:55:11.296408Z",
+        "status": "succeeded",
+        "worker_id": "e06251af-d410-4b8c-a91b-9100bcc51c6c",
+        "file_id": "047ff94c-73ff-49a5-9027-8fb14376dd0d",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "9ce7cb5e-0680-4bf5-a724-434224a2f92b"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "cb748bd8-ff01-4640-8ad4-40e4605600c6",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-20T01:01:26.279679Z",
+      "updated_at": "2025-07-20T01:02:21.996368Z",
+      "name": "nifty_torvalds8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "c10dd94f-bc95-4e3d-a4dd-ea12833ea5ab",
+        "created_at": "2025-07-20T01:01:26.274107Z",
+        "started_at": "2025-07-20T01:01:26.291019Z",
+        "completed_at": "2025-07-20T01:02:21.996368Z",
+        "status": "succeeded",
+        "worker_id": "da46b2ab-1612-4620-afe5-2106c27a063e",
+        "file_id": "ab8bb58f-34d4-4c8d-a569-248cbc199475",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "cb748bd8-ff01-4640-8ad4-40e4605600c6"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "5699915f-6a9f-41bc-a98e-3f36220b9382",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-20T01:12:48.215328Z",
+      "updated_at": "2025-07-20T01:13:44.497105Z",
+      "name": "competent_shirley8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "92904571-cb34-47b4-9843-81fb962d7774",
+        "created_at": "2025-07-20T01:12:48.209303Z",
+        "started_at": "2025-07-20T01:12:48.227473Z",
+        "completed_at": "2025-07-20T01:13:44.497105Z",
+        "status": "succeeded",
+        "worker_id": "e06251af-d410-4b8c-a91b-9100bcc51c6c",
+        "file_id": "d509f413-6283-4bd1-975e-f5d9d5dca18d",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "5699915f-6a9f-41bc-a98e-3f36220b9382"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "2edf4fe0-9a2e-4dc9-9448-a1ce91e971b3",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-20T01:21:06.5085Z",
+      "updated_at": "2025-07-20T01:22:03.380785Z",
+      "name": "wonderful_moser7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "d2050c1e-0dcf-42c0-8ffd-fe8d3db8b8fc",
+        "created_at": "2025-07-20T01:21:06.502814Z",
+        "started_at": "2025-07-20T01:21:06.524832Z",
+        "completed_at": "2025-07-20T01:22:03.380785Z",
+        "status": "succeeded",
+        "worker_id": "e06251af-d410-4b8c-a91b-9100bcc51c6c",
+        "file_id": "fcdc00f3-733d-4420-b7f9-5bb0f173c574",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "2edf4fe0-9a2e-4dc9-9448-a1ce91e971b3"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "26f5c13f-1e05-4764-bed6-7445d64d111a",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-20T08:07:23.11936Z",
+      "updated_at": "2025-07-20T08:08:19.182341Z",
+      "name": "inspiring_dewdney3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "e4b328e3-1268-4a3b-bd5b-f0e2cf9ed9d1",
+        "created_at": "2025-07-20T08:07:23.076952Z",
+        "started_at": "2025-07-20T08:07:23.159752Z",
+        "completed_at": "2025-07-20T08:08:19.182341Z",
+        "status": "succeeded",
+        "worker_id": "e06251af-d410-4b8c-a91b-9100bcc51c6c",
+        "file_id": "763cb71d-1a1b-4f23-8165-29f05cad3d82",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "26f5c13f-1e05-4764-bed6-7445d64d111a"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "24bfd0f4-9c45-4cec-b317-6bacbfff843f",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-20T08:12:27.308387Z",
+      "updated_at": "2025-07-20T08:13:23.375403Z",
+      "name": "thirsty_swanson1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "b21a3213-af2e-46b9-b1ee-88de9e8fb376",
+        "created_at": "2025-07-20T08:12:27.302239Z",
+        "started_at": "2025-07-20T08:12:27.321363Z",
+        "completed_at": "2025-07-20T08:13:23.375403Z",
+        "status": "succeeded",
+        "worker_id": "815a1d33-0372-4526-8ec2-ff9da4e7a347",
+        "file_id": "f74f86c7-7a7d-43d1-89b8-e7370e3d280e",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "24bfd0f4-9c45-4cec-b317-6bacbfff843f"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "b0e826a3-301b-4bef-9078-b3f62ec50826",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-20T08:15:32.685336Z",
+      "updated_at": "2025-07-20T08:16:27.603092Z",
+      "name": "magical_fermat9",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "25563960-975b-499f-9a61-fdf991d95674",
+        "created_at": "2025-07-20T08:15:32.678918Z",
+        "started_at": "2025-07-20T08:15:32.697765Z",
+        "completed_at": "2025-07-20T08:16:27.603092Z",
+        "status": "succeeded",
+        "worker_id": "e06251af-d410-4b8c-a91b-9100bcc51c6c",
+        "file_id": "14bdd284-8403-4e5b-a231-225305107ece",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "b0e826a3-301b-4bef-9078-b3f62ec50826"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "7aacef6c-13db-4a38-b51e-ae79663ae307",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-20T08:16:52.584482Z",
+      "updated_at": "2025-07-20T08:17:48.180569Z",
+      "name": "distracted_lichterman5",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "fdc92ff7-beab-4837-aed6-6bb49ea8efc9",
+        "created_at": "2025-07-20T08:16:52.579521Z",
+        "started_at": "2025-07-20T08:16:52.595198Z",
+        "completed_at": "2025-07-20T08:17:48.180569Z",
+        "status": "succeeded",
+        "worker_id": "e06251af-d410-4b8c-a91b-9100bcc51c6c",
+        "file_id": "c98e8e28-4322-4cc3-a21d-91249bc44ead",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "7aacef6c-13db-4a38-b51e-ae79663ae307"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "0f18632d-5f4b-4a11-a5ca-8ae1b3963fde",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-20T08:20:35.278154Z",
+      "updated_at": "2025-07-20T08:21:32.270727Z",
+      "name": "zealous_jones7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "72587f4a-b089-4559-bcb0-f54abb6a84d1",
+        "created_at": "2025-07-20T08:20:35.271925Z",
+        "started_at": "2025-07-20T08:20:35.290354Z",
+        "completed_at": "2025-07-20T08:21:32.270727Z",
+        "status": "succeeded",
+        "worker_id": "e06251af-d410-4b8c-a91b-9100bcc51c6c",
+        "file_id": "195d33fa-d1cb-4e0e-8d52-bfbddb1c1200",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "0f18632d-5f4b-4a11-a5ca-8ae1b3963fde"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "5bd0d28f-e8ad-43a7-9cc4-067cd6196e86",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-20T08:30:33.399651Z",
+      "updated_at": "2025-07-20T08:31:28.388316Z",
+      "name": "angry_carver8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "a7946c9d-9788-4c5a-8dbf-3e4ee0c50775",
+        "created_at": "2025-07-20T08:30:33.39412Z",
+        "started_at": "2025-07-20T08:30:33.410845Z",
+        "completed_at": "2025-07-20T08:31:28.388316Z",
+        "status": "succeeded",
+        "worker_id": "e06251af-d410-4b8c-a91b-9100bcc51c6c",
+        "file_id": "ab65437d-eff8-4320-848f-450e59dd2eda",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "5bd0d28f-e8ad-43a7-9cc4-067cd6196e86"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "2f6dc02e-d5c6-4062-9532-2e9ee8b798fd",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-20T08:40:59.464882Z",
+      "updated_at": "2025-07-20T08:41:54.387876Z",
+      "name": "sad_bose8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "185cae83-02ec-4fae-82e7-e0ac5a3bee78",
+        "created_at": "2025-07-20T08:40:59.459742Z",
+        "started_at": "2025-07-20T08:40:59.476093Z",
+        "completed_at": "2025-07-20T08:41:54.387876Z",
+        "status": "succeeded",
+        "worker_id": "e06251af-d410-4b8c-a91b-9100bcc51c6c",
+        "file_id": "bced79a2-de8e-440c-9594-6702d37842c8",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "2f6dc02e-d5c6-4062-9532-2e9ee8b798fd"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "2f60a9e8-8345-4ef9-b578-0d1e54e1aaf7",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-20T08:42:18.274614Z",
+      "updated_at": "2025-07-20T08:43:13.074483Z",
+      "name": "stoic_hopper0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "d3a700a4-d4ac-48ac-8bd2-061677a01738",
+        "created_at": "2025-07-20T08:42:18.268392Z",
+        "started_at": "2025-07-20T08:42:18.288378Z",
+        "completed_at": "2025-07-20T08:43:13.074483Z",
+        "status": "succeeded",
+        "worker_id": "815a1d33-0372-4526-8ec2-ff9da4e7a347",
+        "file_id": "a916dc29-bc91-420d-8616-fa358dfcf99c",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "2f60a9e8-8345-4ef9-b578-0d1e54e1aaf7"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "bf8d217a-fe1f-464e-97eb-2c471330f6d2",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-20T09:02:08.910149Z",
+      "updated_at": "2025-07-20T09:03:04.103678Z",
+      "name": "brave_austin4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "e7b3eebc-27e9-4144-b334-7b71f3d4a07c",
+        "created_at": "2025-07-20T09:02:08.904008Z",
+        "started_at": "2025-07-20T09:02:08.923104Z",
+        "completed_at": "2025-07-20T09:03:04.103678Z",
+        "status": "succeeded",
+        "worker_id": "e06251af-d410-4b8c-a91b-9100bcc51c6c",
+        "file_id": "68255c9c-8932-4430-bccc-081900622930",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "bf8d217a-fe1f-464e-97eb-2c471330f6d2"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "b6d68495-f486-4cd5-a867-a9e0baa004ce",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-20T09:30:51.667115Z",
+      "updated_at": "2025-07-20T09:31:47.382546Z",
+      "name": "wizardly_knuth3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "707eca72-5358-4dfc-81f8-1e0834a42797",
+        "created_at": "2025-07-20T09:30:51.660579Z",
+        "started_at": "2025-07-20T09:30:51.679457Z",
+        "completed_at": "2025-07-20T09:31:47.382546Z",
+        "status": "succeeded",
+        "worker_id": "e06251af-d410-4b8c-a91b-9100bcc51c6c",
+        "file_id": "a5937a48-5f34-4a6b-a24d-a324d887d947",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "b6d68495-f486-4cd5-a867-a9e0baa004ce"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "3123e3e1-4759-40e7-b8b6-96dabff10c1d",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-21T05:16:35.233454Z",
+      "updated_at": "2025-07-21T05:17:30.099378Z",
+      "name": "interesting_kare1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "90805a96-6c2a-4940-b3e8-b0beaf69c257",
+        "created_at": "2025-07-21T05:16:35.226234Z",
+        "started_at": "2025-07-21T05:16:35.249908Z",
+        "completed_at": "2025-07-21T05:17:30.099378Z",
+        "status": "succeeded",
+        "worker_id": "e06251af-d410-4b8c-a91b-9100bcc51c6c",
+        "file_id": "51988232-2b57-4874-9d84-bdc690189cb5",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "3123e3e1-4759-40e7-b8b6-96dabff10c1d"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "a08aa6db-2fa6-4605-a499-f851a9759f9a",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-21T05:22:47.301079Z",
+      "updated_at": "2025-07-21T05:22:47.301079Z",
+      "name": "zen_aryabhata1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "08bcc13f-fa38-44fb-aceb-9e96a4b6cf5e",
+        "created_at": "2025-07-21T05:22:47.293323Z",
+        "started_at": "2025-07-21T05:22:47.317792Z",
+        "completed_at": "2025-07-21T05:22:50.588367Z",
+        "canceled_at": "2025-07-21T05:22:49.60494Z",
+        "error": "template import provision for start: initialize terraform: exit status 1",
+        "status": "failed",
+        "worker_id": "da46b2ab-1612-4620-afe5-2106c27a063e",
+        "file_id": "53e12bf0-47eb-4d63-8b53-896d90570be9",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "a08aa6db-2fa6-4605-a499-f851a9759f9a"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "c10604e7-540b-43c9-bca1-496a77cb8e00",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-21T05:22:52.827043Z",
+      "updated_at": "2025-07-21T05:23:48.082838Z",
+      "name": "lucid_elion7",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "61fd6796-ef8a-4c6e-96c4-c407cae48031",
+        "created_at": "2025-07-21T05:22:52.819983Z",
+        "started_at": "2025-07-21T05:22:52.84233Z",
+        "completed_at": "2025-07-21T05:23:48.082838Z",
+        "status": "succeeded",
+        "worker_id": "e06251af-d410-4b8c-a91b-9100bcc51c6c",
+        "file_id": "73e78d3d-0884-45a5-a26c-bbbb6d7d087a",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "c10604e7-540b-43c9-bca1-496a77cb8e00"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "cd3225b1-a817-4491-bd10-56adf1c875bf",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-21T05:23:50.826254Z",
+      "updated_at": "2025-07-21T05:24:46.310184Z",
+      "name": "eloquent_mcnulty1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "a30944b1-25c2-4a30-8faf-9cb4e54d194f",
+        "created_at": "2025-07-21T05:23:50.818761Z",
+        "started_at": "2025-07-21T05:23:50.843161Z",
+        "completed_at": "2025-07-21T05:24:46.310184Z",
+        "status": "succeeded",
+        "worker_id": "da46b2ab-1612-4620-afe5-2106c27a063e",
+        "file_id": "b4a2f5f7-deb1-4aa4-a3e4-631d3b2fe130",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "cd3225b1-a817-4491-bd10-56adf1c875bf"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "df47cb49-5523-40ed-8712-2d352b7c34b3",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-21T05:35:30.772671Z",
+      "updated_at": "2025-07-21T05:36:26.655194Z",
+      "name": "angry_archimedes6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "72c8a325-a353-4e15-b9d2-814866d7b4a1",
+        "created_at": "2025-07-21T05:35:30.766882Z",
+        "started_at": "2025-07-21T05:35:30.78677Z",
+        "completed_at": "2025-07-21T05:36:26.655194Z",
+        "status": "succeeded",
+        "worker_id": "e06251af-d410-4b8c-a91b-9100bcc51c6c",
+        "file_id": "55d77945-21b6-44b9-a4ab-4a6e02b71256",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "df47cb49-5523-40ed-8712-2d352b7c34b3"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "d43c90a3-9fb1-4a08-98da-9d2cb9a5c6ac",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-21T05:54:33.110522Z",
+      "updated_at": "2025-07-21T05:55:28.400738Z",
+      "name": "elegant_ride9",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "2ad5bec5-3a1e-4404-b603-576be3bf644c",
+        "created_at": "2025-07-21T05:54:33.102713Z",
+        "started_at": "2025-07-21T05:54:33.127793Z",
+        "completed_at": "2025-07-21T05:55:28.400738Z",
+        "status": "succeeded",
+        "worker_id": "da46b2ab-1612-4620-afe5-2106c27a063e",
+        "file_id": "d9933ee3-696e-4b5f-9da0-597a4e1ed5e7",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "d43c90a3-9fb1-4a08-98da-9d2cb9a5c6ac"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "e787f951-8cf2-40a8-bf42-d11b143e734b",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-21T06:48:13.547334Z",
+      "updated_at": "2025-07-21T06:49:07.435839Z",
+      "name": "pensive_ardinghelli6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "d232a19d-0825-4255-9d8e-7e9ea5cdf7b3",
+        "created_at": "2025-07-21T06:48:13.53798Z",
+        "started_at": "2025-07-21T06:48:13.563552Z",
+        "completed_at": "2025-07-21T06:49:07.435839Z",
+        "status": "succeeded",
+        "worker_id": "8052e97f-1c2c-4bff-bfa4-f14874bb1041",
+        "file_id": "f8e3c12d-44c7-416b-b8c7-f10d2603dc07",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "e787f951-8cf2-40a8-bf42-d11b143e734b"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "17d66a37-358c-415a-81a1-ba6c3daa6d4e",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-21T16:17:18.770409Z",
+      "updated_at": "2025-07-21T16:18:12.807795Z",
+      "name": "mystifying_raman6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "cc376ff3-0f42-4490-8104-e0efb67394ec",
+        "created_at": "2025-07-21T16:17:18.760077Z",
+        "started_at": "2025-07-21T16:17:18.782545Z",
+        "completed_at": "2025-07-21T16:18:12.807795Z",
+        "status": "succeeded",
+        "worker_id": "9045b1c2-4e00-4177-bd6d-fde65df17469",
+        "file_id": "9e04fa2e-6392-4229-a6c0-32a076ac2429",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "17d66a37-358c-415a-81a1-ba6c3daa6d4e"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "28c928f2-0c67-41ed-83ee-1869261b4755",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-21T16:24:24.574412Z",
+      "updated_at": "2025-07-21T16:25:20.316469Z",
+      "name": "awesome_kowalevski3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "bf82836c-55b9-4e0f-940e-770e654101da",
+        "created_at": "2025-07-21T16:24:24.564136Z",
+        "started_at": "2025-07-21T16:24:24.586373Z",
+        "completed_at": "2025-07-21T16:25:20.316469Z",
+        "status": "succeeded",
+        "worker_id": "386b4af6-d4c8-482d-9660-4370410cc4b7",
+        "file_id": "4db65885-ec70-4a92-87cc-ea3548a3f6d9",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "28c928f2-0c67-41ed-83ee-1869261b4755"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# DevContainers on EC2\n\nThis deploys an EC2 instance into a default VPC that installs:\n- NPM + Node\n- Docker\n- @devcontainers/cli\n\nAnd set's up the following Coder Apps\n- code-server\n- coder-login\n- git-clone\n\nYou can use DevContainers standalone with just the VSCode extension, the CLI, or both! \n\nThis template also has the following Coder [experimental feature](https://coder.com/docs/admin/templates/extending-templates/devcontainers) enabled for enhancing the devcontainer UX!",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "bd3432de-d4d5-49e9-a21d-e29f9b542b2a",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-21T17:46:06.553291Z",
+      "updated_at": "2025-07-21T17:46:06.604391Z",
+      "name": "exciting_jepsen4",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "f640809a-2901-4342-9bf2-7b396b089dd3",
+        "created_at": "2025-07-21T17:46:06.545986Z",
+        "started_at": "2025-07-21T17:46:06.564455Z",
+        "completed_at": "2025-07-21T17:46:29.219341Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "8052e97f-1c2c-4bff-bfa4-f14874bb1041",
+        "file_id": "f5a07de5-7e6e-4976-9d3c-8f5e2db77dc9",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "bd3432de-d4d5-49e9-a21d-e29f9b542b2a"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# DevContainers on EC2\n\nThis deploys an EC2 instance into a default VPC that installs:\n- NPM + Node\n- Docker\n- @devcontainers/cli\n\nAnd set's up the following Coder Apps\n- code-server\n- coder-login\n- git-clone\n\nYou can use DevContainers standalone with just the VSCode extension, the CLI, or both! \n\nThis template also has the following Coder [experimental feature](https://coder.com/docs/admin/templates/extending-templates/devcontainers) enabled for enhancing the devcontainer UX!",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "2b689ded-d211-43a6-86b7-25c35352951c",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-21T17:47:46.639727Z",
+      "updated_at": "2025-07-21T17:47:46.699138Z",
+      "name": "agitated_kowalevski3",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "c0597541-0631-4624-988d-43d01cb9e5b9",
+        "created_at": "2025-07-21T17:47:46.62994Z",
+        "started_at": "2025-07-21T17:47:46.652779Z",
+        "completed_at": "2025-07-21T17:48:09.074238Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "386b4af6-d4c8-482d-9660-4370410cc4b7",
+        "file_id": "705cb55d-ea01-4ab6-ba42-4e954514d558",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "2b689ded-d211-43a6-86b7-25c35352951c"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# DevContainers on EC2\n\nThis deploys an EC2 instance into a default VPC that installs:\n- NPM + Node\n- Docker\n- @devcontainers/cli\n\nAnd set's up the following Coder Apps\n- code-server\n- coder-login\n- git-clone\n\nYou can use DevContainers standalone with just the VSCode extension, the CLI, or both! \n\nThis template also has the following Coder [experimental feature](https://coder.com/docs/admin/templates/extending-templates/devcontainers) enabled for enhancing the devcontainer UX!",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "eff42a22-a53a-4536-90b6-3c148f1749dd",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-21T17:48:17.642509Z",
+      "updated_at": "2025-07-21T17:49:12.599293Z",
+      "name": "clever_bassi1",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "ceaeef64-d461-4249-af9d-12d7f0fc87b1",
+        "created_at": "2025-07-21T17:48:17.632318Z",
+        "started_at": "2025-07-21T17:48:17.654114Z",
+        "completed_at": "2025-07-21T17:49:12.599293Z",
+        "status": "succeeded",
+        "worker_id": "9045b1c2-4e00-4177-bd6d-fde65df17469",
+        "file_id": "41a7ffc5-c8bf-4cd4-be13-81661e5e36fe",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "eff42a22-a53a-4536-90b6-3c148f1749dd"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# DevContainers on EC2\n\nThis deploys an EC2 instance into a default VPC that installs:\n- NPM + Node\n- Docker\n- @devcontainers/cli\n\nAnd set's up the following Coder Apps\n- code-server\n- coder-login\n- git-clone\n\nYou can use DevContainers standalone with just the VSCode extension, the CLI, or both! \n\nThis template also has the following Coder [experimental feature](https://coder.com/docs/admin/templates/extending-templates/devcontainers) enabled for enhancing the devcontainer UX!",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "16f3f260-ea62-4ed1-b6bd-69d5a9482193",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-21T17:56:49.429461Z",
+      "updated_at": "2025-07-21T17:56:49.482063Z",
+      "name": "sad_moser0",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "149606ea-5431-4559-9a4b-df9fb44bdd43",
+        "created_at": "2025-07-21T17:56:49.419152Z",
+        "started_at": "2025-07-21T17:56:49.441639Z",
+        "completed_at": "2025-07-21T17:57:13.797901Z",
+        "error": "template import provision for start: terraform plan: exit status 1",
+        "status": "failed",
+        "worker_id": "9045b1c2-4e00-4177-bd6d-fde65df17469",
+        "file_id": "a87997b6-3817-4de1-84c1-e8a949758908",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "16f3f260-ea62-4ed1-b6bd-69d5a9482193"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# DevContainers on EC2\n\nThis deploys an EC2 instance into a default VPC that installs:\n- NPM + Node\n- Docker\n- @devcontainers/cli\n\nAnd set's up the following Coder Apps\n- code-server\n- coder-login\n- git-clone\n\nYou can use DevContainers standalone with just the VSCode extension, the CLI, or both! \n\nThis template also has the following Coder [experimental feature](https://coder.com/docs/admin/templates/extending-templates/devcontainers) enabled for enhancing the devcontainer UX!",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "d699a069-3a3b-44b5-b68c-cf9165ad0d03",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-21T17:58:30.598844Z",
+      "updated_at": "2025-07-21T17:59:26.293436Z",
+      "name": "gallant_neumann8",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "25009b4c-c873-4fb4-9620-2aaa89a26b72",
+        "created_at": "2025-07-21T17:58:30.588509Z",
+        "started_at": "2025-07-21T17:58:30.611231Z",
+        "completed_at": "2025-07-21T17:59:26.293436Z",
+        "status": "succeeded",
+        "worker_id": "9045b1c2-4e00-4177-bd6d-fde65df17469",
+        "file_id": "11bfebe9-07ee-4cf7-b17c-2ccff2e5d8e1",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "d699a069-3a3b-44b5-b68c-cf9165ad0d03"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# DevContainers on EC2\n\nThis deploys an EC2 instance into a default VPC that installs:\n- NPM + Node\n- Docker\n- @devcontainers/cli\n\nAnd set's up the following Coder Apps\n- code-server\n- coder-login\n- git-clone\n\nYou can use DevContainers standalone with just the VSCode extension, the CLI, or both! \n\nThis template also has the following Coder [experimental feature](https://coder.com/docs/admin/templates/extending-templates/devcontainers) enabled for enhancing the devcontainer UX!",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  },
+  {
+    "TemplateVersion": {
+      "id": "71fc7e78-eadf-48d0-836a-613de7354f32",
+      "template_id": "31d4dfdd-5f7d-44f8-97d4-b744e378b1cb",
+      "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+      "created_at": "2025-07-21T18:03:19.339261Z",
+      "updated_at": "2025-07-21T18:04:15.131616Z",
+      "name": "goofy_euler6",
+      "message": "Uploaded from the CLI",
+      "job": {
+        "id": "b1e4bf29-bfe8-405e-b249-1e7958683335",
+        "created_at": "2025-07-21T18:03:19.32895Z",
+        "started_at": "2025-07-21T18:03:19.351859Z",
+        "completed_at": "2025-07-21T18:04:15.131616Z",
+        "status": "succeeded",
+        "worker_id": "8052e97f-1c2c-4bff-bfa4-f14874bb1041",
+        "file_id": "11bfebe9-07ee-4cf7-b17c-2ccff2e5d8e1",
+        "tags": {
+          "owner": "",
+          "region": "us-east-2",
+          "scope": "organization"
+        },
+        "queue_position": 0,
+        "queue_size": 0,
+        "organization_id": "316a25a4-ecea-40aa-959e-2839e28b3628",
+        "input": {
+          "template_version_id": "71fc7e78-eadf-48d0-836a-613de7354f32"
+        },
+        "type": "template_version_import",
+        "metadata": {
+          "template_version_name": "",
+          "template_id": "00000000-0000-0000-0000-000000000000",
+          "template_name": "",
+          "template_display_name": "",
+          "template_icon": ""
+        }
+      },
+      "readme": "# DevContainers on EC2\n\nThis deploys an EC2 instance into a default VPC that installs:\n- NPM + Node\n- Docker\n- @devcontainers/cli\n\nAnd set's up the following Coder Apps\n- code-server\n- coder-login\n- git-clone\n\nYou can use DevContainers standalone with just the VSCode extension, the CLI, or both! \n\nThis template also has the following Coder [experimental feature](https://coder.com/docs/admin/templates/extending-templates/devcontainers) enabled for enhancing the devcontainer UX!",
+      "created_by": {
+        "id": "2094c9e9-1370-4cf1-8c43-93a05b0bdb5c",
+        "username": "ju-pe"
+      },
+      "archived": false
+    }
+  }
+]

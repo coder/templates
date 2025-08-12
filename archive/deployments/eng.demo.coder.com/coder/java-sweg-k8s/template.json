@@ -1,0 +1,62 @@
+{
+  "id": "7b909b66-0418-4dd0-b50f-8e7e13e632ea",
+  "created_at": "2025-06-30T17:53:32.156257Z",
+  "updated_at": "2025-06-30T18:29:54.76301Z",
+  "organization_id": "a08798b3-e2b4-4289-8756-594bd5405755",
+  "organization_name": "coder",
+  "organization_display_name": "Coder",
+  "organization_icon": "",
+  "name": "java-sweg-k8s",
+  "display_name": "Java SWEG K8s",
+  "provisioner": "terraform",
+  "active_version_id": "b809692e-fa90-45df-a392-1deda7ecd00c",
+  "active_user_count": 2,
+  "build_time_stats": {
+    "delete": {
+      "P50": null,
+      "P95": null
+    },
+    "start": {
+      "P50": null,
+      "P95": null
+    },
+    "stop": {
+      "P50": null,
+      "P95": null
+    }
+  },
+  "description": "Provision Kubernetes Deployments as Coder workspaces with Java deps for SWEG",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "/icon/k8s.png",
+  "default_ttl_ms": 86400000,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [
+      "sunday"
+    ],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "4ee92c22-253e-4709-b9ee-dcc94431d49b",
+  "created_by_name": "austen",
+  "allow_user_autostart": false,
+  "allow_user_autostop": false,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 0,
+  "time_til_dormant_autodelete_ms": 0,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": false
+}

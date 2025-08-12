@@ -1,0 +1,62 @@
+{
+  "id": "9f927611-bcc5-45e5-ab5d-37e092ca391f",
+  "created_at": "2025-06-06T20:00:55.858542Z",
+  "updated_at": "2025-06-06T20:57:08.190397Z",
+  "organization_id": "c1064dd3-cd6c-4f6d-9754-f0dcab588b18",
+  "organization_name": "us-central",
+  "organization_display_name": "Coder",
+  "organization_icon": "/icon/coder.svg",
+  "name": "k8s-with-ray",
+  "display_name": "Ray.io",
+  "provisioner": "terraform",
+  "active_version_id": "cea2bec4-dca7-49a9-b12f-b104733d2b0c",
+  "active_user_count": 0,
+  "build_time_stats": {
+    "delete": {
+      "P50": 8013,
+      "P95": 8199
+    },
+    "start": {
+      "P50": null,
+      "P95": null
+    },
+    "stop": {
+      "P50": null,
+      "P95": null
+    }
+  },
+  "description": "Provision Kubernetes Deployments as Coder workspaces\nray.io is integrated ",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "/icon/k8s.png",
+  "default_ttl_ms": 86400000,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [
+      "sunday"
+    ],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "da1d6e71-e561-4e0e-ab0f-dc81f2440524",
+  "created_by_name": "michaelpatterson",
+  "allow_user_autostart": false,
+  "allow_user_autostop": true,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 0,
+  "time_til_dormant_autodelete_ms": 0,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": true
+}

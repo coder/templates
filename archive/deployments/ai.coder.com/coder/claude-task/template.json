@@ -1,0 +1,60 @@
+{
+  "id": "c5c4f14f-ff1d-44ed-9fda-552c7369e414",
+  "created_at": "2025-06-11T06:26:58.354779Z",
+  "updated_at": "2025-07-11T12:03:05.353572Z",
+  "organization_id": "bf573455-c9ef-4061-bdb3-8081da988ac0",
+  "organization_name": "coder",
+  "organization_display_name": "Coder",
+  "organization_icon": "/icon/coder.svg",
+  "name": "claude-task",
+  "display_name": "Build from Scratch w/ Claude",
+  "provisioner": "terraform",
+  "active_version_id": "7cb185aa-bbd4-4297-95f5-52a86774c743",
+  "active_user_count": 4,
+  "build_time_stats": {
+    "delete": {
+      "P50": 9850,
+      "P95": 19837
+    },
+    "start": {
+      "P50": 17564,
+      "P95": 93185
+    },
+    "stop": {
+      "P50": 11882,
+      "P95": 19922
+    }
+  },
+  "description": "Launch a Claude workspace to run a task!",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "/icon/claude.svg",
+  "default_ttl_ms": 3600000,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "f973b3c7-4619-41a4-8a64-e5fa8fd80006",
+  "created_by_name": "jullian",
+  "allow_user_autostart": false,
+  "allow_user_autostop": false,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 86400000,
+  "time_til_dormant_autodelete_ms": 86400000,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": true
+}

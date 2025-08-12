@@ -1,0 +1,60 @@
+{
+  "id": "d234cc41-bbda-43ae-9bf9-87d5a9c149e7",
+  "created_at": "2025-04-14T20:47:08.698464Z",
+  "updated_at": "2025-04-14T20:47:08.704983Z",
+  "organization_id": "acbf644a-8fbb-4837-a63b-530320610436",
+  "organization_name": "Org2",
+  "organization_display_name": "Organization 2",
+  "organization_icon": "/emojis/0031-fe0f-20e3.png",
+  "name": "aws-linux",
+  "display_name": "",
+  "provisioner": "terraform",
+  "active_version_id": "cfdc94bc-a44d-4230-9244-d1b29d1702ee",
+  "active_user_count": 1,
+  "build_time_stats": {
+    "delete": {
+      "P50": null,
+      "P95": null
+    },
+    "start": {
+      "P50": null,
+      "P95": null
+    },
+    "stop": {
+      "P50": null,
+      "P95": null
+    }
+  },
+  "description": "",
+  "deprecated": false,
+  "deprecation_message": "",
+  "icon": "",
+  "default_ttl_ms": 0,
+  "activity_bump_ms": 3600000,
+  "autostop_requirement": {
+    "days_of_week": [],
+    "weeks": 1
+  },
+  "autostart_requirement": {
+    "days_of_week": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ]
+  },
+  "created_by_id": "90830cb4-abc2-4628-9ef2-ec61b56bab19",
+  "created_by_name": "michaelpatterson",
+  "allow_user_autostart": true,
+  "allow_user_autostop": true,
+  "allow_user_cancel_workspace_jobs": false,
+  "failure_ttl_ms": 0,
+  "time_til_dormant_ms": 0,
+  "time_til_dormant_autodelete_ms": 0,
+  "require_active_version": false,
+  "max_port_share_level": "owner",
+  "use_classic_parameter_flow": false
+}
