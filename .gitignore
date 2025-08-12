@@ -40,4 +40,4 @@ terraform.rc
 .DS_Store
 
 # Archive folder
-#archive
+archive
