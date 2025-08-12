@@ -11,6 +11,11 @@ on:
         description: "Coder deployment URL, e.g. https://prod.example.com"
         type: string
         required: true
+      activate:
+        description: "Whether to activate the new template version"
+        type: boolean
+        required: false
+        default: false
     secrets:
       CODER_SESSION_TOKEN:
         required: true
@@ -106,7 +111,6 @@ jobs:
           echo "version_name=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
           echo "message=$(git log --format=%s -n 1 ${{ github.sha }})" >> "$GITHUB_OUTPUT"
 
-      # TODO: remove activate=false
       - name: Push ${{ matrix.template }} (in org ${{ matrix.org }})
         shell: bash
         run: |
@@ -117,5 +121,5 @@ jobs:
             --directory="${{ matrix.dir }}" \
             --name="${{ steps.meta.outputs.version_name }}" \
             --message="${{ steps.meta.outputs.message }}" \
-            --activate=false \
+            --activate="${{ inputs.activate }}"" \
             --yes
