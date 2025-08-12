@@ -1,3 +1,4 @@
+# Managed in https://github.com/coder/templates
 terraform {
     required_providers {
         kubernetes = {
