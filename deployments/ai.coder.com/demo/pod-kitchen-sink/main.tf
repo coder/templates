@@ -230,7 +230,7 @@ resource "coder_agent" "coder" {
 locals {
   # This is the init script for the main workspace container that runs before the
   # agent starts to configure workspace process logging.
-  exectrace_init_script = <<EOT
+  exectrace_init_script = <<EOF
     set -eu
     pidns_inum=$(readlink /proc/self/ns/pid | sed 's/[^0-9]//g')
     if [ -z "$pidns_inum" ]; then
@@ -275,7 +275,7 @@ locals {
       exit $rc
     fi
 
-  EOT 
+  EOF
 }
 
 
