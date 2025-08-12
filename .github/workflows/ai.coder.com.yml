@@ -1,0 +1,20 @@
+name: Push templates to prod
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      # TODO: remove
+      - phorcys420/refactor
+    paths:
+      - 'deployments/ai.coder.com/**'
+
+jobs:
+  push:
+    uses: ./.github/workflows/_coder-templates-push.yml
+    with:
+      deployment_dir: deployments/ai.coder.com  
+      coder_url: https://ai.coder.com
+    secrets:
+      CODER_SESSION_TOKEN: ${{ secrets.CODER_SESSION_TOKEN_AI }}

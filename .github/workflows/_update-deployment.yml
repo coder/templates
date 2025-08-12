@@ -1,0 +1,73 @@
+name: Coder Templates Push
+
+on:
+  workflow_call:
+    inputs:
+      deployment_dir:
+        description: "Top-level folder for this deployment (e.g. prod.example.com)"
+        type: string
+        required: true
+      coder_url:
+        description: "Coder deployment URL, e.g. https://prod.example.com"
+        type: string
+        required: true
+    secrets:
+      CODER_SESSION_TOKEN:
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    name: Discover templates
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: set-matrix
+        name: Build matrix from <deployment>/<org>/<template>
+        shell: bash
+        run: |
+          python3 .github/scripts/discover_templates.py "${{ inputs.deployment_dir }}" > matrix.json
+          echo "matrix=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
+
+  push:
+    name: Push templates
+    needs: discover
+    runs-on: ubuntu-latest
+    if: needs.discover.outputs.matrix != ''
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.discover.outputs.matrix) }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Coder CLI
+        uses: coder/setup-action@v1
+        with:
+          access_url: ${{ inputs.coder_url }}
+          coder_session_token: ${{ secrets.CODER_SESSION_TOKEN }}
+
+      - id: meta
+        name: Compute version name and message
+        shell: bash
+        run: |
+          echo "version_name=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+          echo "message=$(git log --format=%s -n 1 ${{ github.sha }})" >> "$GITHUB_OUTPUT"
+
+      # TODO: remove activate=false
+      - name: Push ${{ matrix.template }} (in org ${{ matrix.org }})
+        shell: bash
+        run: |
+          echo "Pushing template '${{ matrix.template }}' for org '${{ matrix.org }}' from '${{ matrix.dir }}'"
+          coder templates push "${{ matrix.template }}" \
+            --org "${{ matrix.org }}" \
+            --directory "${{ matrix.dir }}" \
+            --name "${{ steps.meta.outputs.version_name }}" \
+            --message "${{ steps.meta.outputs.message }}" \
+            --activate false \
+            --yes
