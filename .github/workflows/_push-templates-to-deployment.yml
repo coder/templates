@@ -121,5 +121,5 @@ jobs:
             --directory="${{ matrix.dir }}" \
             --name="${{ steps.meta.outputs.version_name }}" \
             --message="${{ steps.meta.outputs.message }}" \
-            --activate="${{ inputs.activate }}"" \
+            --activate="${{ inputs.activate }}" \
             --yes
