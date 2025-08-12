@@ -208,6 +208,7 @@ resource "coder_agent" "dev" {
     }
 }
 
+# TODO: do NOT host modules in template
 module "coder-login" {
     source = "./modules/coder-login"
     agent_id = coder_agent.dev.id

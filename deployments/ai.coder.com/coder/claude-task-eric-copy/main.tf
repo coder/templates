@@ -330,6 +330,7 @@ nohup node server.js > /tmp/hterm.log 2>&1 &
     }
 }
 
+# TODO: do NOT host modules in template
 module "coder-login" {
     source = "./modules/coder-login"
     agent_id = coder_agent.dev.id
