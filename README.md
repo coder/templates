@@ -1,27 +1,2 @@
-# Coder Templates
-
-This is a repository that centralizes example templates curated by Coder and it's community.
-For a list of base-level examples, list them in our CLI with `coder templates init`.
-
-> [Submit an issue](https://github.com/coder/coder/issues/new) if you encounter any issues!
-
-## Getting Started
-
-Clone this repository to create a template from any example listed here:
-
-```console
-git clone https://github.com/coder/templates
-```
-
-To consume this repository's templates in your Coder deployment:
-
-```console
-cd <TEMPLATE_DIR>
-coder templates push
-```
-
-OR
-
-```console
-coder templates push -d <TEMPLATE_DIR>
-```
+# Coder Demo Templates
+This is the home of our demo template setup, this repo centralizes all the "demo" templates (use-case specific and others).
