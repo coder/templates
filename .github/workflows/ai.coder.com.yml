@@ -1,4 +1,4 @@
-name: Push templates to prod
+name: Push templates to ai.coder.com
 
 on:
   workflow_dispatch:
@@ -10,11 +10,19 @@ on:
     paths:
       - 'deployments/ai.coder.com/**'
 
+permissions:
+  contents: read
+
+concurrency:
+  group: push-templates-ai-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  push:
-    uses: ./.github/workflows/_coder-templates-push.yml
+  ai-coder-com:
+    name: ai.coder.com
+    uses: ./.github/workflows/_push-templates-to-deployment.yml
     with:
-      deployment_dir: deployments/ai.coder.com  
+      deployment_dir: deployments/ai.coder.com
       coder_url: https://ai.coder.com
     secrets:
       CODER_SESSION_TOKEN: ${{ secrets.CODER_SESSION_TOKEN_AI }}
