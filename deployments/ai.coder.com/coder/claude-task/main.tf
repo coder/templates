@@ -35,6 +35,20 @@ data "coder_parameter" "ai_prompt" {
     mutable     = false
 }
 
+data "coder_parameter" "cost" {
+    type = "number"
+    name = "Workspace Cost"
+    icon = "/emojis/1f4b8.png" # 💸
+    description = "This adjusts the CPU & Memory of this workspace where it's calculated as: cpu = ceil(cost/2), memory = cost, ephemeral-storage = cost*5 "
+    default = 2
+    mutable = false
+    validation {
+        min       = 2
+        max       = 8
+        monotonic = "increasing"
+    }
+}
+
 locals {
     regions = {
         "us-east-2" = {
@@ -92,7 +106,7 @@ data "coder_external_auth" "github" {
 resource "coder_metadata" "pod_info" {
     count = data.coder_workspace.me.start_count
     resource_id = kubernetes_pod.dev[0].id
-    daily_cost = local.cost
+    daily_cost = data.coder_parameter.cost.value
     item {
         key   = "UUID"
         value = random_uuid.prebuilds.result
@@ -274,7 +288,6 @@ module "preview" {
 }
 
 locals {
-    cost = 2
     task_prompt = join(" ", [
         "First, post a 'task started' update to Coder.",
         "Then, review all of your memory.",
@@ -334,7 +347,7 @@ locals {
         GIT_AUTHOR_NAME = data.coder_workspace_owner.me.name
         GIT_AUTHOR_EMAIL = data.coder_workspace_owner.me.email
         GH_TOKEN = local.logged_into_git ? data.coder_external_auth.github.access_token : var.gh_token
-        NODE_OPTIONS = "--max-old-space-size=${512*local.cost}"
+        NODE_OPTIONS = "--max-old-space-size=${512*data.coder_parameter.cost.value}"
         CLAUDE_CODE_MAX_OUTPUT_TOKENS = "8192"
     }
 }
@@ -402,9 +415,9 @@ resource "kubernetes_pod" "dev" {
             }
             resources {
                 limits = {
-                    cpu = "${ceil(local.cost/2)}"
-                    memory = "${local.cost}G"
-                    ephemeral-storage = "${local.cost*5}Gi"
+                    cpu = "${ceil(data.coder_parameter.cost.value/2)}"
+                    memory = "${data.coder_parameter.cost.value}G"
+                    ephemeral-storage = "${data.coder_parameter.cost.value*5}Gi"
                 }
             }
             security_context {

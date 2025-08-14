@@ -68,6 +68,20 @@ data "coder_parameter" "git-repo" {
     default      = ""
 }
 
+data "coder_parameter" "cost" {
+    type = "number"
+    name = "Workspace Cost"
+    icon = "/emojis/1f4b8.png" # 💸
+    description = "This adjusts the CPU & Memory of this workspace where it's calculated as: cpu = ceil(cost/2), memory = cost, ephemeral-storage = cost*5 "
+    default = 2
+    mutable = false
+    validation {
+        min       = 2
+        max       = 8
+        monotonic = "increasing"
+    }
+}
+
 data "coder_workspace_tags" "location" {
     tags = {
         region = data.coder_parameter.location.value
@@ -90,7 +104,7 @@ locals {
 resource "coder_metadata" "pod_info" {
     count = data.coder_workspace.me.start_count
     resource_id = kubernetes_pod.dev[0].id
-    daily_cost = local.cost
+    daily_cost = data.coder_parameter.cost.value
     item {
         key   = "UUID"
         value = random_uuid.prebuilds.result
@@ -105,7 +119,6 @@ data "coder_workspace" "me" {}
 data "coder_workspace_owner" "me" {}
 
 locals {
-    cost = 2
     home_folder = "/home/coder"
     work_folder = data.coder_parameter.git-repo.value == "" ? local.home_folder : join("/", [
         local.home_folder, element(split(".", element(split("/", data.coder_parameter.git-repo.value), -1)), 0)
@@ -348,7 +361,7 @@ locals {
         GIT_AUTHOR_NAME = data.coder_workspace_owner.me.name
         GIT_AUTHOR_EMAIL = data.coder_workspace_owner.me.email
         GH_TOKEN = local.logged_into_git ? data.coder_external_auth.github.access_token : var.gh_token
-        NODE_OPTIONS = "--max-old-space-size=${512*local.cost}"
+        NODE_OPTIONS = "--max-old-space-size=${512*data.coder_parameter.cost.value}"
     }
 }
 
@@ -415,8 +428,8 @@ resource "kubernetes_pod" "dev" {
             }
             resources {
                 limits = {
-                    cpu = "${ceil(local.cost/2)}"
-                    memory = "${local.cost}G"
+                    cpu = "${ceil(data.coder_parameter.cost.value/2)}"
+                    memory = "${data.coder_parameter.cost.value}G"
                 }
             }
             security_context {
