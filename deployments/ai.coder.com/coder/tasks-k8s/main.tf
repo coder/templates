@@ -20,6 +20,11 @@ variable "gh_username" {
     sensitive = true
 }
 
+variable "cost" {
+    type = number
+    default = 4
+}
+
 # The Claude Code module does the automatic task reporting
 # Other agent modules: https://registry.coder.com/modules?search=agent
 # Or use a custom agent:  
@@ -325,7 +330,7 @@ module "code-server" {
 resource "coder_metadata" "pod_info" {
     count = data.coder_workspace.me.start_count
     resource_id = kubernetes_pod.dev[0].id
-    daily_cost = local.cost
+    daily_cost = var.cost
     item {
         key   = "UUID"
         value = "coder-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}"
@@ -399,7 +404,6 @@ data "coder_external_auth" "github" {
 }
 
 locals {
-    cost = 4
     logged_into_git = data.coder_external_auth.github.access_token != ""
     env = {
         CODER_AGENT_TOKEN = coder_agent.main.token
@@ -409,7 +413,7 @@ locals {
         CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC = "1"
         DISABLE_PROMPT_CACHING = "1"
         GH_TOKEN = local.logged_into_git ? data.coder_external_auth.github.access_token : var.gh_token
-        NODE_OPTIONS = "--max-old-space-size=${512*local.cost}"
+        NODE_OPTIONS = "--max-old-space-size=${512*var.cost}"
         CLAUDE_CODE_MAX_OUTPUT_TOKENS = "8192"
     }
 }
@@ -478,9 +482,9 @@ resource "kubernetes_pod" "dev" {
             }
             resources {
                 limits = {
-                    ephemeral-storage = "${local.cost*5}Gi"
-                    cpu = "${ceil(local.cost/2)}"
-                    memory = "${local.cost}Gi"
+                    ephemeral-storage = "${var.cost*5}Gi"
+                    cpu = "${ceil(var.cost/2)}"
+                    memory = "${var.cost}Gi"
                 }
             }
             security_context {
