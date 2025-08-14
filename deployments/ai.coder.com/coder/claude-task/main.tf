@@ -26,6 +26,11 @@ variable "gh_username" {
     sensitive = true
 }
 
+variable "cost" {
+    type = number
+    default = 2
+}
+
 data "coder_parameter" "ai_prompt" {
     type        = "string"
     name        = "AI Prompt"
@@ -92,7 +97,7 @@ data "coder_external_auth" "github" {
 resource "coder_metadata" "pod_info" {
     count = data.coder_workspace.me.start_count
     resource_id = kubernetes_pod.dev[0].id
-    daily_cost = local.cost
+    daily_cost = var.cost
     item {
         key   = "UUID"
         value = random_uuid.prebuilds.result
@@ -274,7 +279,6 @@ module "preview" {
 }
 
 locals {
-    cost = 2
     task_prompt = join(" ", [
         "First, post a 'task started' update to Coder.",
         "Then, review all of your memory.",
@@ -334,7 +338,7 @@ locals {
         GIT_AUTHOR_NAME = data.coder_workspace_owner.me.name
         GIT_AUTHOR_EMAIL = data.coder_workspace_owner.me.email
         GH_TOKEN = local.logged_into_git ? data.coder_external_auth.github.access_token : var.gh_token
-        NODE_OPTIONS = "--max-old-space-size=${512*local.cost}"
+        NODE_OPTIONS = "--max-old-space-size=${512*var.cost}"
         CLAUDE_CODE_MAX_OUTPUT_TOKENS = "8192"
     }
 }
@@ -402,9 +406,9 @@ resource "kubernetes_pod" "dev" {
             }
             resources {
                 limits = {
-                    cpu = "${ceil(local.cost/2)}"
-                    memory = "${local.cost}G"
-                    ephemeral-storage = "${local.cost*5}Gi"
+                    cpu = "${ceil(var.cost/2)}"
+                    memory = "${var.cost}G"
+                    ephemeral-storage = "${var.cost*5}Gi"
                 }
             }
             security_context {
