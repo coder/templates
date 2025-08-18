@@ -9,6 +9,9 @@ tags: [kubernetes, container]
 
 # Remote Development on Kubernetes Pods
 
+> [!IMPORTANT]
+> This template is centrally managed by CI/CD in the [coder/templates](https://github.com/coder/templates) repository.
+
 Provision Kubernetes Pods as [Coder workspaces](https://coder.com/docs/v2/latest/workspaces) with this example template.
 
 <!-- TODO: Add screenshot -->
