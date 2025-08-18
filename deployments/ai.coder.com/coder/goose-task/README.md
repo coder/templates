@@ -1,5 +1,8 @@
 # 🪽 Prototype Anything with Goose AI 🪿💨
 
+> [!IMPORTANT]
+> This template is centrally managed by CI/CD in the [coder/templates](https://github.com/coder/templates) repository.
+
 This template creates an EC2 VM-based workspace that lets you quickly prototype *anything* using Goose AI inside a Coder workspace. Just tell Goose what you want to build, and it will generate code, run a development server, and show you a live "preview—all" automatically.
 
 **NOTE**: Currently, task reporting is disabled as Coder's MCP server causes intermittent issues. This template will not report tasks back to your dashboard.

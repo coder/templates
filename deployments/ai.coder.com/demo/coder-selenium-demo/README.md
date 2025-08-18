@@ -1,5 +1,8 @@
 # Selenium Testing in Coder Workspaces
 
+> [!IMPORTANT]
+> This template is centrally managed by CI/CD in the [coder/templates](https://github.com/coder/templates) repository.
+
 This repository demonstrates how to run automated browser testing using Selenium within Coder Workspaces. The workspace comes pre-configured with Selenium Grid, Chrome browser, and all necessary drivers for immediate testing.
 
 ## 🚀 Quick Start

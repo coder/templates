@@ -9,6 +9,9 @@ tags: [vm, windows, aws]
 
 # Visual Studio Code IDE on a Windows VM in AWS
 
+> [!IMPORTANT]
+> This template is centrally managed by CI/CD in the [coder/templates](https://github.com/coder/templates) repository.
+
 ### Apps included
 
 1. A web-based terminal
