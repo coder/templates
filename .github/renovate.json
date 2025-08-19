@@ -9,7 +9,7 @@
   "baseBranches": ["phorcys420/ci-refactor-3"],
   "packageRules": [
     {
-      "matchManagers": ["terraform"],
+      "matchDatasources": ["terraform-provider"],
       "groupName": "terraform providers",
       "separateMinorPatch": true,
       "enabled": true
