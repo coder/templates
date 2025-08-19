@@ -24,10 +24,28 @@ inputs:
   template_dir:
     description: "Directory containing the template"
     required: true
+  validate_before_push:
+    description: "Whether to validate the template before pushing"
+    required: false
+    default: "true"
 
 runs:
   using: "composite"
   steps:
+    - name: Setup Terraform
+      if: inputs.validate_before_push == 'true'
+      uses: coder/coder/.github/actions/setup-tf@main
+
+    - name: Validate template
+      if: inputs.validate_before_push == 'true'
+      shell: bash
+      working-directory: ${{ inputs.template_dir }}
+      run: |
+        set -euo pipefail
+        echo "Validating Terraform for template '${{ inputs.template }}' in org '${{ inputs.org }}' from '${{ inputs.template_dir }}'"
+        terraform init
+        terraform validate
+
     - name: Set up Coder CLI
       uses: coder/setup-action@v1
       with:
