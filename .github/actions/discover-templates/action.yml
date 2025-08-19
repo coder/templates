@@ -43,11 +43,6 @@ runs:
 
         echo "HEAD commit -> $HEAD_SHA"
         echo "head_sha=$HEAD_SHA" >> "$GITHUB_OUTPUT"
-
-        # If invoked manually, instruct the script to list all templates
-        if [[ "$EVENT" == "workflow_dispatch" ]]; then
-          echo "LIST_ALL=true" >> "$GITHUB_ENV"
-        fi
     
     - name: Ensure base commit is available (shallow)
       shell: bash
@@ -60,13 +55,18 @@ runs:
         fi
 
     - id: set-matrix
-      name: Build matrix from changed <deployment>/<org>/<template>
+      name: Build matrix from <deployment>/<org>/<template>
       shell: bash
       env:
         DEPLOYMENT_DIR: ${{ inputs.deployment_dir }}
         BASE_SHA: ${{ steps.range.outputs.base_sha }}
         HEAD_SHA: ${{ steps.range.outputs.head_sha }}
+        EVENT: ${{ github.event_name }}
       run: |
         set -euo pipefail
-        python3 .github/scripts/discover-templates.py "$DEPLOYMENT_DIR" "$BASE_SHA" "$HEAD_SHA" > matrix.json
+        if [[ "$EVENT" == "workflow_dispatch" ]]; then
+          python3 .github/actions/discover-templates/list-templates.py "$DEPLOYMENT_DIR" > matrix.json
+        else
+          python3 .github/actions/discover-templates/discover-templates.py "$DEPLOYMENT_DIR" "$BASE_SHA" "$HEAD_SHA" > matrix.json
+        fi
         echo "matrix=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
