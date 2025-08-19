@@ -25,6 +25,11 @@ jobs:
     outputs:
       matrix: ${{ steps.discover.outputs.matrix }}
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
       - id: discover
         name: Discover changed templates
         uses: ./.github/actions/discover-templates
@@ -40,6 +45,9 @@ jobs:
       fail-fast: false
       matrix: ${{ fromJSON(needs.discover-templates.outputs.matrix) }}
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
       - name: Validate template
         uses: ./.github/actions/validate-templates
         with:
