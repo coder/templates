@@ -61,4 +61,4 @@ jobs:
           template: ${{ matrix.template }}
           org: ${{ matrix.org }}
           template_dir: ${{ matrix.dir }}
-          validate_before_push: ${{ github.event.inputs.validate_before_push || 'true' }}
+          validate_before_push: ${{ github.event.inputs.validate_before_push }}
