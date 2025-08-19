@@ -1,13 +1,6 @@
 name: Push templates
 
 on:
-  workflow_dispatch:
-    inputs:
-      validate_before_push:
-        description: 'Validate templates before pushing'
-        required: false
-        default: true
-        type: boolean
   push:
     branches:
       - main
@@ -61,4 +54,3 @@ jobs:
           template: ${{ matrix.template }}
           org: ${{ matrix.org }}
           template_dir: ${{ matrix.dir }}
-          validate_before_push: ${{ github.event.inputs.validate_before_push }}
