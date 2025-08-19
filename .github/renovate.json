@@ -13,6 +13,10 @@
       "groupName": "terraform providers",
       "separateMinorPatch": true,
       "enabled": true
+    },
+    {
+      "matchDatasources": ["terraform-module"],
+      "registryUrls": ["https://registry.coder.com"]
     }
   ],
   "lockFileMaintenance": {
