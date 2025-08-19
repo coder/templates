@@ -35,10 +35,11 @@ jobs:
           fetch-depth: 0
           
       - id: discover
-        name: Discover changed templates
+        name: Discover templates
         uses: ./.github/actions/discover-templates
         with:
           deployment_dir: deployments/ai.coder.com
+          list_all: ${{ github.event_name == 'workflow_dispatch' }}
 
   push-and-validate:
     name: Validate and push template

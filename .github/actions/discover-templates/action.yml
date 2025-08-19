@@ -5,6 +5,10 @@ inputs:
   deployment_dir:
     description: "Top-level folder for this deployment (e.g. prod.example.com)"
     required: true
+  list_all:
+    description: "List all templates instead of only changed ones"
+    required: false
+    default: "false"
 
 outputs:
   matrix:
@@ -62,9 +66,10 @@ runs:
         BASE_SHA: ${{ steps.range.outputs.base_sha }}
         HEAD_SHA: ${{ steps.range.outputs.head_sha }}
         EVENT: ${{ github.event_name }}
+        LIST_ALL: ${{ inputs.list_all }}
       run: |
         set -euo pipefail
-        if [[ "$EVENT" == "workflow_dispatch" ]]; then
+        if [[ "$LIST_ALL" == "true" || "$EVENT" == "workflow_dispatch" ]]; then
           python3 .github/actions/discover-templates/discover-templates.py --deployment-dir "$DEPLOYMENT_DIR" --list-all > matrix.json
         else
           python3 .github/actions/discover-templates/discover-templates.py --deployment-dir "$DEPLOYMENT_DIR" --diff --base "$BASE_SHA" --head "$HEAD_SHA" > matrix.json
