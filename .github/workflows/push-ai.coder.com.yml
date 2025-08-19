@@ -16,16 +16,16 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test-ai-coder-com:
+  test:
     name: Test ai.coder.com templates
-    uses: ./.github/actions/validate-template
+    uses: ./.github/actions/validate-templates
     with:
       deployment_dir: deployments/ai.coder.com
 
-  ai-coder-com:
+  push:
     name: ai.coder.com
-    needs: test-ai-coder-com
-    uses: ./.github/actions/push-templates-to-deployment
+    needs: test
+    uses: ./.github/actions/push-templates
     with:
       deployment_dir: deployments/ai.coder.com
       coder_url: https://ai.coder.com

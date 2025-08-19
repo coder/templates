@@ -33,18 +33,11 @@ jobs:
       - name: Setup Terraform
         uses: coder/coder/.github/actions/setup-tf@main
 
-      - name: Terraform Init for ${{ matrix.template }} (in org ${{ matrix.org }})
-        shell: bash
-        working-directory: ${{ matrix.dir }}
-        run: |
-          set -euo pipefail
-          echo "Initializing Terraform for template '${{ matrix.template }}' in org '${{ matrix.org }}' from '${{ matrix.dir }}'"
-          terraform init
-
-      - name: Terraform Validate for ${{ matrix.template }} (in org ${{ matrix.org }})
+      - name: Validate ${{ matrix.template }} (in org ${{ matrix.org }})
         shell: bash
         working-directory: ${{ matrix.dir }}
         run: |
           set -euo pipefail
           echo "Validating Terraform for template '${{ matrix.template }}' in org '${{ matrix.org }}' from '${{ matrix.dir }}'"
+          terraform init
           terraform validate
