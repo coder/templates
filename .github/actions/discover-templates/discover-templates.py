@@ -9,7 +9,7 @@ from typing import Tuple, Optional, List, Dict
 def git(args: List[str]) -> str:
     return subprocess.check_output(["git", "--no-pager"] + args, text=True).strip()
 
-def parse_org_template(deployment: str, path: str) -> Optional[Tuple[str, str, str]]:
+def parse_template_folder(deployment: str, path: str) -> Optional[Tuple[str, str, str]]:
     # path may be absolute or relative; normalize relative to deployment
     deployment = os.path.normpath(deployment)
     path = os.path.normpath(path)
@@ -37,7 +37,7 @@ def discover_changed(deployment: str, base_sha: str, head_sha: str) -> List[Dict
     seen = set()
     items: List[Dict[str, str]] = []
     for p in changed_paths:
-        parsed = parse_org_template(deployment, p)
+        parsed = parse_template_folder(deployment, p)
         if not parsed:
             continue
         org, tmpl, tdir = parsed
