@@ -1,0 +1,52 @@
+name: Validate Template
+
+on:
+  workflow_call:
+    inputs:
+      deployment_dir:
+        description: "Top-level folder for this deployment (e.g. prod.example.com)"
+        type: string
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    name: Discover templates
+    uses: ./.github/workflows/_discover-templates.yml
+    with:
+      deployment_dir: ${{ inputs.deployment_dir }}
+
+  validate:
+    name: Validate template
+    needs: discover
+    runs-on: ubuntu-latest
+    if: needs.discover.outputs.matrix != ''
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.discover.outputs.matrix) }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "~1.0"
+
+      - name: Terraform Init for ${{ matrix.template }} (in org ${{ matrix.org }})
+        shell: bash
+        working-directory: ${{ matrix.dir }}
+        run: |
+          set -euo pipefail
+          echo "Initializing Terraform for template '${{ matrix.template }}' in org '${{ matrix.org }}' from '${{ matrix.dir }}'"
+          terraform init
+
+      - name: Terraform Validate for ${{ matrix.template }} (in org ${{ matrix.org }})
+        shell: bash
+        working-directory: ${{ matrix.dir }}
+        run: |
+          set -euo pipefail
+          echo "Validating Terraform for template '${{ matrix.template }}' in org '${{ matrix.org }}' from '${{ matrix.dir }}'"
+          terraform validate
