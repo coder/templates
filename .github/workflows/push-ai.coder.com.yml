@@ -18,7 +18,7 @@ concurrency:
 jobs:
   ai-coder-com:
     name: ai.coder.com
-    uses: ./.github/actions/_push-templates-to-deployment.yml
+    uses: ./.github/actions/push-templates-to-deployment
     with:
       deployment_dir: deployments/ai.coder.com
       coder_url: https://ai.coder.com
