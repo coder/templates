@@ -116,7 +116,6 @@ data "coder_workspace_preset" "default" {
     EOT
     "preview_port"    = "4200"
     "container_image" = "codercom/example-universal:ubuntu"
-    "jetbrains_ide"   = "PY"
   }
 
   # Pre-builds is a Coder Premium
@@ -311,8 +310,10 @@ module "code-server" {
     folder = "/home/coder/projects"
     source = "registry.coder.com/coder/code-server/coder"
 
+    extensions = ["RooVeterinaryInc.roo-cline"]
     settings = {
-      "workbench.colorTheme" : "Default Dark Modern"
+      "workbench.colorTheme" : "Default Dark Modern",
+      "roo-cline.autoImportSettingsPath": "/home/coder/.roo/roo-init.json"
     }
 
     # This ensures that the latest non-breaking version of the module gets downloaded, you can also pin the module version to prevent breaking changes in production.
@@ -320,6 +321,43 @@ module "code-server" {
 
     agent_id = coder_agent.main.id
     order    = 1
+}
+
+resource "coder_script" "roocode_init" {
+    display_name = "Roo Code Init"
+    icon = "https://avatars.githubusercontent.com/u/211522643?s=200&v=4"
+    run_on_start = true
+    agent_id = coder_agent.main.id
+    script = <<-EOT
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    ROO_INIT_FILE="$HOME/.roo/roo-init.json"
+
+    if [ ! -f "$ROO_INIT_FILE" ]; then
+    mkdir -p "$(dirname "$ROO_INIT_FILE")"
+
+    cat > "$ROO_INIT_FILE" <<EOF
+    {
+    "providerProfiles": {
+        "currentApiConfigName": "default",
+        "apiConfigs": {
+        "default": {
+            "litellmBaseUrl": "https://litellm.ai.demo.coder.com",
+            "litellmApiKey": "$${ANTHROPIC_AUTH_TOKEN}",
+            "litellmModelId": "anthropic.claude.haiku",
+            "apiProvider": "litellm",
+            "id": "wbtoigff1bh"
+        }
+        }
+    }
+    }
+    EOF
+    echo "Created $ROO_INIT_FILE with API key from ANTHROPIC_AUTH_TOKEN"
+    else
+    echo "$ROO_INIT_FILE already exists, skipping."
+    fi
+	EOT
 }
 
 resource "coder_metadata" "pod_info" {
