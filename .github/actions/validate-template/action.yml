@@ -24,5 +24,5 @@ runs:
       run: |
         set -euo pipefail
         echo "Validating Terraform for template '${{ inputs.template }}' in org '${{ inputs.org }}' from '${{ inputs.template_dir }}'"
-        terraform init
+        terraform init -lockfile=readonly
         terraform validate

@@ -1,12 +1,6 @@
 name: Push templates
 
 on:
-  push:
-    branches:
-      - main
-      - phorcys420/ci-refactor-2
-    paths:
-      - 'deployments/ai.coder.com/**'
   workflow_dispatch:
     inputs:
       activate:
@@ -14,6 +8,11 @@ on:
         type: boolean
         default: false
         required: false
+  push:
+    branches:
+      - main
+    paths:
+      - 'deployments/ai.coder.com/**'
 
 permissions:
   contents: read
@@ -41,8 +40,8 @@ jobs:
           deployment_dir: deployments/ai.coder.com
           list_all: ${{ github.event_name == 'workflow_dispatch' }}
 
-  push-and-validate:
-    name: Validate and push template
+  push:
+    name: Push template
     needs: discover-templates
     runs-on: ubuntu-latest
     if: needs.discover-templates.outputs.matrix != '' && needs.discover-templates.outputs.matrix != '[]'
