@@ -2,16 +2,15 @@ name: Push templates
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows: ["Test templates"]
-    types:
-      - completed
-    branches:
-      - main
+    inputs:
+      validate_before_push:
+        description: 'Validate templates before pushing'
+        required: false
+        default: true
+        type: boolean
   push:
     branches:
       - main
-      - blink/fix-actions-structure
     paths:
       - 'deployments/ai.coder.com/**'
 
@@ -26,7 +25,6 @@ jobs:
   discover-templates:
     name: Discover templates
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name != 'workflow_run' }}
     outputs:
       matrix: ${{ steps.discover.outputs.matrix }}
     steps:
@@ -41,11 +39,30 @@ jobs:
         with:
           deployment_dir: deployments/ai.coder.com
 
-  push-templates:
-    name: Push template
+  validate-templates:
+    name: Validate template
     needs: discover-templates
     runs-on: ubuntu-latest
-    if: needs.discover-templates.outputs.matrix != '' && needs.discover-templates.outputs.matrix != '[]'
+    if: (github.event.inputs.validate_before_push != 'false') && needs.discover-templates.outputs.matrix != '' && needs.discover-templates.outputs.matrix != '[]'
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.discover-templates.outputs.matrix) }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Validate template
+        uses: ./.github/actions/validate-templates
+        with:
+          template: ${{ matrix.template }}
+          org: ${{ matrix.org }}
+          template_dir: ${{ matrix.dir }}
+
+  push-templates:
+    name: Push template
+    needs: [discover-templates, validate-templates]
+    runs-on: ubuntu-latest
+    if: always() && needs.discover-templates.outputs.matrix != '' && needs.discover-templates.outputs.matrix != '[]' && (needs.validate-templates.result == 'success' || needs.validate-templates.result == 'skipped')
     strategy:
       fail-fast: false
       matrix: ${{ fromJSON(needs.discover-templates.outputs.matrix) }}

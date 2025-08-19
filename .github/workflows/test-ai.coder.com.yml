@@ -2,12 +2,6 @@ name: Test templates
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-      - blink/fix-actions-structure
-    paths:
-      - 'deployments/ai.coder.com/**'
   pull_request:
     paths:
       - 'deployments/ai.coder.com/**'
