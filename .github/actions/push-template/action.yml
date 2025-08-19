@@ -1,5 +1,5 @@
 name: "Push Templates"
-description: "Pushes Coder templates to a deployment after discovering changed templates"
+description: "Pushes a singular Coder template to a deployment"
 
 inputs:
   deployment_dir:
@@ -18,11 +18,11 @@ inputs:
   template:
     description: "Template name to push"
     required: true
-  org:
-    description: "Organization name"
-    required: true
   template_dir:
     description: "Directory containing the template"
+    required: true
+  org:
+    description: "Organization name"
     required: true
 
 runs:

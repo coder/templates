@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - phorcys420/ci-refactor-2
     paths:
       - 'deployments/ai.coder.com/**'
 
@@ -32,8 +33,8 @@ jobs:
         with:
           deployment_dir: deployments/ai.coder.com
 
-  push-templates:
-    name: Push template
+  push-and-validate:
+    name: Validate and push template
     needs: discover-templates
     runs-on: ubuntu-latest
     if: needs.discover-templates.outputs.matrix != '' && needs.discover-templates.outputs.matrix != '[]'
@@ -43,14 +44,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Validate template
+        uses: ./.github/actions/validate-template
+        with:
+          template: ${{ matrix.template }}
+          template_dir: ${{ matrix.dir }}
+          org: ${{ matrix.org }}
         
       - name: Push template
-        uses: ./.github/actions/push-templates
+        uses: ./.github/actions/push-template
         with:
           deployment_dir: deployments/ai.coder.com
           coder_url: https://ai.coder.com
           coder_session_token: ${{ secrets.CODER_SESSION_TOKEN_AI }}
-          activate: "true"
           template: ${{ matrix.template }}
-          org: ${{ matrix.org }}
           template_dir: ${{ matrix.dir }}
+          org: ${{ matrix.org }}
+          activate: "true"
