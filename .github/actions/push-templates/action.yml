@@ -1,70 +1,59 @@
-name: Coder Templates Push
+name: "Push Templates"
+description: "Pushes Coder templates to a deployment after discovering changed templates"
 
-on:
-  workflow_call:
-    inputs:
-      deployment_dir:
-        description: "Top-level folder for this deployment (e.g. prod.example.com)"
-        type: string
-        required: true
-      coder_url:
-        description: "Coder deployment URL, e.g. https://prod.example.com"
-        type: string
-        required: true
-      activate:
-        description: "Whether to activate the new template version"
-        type: boolean
-        required: false
-        default: false
-    secrets:
-      CODER_SESSION_TOKEN:
-        required: true
+inputs:
+  deployment_dir:
+    description: "Top-level folder for this deployment (e.g. prod.example.com)"
+    required: true
+  coder_url:
+    description: "Coder deployment URL, e.g. https://prod.example.com"
+    required: true
+  coder_session_token:
+    description: "Coder session token for authentication"
+    required: true
+  activate:
+    description: "Whether to activate the new template version"
+    required: false
+    default: "false"
+  template:
+    description: "Template name to push"
+    required: true
+  org:
+    description: "Organization name"
+    required: true
+  template_dir:
+    description: "Directory containing the template"
+    required: true
 
-permissions:
-  contents: read
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-jobs:
-  discover-templates:
-    name: Discover templates
-    uses: ./.github/actions/discover-templates
-    with:
-      deployment_dir: ${{ inputs.deployment_dir }}
+    - name: Set up Coder CLI
+      uses: coder/setup-action@v1
+      with:
+        access_url: ${{ inputs.coder_url }}
+        coder_session_token: ${{ inputs.coder_session_token }}
 
-  push-templates:
-    name: Push template
-    needs: discover-templates
-    runs-on: ubuntu-latest
-    if: needs.discover-templates.outputs.matrix != ''
-    strategy:
-      fail-fast: false
-      matrix: ${{ fromJSON(needs.discover-templates.outputs.matrix) }}
+    - id: meta
+      name: Compute version name and message
+      shell: bash
+      run: |
+        set -euo pipefail
+        echo "version_name=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+        echo "message=$(git log --format=%s -n 1 ${{ github.sha }})" >> "$GITHUB_OUTPUT"
 
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Coder CLI
-        uses: coder/setup-action@v1
-        with:
-          access_url: ${{ inputs.coder_url }}
-          coder_session_token: ${{ secrets.CODER_SESSION_TOKEN }}
-
-      - id: meta
-        name: Compute version name and message
-        shell: bash
-        run: |
-          set -euo pipefail
-          echo "version_name=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
-          echo "message=$(git log --format=%s -n 1 ${{ github.sha }})" >> "$GITHUB_OUTPUT"
-
-      - name: Push ${{ matrix.template }} (in org ${{ matrix.org }})
-        shell: bash
-        run: |
-          set -euo pipefail
-          echo "Pushing template '${{ matrix.template }}' for org '${{ matrix.org }}' from '${{ matrix.dir }}'"
-          coder templates push "${{ matrix.template }}" \
-            --org="${{ matrix.org }}" \
-            --directory="${{ matrix.dir }}" \
-            --name="${{ steps.meta.outputs.version_name }}" \
-            --message="${{ steps.meta.outputs.message }}" \
-            --activate="${{ inputs.activate }}" \
-            --yes
+    - name: Push template
+      shell: bash
+      run: |
+        set -euo pipefail
+        echo "Pushing template '${{ inputs.template }}' for org '${{ inputs.org }}' from '${{ inputs.template_dir }}'"
+        coder templates push "${{ inputs.template }}" \
+          --org="${{ inputs.org }}" \
+          --directory="${{ inputs.template_dir }}" \
+          --name="${{ steps.meta.outputs.version_name }}" \
+          --message="${{ steps.meta.outputs.message }}" \
+          --activate="${{ inputs.activate }}" \
+          --yes

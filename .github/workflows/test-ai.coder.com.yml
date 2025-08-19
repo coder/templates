@@ -19,8 +19,30 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
-    name: Test ai.coder.com templates
-    uses: ./.github/actions/validate-templates
-    with:
-      deployment_dir: deployments/ai.coder.com
+  discover-templates:
+    name: Discover templates
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.discover.outputs.matrix }}
+    steps:
+      - id: discover
+        name: Discover changed templates
+        uses: ./.github/actions/discover-templates
+        with:
+          deployment_dir: deployments/ai.coder.com
+
+  validate-templates:
+    name: Validate template
+    needs: discover-templates
+    runs-on: ubuntu-latest
+    if: needs.discover-templates.outputs.matrix != ''
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.discover-templates.outputs.matrix) }}
+    steps:
+      - name: Validate template
+        uses: ./.github/actions/validate-templates
+        with:
+          template: ${{ matrix.template }}
+          org: ${{ matrix.org }}
+          template_dir: ${{ matrix.dir }}
