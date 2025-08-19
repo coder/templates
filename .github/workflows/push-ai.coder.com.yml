@@ -12,13 +12,20 @@ permissions:
   contents: read
 
 concurrency:
-  group: push-templates-ai-${{ github.ref }}
+  group: push-templates-ai.coder.com
   cancel-in-progress: true
 
 jobs:
-  ai-coder-com:
+  test:
+    name: Test ai.coder.com templates
+    uses: ./.github/actions/validate-templates
+    with:
+      deployment_dir: deployments/ai.coder.com
+
+  push:
     name: ai.coder.com
-    uses: ./.github/workflows/_push-templates-to-deployment.yml
+    needs: test
+    uses: ./.github/actions/push-templates
     with:
       deployment_dir: deployments/ai.coder.com
       coder_url: https://ai.coder.com

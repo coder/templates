@@ -1,0 +1,43 @@
+name: Validate Template
+
+on:
+  workflow_call:
+    inputs:
+      deployment_dir:
+        description: "Top-level folder for this deployment (e.g. prod.example.com)"
+        type: string
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  discover-templates:
+    name: Discover templates
+    uses: ./.github/actions/discover-templates
+    with:
+      deployment_dir: ${{ inputs.deployment_dir }}
+
+  validate-templates:
+    name: Validate template
+    needs: discover-templates
+    runs-on: ubuntu-latest
+    if: needs.discover-templates.outputs.matrix != ''
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.discover-templates.outputs.matrix) }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: coder/coder/.github/actions/setup-tf@main
+
+      - name: Validate ${{ matrix.template }} (in org ${{ matrix.org }})
+        shell: bash
+        working-directory: ${{ matrix.dir }}
+        run: |
+          set -euo pipefail
+          echo "Validating Terraform for template '${{ matrix.template }}' in org '${{ matrix.org }}' from '${{ matrix.dir }}'"
+          terraform init
+          terraform validate
