@@ -5,6 +5,10 @@ inputs:
   deployment_dir:
     description: "Top-level folder for this deployment (e.g. prod.example.com)"
     required: true
+  list_all:
+    description: "List all templates instead of only changed ones"
+    required: false
+    default: "false"
 
 outputs:
   matrix:
@@ -55,13 +59,19 @@ runs:
         fi
 
     - id: set-matrix
-      name: Build matrix from changed <deployment>/<org>/<template>
+      name: Build matrix from <deployment>/<org>/<template>
       shell: bash
       env:
         DEPLOYMENT_DIR: ${{ inputs.deployment_dir }}
         BASE_SHA: ${{ steps.range.outputs.base_sha }}
         HEAD_SHA: ${{ steps.range.outputs.head_sha }}
+        EVENT: ${{ github.event_name }}
+        LIST_ALL: ${{ inputs.list_all }}
       run: |
         set -euo pipefail
-        python3 .github/scripts/discover-templates.py "$DEPLOYMENT_DIR" "$BASE_SHA" "$HEAD_SHA" > matrix.json
+        if [[ "$LIST_ALL" == "true" || "$EVENT" == "workflow_dispatch" ]]; then
+          python3 .github/actions/discover-templates/discover-templates.py --deployment-dir "$DEPLOYMENT_DIR" --list-all > matrix.json
+        else
+          python3 .github/actions/discover-templates/discover-templates.py --deployment-dir "$DEPLOYMENT_DIR" --diff --base "$BASE_SHA" --head "$HEAD_SHA" > matrix.json
+        fi
         echo "matrix=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
