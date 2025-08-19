@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "labels": ["renovate", "terraform"],
+  "rangeStrategy": "auto",
+  "platformAutomerge": false,
+  "baseBranches": ["phorcys420/ci-refactor-3"],
+  "packageRules": [
+    {
+      "matchDatasources": ["terraform-provider"],
+      "groupName": "terraform providers",
+      "separateMinorPatch": true,
+      "enabled": true
+    },
+    {
+      "matchDatasources": ["terraform-module"],
+      "registryUrls": ["https://registry.coder.com"]
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": false,
+    "schedule": ["after 3am on sunday"],
+    "commitMessageAction": "update terraform lockfiles"
+  },
+  "regexManagers": [],
+  "semanticCommits": "enabled"
+}
