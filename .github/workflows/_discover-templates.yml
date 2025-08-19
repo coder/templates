@@ -10,13 +10,13 @@ on:
     outputs:
       matrix:
         description: "Matrix of templates to process"
-        value: ${{ jobs.discover.outputs.matrix }}
+        value: ${{ jobs.discover-templates.outputs.matrix }}
 
 permissions:
   contents: read
 
 jobs:
-  discover:
+  discover-templates:
     name: Discover templates
     runs-on: ubuntu-latest
     outputs:
