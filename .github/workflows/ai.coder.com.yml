@@ -12,7 +12,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: push-templates-ai-${{ github.ref }}
+  group: push-templates-ai.coder.com
   cancel-in-progress: true
 
 jobs:
