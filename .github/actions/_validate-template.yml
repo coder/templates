@@ -14,7 +14,7 @@ permissions:
 jobs:
   discover-templates:
     name: Discover templates
-    uses: ./.github/workflows/_discover-templates.yml
+    uses: ./.github/actions/_discover-templates.yml
     with:
       deployment_dir: ${{ inputs.deployment_dir }}
 

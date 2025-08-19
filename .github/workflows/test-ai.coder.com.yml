@@ -1,0 +1,26 @@
+name: Test templates
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'deployments/ai.coder.com/**'
+  pull_request:
+    paths:
+      - 'deployments/ai.coder.com/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-templates-ai.coder.com-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test-ai-coder-com:
+    name: Test ai.coder.com templates
+    uses: ./.github/actions/_validate-template.yml
+    with:
+      deployment_dir: deployments/ai.coder.com
