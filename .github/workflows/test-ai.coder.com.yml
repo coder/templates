@@ -31,7 +31,7 @@ jobs:
         with:
           deployment_dir: deployments/ai.coder.com
 
-  validate-templates:
+  validate:
     name: Validate template
     needs: discover-templates
     runs-on: ubuntu-latest
@@ -44,7 +44,7 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Validate template
-        uses: ./.github/actions/validate-templates
+        uses: ./.github/actions/validate-template
         with:
           template: ${{ matrix.template }}
           org: ${{ matrix.org }}

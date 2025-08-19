@@ -1,15 +1,15 @@
 name: "Validate Templates"
-description: "Validates Coder templates using Terraform validation"
+description: "Validates a singular Coder templates using Terraform validation"
 
 inputs:
   template:
     description: "Template name to validate"
     required: true
-  org:
-    description: "Organization name"
-    required: true
   template_dir:
     description: "Directory containing the template"
+    required: true
+  org:
+    description: "Organization name"
     required: true
 
 runs:
