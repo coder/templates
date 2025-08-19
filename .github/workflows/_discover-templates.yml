@@ -17,7 +17,6 @@ permissions:
 
 jobs:
   discover:
-    id: discover-templates
     name: Discover templates
     runs-on: ubuntu-latest
     outputs:
