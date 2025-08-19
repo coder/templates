@@ -1,78 +1,67 @@
-name: Discover Templates
+name: "Discover Templates"
+description: "Discovers changed templates in a deployment directory and outputs a matrix for processing"
 
-on:
-  workflow_call:
-    inputs:
-      deployment_dir:
-        description: "Top-level folder for this deployment (e.g. prod.example.com)"
-        type: string
-        required: true
-    outputs:
-      matrix:
-        description: "Matrix of templates to process"
-        value: ${{ jobs.discover-templates.outputs.matrix }}
+inputs:
+  deployment_dir:
+    description: "Top-level folder for this deployment (e.g. prod.example.com)"
+    required: true
 
-permissions:
-  contents: read
+outputs:
+  matrix:
+    description: "Matrix of templates to process"
+    value: ${{ steps.set-matrix.outputs.matrix }}
 
-jobs:
-  discover-templates:
-    name: Discover templates
-    runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ steps.set-matrix.outputs.matrix }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+runs:
+  using: "composite"
+  steps:
+    - id: range
+      name: Compute compare range
+      shell: bash
+      run: |
+        set -euo pipefail
+        EVENT="${{ github.event_name }}"
+        HEAD_SHA="${{ github.sha }}"
+        BASE_SHA=""
 
-      - id: range
-        name: Compute compare range
-        shell: bash
-        run: |
-          set -euo pipefail
-          EVENT="${{ github.event_name }}"
-          HEAD_SHA="${{ github.sha }}"
-          BASE_SHA=""
+        if [[ "$EVENT" == "pull_request" || "$EVENT" == "pull_request_target" ]]; then
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+        elif [[ "$EVENT" == "push" && -n "${{ github.event.before }}" ]]; then
+          BASE_SHA="${{ github.event.before }}"
+        fi
 
-          if [[ "$EVENT" == "pull_request" || "$EVENT" == "pull_request_target" ]]; then
-            BASE_SHA="${{ github.event.pull_request.base.sha }}"
-            HEAD_SHA="${{ github.event.pull_request.head.sha }}"
-          elif [[ "$EVENT" == "push" && -n "${{ github.event.before }}" ]]; then
-            BASE_SHA="${{ github.event.before }}"
+        if [[ -z "$BASE_SHA" ]]; then
+          if git rev-parse HEAD^ >/dev/null 2>&1; then
+            BASE_SHA="$(git rev-parse HEAD^)"
+          else
+            BASE_SHA="$(git rev-list --max-parents=0 HEAD | tail -n1)"
           fi
+        fi
 
-          if [[ -z "$BASE_SHA" ]]; then
-            if git rev-parse HEAD^ >/dev/null 2>&1; then
-              BASE_SHA="$(git rev-parse HEAD^)"
-            else
-              BASE_SHA="$(git rev-list --max-parents=0 HEAD | tail -n1)"
-            fi
-          fi
+        echo "Base commit -> $BASE_SHA"
+        echo "base_sha=$BASE_SHA" >> "$GITHUB_OUTPUT"
 
-          echo "Base commit -> $BASE_SHA"
-          echo "base_sha=$BASE_SHA" >> "$GITHUB_OUTPUT"
+        echo "HEAD commit -> $HEAD_SHA"
+        echo "head_sha=$HEAD_SHA" >> "$GITHUB_OUTPUT"
+    
+    - name: Ensure base commit is available (shallow)
+      shell: bash
+      env:
+        BASE_SHA: ${{ steps.range.outputs.base_sha }}
+      run: |
+        set -euo pipefail
+        if ! git cat-file -e "$BASE_SHA^{commit}" 2>/dev/null; then
+          git fetch --no-tags --prune --depth=1 origin "$BASE_SHA" || true
+        fi
 
-          echo "HEAD commit -> $HEAD_SHA"
-          echo "head_sha=$HEAD_SHA" >> "$GITHUB_OUTPUT"
-      
-      - name: Ensure base commit is available (shallow)
-        env:
-          BASE_SHA: ${{ steps.range.outputs.base_sha }}
-        run: |
-          set -euo pipefail
-          if ! git cat-file -e "$BASE_SHA^{commit}" 2>/dev/null; then
-            git fetch --no-tags --prune --depth=1 origin "$BASE_SHA" || true
-          fi
-
-      - id: set-matrix
-        name: Build matrix from changed <deployment>/<org>/<template>
-        shell: bash
-        env:
-          DEPLOYMENT_DIR: ${{ inputs.deployment_dir }}
-          BASE_SHA: ${{ steps.range.outputs.base_sha }}
-          HEAD_SHA: ${{ steps.range.outputs.head_sha }}
-        run: |
-          set -euo pipefail
-          python3 .github/scripts/discover-templates.py "$DEPLOYMENT_DIR" "$BASE_SHA" "$HEAD_SHA" > matrix.json
-          echo "matrix=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
+    - id: set-matrix
+      name: Build matrix from changed <deployment>/<org>/<template>
+      shell: bash
+      env:
+        DEPLOYMENT_DIR: ${{ inputs.deployment_dir }}
+        BASE_SHA: ${{ steps.range.outputs.base_sha }}
+        HEAD_SHA: ${{ steps.range.outputs.head_sha }}
+      run: |
+        set -euo pipefail
+        python3 .github/scripts/discover-templates.py "$DEPLOYMENT_DIR" "$BASE_SHA" "$HEAD_SHA" > matrix.json
+        echo "matrix=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
