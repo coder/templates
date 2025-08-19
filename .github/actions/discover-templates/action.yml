@@ -63,14 +63,5 @@ runs:
         HEAD_SHA: ${{ steps.range.outputs.head_sha }}
       run: |
         set -euo pipefail
-        
-        # If triggered by workflow_run, discover all templates instead of just changed ones
-        if [[ "${{ github.event_name }}" == "workflow_run" ]]; then
-          echo "Workflow triggered by workflow_run - discovering all templates"
-          python3 .github/scripts/discover-templates.py "$DEPLOYMENT_DIR" --all > matrix.json
-        else
-          echo "Discovering changed templates only"
-          python3 .github/scripts/discover-templates.py "$DEPLOYMENT_DIR" "$BASE_SHA" "$HEAD_SHA" > matrix.json
-        fi
-        
+        python3 .github/scripts/discover-templates.py "$DEPLOYMENT_DIR" "$BASE_SHA" "$HEAD_SHA" > matrix.json
         echo "matrix=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
