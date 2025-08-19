@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - blink/fix-actions-structure
     paths:
       - 'deployments/ai.coder.com/**'
 
