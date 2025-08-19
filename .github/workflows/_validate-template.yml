@@ -13,12 +13,14 @@ permissions:
 
 jobs:
   discover-templates:
+    id: discover-templates
     name: Discover templates
     uses: ./.github/workflows/_discover-templates.yml
     with:
       deployment_dir: ${{ inputs.deployment_dir }}
 
   validate-templates:
+    id: validate-templates
     name: Validate template
     needs: discover-templates
     runs-on: ubuntu-latest
