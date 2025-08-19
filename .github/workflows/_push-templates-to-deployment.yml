@@ -26,7 +26,7 @@ permissions:
 jobs:
   discover-templates:
     name: Discover templates
-    uses: ./.github/actions/discover-templates
+    uses: ./.github/workflows/_discover-templates.yml@phorcys420/ci-updates
     with:
       deployment_dir: ${{ inputs.deployment_dir }}
 

@@ -18,14 +18,14 @@ concurrency:
 jobs:
   test-ai-coder-com:
     name: Test ai.coder.com templates
-    uses: ./.github/actions/validate-template
+    uses: ./.github/workflows/_validate-template.yml@phorcys420/ci-updates
     with:
       deployment_dir: deployments/ai.coder.com
 
   ai-coder-com:
     name: ai.coder.com
     needs: test-ai-coder-com
-    uses: ./.github/actions/push-templates-to-deployment
+    uses: ./.github/workflows/_push-templates-to-deployment.yml@phorcys420/ci-updates
     with:
       deployment_dir: deployments/ai.coder.com
       coder_url: https://ai.coder.com

@@ -21,6 +21,6 @@ concurrency:
 jobs:
   test-ai-coder-com:
     name: Test ai.coder.com templates
-    uses: ./.github/actions/validate-template
+    uses: ./.github/workflows/_validate-template.yml@phorcys420/ci-updates
     with:
       deployment_dir: deployments/ai.coder.com
