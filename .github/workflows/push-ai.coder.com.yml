@@ -41,25 +41,6 @@ jobs:
         with:
           deployment_dir: deployments/ai.coder.com
 
-  validate-templates:
-    name: Validate template
-    needs: discover-templates
-    runs-on: ubuntu-latest
-    if: needs.discover-templates.outputs.matrix != '' && needs.discover-templates.outputs.matrix != '[]'
-    strategy:
-      fail-fast: false
-      matrix: ${{ fromJSON(needs.discover-templates.outputs.matrix) }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        
-      - name: Validate template
-        uses: ./.github/actions/validate-templates
-        with:
-          template: ${{ matrix.template }}
-          org: ${{ matrix.org }}
-          template_dir: ${{ matrix.dir }}
-
   push-templates:
     name: Push template
     needs: [discover-templates, validate-templates]
