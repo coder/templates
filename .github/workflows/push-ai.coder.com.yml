@@ -7,6 +7,13 @@ on:
       - phorcys420/ci-refactor-2
     paths:
       - 'deployments/ai.coder.com/**'
+  workflow_dispatch:
+    inputs:
+      activate:
+        description: 'Activate the pushed template versions'
+        type: boolean
+        default: false
+        required: false
 
 permissions:
   contents: read
@@ -61,4 +68,4 @@ jobs:
           template: ${{ matrix.template }}
           template_dir: ${{ matrix.dir }}
           org: ${{ matrix.org }}
-          activate: "true"
+          activate: ${{ inputs.activate || false }}

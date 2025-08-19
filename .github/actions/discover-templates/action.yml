@@ -43,6 +43,11 @@ runs:
 
         echo "HEAD commit -> $HEAD_SHA"
         echo "head_sha=$HEAD_SHA" >> "$GITHUB_OUTPUT"
+
+        # If invoked manually, instruct the script to list all templates
+        if [[ "$EVENT" == "workflow_dispatch" ]]; then
+          echo "LIST_ALL=true" >> "$GITHUB_ENV"
+        fi
     
     - name: Ensure base commit is available (shallow)
       shell: bash
