@@ -2,6 +2,12 @@ name: Push templates
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Test templates"]
+    types:
+      - completed
+    branches:
+      - main
   push:
     branches:
       - main
@@ -20,6 +26,7 @@ jobs:
   discover-templates:
     name: Discover templates
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name != 'workflow_run' }}
     outputs:
       matrix: ${{ steps.discover.outputs.matrix }}
     steps:
