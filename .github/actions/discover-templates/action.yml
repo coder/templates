@@ -65,8 +65,8 @@ runs:
       run: |
         set -euo pipefail
         if [[ "$EVENT" == "workflow_dispatch" ]]; then
-          python3 .github/actions/discover-templates/list-templates.py "$DEPLOYMENT_DIR" > matrix.json
+          python3 .github/actions/discover-templates/discover-templates.py --deployment-dir "$DEPLOYMENT_DIR" --list-all > matrix.json
         else
-          python3 .github/actions/discover-templates/discover-templates.py "$DEPLOYMENT_DIR" "$BASE_SHA" "$HEAD_SHA" > matrix.json
+          python3 .github/actions/discover-templates/discover-templates.py --deployment-dir "$DEPLOYMENT_DIR" --diff --base "$BASE_SHA" --head "$HEAD_SHA" > matrix.json
         fi
         echo "matrix=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
