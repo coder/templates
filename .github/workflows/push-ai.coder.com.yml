@@ -7,6 +7,13 @@ on:
       - phorcys420/ci-refactor-2
     paths:
       - 'deployments/ai.coder.com/**'
+  workflow_dispatch:
+    inputs:
+      activate:
+        description: 'Activate the pushed template versions'
+        type: boolean
+        default: false
+        required: false
 
 permissions:
   contents: read
@@ -28,10 +35,11 @@ jobs:
           fetch-depth: 0
           
       - id: discover
-        name: Discover changed templates
+        name: Discover templates
         uses: ./.github/actions/discover-templates
         with:
           deployment_dir: deployments/ai.coder.com
+          list_all: ${{ github.event_name == 'workflow_dispatch' }}
 
   push-and-validate:
     name: Validate and push template
@@ -61,4 +69,4 @@ jobs:
           template: ${{ matrix.template }}
           template_dir: ${{ matrix.dir }}
           org: ${{ matrix.org }}
-          activate: "true"
+          activate: ${{ inputs.activate || false }}
