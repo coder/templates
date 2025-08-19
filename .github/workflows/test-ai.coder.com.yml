@@ -15,7 +15,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: test-templates-ai.coder.com-${{ github.ref }}
+  group: test-templates-ai.coder.com
   cancel-in-progress: true
 
 jobs:
