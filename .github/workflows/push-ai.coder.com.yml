@@ -43,7 +43,7 @@ jobs:
 
   push-templates:
     name: Push template
-    needs: [discover-templates, validate-templates]
+    needs: discover-templates
     runs-on: ubuntu-latest
     if: needs.discover-templates.outputs.matrix != '' && needs.discover-templates.outputs.matrix != '[]'
     strategy:
