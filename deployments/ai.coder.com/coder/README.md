@@ -1,3 +1,3 @@
-# Organization - Coder
+# Organization - Public demos
 
-This organization is the built-in default organization, no templates should be in this organization.
+This organization is the built-in default organization, we use this for public (customer/prospect-facing demos).

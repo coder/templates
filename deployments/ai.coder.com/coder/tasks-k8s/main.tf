@@ -64,7 +64,10 @@ data "coder_workspace_preset" "default" {
         (servers, dev watchers, GUI apps).
       -	Built-in tools - use for everything else:
        (file operations, git commands, builds & installs, one-off shell commands)
-	    
+	
+      When you need to access the GitHub API (e.g to query GitHub issues, or pull requests), use the GitHub CLI (`gh`).
+      The GitHub CLI is already authenticated, use `gh api` for any REST API calls. The GitHub token is also available as `GH_TOKEN`.
+
       Remember this decision rule:
       - Stays running? → desktop-commander
       - Finishes immediately? → built-in tools
