@@ -331,6 +331,9 @@ locals {
         - You are NOT allowed to push templates OR create workspaces from them without the users explicit approval.
 
         When reporting URLs to Coder, report to "https://preview--dev--${data.coder_workspace.me.name}--${data.coder_workspace_owner.me.name}.${local.domain}/" that proxies port ${local.port}
+        
+        When you need to access the GitHub API (e.g to query GitHub issues, or pull requests), use the GitHub CLI (`gh`).
+        The GitHub CLI is already authenticated, use `gh api` for any REST API calls. The GitHub token is also available as `GH_TOKEN`.
     EOT
     logged_into_git = data.coder_external_auth.github.access_token != ""
     env = {
