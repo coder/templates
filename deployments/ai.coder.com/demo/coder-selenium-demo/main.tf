@@ -592,7 +592,7 @@ variable "workspace_namespace" {
   Kubernetes namespace to deploy the workspace into
 
   EOF
-  default = ""
+  default = "coder-ws-demo"
 }
 
 locals {
