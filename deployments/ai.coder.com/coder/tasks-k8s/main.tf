@@ -385,7 +385,7 @@ resource "coder_app" "preview" {
 module "k8s_ws_deployment" {
   source          = "./modules/k8s_ws_deployment"
   name            = "coder-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}"
-  namespace       = "coder-ws-experiment"
+  namespace       = "coder-ws"
   container_image = data.coder_parameter.container_image.value
   labels = {
     "com.coder.workspace.id"   = data.coder_workspace.me.id
