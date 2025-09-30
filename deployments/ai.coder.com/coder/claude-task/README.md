@@ -1,22 +1,7 @@
 # 🚀 Run a Task with Claude Code 💥💥
 
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
-
-> [!TIP]
-> Helpful advice for doing things better or more easily.
-
 > [!IMPORTANT]
-> Key information users need to know to achieve their goal.
-
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
-
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
-
-> [!NOTE]
-> This template is centrally managed by CI/CD in the [coder/templates](https://github.com/coder/templates) repository.
+> This template is centrally managed by CI/CD in `https://github.com/coder/templates`.
 
 This template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live "preview—all" automatically.
 

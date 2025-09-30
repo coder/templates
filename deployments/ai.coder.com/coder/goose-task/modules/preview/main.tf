@@ -1,53 +1,58 @@
 terraform {
-    required_version = ">= 1.0"
+  required_version = ">= 1.0"
 
-    required_providers {
-        coder = {
-            source  = "coder/coder"
-            version = ">= 0.23"
-        }
+  required_providers {
+    coder = {
+      source  = "coder/coder"
+      version = ">= 0.23"
     }
+  }
 }
 
 variable "agent_id" {
-    type = string
+  type = string
 }
 
 variable "port" {
-    type = number
+  type = number
+}
+
+variable "order" {
+  type    = number
+  default = 0
 }
 
 data "coder_workspace" "me" {}
 data "coder_workspace_owner" "me" {}
 
 locals {
-    domain = element(split("/", data.coder_workspace.me.access_url), -1)
+  domain = element(split("/", data.coder_workspace.me.access_url), -1)
 }
 
 resource "coder_app" "preview" {
-    agent_id     = var.agent_id
-    slug         = "preview"
-    display_name = "Preview your app"
-    icon         = "${data.coder_workspace.me.access_url}/emojis/1f50e.png"
-    url          = "http://localhost:${var.port}"
-    share        = "authenticated"
-    subdomain    = true
-    open_in      = "tab"
-    order = 3
-    healthcheck {
-        url       = "http://localhost:${var.port}/"
-        interval  = 5
-        threshold = 15
-    }
+  agent_id     = var.agent_id
+  slug         = "preview"
+  display_name = "Preview App"
+  icon         = "${data.coder_workspace.me.access_url}/emojis/1f50e.png"
+  url          = "http://localhost:${var.port}"
+  share        = "authenticated"
+  subdomain    = true
+  open_in      = "tab"
+  order        = var.order
+  healthcheck {
+    url       = "http://localhost:${var.port}/"
+    interval  = 5
+    threshold = 15
+  }
 }
 
 # Install and Initialize Claude Code
 resource "coder_script" "preview_app" {
-    agent_id     = var.agent_id
-    display_name = "Preview App"
-    icon         = "${data.coder_workspace.me.access_url}/emojis/1f50e.png"
-    run_on_start = true
-    script       = <<-EOT
+  agent_id     = var.agent_id
+  display_name = "Preview App"
+  icon         = "${data.coder_workspace.me.access_url}/emojis/1f50e.png"
+  run_on_start = true
+  script       = <<-EOT
         cat <<EOF >/tmp/index.html
         <!DOCTYPE html>
         <html lang="en">
