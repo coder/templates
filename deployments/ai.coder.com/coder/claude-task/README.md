@@ -1,7 +1,7 @@
 # 🚀 Run a Task with Claude Code 💥💥
 
 > [!IMPORTANT]
-> This template is centrally managed by CI/CD in the [coder/templates](https://github.com/coder/templates) repository.
+> This template is centrally managed by CI/CD in the repository, coder/templates.
 
 This template lets you quickly prototype *anything* using Claude Code inside a Coder workspace. Just tell Claude what you want to build, and it will generate code, run a development server, and show you a live "preview—all" automatically.
 
