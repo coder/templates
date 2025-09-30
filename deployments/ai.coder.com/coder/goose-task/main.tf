@@ -1,17 +1,13 @@
 # Managed in https://github.com/coder/templates
 terraform {
     required_providers {
-        kubernetes = {
-            source = "hashicorp/kubernetes"
-            version = "2.37.1"
-        }
         coder = {
-            source = "coder/coder"
-            version = "2.8.0"
+            source  = "coder/coder"
+            version = "2.11.0"
         }
-        random = {
-            source = "hashicorp/random"
-            version = "3.7.2"
+        kubernetes = {
+            source  = "hashicorp/kubernetes"
+            version = "2.38.0"
         }
     }
 }
@@ -26,6 +22,17 @@ variable "gh_username" {
     sensitive = true
 }
 
+variable "litellm_base_url" {
+    type = string
+    sensitive = true
+}
+
+variable "container_image" {
+  type      = string
+  sensitive = true
+  default = "codercom/example-universal:ubuntu"
+}
+
 data "coder_parameter" "ai_prompt" {
     type        = "string"
     name        = "AI Prompt"
@@ -35,6 +42,20 @@ data "coder_parameter" "ai_prompt" {
     mutable     = false
 }
 
+data "coder_parameter" "cost" {
+  type        = "number"
+  name        = "Workspace Cost"
+  icon        = "/emojis/1f4b8.png" # 💸
+  description = "This adjusts the CPU & Memory of this workspace where it's calculated as: cpu = ceil(cost/2), memory = cost, ephemeral-storage = cost*5 "
+  default     = 4
+  mutable     = false
+  validation {
+    min       = 2
+    max       = 8
+    monotonic = "increasing"
+  }
+}
+
 data "coder_parameter" "location" {
     name         = "location"
     display_name = "Location"
@@ -42,21 +63,15 @@ data "coder_parameter" "location" {
     mutable      = true
     order = 1
     default      = "us-east-2"
-    option {
-        value = "us-east-2"
-        name  = "Ohio"
-        icon  = "/emojis/1f1fa-1f1f8.png" # 🇺🇸
+  form_type = "dropdown"
+  dynamic "option" {
+    for_each = local.regions
+    content {
+      value = option.key
+      name  = option.value.name
+      icon  = option.value.icon
     }
-    option {
-        value = "us-west-2"
-        name  = "Oregon"
-        icon  = "/emojis/1f1fa-1f1f8.png" # 🇺🇸
-    }
-    option {
-        value = "eu-west-2"
-        name  = "London"
-        icon  = "/emojis/1f1ec-1f1e7.png" # 🇬🇧
-    }
+  }
 }
 
 data "coder_parameter" "git-repo" {
@@ -66,20 +81,6 @@ data "coder_parameter" "git-repo" {
     mutable      = false
     order = 0
     default      = ""
-}
-
-data "coder_parameter" "cost" {
-    type = "number"
-    name = "Workspace Cost"
-    icon = "/emojis/1f4b8.png" # 💸
-    description = "This adjusts the CPU & Memory of this workspace where it's calculated as: cpu = ceil(cost/2), memory = cost, ephemeral-storage = cost*5 "
-    default = 2
-    mutable = false
-    validation {
-        min       = 2
-        max       = 8
-        monotonic = "increasing"
-    }
 }
 
 data "coder_workspace_tags" "location" {
@@ -94,28 +95,39 @@ data "coder_external_auth" "github" {
 }
 
 locals {
-    region_map = {
-        "us-east-2" = "Ohio"
-        "us-west-2" = "Oregon"
-        "eu-west-2" = "London"
+    cost = data.coder_parameter.cost.value
+    regions = {
+        "us-east-2" = {
+        name = "Ohio"
+        icon = "/emojis/1f1fa-1f1f8.png" # 🇺🇸
+        }
+        "us-west-2" = {
+        name = "Oregon"
+        icon = "/emojis/1f1fa-1f1f8.png" # 🇺🇸
+        }
+        "eu-west-2" = {
+        name = "London"
+        icon = "/emojis/1f1ec-1f1e7.png" # 🇬🇧
+        }
     }
 }
 
 resource "coder_metadata" "pod_info" {
     count = data.coder_workspace.me.start_count
-    resource_id = kubernetes_pod.dev[0].id
-    daily_cost = data.coder_parameter.cost.value
+    resource_id = module.k8s_ws_deployment.agent_id
+    daily_cost = local.cost
     item {
         key   = "UUID"
-        value = random_uuid.prebuilds.result
+        value = local.workspace_name
     }
     item {
         key = "Location"
-        value = local.region_map[data.coder_parameter.location.value]
+        value = local.regions[data.coder_parameter.location.value].name
     }
 }
 
 data "coder_workspace" "me" {}
+
 data "coder_workspace_owner" "me" {}
 
 locals {
@@ -123,155 +135,83 @@ locals {
     work_folder = data.coder_parameter.git-repo.value == "" ? local.home_folder : join("/", [
         local.home_folder, element(split(".", element(split("/", data.coder_parameter.git-repo.value), -1)), 0)
     ])
+    workspace_name = "coder-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}"
 }
 
-resource "random_uuid" "prebuilds" {}
 
-resource "coder_agent" "dev" {
-    arch = "amd64"
-    os = "linux"
-    dir = local.home_folder
-
-    display_apps {
-        vscode          = false
-        vscode_insiders = false
-        web_terminal    = true
-        ssh_helper      = false
-    }
-
-    metadata {
-        display_name = "CPU Usage"
-        key          = "cpu_usage"
-        order        = 0
-        script       = "coder stat cpu"
-        interval     = 10
-        timeout      = 1
-    }
-
-    metadata {
-        display_name = "RAM Usage"
-        key          = "ram_usage"
-        order        = 1
-        script       = "coder stat mem"
-        interval     = 10
-        timeout      = 1
-    }
-
-    metadata {
-        display_name = "CPU Usage (Host)"
-        key          = "cpu_usage_host"
-        order        = 2
-        script       = "coder stat cpu --host"
-        interval     = 10
-        timeout      = 1
-    }
-
-    metadata {
-        display_name = "RAM Usage (Host)"
-        key          = "ram_usage_host"
-        order        = 3
-        script       = "coder stat mem --host"
-        interval     = 10
-        timeout      = 1
-    }
-
-    metadata {
-        display_name = "Swap Usage (Host)"
-        key          = "swap_usage_host"
-        order        = 4
-        script       = <<-EOT
-            #!/usr/bin/env bash
-            echo "$(free -b | awk '/^Swap/ { printf("%.1f/%.1f", $3/1024.0/1024.0/1024.0, $2/1024.0/1024.0/1024.0) }') GiB"
-        EOT
-        interval     = 10
-        timeout      = 1
-    }
-
-    metadata {
-        display_name = "Load Average (Host)"
-        key          = "load_host"
-        order        = 5
-        # get load avg scaled by number of cores
-        script   = <<-EOT
-            #!/usr/bin/env bash
-            echo "`cat /proc/loadavg | awk '{ print $1 }'` `nproc`" | awk '{ printf "%0.2f", $1/$2 }'
-        EOT
-        interval = 60
-        timeout  = 1
-    }
-
-    metadata {
-        display_name = "Disk Usage (Host)"
-        key          = "disk_host"
-        order        = 6
-        script       = "coder stat disk --path /"
-        interval     = 600
-        timeout      = 10
-    }
-
-    resources_monitoring {
-        memory {
-            enabled   = true
-            threshold = 80
-        }
-        volume {
-            enabled   = true
-            threshold = 90
-            path      = "/home/coder"
-        }
-    }
-}
-
-# TODO: do NOT host modules in template
 module "coder-login" {
-    source = "./modules/coder-login"
-    agent_id = coder_agent.dev.id
+  count   = data.coder_workspace.me.start_count
+  source  = "registry.coder.com/coder/coder-login/coder"
+  version = "1.1.0"
+
+  agent_id = module.k8s_ws_deployment.agent_id
 }
 
 module "git-clone" {
-    count = data.coder_parameter.git-repo.value == "" ? 0 : 1
-    source = "./modules/git-clone"
-    agent_id = coder_agent.dev.id
-    url      = data.coder_parameter.git-repo.value
-    base_dir = local.home_folder
+  count    = data.coder_parameter.git-repo.value == "" ? 0 : 1
+  source   = "registry.coder.com/coder/git-clone/coder"
+  version  = "1.1.1"
+  agent_id = module.k8s_ws_deployment.agent_id
+  url      = data.coder_parameter.git-repo.value
+  base_dir = local.home_folder
 }
 
 module "code-server" {
-    source   = "./modules/code-server"
-    agent_id = coder_agent.dev.id
-    folder = local.work_folder
+  count   = data.coder_workspace.me.start_count
+  source  = "registry.coder.com/coder/code-server/coder"
+  version = "1.3.1"
+
+  settings = {
+    "workbench.colorTheme" : "Default Dark Modern"
+  }
+
+  agent_id = module.k8s_ws_deployment.agent_id
+  folder   = local.work_folder
+  order    = 997
+  group    = "Web Editors"
 }
 
 module "vscode-desktop" {
-    source   = "./modules/vscode-desktop"
-    agent_id = coder_agent.dev.id
-    folder   = local.work_folder
+  count    = data.coder_workspace.me.start_count
+  source   = "registry.coder.com/coder/vscode-desktop/coder"
+  version  = "1.1.1"
+  agent_id = module.k8s_ws_deployment.agent_id
+  folder   = local.work_folder
+  order    = 998
+  group    = "Desktop IDEs"
 }
 
 module "cursor" {
-    source   = "./modules/cursor"
-    agent_id = coder_agent.dev.id
-    folder = local.work_folder
+  count    = data.coder_workspace.me.start_count
+  source   = "registry.coder.com/coder/cursor/coder"
+  version  = "1.3.2"
+  agent_id = module.k8s_ws_deployment.agent_id
+  folder   = local.work_folder
+  order    = 998
+  group    = "Desktop IDEs"
+}
+
+module "kiro" {
+  count    = data.coder_workspace.me.start_count
+  source   = "registry.coder.com/coder/kiro/coder"
+  version  = "1.1.0"
+  agent_id = module.k8s_ws_deployment.agent_id
+  folder   = local.work_folder
+  order    = 998
+  group    = "Desktop IDEs"
 }
 
 module "goose" {
-    source        = "./modules/goose"
-    agent_id      = coder_agent.dev.id
-    folder        = local.work_folder
-    install_goose = false
-    install_agentapi = true
-
-    pre_install_script = <<-EOF
-        # If user doesn't have a Github account or aren't 
-        # part of the coder-contrib organization, then they can use the `coder-contrib-bot` account.
-        if [ ! -z "$GH_USERNAME" ]; then
-            unset -v GIT_ASKPASS
-            unset -v GIT_SSH_COMMAND
-        fi
-    EOF
-    goose_version = "1.0.27"
+  source           = "registry.coder.com/coder/goose/coder"
+  version          = "2.1.2"
+  order = 0
+  agent_id         = module.k8s_ws_deployment.agent_id
+  folder           = local.work_folder
+  install_goose    = false
+  goose_version    = "1.9.0"
     goose_provider = "openai"
     goose_model = "anthropic.claude.haiku"
+  agentapi_version = "latest"
     additional_extensions = yamlencode({
         desktop-command = {
             name = "Desktop-commander"
@@ -299,8 +239,17 @@ locals {
 
 module "preview" {
     source = "./modules/preview"
-    agent_id = coder_agent.dev.id
+    agent_id = module.k8s_ws_deployment.agent_id
     port = local.port
+    order    = 1
+}
+
+module "filebrowser" {
+  count    = data.coder_workspace.me.start_count
+  source   = "registry.coder.com/coder/filebrowser/coder"
+  version  = "1.1.2"
+  agent_id = module.k8s_ws_deployment.agent_id
+  order = 2
 }
 
 locals {
@@ -352,98 +301,98 @@ locals {
         The GitHub CLI is already authenticated, use `gh api` for any REST API calls. The GitHub token is also available as `GH_TOKEN`.
     EOT
     logged_into_git = data.coder_external_auth.github.access_token != ""
-    env = {
-        CODER_AGENT_TOKEN = coder_agent.dev.token
-        OPENAI_HOST = "https://litellm.ai.demo.coder.com"
-        CODER_MCP_APP_STATUS_SLUG = "goose"
-        GOOSE_DISABLE_KEYRING = "1"
-        GOOSE_SYSTEM_PROMPT = local.system_prompt
-        GOOSE_TASK_PROMPT = local.task_prompt
-        GOOSE_LEAD_MODEL = "anthropic.claude.sonnet"
-        DISABLE_PROMPT_CACHING = "1"
-        GIT_AUTHOR_NAME = data.coder_workspace_owner.me.name
-        GIT_AUTHOR_EMAIL = data.coder_workspace_owner.me.email
-        GH_TOKEN = local.logged_into_git ? data.coder_external_auth.github.access_token : var.gh_token
-        NODE_OPTIONS = "--max-old-space-size=${512*data.coder_parameter.cost.value}"
-    }
 }
 
-resource "kubernetes_pod" "dev" {
+module "k8s_ws_deployment" {
+  source          = "./modules/k8s_ws_deployment"
+  name            = local.workspace_name
+  namespace       = "coder-ws"
+  container_image = var.container_image
+  labels = {
+    "com.coder.workspace.id"   = data.coder_workspace.me.id
+    "com.coder.workspace.name" = data.coder_workspace.me.name
+    "com.coder.user.id"        = data.coder_workspace_owner.me.id
+    "com.coder.user.username"  = data.coder_workspace_owner.me.name
+  }
+  annotations = {
+    "com.coder.user.email" = data.coder_workspace_owner.me.email
+  }
+  node_selector = {
+    "node.coder.io/used-for" = "coder-ws-all"
+    "node.coder.io/name"     = "coder"
+  }
+  pre_command                = <<-EOF
+        export PATH=$PATH:/home/coder/bin
+    EOF
+  envs = merge({
+    OPENAI_HOST = var.litellm_base_url
+    CODER_MCP_APP_STATUS_SLUG = "goose"
+    GOOSE_DISABLE_KEYRING = "1"
+    GOOSE_SYSTEM_PROMPT = local.system_prompt
+    GOOSE_TASK_PROMPT = local.task_prompt
+    GOOSE_LEAD_MODEL = "anthropic.claude.sonnet"
+    DISABLE_PROMPT_CACHING = "1"
+    NODE_OPTIONS                             = "--max-old-space-size=${512 * local.cost}"
 
-    count = data.coder_workspace.me.start_count
-
-    metadata {
-        name = random_uuid.prebuilds.result
-        namespace = "coder-ws"
+    GIT_AUTHOR_NAME     = coalesce(data.coder_workspace_owner.me.full_name, data.coder_workspace_owner.me.name)
+    GIT_AUTHOR_EMAIL    = "${data.coder_workspace_owner.me.email}"
+    GIT_COMMITTER_NAME  = coalesce(data.coder_workspace_owner.me.full_name, data.coder_workspace_owner.me.name)
+    GIT_COMMITTER_EMAIL = "${data.coder_workspace_owner.me.email}"
+    GH_TOKEN            = local.logged_into_git ? data.coder_external_auth.github.access_token : var.gh_token
+  })
+  envs_secret = {
+    OPENAI_API_KEY = {
+      name = "litellm"
+      key  = "token"
     }
-
-    spec {
-        termination_grace_period_seconds = 0
-        node_selector = {
-            "node.coder.io/used-for" = "coder-ws-all"
-            "node.coder.io/name" = "coder"
-        }
-
-        toleration {
-            key = "dedicated"
-            operator = "Equal"
-            value = "coder-ws"
-            effect = "NoSchedule"
-        }
-
-        container {
-            name = random_uuid.prebuilds.result
-            image = "750246862020.dkr.ecr.us-east-2.amazonaws.com/goose-ws:ubuntu-noble"
-            image_pull_policy = "IfNotPresent"
-            command = [
-                "/bin/bash", "-c", 
-                join("\n", [
-                    "export PATH=$PATH:${local.home_folder}/bin",
-                    local.logged_into_git ? "" : "git config --global credential.helper 'store --file=/tmp/.git-credentials'",
-                    local.logged_into_git ? "" : "echo \"https://$GH_USERNAME:$GH_TOKEN@github.com\" > /tmp/.git-credentials",
-                    coder_agent.dev.init_script
-                ])
-            ]
-            dynamic "env" {
-                for_each = local.env
-                content {
-                    name = env.key
-                    value = env.value
-                }
-            }
-            env {
-                name = "OPENAI_API_KEY"
-                value_from {
-                    secret_key_ref {
-                        name = "litellm"
-                        key = "token"
-                    }
-                }
-            }
-            dynamic "env" {
-                for_each = local.logged_into_git ? {} : {
-                    GH_USERNAME = var.gh_username
-                }
-                content {
-                    name = env.key
-                    value = env.value
-                }
-            }
-            resources {
-                limits = {
-                    cpu = "${ceil(data.coder_parameter.cost.value/2)}"
-                    memory = "${data.coder_parameter.cost.value}G"
-                }
-            }
-            security_context {
-                allow_privilege_escalation = true
-                privileged = false
-                read_only_root_filesystem = false
-            }
-        }
-    }
-
-    lifecycle {
-        ignore_changes = [ spec.0.container.0.env ]
-    }
+  }
+  cpu                        = ceil(local.cost / 2) * 1000
+  memory                     = local.cost
+  privileged                 = false
+  allow_privilege_escalation = true
+  read_only_root_filesystem  = false
+  attach_volume              = true
+  pvc_storage_size           = local.cost * 5
+  metadata_blocks = [{
+    display_name = "CPU Usage (Workspace)"
+    key          = "cpu_usage"
+    order        = 0
+    script       = "coder stat cpu"
+    interval     = 10
+    timeout      = 1
+    }, {
+    display_name = "RAM Usage (Workspace)"
+    key          = "ram_usage"
+    order        = 1
+    script       = "coder stat mem"
+    interval     = 10
+    timeout      = 1
+    }, {
+    display_name = "CPU Usage (Host)"
+    key          = "cpu_usage_host"
+    order        = 2
+    script       = "coder stat cpu --host"
+    interval     = 10
+    timeout      = 1
+    }, {
+    display_name = "RAM Usage (Host)"
+    key          = "ram_usage_host"
+    order        = 3
+    script       = "coder stat mem --host"
+    interval     = 10
+    timeout      = 1
+    }, {
+    display_name = "Disk Usage (Host)"
+    key          = "disk_host"
+    order        = 6
+    script       = "coder stat disk --path / --prefix Gi"
+    interval     = 600
+    timeout      = 10
+  }]
+  tolerations = [{
+    key      = "dedicated"
+    operator = "Equal"
+    value    = "coder-ws"
+    effect   = "NoSchedule"
+  }]
 }
