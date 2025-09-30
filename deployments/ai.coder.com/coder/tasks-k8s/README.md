@@ -9,7 +9,7 @@ tags: [kubernetes, container, ai, tasks]
 # Run Coder Tasks on Kubernetes
 
 > [!IMPORTANT]
-> This template is centrally managed by CI/CD in the [coder/templates](https://github.com/coder/templates) repository.
+> This template is centrally managed by CI/CD in the repository, coder/templates.
 
 This is an example template for running [Coder Tasks](https://coder.com/docs/ai-coder/tasks), Claude Code, along with a [real world application](https://realworld-docs.netlify.app/).
 
