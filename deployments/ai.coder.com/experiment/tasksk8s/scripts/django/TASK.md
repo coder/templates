@@ -1,0 +1,1 @@
+Work on the Git project in your current directory. Research and analyze the "README.md" and "index.html" to learn how the app works as I'll be asking you to modify.
