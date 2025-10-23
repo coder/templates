@@ -69,6 +69,6 @@ jobs:
           coder_session_token: ${{ secrets.CODER_SESSION_TOKEN_AI }}
           template: ${{ matrix.template }}
           template_dir: ${{ matrix.dir }}
-          template_variables: ${{ toJson(vars[format('CODER_{0}_{1}', matrix.org, matrix.template)]) || '' }}
+          template_variables: ${{ toJson(secrets[format('CODER_{0}_{1}', matrix.org, matrix.template)]) || '' }}
           org: ${{ matrix.org }}
           activate: ${{ inputs.activate || false }}
