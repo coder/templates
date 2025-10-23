@@ -53,7 +53,6 @@ runs:
         echo "Pushing template '${{ inputs.template }}' for org '${{ inputs.org }}' from '${{ inputs.template_dir }}'"
         TEMPLATE_VARS='${{ inputs.template_variables }}'
         echo "$TEMPLATE_VARS"
-        test -z "$TEMPLATE_VARS" || echo $?
         if [ "$TEMPLATE_VARS" = "\"\"" ] || [ "$TEMPLATE_VARS" = "null" ] || [ -z "$TEMPLATE_VARS" ]; then
             TEMPLATE_VARS=""
         else
