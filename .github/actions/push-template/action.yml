@@ -51,10 +51,10 @@ runs:
       run: |
         set -euo pipefail
         echo "Pushing template '${{ inputs.template }}' for org '${{ inputs.org }}' from '${{ inputs.template_dir }}'"
-        TEMPLATE_VARS=${{ inputs.template_variables }}
+        TEMPLATE_VARS='${{ inputs.template_variables }}'
         echo "$TEMPLATE_VARS"
         test -z "$TEMPLATE_VARS" || echo $?
-        if [ -z "$TEMPLATE_VARS" ]; then
+        if [ "$TEMPLATE_VARS" = "\"\"" ] || [ "$TEMPLATE_VARS" = "null" ] || [ -z "$TEMPLATE_VARS" ]; then
             TEMPLATE_VARS=""
         else
             TEMPLATE_VARS="--var $(echo $TEMPLATE_VARS | jq -r 'fromjson | to_entries | map("\(.key)=\(.value)") | join(",")')"
