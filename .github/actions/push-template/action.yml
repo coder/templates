@@ -52,7 +52,8 @@ runs:
         set -euo pipefail
         echo "Pushing template '${{ inputs.template }}' for org '${{ inputs.org }}' from '${{ inputs.template_dir }}'"
         TEMPLATE_VARS=$(echo '${{ inputs.template_variables }}')
-        printf "$TEMPLATE_VARS"
+        echo "$TEMPLATE_VARS"
+        test -z "$TEMPLATE_VARS" && echo $?
         if [ -z "$TEMPLATE_VARS" ]; then
             TEMPLATE_VARS=""
         else
