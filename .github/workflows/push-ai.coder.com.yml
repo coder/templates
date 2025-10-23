@@ -5,8 +5,9 @@ on:
     branches:
       - main
       - phorcys420/ci-refactor-2
+      - jatcod3r/ci-test
     paths:
-      - 'deployments/ai.coder.com/**'
+      - 'deployments/ai.coder.com/experiment/**'
   workflow_dispatch:
     inputs:
       activate:
