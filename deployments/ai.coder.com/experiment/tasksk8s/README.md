@@ -6,7 +6,7 @@ verified: false
 tags: [kubernetes, container, ai, tasks]
 ---
 
-# Run Coder Tasks on Kubernetes Tests
+# Run Coder Tasks on Kubernetes
 
 > [!IMPORTANT]
 > This template is centrally managed by CI/CD in the repository, coder/templates.
