@@ -60,13 +60,13 @@ runs:
         fi
         echo "$TEMPLATE_VARS"
 
-        # coder templates push "${{ inputs.template }}" \
-        #   --org="${{ inputs.org }}" \
-        #   --directory="${{ inputs.template_dir }}" \
-        #   --name="${{ steps.meta.outputs.version_name }}" \
-        #   --message="${{ steps.meta.outputs.message }}" \
-        #   --activate="${{ inputs.activate }}" \
-        #   --yes $TEMPLATE_VARS
+        coder templates push "${{ inputs.template }}" \
+          --org="${{ inputs.org }}" \
+          --directory="${{ inputs.template_dir }}" \
+          --name="${{ steps.meta.outputs.version_name }}" \
+          --message="${{ steps.meta.outputs.message }}" \
+          --activate="${{ inputs.activate }}" \
+          --yes $TEMPLATE_VARS
           
           
 
