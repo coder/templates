@@ -52,7 +52,7 @@ runs:
         set -euo pipefail
         echo "Pushing template '${{ inputs.template }}' for org '${{ inputs.org }}' from '${{ inputs.template_dir }}'"
         TEMPLATE_VARS='${{ inputs.template_variables }}'
-        echo "$TEMPLATE_VARS"
+        printf "$TEMPLATE_VARS"
         if [ -z "$TEMPLATE_VARS" ]; then
             TEMPLATE_VARS=""
         else
