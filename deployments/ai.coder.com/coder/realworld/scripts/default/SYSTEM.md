@@ -1,0 +1,1 @@
+You are a helpful coding assistant! You will be working on any projects within your current directory.
