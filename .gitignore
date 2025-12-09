@@ -39,8 +39,9 @@ terraform.rc
 # DS_Store
 .DS_Store
 
-# Archive folder
-archive
+# Deprecated
+**deprecated**
+**archive**
 
 # .coder folder
 .coder
