@@ -36,7 +36,8 @@ variable "templates" {
 }
 
 locals {
-    env = {
+    coder_shell_env = {
+        # Coder CLI doesn't expose this environment variable, but use w/ caution
         CODER_SESSION_TOKEN = nonsensitive(var.token)
         CODER_URL = var.access_url
     }
@@ -60,7 +61,7 @@ resource "null_resource" "upgrade-and-init" {
     provisioner "local-exec" {
         working_dir = each.value.path
         command = "terraform init -upgrade && terraform providers lock -platform=${each.value.platform}"
-        environment = local.env
+        environment = local.coder_shell_env
     }
 }
 
@@ -86,6 +87,10 @@ resource "coderd_template" "this" {
         name        = "stable-${formatdate("YYYY-MM-DD_hh-mm-ss", time_static.this[each.key].rfc3339)}"
         description = "Stable Version."
         directory   = each.value.path
+        provisioner_tags = toset([{
+            name = "region" 
+            value = "us-east-2"
+        }])
         active = true
     }]
 }
@@ -101,6 +106,49 @@ resource "null_resource" "remove-public-access" {
     provisioner "local-exec" {
         working_dir = each.value.path
         command = "coder templates edit --private -O ${var.org_id} ${each.key}"
-        environment = local.env
+        environment = local.coder_shell_env
+    }
+}
+
+# Test Workspace Creation
+resource "null_resource" "test-ws" {
+    for_each = var.templates
+    triggers = {
+        # Ensure that modules are always re-initialized when checksum changes.
+        run_on_checksum = "${data.archive_file.init[each.key].id}"
+        template_id = "${coderd_template.this[each.key].id}"
+    }
+    provisioner "local-exec" {
+        working_dir = each.value.path
+        command = <<EOF
+            set -euo pipefail
+            coder create "${substr(coderd_template.this[each.key].id, 0, 10)}-ci-check" \
+                --org="${var.org_id}" \
+                --template="${each.key}" \
+                --template-version="stable-${formatdate("YYYY-MM-DD_hh-mm-ss", time_static.this[each.key].rfc3339)}" \
+                --yes
+
+            echo -e "\033[1;32mSuccess!\033[0m Coder can build the workspace."
+        EOF
+        environment = local.coder_shell_env
+    }
+}
+
+resource "null_resource" "clean-ws" {
+    for_each = var.templates
+    triggers = {
+        # Ensure that modules are always re-initialized when checksum changes.
+        null_resource_id = "${null_resource.test-ws[each.key].id}"
+    }
+    provisioner "local-exec" {
+        working_dir = each.value.path
+        command = <<EOF
+            set -euo pipefail
+            coder delete "${substr(coderd_template.this[each.key].id, 0, 10)}-ci-check" \
+                --yes
+
+            echo -e "\033[1;32mSuccess!\033[0m Coder workspace cleaned."
+        EOF
+        environment = local.coder_shell_env
     }
 }
