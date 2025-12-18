@@ -1,0 +1,123 @@
+name: Push Templates
+description: "Pushes a singular Coder template to a deployment"
+
+inputs:
+  deployment_dir:
+    description: "Top-level folder for this deployment (e.g. prod.example.com)"
+    required: true
+  coder_url:
+    description: "Coder deployment URL, e.g. https://prod.example.com"
+    required: true
+  coder_session_token:
+    description: "Coder session token for authentication"
+    required: true
+  activate:
+    description: "Whether to activate the new template version"
+    required: false
+    default: "false"
+  template:
+    description: "Template name to push"
+    required: true
+  template_dir:
+    description: "Directory containing the template"
+    required: true
+  org:
+    description: "Organization name"
+    required: true
+
+# Assume multiple templates are updated simultaneously (i.e. SHA has changed amongst all of them)
+# All templates must succeed validation prior to being merged into main.
+# Once it reaches main, another workflow will push the templates for real.
+    
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup TF
+      uses: coder/coder/.github/actions/setup-tf@main
+
+    - name: Setup Coder CLI
+      uses: coder/setup-action@v1
+      with:
+        access_url: ${{ inputs.coder_url }}
+        coder_session_token: ${{ inputs.coder_session_token }}
+
+    - id: meta
+      name: Compute version name and message
+      shell: bash
+      working-directory: "${{ inputs.template_dir }}"
+      run: |
+        set -euo pipefail
+        echo "version_name=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+        echo "message=$(git log --format=%s -n 1 ${{ github.sha }})" >> "$GITHUB_OUTPUT"
+
+    # Pre-setup
+    - id: init-template
+      name: Init Template
+      shell: bash
+      working-directory: "${{ inputs.template_dir }}"
+      run: terraform init -backend=false && terraform providers lock -platform=linux_amd64
+
+    # Has it been formatted?
+    - id: format-check
+      name: Format Checkedness
+      shell: bash
+      working-directory: "${{ inputs.template_dir }}"
+      run: |
+        terraform fmt -check && echo -e "\033[1;32mSuccess!\033[0m The configuration is correctly formatted."
+
+    # Is the Terraform legit?
+    - id: legit-check
+      name: Legit Checkedness
+      shell: bash
+      working-directory: "${{ inputs.template_dir }}"
+      run: terraform validate
+
+    # Try pushing to Coder, remove ACL and prefer only headless access (owners should troubleshoot).
+    # GET TEST PROVISIONER SETUP!
+    - id: pushable-check
+      name: Pushable Checkedness
+      shell: bash
+      run: |
+        set -euo pipefail
+        coder templates push "${{ inputs.template }}-ci-check" \
+          --org="${{ inputs.org }}" \
+          --name="${{ steps.meta.outputs.version_name }}" \
+          --directory="${{ inputs.template_dir }}" \
+          --message="${{ steps.meta.outputs.message }}" \
+          --provisioner-tag="region=us-east-2" \
+          --activate="${{ inputs.activate }}" \
+          --yes
+
+        coder templates edit "${{ inputs.template }}-ci-check" \
+          --org="${{ inputs.org }}" \
+          --private
+
+        echo -e "\033[1;32mSuccess!\033[0m Coder can build and push the template."
+
+    # Can it build w/ default parameters?
+    - name: workspace-create-check
+      shell: bash
+      working-directory: "${{ inputs.template_dir }}"
+      run: |
+        set -euo pipefail
+        coder create "${{ inputs.template }}-${{ github.run_id }}-${{ github.run_attempt }}" \
+          --org="${{ inputs.org }}" \
+          --template="${{ inputs.template }}-ci-check" \
+          --template-version="${{ steps.meta.outputs.version_name }}" \
+          --yes
+
+        echo -e "\033[1;32mSuccess!\033[0m Coder can build the workspace."
+
+    # Clean Up!
+    - name: cleanup
+      if: always()
+      shell: bash
+      run: |
+        set -euo pipefail
+        coder delete "${{ inputs.template }}-${{ github.run_id }}-${{ github.run_attempt }}" \
+          --yes || true
+
+        coder templates delete "${{ inputs.template }}-ci-check" \
+          --org="${{ inputs.org }}" \
+          --yes || true

@@ -32,13 +32,25 @@ data "coderd_organization" "demo" {
   name     = "demo"
 }
 
-module "ai-coder-com-experiment" {
-  source = "../modules/template"
-  providers = {
-    coderd = coderd.ai-coder-com
-  }
-  access_url = var.ai_coder_com_access_url
-  token      = var.ai_coder_com_token
-  org_id     = data.coderd_organization.experiment.id
-  templates = {}
-}
+# module "ai-coder-com-experiment" {
+#   source = "../modules/template"
+#   providers = {
+#     coderd = coderd.ai-coder-com
+#   }
+#   access_url = var.ai_coder_com_access_url
+#   token      = var.ai_coder_com_token
+#   org_id     = data.coderd_organization.experiment.id
+#   templates = {
+#     "pod-kitchen-sink-matyas" = {
+#       path         = "${path.module}/../deployments/ai.coder.com/experiment/pod-kitchen-sink-matyas"
+#       description = "A universal template that includes all sorts of IDEs! Used for demo purposes only!"
+#       display_name = "Matyas Universal Pod Template"
+#       icon         = "/emojis/1fa90.png"
+#     }
+#   }
+# }
+
+# import {
+#   to = module.ai-coder-com-experiment.coderd_template.this["pod-kitchen-sink-matyas"]
+#   id = "experiment/pod-kitchen-sink-matyas"
+# }
