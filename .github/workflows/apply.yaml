@@ -1,0 +1,65 @@
+name: Apply Terraform
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'deployments/ai.coder.com/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-templates-ai.coder.com
+  cancel-in-progress: true
+
+jobs:
+  apply:
+    name: Validate template
+    needs: discover-templates
+    runs-on: ubuntu-latest
+    if: needs.discover-templates.outputs.matrix != '' && needs.discover-templates.outputs.matrix != '[]'
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.discover-templates.outputs.matrix) }}
+    steps:
+      - name: Setup TF
+        uses: coder/coder/.github/actions/setup-tf@main
+
+      - name: Setup Coder CLI
+        uses: coder/setup-action@v1
+        with:
+          access_url: ${{ inputs.coder_url }}
+          coder_session_token: ${{ inputs.coder_session_token }}
+
+      - id: meta
+        name: Compute version name and message
+        shell: bash
+        working-directory: "${{ inputs.template_dir }}"
+        run: |
+          set -euo pipefail
+          echo "version_name=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+          echo "message=$(git log --format=%s -n 1 ${{ github.sha }})" >> "$GITHUB_OUTPUT"
+
+      # Pre-setup
+      - id: init-template
+        name: Init Template
+        shell: bash
+        working-directory: "${{ inputs.template_dir }}"
+        run: terraform init -backend=false && terraform providers lock -platform=linux_amd64
+
+      # Has it been formatted?
+      - id: format-check
+        name: Format Checkedness
+        shell: bash
+        working-directory: "${{ inputs.template_dir }}"
+        run: |
+          terraform fmt -check && echo -e "\033[1;32mSuccess!\033[0m The configuration is correctly formatted."
+
+      # Is the Terraform legit?
+      - id: legit-check
+        name: Legit Checkedness
+        shell: bash
+        working-directory: "${{ inputs.template_dir }}"
+        run: terraform validate

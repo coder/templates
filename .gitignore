@@ -1,5 +1,9 @@
-# Local .terraform directories
+# Locals
 **/.terraform/*
+**deprecated**
+**archive**
+.cache_ggshield
+.DS_Store
 
 # .tfstate files
 *.tfstate
@@ -35,13 +39,6 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
-
-# DS_Store
-.DS_Store
-
-# Deprecated
-**deprecated**
-**archive**
 
 # .coder folder
 .coder
