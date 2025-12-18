@@ -1,0 +1,13 @@
+#cloud-config
+cloud_final_modules: [["scripts-user", "always"]]
+groups:
+- docker: []
+hostname: ${user}
+package_reboot_if_required: true
+package_update: true
+package_upgrade: true
+users:
+- groups: ["docker"]
+  name: ${user}
+  shell: "/bin/bash"
+  sudo: "ALL=(ALL) NOPASSWD:ALL"
