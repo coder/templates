@@ -139,6 +139,12 @@ provider "kubernetes" {
 data "coder_workspace" "me" {}
 data "coder_workspace_owner" "me" {}
 
+data "coder_workspace_tags" "region" {
+    tags = {
+        region = "us-east-2"
+    }
+}
+
 data "coder_parameter" "disk_size" {
   name        = "PVC storage size"
   type        = "number"
