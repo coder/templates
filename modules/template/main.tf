@@ -35,6 +35,13 @@ variable "templates" {
     }))
 }
 
+locals {
+    env = {
+        CODER_SESSION_TOKEN = nonsensitive(var.token)
+        CODER_URL = var.access_url
+    }
+}
+
 data "archive_file" "init" {
   for_each = var.templates
   type        = "zip"
@@ -53,10 +60,7 @@ resource "null_resource" "upgrade-and-init" {
     provisioner "local-exec" {
         working_dir = each.value.path
         command = "terraform init -upgrade && terraform providers lock -platform=${each.value.platform}"
-        environment = {
-            CODER_SESSION_TOKEN = var.token
-            CODER_URL = var.access_url
-        }
+        environment = local.env
     }
 }
 
@@ -97,9 +101,6 @@ resource "null_resource" "remove-public-access" {
     provisioner "local-exec" {
         working_dir = each.value.path
         command = "coder templates edit --private -O ${var.org_id} ${each.key}"
-        environment = {
-            CODER_SESSION_TOKEN = var.token
-            CODER_URL = var.access_url
-        }
+        environment = local.env
     }
 }
