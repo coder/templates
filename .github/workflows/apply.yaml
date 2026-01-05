@@ -14,15 +14,10 @@ concurrency:
   group: test-templates-ai.coder.com
   cancel-in-progress: true
 
-jobs:
+jobs:  
   apply:
     name: Validate template
-    needs: discover-templates
     runs-on: ubuntu-latest
-    if: needs.discover-templates.outputs.matrix != '' && needs.discover-templates.outputs.matrix != '[]'
-    strategy:
-      fail-fast: false
-      matrix: ${{ fromJSON(needs.discover-templates.outputs.matrix) }}
     steps:
       - name: Setup TF
         uses: coder/coder/.github/actions/setup-tf@main
