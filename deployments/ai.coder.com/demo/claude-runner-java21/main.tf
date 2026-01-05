@@ -319,6 +319,17 @@ locals {
     # "redhat.vscode-xml",
     # "redhat.vscode-yaml"
   ]
+  coder-mux-settings = {
+    "anthropic": {
+      "serviceTier": "default",
+      "models": [
+        "anthropic.claude-haiku-4-5-20251001-v1:0",
+        "anthropic.claude-opus-4-5-20251101-v1:0"
+      ],
+      "baseUrl": "${data.coder_workspace.me.access_url}/api/v2/aibridge/anthropic",
+      "apiKey": "${data.coder_workspace_owner.me.session_token}"
+    }
+  }
 }
 
 locals {
@@ -464,6 +475,15 @@ locals {
     hasAcknowledgedCostThreshold = true
     hasCompletedOnboarding = true
   }
+
+  container_startup_script = <<-EOT
+    set -e
+
+    cd ~
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+    \. "$HOME/.nvm/nvm.sh"
+    nvm install 24
+  EOT
 }
 
 resource "coder_agent" "main" {
@@ -486,6 +506,10 @@ resource "coder_agent" "main" {
 
   startup_script = <<-EOT
     set -e
+    
+    echo "Setting up Coder Mux config..."
+    mkdir -p ~/.mux
+    echo "${replace(jsonencode(local.coder-mux-settings), "\"", "\\\"")}" > ~/.mux/providers.jsonc
 
     # Create the repo directory if it doesn't exist
     mkdir -p /home/coder/repo
@@ -611,6 +635,16 @@ module "code-server" {
   extensions   = local.vscode-web-extensions
   settings     = local.vscode-web-settings
   group        = "Web IDEs"
+}
+
+module "cmux" {
+  count    = data.coder_workspace.me.start_count
+  source   = "registry.coder.com/coder/mux/coder"
+  version  = "1.0.6"
+  agent_id = coder_agent.main.id
+  install_version = "latest"
+  subdomain = true
+  port     = 8081
 }
 
 resource "coder_ai_task" "this" {
@@ -785,7 +819,7 @@ resource "kubernetes_deployment_v1" "main" {
           name              = "dev"
           image             = var.java_image
           image_pull_policy = "Always"
-          command           = ["sh", "-c", coder_agent.main.init_script]
+          command           = ["sh", "-c", join("\n", [local.container_startup_script, coder_agent.main.init_script])]
           security_context {
             run_as_user = "1000"
           }
