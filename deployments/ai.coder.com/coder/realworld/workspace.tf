@@ -16,7 +16,7 @@ locals {
 }
 
 resource "coder_metadata" "pod_info" {
-  resource_id = try(kubernetes_deployment.this[0].id, "")
+  resource_id = try(kubernetes_deployment_v1.this[0].id, "")
   daily_cost = 1
   item {
     key   = "Workspace UUID"
@@ -93,7 +93,7 @@ locals {
   }, local.user_settings)
 }
 
-resource "kubernetes_deployment" "this" {
+resource "kubernetes_deployment_v1" "this" {
   count            = data.coder_workspace.me.start_count
   wait_for_rollout = false
   metadata {

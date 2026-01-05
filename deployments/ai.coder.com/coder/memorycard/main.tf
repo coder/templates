@@ -194,7 +194,6 @@ locals {
     "workbench.colorTheme" : "Default Dark Modern",
     "workbench.preferredDarkColorTheme" : "Default Dark Modern",
     "workbench.preferredHighContrastColorTheme" : "Default High Contrast",
-    # "roo-cline.autoImportSettingsPath" : "${local.home_folder}/.roo/roo-init.json",
     "git.useIntegratedAskPass" : false,
     "github.gitAuthentication" : false,
     "security.workspace.trust.enabled": false,
@@ -205,8 +204,18 @@ locals {
   }
   vscode-web-extensions = [
     "esbenp.prettier-vscode",
-    # "RooVeterinaryInc.roo-cline"
   ]
+  coder-mux-settings = {
+    "anthropic": {
+      "serviceTier": "default",
+      "models": [
+        "anthropic.claude-haiku-4-5-20251001-v1:0",
+        "anthropic.claude-opus-4-5-20251101-v1:0"
+      ],
+      "baseUrl": "${data.coder_workspace.me.access_url}/api/v2/aibridge/anthropic",
+      "apiKey": "${data.coder_workspace_owner.me.session_token}"
+    }
+  }
 }
 
 module "git-clone" {
@@ -230,7 +239,7 @@ module "vscode-web" {
 
   agent_id = coder_agent.k8s-deployment.id
   folder   = local.work_folder
-  order    = 997
+  order    = 996
   group    = "Web Editors"
 }
 
@@ -240,7 +249,7 @@ module "vscode-desktop" {
   # source   = "./modules/vscode-desktop"
   agent_id = coder_agent.k8s-deployment.id
   folder   = local.work_folder
-  order    = 998
+  order    = 997
   group    = "Desktop IDEs"
 }
 
@@ -270,25 +279,10 @@ locals {
         echo "Failed to install extension: $extension: $output"
       fi
     done
-
-    # ROO_INIT_FILE="$HOME/.roo/roo-init.json"
-    # mkdir -p "$(dirname "$ROO_INIT_FILE")"
-    # cat > "$ROO_INIT_FILE" <<EOT
-    # {
-    #   "providerProfiles": {
-    #     "currentApiConfigName": "default",
-    #     "apiConfigs": {
-    #       "default": {
-    #           "litellmBaseUrl": "${data.coder_workspace.me.access_url}/api/experimental/aibridge/anthropic",
-    #           "litellmApiKey": "${data.coder_workspace_owner.me.session_token}",
-    #           "litellmModelId": "anthropic.claude.haiku",
-    #           "apiProvider": "litellm",
-    #           "id": "wbtoigff1bh"
-    #       }
-    #     }
-    #   }
-    # }
-    # EOT
+    
+    echo "Setting up Coder Mux config..."
+    mkdir -p ~/.mux
+    echo "${replace(jsonencode(local.coder-mux-settings), "\"", "\\\"")}" > ~/.mux/providers.jsonc
   EOF
 }
 
@@ -384,12 +378,10 @@ locals {
     }
     env = {
       CLAUDE_CODE_ENABLE_TELEMETRY             = "1",
-      CLAUDE_CODE_MAX_OUTPUT_TOKENS            = "8192"
-      # CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC = "1"
-      # DISABLE_PROMPT_CACHING                   = "1"
-      ANTHROPIC_BASE_URL                       = "${data.coder_workspace.me.access_url}/api/experimental/aibridge/anthropic"
-      ANTHROPIC_MODEL                          = "anthropic.claude.sonnet"
-      ANTHROPIC_SMALL_FAST_MODEL               = "anthropic.claude.haiku"
+      CLAUDE_CODE_MAX_OUTPUT_TOKENS            = "8192",
+      ANTHROPIC_BASE_URL                       = "${data.coder_workspace.me.access_url}/api/v2/aibridge/anthropic"
+      ANTHROPIC_MODEL                          = "anthropic.claude-opus-4-5-20251101-v1:0"
+      ANTHROPIC_SMALL_FAST_MODEL               = "anthropic.claude-haiku-4-5-20251001-v1:0"
       NODE_OPTIONS                             = "--max-old-space-size=8192"
 
       GIT_SSH_COMMAND     = ""
@@ -443,6 +435,18 @@ module "claude-code" {
   boundary_proxy_port              = "8087"
 
   order = 0
+}
+
+module "cmux" {
+  count    = data.coder_workspace.me.start_count
+  source   = "registry.coder.com/coder/mux/coder"
+  version  = "1.0.6"
+  agent_id = coder_agent.k8s-deployment.id
+  install_version = "latest"
+  subdomain = true
+  port     = 8081
+  
+  order    = 998
 }
 
 resource "coder_ai_task" "this" {
