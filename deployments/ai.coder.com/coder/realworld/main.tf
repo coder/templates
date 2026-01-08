@@ -204,10 +204,7 @@ locals {
   coder-mux-settings = {
     "anthropic": {
       "serviceTier": "default",
-      "models": [
-        "anthropic.claude-haiku-4-5-20251001-v1:0",
-        "anthropic.claude-opus-4-5-20251101-v1:0"
-      ],
+      "models": [],
       "baseUrl": "${data.coder_workspace.me.access_url}/api/v2/aibridge/anthropic",
       "apiKey": "${data.coder_workspace_owner.me.session_token}"
     }
@@ -370,8 +367,8 @@ locals {
       CLAUDE_CODE_ENABLE_TELEMETRY             = "1",
       CLAUDE_CODE_MAX_OUTPUT_TOKENS            = "8192",
       ANTHROPIC_BASE_URL                       = "${data.coder_workspace.me.access_url}/api/v2/aibridge/anthropic"
-      ANTHROPIC_MODEL                          = "anthropic.claude-opus-4-5-20251101-v1:0"
-      ANTHROPIC_SMALL_FAST_MODEL               = "anthropic.claude-haiku-4-5-20251001-v1:0"
+      ANTHROPIC_MODEL                          = "claude-opus-4-5"
+      ANTHROPIC_SMALL_FAST_MODEL               = "claude-haiku-4-5"
       NODE_OPTIONS                             = "--max-old-space-size=8192"
 
       GIT_AUTHOR_NAME     = coalesce(data.coder_workspace_owner.me.full_name, data.coder_workspace_owner.me.name)
