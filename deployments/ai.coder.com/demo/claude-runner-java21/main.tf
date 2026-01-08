@@ -608,7 +608,7 @@ module "claude-code" {
   source              = "registry.coder.com/coder/claude-code/coder"
   agent_id            = coder_agent.main.id
   workdir             = local.work_folder
-  version             = "4.2.6"
+  version             = "4.2.9"
 
   install_agentapi    = true
   install_claude_code = true

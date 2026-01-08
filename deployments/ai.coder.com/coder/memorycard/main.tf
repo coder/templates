@@ -408,7 +408,7 @@ locals {
 module "claude-code" {
   # count = data.coder_workspace.me.start_count
   source   = "registry.coder.com/coder/claude-code/coder"
-  # version = "3.4.3"
+  version = "4.2.9"
   # source   = "./modules/claude-code"
   agent_id = coder_agent.k8s-deployment.id
   workdir  = local.work_folder
